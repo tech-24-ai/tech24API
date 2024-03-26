@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "User Manager"
+    },
+    {
+        "id": 2,
+        "name": "Master Manager"
+    },
+    {
+        "id": 3,
+        "name": "Vendor Manager"
+    },
+    {
+        "id": 4,
+        "name": "Visitor Manager"
+    },
+    {
+        "id": 5,
+        "name": "Contact Manager"
+    },
+    {
+        "id": 6,
+        "name": "Module Manager"
+    },
+    {
+        "id": 7,
+        "name": "Question Manager"
+    },
+    {
+        "id": 8,
+        "name": "Flow Manager"
+    },
+    {
+        "id": 9,
+        "name": "Visitor Manager"
+    }
+]

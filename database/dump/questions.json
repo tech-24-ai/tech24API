@@ -1,0 +1,186 @@
+[
+    {
+        "id": 3,
+        "step_id": 1,
+        "option_type": "radiobox",
+        "name": "Select number of virtual machines (VM) to be protected",
+        "tags": "",
+        "notes": ""
+    },
+    {
+        "id": 4,
+        "step_id": 1,
+        "option_type": "radiobox",
+        "name": "Select number of physical servers to be protected",
+        "tags": "",
+        "notes": ""
+    },
+    {
+        "id": 5,
+        "step_id": 1,
+        "option_type": "radiobox",
+        "name": "Total storage to be backup up to TB (consider backup growth for 5 years)",
+        "tags": "",
+        "notes": ""
+    },
+    {
+        "id": 6,
+        "step_id": 2,
+        "option_type": "checkbox",
+        "name": "Select hypervisor type (multiple selection possible)",
+        "tags": "",
+        "notes": ""
+    },
+    {
+        "id": 7,
+        "step_id": 2,
+        "option_type": "checkbox",
+        "name": "Select VM OS (multiple selection possible)",
+        "tags": "",
+        "notes": ""
+    },
+    {
+        "id": 8,
+        "step_id": 2,
+        "option_type": "checkbox",
+        "name": "Select all applicable physical server OS (multiple selection possiblle)",
+        "tags": "",
+        "notes": ""
+    },
+    {
+        "id": 9,
+        "step_id": 2,
+        "option_type": "checkbox",
+        "name": "Select all applications that need to be protected (multiple selection possible)",
+        "tags": "",
+        "notes": ""
+    },
+    {
+        "id": 10,
+        "step_id": 3,
+        "option_type": "checkbox",
+        "name": "Support backup to public cloud (multiple selection possible)",
+        "tags": "",
+        "notes": ""
+    },
+    {
+        "id": 11,
+        "step_id": 3,
+        "option_type": "checkbox",
+        "name": "Do you require backup for NoSQL databasees (multiple selection possible)",
+        "tags": "",
+        "notes": ""
+    },
+    {
+        "id": 12,
+        "step_id": 3,
+        "option_type": "radiobox",
+        "name": "Do you require backup for containers",
+        "tags": "",
+        "notes": ""
+    },
+    {
+        "id": 13,
+        "step_id": 3,
+        "option_type": "multi_radiobox",
+        "name": "Do you require backup of any of the following OSs (select multiple and assign priority)",
+        "tags": "",
+        "notes": ""
+    },
+    {
+        "id": 14,
+        "step_id": 3,
+        "option_type": "radiobox",
+        "name": "Do you require backup to tape ?",
+        "tags": "",
+        "notes": ""
+    },
+    {
+        "id": 16,
+        "step_id": 1,
+        "option_type": "radiobox",
+        "name": "Select Capacity for SAN",
+        "tags": null,
+        "notes": ""
+    },
+    {
+        "id": 17,
+        "step_id": 2,
+        "option_type": "radiobox",
+        "name": "Select Array Type",
+        "tags": null,
+        "notes": ""
+    },
+    {
+        "id": 18,
+        "step_id": 2,
+        "option_type": "radiobox",
+        "name": "Select Performance/Availability",
+        "tags": null,
+        "notes": ""
+    },
+    {
+        "id": 19,
+        "step_id": 2,
+        "option_type": "checkbox",
+        "name": "Front-end Protocols",
+        "tags": null,
+        "notes": ""
+    },
+    {
+        "id": 20,
+        "step_id": 2,
+        "option_type": "radiobox",
+        "name": "CSI Plug-In",
+        "tags": null,
+        "notes": ""
+    },
+    {
+        "id": 21,
+        "step_id": 2,
+        "option_type": "radiobox",
+        "name": "Docker Volume Plug-in",
+        "tags": null,
+        "notes": ""
+    },
+    {
+        "id": 22,
+        "step_id": 1,
+        "option_type": "radiobox",
+        "name": "Select Capacity for Object Storage",
+        "tags": null,
+        "notes": ""
+    },
+    {
+        "id": 23,
+        "step_id": 2,
+        "option_type": "radiobox",
+        "name": "Select Deployment",
+        "tags": null,
+        "notes": ""
+    },
+    {
+        "id": 24,
+        "step_id": 2,
+        "option_type": "checkbox",
+        "name": "Select Storage Application",
+        "tags": null,
+        "notes": ""
+    },
+    {
+        "id": 25,
+        "step_id": 3,
+        "option_type": "radiobox",
+        "name": "Cloud Tiering",
+        "tags": null,
+        "notes": ""
+    },
+    {
+        "id": 26,
+        "step_id": 1,
+        "option_type": "select",
+        "name": "Select File Storage Capacity",
+        "tags": null,
+        "notes": ""
+    }
+]

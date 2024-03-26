@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "About Us",
+        "slug": "about-us",
+        "details": null,
+        "html": "<div class=\"RqBzHd\">\n<ol class=\"X5LH0c\">\n<li class=\"TrT0Xe\">On your computer, open Chrome.</li>\n<li class=\"TrT0Xe\">At the top right, click More. <strong>Settings</strong>.</li>\n<li class=\"TrT0Xe\">Under \"Privacy and security,\" click <strong>Cookies</strong> and other site data.</li>\n<li class=\"TrT0Xe\">Select an option: &ldquo;Allow all <strong>cookies</strong>&rdquo; \"Block all <strong>cookies</strong> (not recommended)&rdquo;. \"Block third party <strong>cookies</strong> in Incognito\" \"Block third-party <strong>cookies</strong>.\"</li>\n</ol>\n</div>"        
+    },
+    {
+        "id": 2,
+        "name": "Terms & Conditions",
+        "slug": "terms-and-conditions",
+        "details": null,
+        "html": "<div class=\"RqBzHd\">\n<ol class=\"X5LH0c\">\n<li class=\"TrT0Xe\">On your computer, open Chrome.</li>\n<li class=\"TrT0Xe\">At the top right, click More. <strong>Settings</strong>.</li>\n<li class=\"TrT0Xe\">Under \"Privacy and security,\" click <strong>Cookies</strong> and other site data.</li>\n<li class=\"TrT0Xe\">Select an option: &ldquo;Allow all <strong>cookies</strong>&rdquo; \"Block all <strong>cookies</strong> (not recommended)&rdquo;. \"Block third party <strong>cookies</strong> in Incognito\" \"Block third-party <strong>cookies</strong>.\"</li>\n</ol>\n</div>"        
+    },
+    {
+        "id": 3,
+        "name": "Privacy Policy",
+        "slug": "privacy-and-policy",
+        "details": null,
+        "html": "<div class=\"RqBzHd\">\n<ol class=\"X5LH0c\">\n<li class=\"TrT0Xe\">On your computer, open Chrome.</li>\n<li class=\"TrT0Xe\">At the top right, click More. <strong>Settings</strong>.</li>\n<li class=\"TrT0Xe\">Under \"Privacy and security,\" click <strong>Cookies</strong> and other site data.</li>\n<li class=\"TrT0Xe\">Select an option: &ldquo;Allow all <strong>cookies</strong>&rdquo; \"Block all <strong>cookies</strong> (not recommended)&rdquo;. \"Block third party <strong>cookies</strong> in Incognito\" \"Block third-party <strong>cookies</strong>.\"</li>\n</ol>\n</div>"        
+    },
+    {
+        "id": 4,
+        "name": "Important Information",
+        "slug": "guideline",
+        "details": "Guideline",
+        "html": "<p>1. Dummy Text</p>\n<p>2. Dummy Text</p>\n<p>3. Dummy Text</p>"        
+    },
+    {
+        "id": 5,
+        "name": "Cookie Settings",
+        "slug": "cookies-setting",
+        "details": null,
+        "html": "<div class=\"RqBzHd\">\n<ol class=\"X5LH0c\">\n<li class=\"TrT0Xe\">On your computer, open Chrome.</li>\n<li class=\"TrT0Xe\">At the top right, click More. <strong>Settings</strong>.</li>\n<li class=\"TrT0Xe\">Under \"Privacy and security,\" click <strong>Cookies</strong> and other site data.</li>\n<li class=\"TrT0Xe\">Select an option: &ldquo;Allow all <strong>cookies</strong>&rdquo; \"Block all <strong>cookies</strong> (not recommended)&rdquo;. \"Block third party <strong>cookies</strong> in Incognito\" \"Block third-party <strong>cookies</strong>.\"</li>\n</ol>\n</div>"        
+    },
+    {
+        "id": 6,
+        "name": "Terms of use",
+        "slug": "terms-of-use",
+        "details": null,
+        "html": "<h3>Terms of use</h3>\n<ul>\n<li>ITMAP does not endorse any vendor, product or service listed in this report and does not recommend users to select only those vendors with the highest ratings. ITMAP&rsquo;s recommendations are based on ITMAP&rsquo;s research methodologies and product recommendation frameworks that are available for reference on ITMAP&rsquo;s website.</li>\n<li>ITMAP makes no representations or warranties as to the accuracy, completeness or sustainability of this report for any particular purpose, and disclaims all liabilities for any damages, whether direct, consequential, incidental or special, arising out of the use of or inability to use this material or the information provided herein.</li>\n<li>This report may contain links to third party websites. ITMAP does not endorse, sponsor, or accept any responsibility for such material. ITMAP is not responsible for the content or privacy practices of any linked sites.</li>\n<li>As a registered user of ITMAP.com, you may open, share and print this report.</li>\n<li>For any queries regarding terms of use, please write to <a href=\"mailto:Queries@ITMAP.com\">Queries@ITMAP.com</a></li>\n</ul>"        
+    }
+]

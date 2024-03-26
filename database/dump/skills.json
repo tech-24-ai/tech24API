@@ -1,0 +1,2270 @@
+[
+	{
+		"id" : 1,
+		"parent_id" : null,
+		"name" : "Programming Languages",
+		"created_at" : "2023-06-26 06:08:47",
+		"updated_at" : "2023-06-26 06:08:47"
+	},
+	{
+		"id" : 2,
+		"parent_id" : null,
+		"name" : "Web Development",
+		"created_at" : "2023-06-26 06:08:48",
+		"updated_at" : "2023-06-26 06:08:48"
+	},
+	{
+		"id" : 3,
+		"parent_id" : null,
+		"name" : "Mobile Development",
+		"created_at" : "2023-06-26 06:08:49",
+		"updated_at" : "2023-06-26 06:08:49"
+	},
+	{
+		"id" : 4,
+		"parent_id" : null,
+		"name" : "Databases Design and Development",
+		"created_at" : "2023-06-26 06:08:50",
+		"updated_at" : "2023-06-26 06:08:50"
+	},
+	{
+		"id" : 5,
+		"parent_id" : null,
+		"name" : "Cloud Computing – Design/Build/Run",
+		"created_at" : "2023-06-26 06:08:51",
+		"updated_at" : "2023-06-26 06:08:51"
+	},
+	{
+		"id" : 6,
+		"parent_id" : null,
+		"name" : "Cybersecurity – Design/Build/Run",
+		"created_at" : "2023-06-26 06:08:52",
+		"updated_at" : "2023-06-26 06:08:52"
+	},
+	{
+		"id" : 7,
+		"parent_id" : null,
+		"name" : "AI and Machine Learning",
+		"created_at" : "2023-06-26 06:08:53",
+		"updated_at" : "2023-06-26 06:08:53"
+	},
+	{
+		"id" : 8,
+		"parent_id" : null,
+		"name" : "Blockchain",
+		"created_at" : "2023-06-26 06:08:54",
+		"updated_at" : "2023-06-26 06:08:54"
+	},
+	{
+		"id" : 9,
+		"parent_id" : null,
+		"name" : "Data Science",
+		"created_at" : "2023-06-26 06:08:55",
+		"updated_at" : "2023-06-26 06:08:55"
+	},
+	{
+		"id" : 10,
+		"parent_id" : null,
+		"name" : "IT Infrastructure",
+		"created_at" : "2023-06-26 06:08:56",
+		"updated_at" : "2023-06-26 06:08:56"
+	},
+	{
+		"id" : 11,
+		"parent_id" : null,
+		"name" : "Enterprise Systems",
+		"created_at" : "2023-06-26 06:08:57",
+		"updated_at" : "2023-06-26 06:08:57"
+	},
+	{
+		"id" : 12,
+		"parent_id" : null,
+		"name" : "Digital Transformation",
+		"created_at" : "2023-06-26 06:08:58",
+		"updated_at" : "2023-06-26 06:08:58"
+	},
+	{
+		"id" : 13,
+		"parent_id" : null,
+		"name" : "IT Strategy",
+		"created_at" : "2023-06-26 06:08:59",
+		"updated_at" : "2023-06-26 06:08:59"
+	},
+	{
+		"id" : 14,
+		"parent_id" : null,
+		"name" : "Business Process Improvement",
+		"created_at" : "2023-06-26 06:08:59",
+		"updated_at" : "2023-06-26 06:08:59"
+	},
+	{
+		"id" : 15,
+		"parent_id" : null,
+		"name" : "Technology Selection",
+		"created_at" : "2023-06-26 06:09:00",
+		"updated_at" : "2023-06-26 06:09:00"
+	},
+	{
+		"id" : 16,
+		"parent_id" : null,
+		"name" : "IT Governance",
+		"created_at" : "2023-06-26 06:09:00",
+		"updated_at" : "2023-06-26 06:09:00"
+	},
+	{
+		"id" : 17,
+		"parent_id" : null,
+		"name" : "Data Strategy",
+		"created_at" : "2023-06-26 06:09:01",
+		"updated_at" : "2023-06-26 06:09:01"
+	},
+	{
+		"id" : 18,
+		"parent_id" : null,
+		"name" : "Innovation Strategy",
+		"created_at" : "2023-06-26 06:09:01",
+		"updated_at" : "2023-06-26 06:09:01"
+	},
+	{
+		"id" : 19,
+		"parent_id" : null,
+		"name" : "Sustainability",
+		"created_at" : "2023-06-26 06:09:01",
+		"updated_at" : "2023-06-26 06:09:01"
+	},
+	{
+		"id" : 20,
+		"parent_id" : 1,
+		"name" : "General-Purpose: Python",
+		"created_at" : "2023-06-26 06:09:02",
+		"updated_at" : "2023-06-26 06:09:02"
+	},
+	{
+		"id" : 21,
+		"parent_id" : 1,
+		"name" : "General-Purpose: Java",
+		"created_at" : "2023-06-26 06:09:03",
+		"updated_at" : "2023-06-26 06:09:03"
+	},
+	{
+		"id" : 22,
+		"parent_id" : 1,
+		"name" : "General-Purpose: C++",
+		"created_at" : "2023-06-26 06:09:03",
+		"updated_at" : "2023-06-26 06:09:03"
+	},
+	{
+		"id" : 23,
+		"parent_id" : 1,
+		"name" : "General-Purpose: C#",
+		"created_at" : "2023-06-26 06:09:05",
+		"updated_at" : "2023-06-26 06:09:05"
+	},
+	{
+		"id" : 24,
+		"parent_id" : 1,
+		"name" : "General-Purpose: JavaScript",
+		"created_at" : "2023-06-26 06:09:05",
+		"updated_at" : "2023-06-26 06:09:05"
+	},
+	{
+		"id" : 25,
+		"parent_id" : 1,
+		"name" : "General-Purpose: Ruby",
+		"created_at" : "2023-06-26 06:09:06",
+		"updated_at" : "2023-06-26 06:09:06"
+	},
+	{
+		"id" : 26,
+		"parent_id" : 1,
+		"name" : "General-Purpose: Swift",
+		"created_at" : "2023-06-26 06:09:06",
+		"updated_at" : "2023-06-26 06:09:06"
+	},
+	{
+		"id" : 27,
+		"parent_id" : 1,
+		"name" : "General-Purpose: PHP",
+		"created_at" : "2023-06-26 06:09:07",
+		"updated_at" : "2023-06-26 06:09:07"
+	},
+	{
+		"id" : 28,
+		"parent_id" : 1,
+		"name" : "General-Purpose: Go",
+		"created_at" : "2023-06-26 06:09:08",
+		"updated_at" : "2023-06-26 06:09:08"
+	},
+	{
+		"id" : 29,
+		"parent_id" : 1,
+		"name" : "General-Purpose: TypeScript",
+		"created_at" : "2023-06-26 06:09:09",
+		"updated_at" : "2023-06-26 06:09:09"
+	},
+	{
+		"id" : 30,
+		"parent_id" : 1,
+		"name" : "General-Purpose: Rust",
+		"created_at" : "2023-06-26 06:09:10",
+		"updated_at" : "2023-06-26 06:09:10"
+	},
+	{
+		"id" : 31,
+		"parent_id" : 1,
+		"name" : "General-Purpose: Kotlin",
+		"created_at" : "2023-06-26 06:09:10",
+		"updated_at" : "2023-06-26 06:09:10"
+	},
+	{
+		"id" : 32,
+		"parent_id" : 1,
+		"name" : "General-Purpose: Scala",
+		"created_at" : "2023-06-26 06:09:10",
+		"updated_at" : "2023-06-26 06:09:10"
+	},
+	{
+		"id" : 33,
+		"parent_id" : 1,
+		"name" : "General-Purpose: Perl",
+		"created_at" : "2023-06-26 06:09:11",
+		"updated_at" : "2023-06-26 06:09:11"
+	},
+	{
+		"id" : 34,
+		"parent_id" : 1,
+		"name" : "General-Purpose: Groovy",
+		"created_at" : "2023-06-26 06:09:12",
+		"updated_at" : "2023-06-26 06:09:12"
+	},
+	{
+		"id" : 35,
+		"parent_id" : 1,
+		"name" : "Data Analysis/Science: R",
+		"created_at" : "2023-06-26 06:09:12",
+		"updated_at" : "2023-06-26 06:09:12"
+	},
+	{
+		"id" : 36,
+		"parent_id" : 1,
+		"name" : "Data Analysis/Science: Julia",
+		"created_at" : "2023-06-26 06:09:12",
+		"updated_at" : "2023-06-26 06:09:12"
+	},
+	{
+		"id" : 37,
+		"parent_id" : 1,
+		"name" : "Data Analysis/Science: MATLAB",
+		"created_at" : "2023-06-26 06:09:13",
+		"updated_at" : "2023-06-26 06:09:13"
+	},
+	{
+		"id" : 38,
+		"parent_id" : 1,
+		"name" : "Shell Scripting: Bash",
+		"created_at" : "2023-06-26 06:09:13",
+		"updated_at" : "2023-06-26 06:09:13"
+	},
+	{
+		"id" : 39,
+		"parent_id" : 1,
+		"name" : "Shell Scripting: PowerShell",
+		"created_at" : "2023-06-26 06:09:14",
+		"updated_at" : "2023-06-26 06:09:14"
+	},
+	{
+		"id" : 40,
+		"parent_id" : 2,
+		"name" : "Frontend: HTML5",
+		"created_at" : "2023-06-26 06:09:15",
+		"updated_at" : "2023-06-26 06:09:15"
+	},
+	{
+		"id" : 41,
+		"parent_id" : 2,
+		"name" : "Frontend: CSS3",
+		"created_at" : "2023-06-26 06:09:16",
+		"updated_at" : "2023-06-26 06:09:16"
+	},
+	{
+		"id" : 42,
+		"parent_id" : 2,
+		"name" : "Frontend: JavaScript",
+		"created_at" : "2023-06-26 06:09:17",
+		"updated_at" : "2023-06-26 06:09:17"
+	},
+	{
+		"id" : 43,
+		"parent_id" : 2,
+		"name" : "Frontend: TypeScript",
+		"created_at" : "2023-06-26 06:09:18",
+		"updated_at" : "2023-06-26 06:09:18"
+	},
+	{
+		"id" : 44,
+		"parent_id" : 2,
+		"name" : "Frontend: React",
+		"created_at" : "2023-06-26 06:09:18",
+		"updated_at" : "2023-06-26 06:09:18"
+	},
+	{
+		"id" : 45,
+		"parent_id" : 2,
+		"name" : "Frontend: Angular",
+		"created_at" : "2023-06-26 06:09:19",
+		"updated_at" : "2023-06-26 06:09:19"
+	},
+	{
+		"id" : 46,
+		"parent_id" : 2,
+		"name" : "Frontend: Vue.js",
+		"created_at" : "2023-06-26 06:09:19",
+		"updated_at" : "2023-06-26 06:09:19"
+	},
+	{
+		"id" : 47,
+		"parent_id" : 2,
+		"name" : "Frontend: jQuery",
+		"created_at" : "2023-06-26 06:09:20",
+		"updated_at" : "2023-06-26 06:09:20"
+	},
+	{
+		"id" : 48,
+		"parent_id" : 2,
+		"name" : "Frontend: Bootstrap",
+		"created_at" : "2023-06-26 06:09:22",
+		"updated_at" : "2023-06-26 06:09:22"
+	},
+	{
+		"id" : 49,
+		"parent_id" : 2,
+		"name" : "Frontend: SASS",
+		"created_at" : "2023-06-26 06:09:22",
+		"updated_at" : "2023-06-26 06:09:22"
+	},
+	{
+		"id" : 50,
+		"parent_id" : 2,
+		"name" : "Backend: Node.js",
+		"created_at" : "2023-06-26 06:09:22",
+		"updated_at" : "2023-06-26 06:09:22"
+	},
+	{
+		"id" : 51,
+		"parent_id" : 2,
+		"name" : "Backend: Django",
+		"created_at" : "2023-06-26 06:09:24",
+		"updated_at" : "2023-06-26 06:09:24"
+	},
+	{
+		"id" : 52,
+		"parent_id" : 2,
+		"name" : "Backend: Flask",
+		"created_at" : "2023-06-26 06:09:24",
+		"updated_at" : "2023-06-26 06:09:24"
+	},
+	{
+		"id" : 53,
+		"parent_id" : 2,
+		"name" : "Backend: Ruby on Rails",
+		"created_at" : "2023-06-26 06:09:25",
+		"updated_at" : "2023-06-26 06:09:25"
+	},
+	{
+		"id" : 54,
+		"parent_id" : 2,
+		"name" : "Backend: ASP.NET",
+		"created_at" : "2023-06-26 06:09:26",
+		"updated_at" : "2023-06-26 06:09:26"
+	},
+	{
+		"id" : 55,
+		"parent_id" : 2,
+		"name" : "Backend: Laravel",
+		"created_at" : "2023-06-26 06:09:26",
+		"updated_at" : "2023-06-26 06:09:26"
+	},
+	{
+		"id" : 56,
+		"parent_id" : 2,
+		"name" : "Backend: Express.js",
+		"created_at" : "2023-06-26 06:09:27",
+		"updated_at" : "2023-06-26 06:09:27"
+	},
+	{
+		"id" : 57,
+		"parent_id" : 2,
+		"name" : "Full-Stack: MEAN",
+		"created_at" : "2023-06-26 06:09:28",
+		"updated_at" : "2023-06-26 06:09:28"
+	},
+	{
+		"id" : 58,
+		"parent_id" : 2,
+		"name" : "Full-Stack: MERN",
+		"created_at" : "2023-06-26 06:09:29",
+		"updated_at" : "2023-06-26 06:09:29"
+	},
+	{
+		"id" : 59,
+		"parent_id" : 2,
+		"name" : "Full-Stack: LAMP",
+		"created_at" : "2023-06-26 06:09:29",
+		"updated_at" : "2023-06-26 06:09:29"
+	},
+	{
+		"id" : 60,
+		"parent_id" : 2,
+		"name" : "Full-Stack: Django + React",
+		"created_at" : "2023-06-26 06:09:30",
+		"updated_at" : "2023-06-26 06:09:30"
+	},
+	{
+		"id" : 61,
+		"parent_id" : 2,
+		"name" : "QA: Blackbox Testing",
+		"created_at" : "2023-06-26 06:09:31",
+		"updated_at" : "2023-06-26 06:09:31"
+	},
+	{
+		"id" : 62,
+		"parent_id" : 2,
+		"name" : "QA: Automated Testing",
+		"created_at" : "2023-06-26 06:09:31",
+		"updated_at" : "2023-06-26 06:09:31"
+	},
+	{
+		"id" : 63,
+		"parent_id" : 3,
+		"name" : "Android Development: Java",
+		"created_at" : "2023-06-26 06:09:32",
+		"updated_at" : "2023-06-26 06:09:32"
+	},
+	{
+		"id" : 64,
+		"parent_id" : 3,
+		"name" : "Android Development: Kotlin",
+		"created_at" : "2023-06-26 06:09:32",
+		"updated_at" : "2023-06-26 06:09:32"
+	},
+	{
+		"id" : 65,
+		"parent_id" : 3,
+		"name" : "Android Development: Android SDK",
+		"created_at" : "2023-06-26 06:09:32",
+		"updated_at" : "2023-06-26 06:09:32"
+	},
+	{
+		"id" : 66,
+		"parent_id" : 3,
+		"name" : "iOS Development: Objective-C",
+		"created_at" : "2023-06-26 06:09:33",
+		"updated_at" : "2023-06-26 06:09:33"
+	},
+	{
+		"id" : 67,
+		"parent_id" : 3,
+		"name" : "iOS Development: Swift",
+		"created_at" : "2023-06-26 06:09:34",
+		"updated_at" : "2023-06-26 06:09:34"
+	},
+	{
+		"id" : 68,
+		"parent_id" : 3,
+		"name" : "iOS Development: iOS SDK",
+		"created_at" : "2023-06-26 06:09:35",
+		"updated_at" : "2023-06-26 06:09:35"
+	},
+	{
+		"id" : 69,
+		"parent_id" : 3,
+		"name" : "Cross-platform: React Native",
+		"created_at" : "2023-06-26 06:09:36",
+		"updated_at" : "2023-06-26 06:09:36"
+	},
+	{
+		"id" : 70,
+		"parent_id" : 3,
+		"name" : "Cross-platform: Flutter",
+		"created_at" : "2023-06-26 06:09:37",
+		"updated_at" : "2023-06-26 06:09:37"
+	},
+	{
+		"id" : 71,
+		"parent_id" : 3,
+		"name" : "Cross-platform: Xamarin",
+		"created_at" : "2023-06-26 06:09:37",
+		"updated_at" : "2023-06-26 06:09:37"
+	},
+	{
+		"id" : 72,
+		"parent_id" : 3,
+		"name" : "Cross-platform: Cordova",
+		"created_at" : "2023-06-26 06:09:38",
+		"updated_at" : "2023-06-26 06:09:38"
+	},
+	{
+		"id" : 73,
+		"parent_id" : 4,
+		"name" : "Relational: MySQL",
+		"created_at" : "2023-06-26 06:09:39",
+		"updated_at" : "2023-06-26 06:09:39"
+	},
+	{
+		"id" : 74,
+		"parent_id" : 4,
+		"name" : "Relational: PostgreSQL",
+		"created_at" : "2023-06-26 06:09:40",
+		"updated_at" : "2023-06-26 06:09:40"
+	},
+	{
+		"id" : 75,
+		"parent_id" : 4,
+		"name" : "Relational: Oracle",
+		"created_at" : "2023-06-26 06:09:41",
+		"updated_at" : "2023-06-26 06:09:41"
+	},
+	{
+		"id" : 76,
+		"parent_id" : 4,
+		"name" : "Relational: SQL Server",
+		"created_at" : "2023-06-26 06:09:41",
+		"updated_at" : "2023-06-26 06:09:41"
+	},
+	{
+		"id" : 77,
+		"parent_id" : 4,
+		"name" : "NoSQL: MongoDB",
+		"created_at" : "2023-06-26 06:09:41",
+		"updated_at" : "2023-06-26 06:09:41"
+	},
+	{
+		"id" : 78,
+		"parent_id" : 4,
+		"name" : "NoSQL: Cassandra",
+		"created_at" : "2023-06-26 06:09:42",
+		"updated_at" : "2023-06-26 06:09:42"
+	},
+	{
+		"id" : 79,
+		"parent_id" : 4,
+		"name" : "NoSQL: Redis",
+		"created_at" : "2023-06-26 06:09:42",
+		"updated_at" : "2023-06-26 06:09:42"
+	},
+	{
+		"id" : 80,
+		"parent_id" : 4,
+		"name" : "NoSQL: CouchDB",
+		"created_at" : "2023-06-26 06:09:43",
+		"updated_at" : "2023-06-26 06:09:43"
+	},
+	{
+		"id" : 81,
+		"parent_id" : 4,
+		"name" : "In-memory: Memcached",
+		"created_at" : "2023-06-26 06:09:43",
+		"updated_at" : "2023-06-26 06:09:43"
+	},
+	{
+		"id" : 82,
+		"parent_id" : 4,
+		"name" : "In-memory: Hazelcast",
+		"created_at" : "2023-06-26 06:09:44",
+		"updated_at" : "2023-06-26 06:09:44"
+	},
+	{
+		"id" : 83,
+		"parent_id" : 5,
+		"name" : "Platforms: AWS",
+		"created_at" : "2023-06-26 06:09:45",
+		"updated_at" : "2023-06-26 06:09:45"
+	},
+	{
+		"id" : 84,
+		"parent_id" : 5,
+		"name" : "Platforms: Microsoft Azure",
+		"created_at" : "2023-06-26 06:09:46",
+		"updated_at" : "2023-06-26 06:09:46"
+	},
+	{
+		"id" : 85,
+		"parent_id" : 5,
+		"name" : "Platforms: Google Cloud",
+		"created_at" : "2023-06-26 06:09:46",
+		"updated_at" : "2023-06-26 06:09:46"
+	},
+	{
+		"id" : 86,
+		"parent_id" : 5,
+		"name" : "Platforms: IBM Cloud",
+		"created_at" : "2023-06-26 06:09:47",
+		"updated_at" : "2023-06-26 06:09:47"
+	},
+	{
+		"id" : 87,
+		"parent_id" : 5,
+		"name" : "Platforms: Oracle Cloud",
+		"created_at" : "2023-06-26 06:09:48",
+		"updated_at" : "2023-06-26 06:09:48"
+	},
+	{
+		"id" : 88,
+		"parent_id" : 5,
+		"name" : "SaaS: Salesforce",
+		"created_at" : "2023-06-26 06:09:49",
+		"updated_at" : "2023-06-26 06:09:49"
+	},
+	{
+		"id" : 89,
+		"parent_id" : 5,
+		"name" : "SaaS: Adobe Creative Cloud",
+		"created_at" : "2023-06-26 06:09:50",
+		"updated_at" : "2023-06-26 06:09:50"
+	},
+	{
+		"id" : 90,
+		"parent_id" : 5,
+		"name" : "IaaS/PaaS: OpenStack",
+		"created_at" : "2023-06-26 06:09:51",
+		"updated_at" : "2023-06-26 06:09:51"
+	},
+	{
+		"id" : 91,
+		"parent_id" : 5,
+		"name" : "IaaS/PaaS: Heroku",
+		"created_at" : "2023-06-26 06:09:52",
+		"updated_at" : "2023-06-26 06:09:52"
+	},
+	{
+		"id" : 92,
+		"parent_id" : 5,
+		"name" : "Cloud Operations: Managed Cloud Services",
+		"created_at" : "2023-06-26 06:09:53",
+		"updated_at" : "2023-06-26 06:09:53"
+	},
+	{
+		"id" : 93,
+		"parent_id" : 5,
+		"name" : "Cloud Operations: FinOps",
+		"created_at" : "2023-06-26 06:09:54",
+		"updated_at" : "2023-06-26 06:09:54"
+	},
+	{
+		"id" : 94,
+		"parent_id" : 5,
+		"name" : "Cloud Operations: Managed Cloud Security Services",
+		"created_at" : "2023-06-26 06:09:55",
+		"updated_at" : "2023-06-26 06:09:55"
+	},
+	{
+		"id" : 95,
+		"parent_id" : 5,
+		"name" : "Cloud Migration Strategy",
+		"created_at" : "2023-06-26 06:09:56",
+		"updated_at" : "2023-06-26 06:09:56"
+	},
+	{
+		"id" : 96,
+		"parent_id" : 6,
+		"name" : "Network Security: Firewalls",
+		"created_at" : "2023-06-26 06:09:56",
+		"updated_at" : "2023-06-26 06:09:56"
+	},
+	{
+		"id" : 97,
+		"parent_id" : 6,
+		"name" : "Network Security: IDS/IPS",
+		"created_at" : "2023-06-26 06:09:58",
+		"updated_at" : "2023-06-26 06:09:58"
+	},
+	{
+		"id" : 98,
+		"parent_id" : 6,
+		"name" : "Application Security: OWASP",
+		"created_at" : "2023-06-26 06:09:59",
+		"updated_at" : "2023-06-26 06:09:59"
+	},
+	{
+		"id" : 99,
+		"parent_id" : 6,
+		"name" : "Application Security: Penetration Testing",
+		"created_at" : "2023-06-26 06:10:00",
+		"updated_at" : "2023-06-26 06:10:00"
+	},
+	{
+		"id" : 100,
+		"parent_id" : 6,
+		"name" : "Data Security: Encryption",
+		"created_at" : "2023-06-26 06:10:01",
+		"updated_at" : "2023-06-26 06:10:01"
+	},
+	{
+		"id" : 101,
+		"parent_id" : 6,
+		"name" : "Data Security: Hashing",
+		"created_at" : "2023-06-26 06:10:01",
+		"updated_at" : "2023-06-26 06:10:01"
+	},
+	{
+		"id" : 102,
+		"parent_id" : 6,
+		"name" : "Data Security: Secure Coding Practices",
+		"created_at" : "2023-06-26 06:10:02",
+		"updated_at" : "2023-06-26 06:10:02"
+	},
+	{
+		"id" : 103,
+		"parent_id" : 6,
+		"name" : "Information Assurance: ISO 27001",
+		"created_at" : "2023-06-26 06:10:02",
+		"updated_at" : "2023-06-26 06:10:02"
+	},
+	{
+		"id" : 104,
+		"parent_id" : 6,
+		"name" : "Information Assurance: COBIT",
+		"created_at" : "2023-06-26 06:10:03",
+		"updated_at" : "2023-06-26 06:10:03"
+	},
+	{
+		"id" : 105,
+		"parent_id" : 6,
+		"name" : "Cybersecurity Frameworks: NIST",
+		"created_at" : "2023-06-26 06:10:04",
+		"updated_at" : "2023-06-26 06:10:04"
+	},
+	{
+		"id" : 106,
+		"parent_id" : 6,
+		"name" : "Cybersecurity Frameworks: CIS",
+		"created_at" : "2023-06-26 06:10:04",
+		"updated_at" : "2023-06-26 06:10:04"
+	},
+	{
+		"id" : 107,
+		"parent_id" : 6,
+		"name" : "Ethical Hacking: Kali Linux",
+		"created_at" : "2023-06-26 06:10:05",
+		"updated_at" : "2023-06-26 06:10:05"
+	},
+	{
+		"id" : 108,
+		"parent_id" : 6,
+		"name" : "Ethical Hacking: Metasploit",
+		"created_at" : "2023-06-26 06:10:06",
+		"updated_at" : "2023-06-26 06:10:06"
+	},
+	{
+		"id" : 109,
+		"parent_id" : 6,
+		"name" : "Compliance: GDPR",
+		"created_at" : "2023-06-26 06:10:07",
+		"updated_at" : "2023-06-26 06:10:07"
+	},
+	{
+		"id" : 110,
+		"parent_id" : 6,
+		"name" : "Compliance: CCPA",
+		"created_at" : "2023-06-26 06:10:08",
+		"updated_at" : "2023-06-26 06:10:08"
+	},
+	{
+		"id" : 111,
+		"parent_id" : 6,
+		"name" : "Assessment: Cyber Risk Assessment Services",
+		"created_at" : "2023-06-26 06:10:09",
+		"updated_at" : "2023-06-26 06:10:09"
+	},
+	{
+		"id" : 112,
+		"parent_id" : 6,
+		"name" : "Security Operations: Managed Security Services",
+		"created_at" : "2023-06-26 06:10:10",
+		"updated_at" : "2023-06-26 06:10:10"
+	},
+	{
+		"id" : 113,
+		"parent_id" : 6,
+		"name" : "Security Operations: Ransomware Recovery Services",
+		"created_at" : "2023-06-26 06:10:10",
+		"updated_at" : "2023-06-26 06:10:10"
+	},
+	{
+		"id" : 114,
+		"parent_id" : 6,
+		"name" : "Security Operations: SOC/NOC design services",
+		"created_at" : "2023-06-26 06:10:12",
+		"updated_at" : "2023-06-26 06:10:12"
+	},
+	{
+		"id" : 115,
+		"parent_id" : 7,
+		"name" : "Machine Learning: Scikit-learn",
+		"created_at" : "2023-06-26 06:10:13",
+		"updated_at" : "2023-06-26 06:10:13"
+	},
+	{
+		"id" : 116,
+		"parent_id" : 7,
+		"name" : "Machine Learning: TensorFlow",
+		"created_at" : "2023-06-26 06:10:13",
+		"updated_at" : "2023-06-26 06:10:13"
+	},
+	{
+		"id" : 117,
+		"parent_id" : 7,
+		"name" : "Machine Learning: PyTorch",
+		"created_at" : "2023-06-26 06:10:13",
+		"updated_at" : "2023-06-26 06:10:13"
+	},
+	{
+		"id" : 118,
+		"parent_id" : 7,
+		"name" : "Machine Learning: Keras",
+		"created_at" : "2023-06-26 06:10:14",
+		"updated_at" : "2023-06-26 06:10:14"
+	},
+	{
+		"id" : 119,
+		"parent_id" : 7,
+		"name" : "Machine Learning: XGBoost",
+		"created_at" : "2023-06-26 06:10:15",
+		"updated_at" : "2023-06-26 06:10:15"
+	},
+	{
+		"id" : 120,
+		"parent_id" : 7,
+		"name" : "AI Frameworks: OpenAI",
+		"created_at" : "2023-06-26 06:10:16",
+		"updated_at" : "2023-06-26 06:10:16"
+	},
+	{
+		"id" : 121,
+		"parent_id" : 7,
+		"name" : "AI Frameworks: IBM Watson",
+		"created_at" : "2023-06-26 06:10:16",
+		"updated_at" : "2023-06-26 06:10:16"
+	},
+	{
+		"id" : 122,
+		"parent_id" : 7,
+		"name" : "Deep Learning: CNNs",
+		"created_at" : "2023-06-26 06:10:17",
+		"updated_at" : "2023-06-26 06:10:17"
+	},
+	{
+		"id" : 123,
+		"parent_id" : 7,
+		"name" : "Deep Learning: RNNs",
+		"created_at" : "2023-06-26 06:10:18",
+		"updated_at" : "2023-06-26 06:10:18"
+	},
+	{
+		"id" : 124,
+		"parent_id" : 7,
+		"name" : "Deep Learning: GANs",
+		"created_at" : "2023-06-26 06:10:19",
+		"updated_at" : "2023-06-26 06:10:19"
+	},
+	{
+		"id" : 125,
+		"parent_id" : 7,
+		"name" : "Natural Language Processing: NLTK",
+		"created_at" : "2023-06-26 06:10:20",
+		"updated_at" : "2023-06-26 06:10:20"
+	},
+	{
+		"id" : 126,
+		"parent_id" : 7,
+		"name" : "Natural Language Processing: SpaCy",
+		"created_at" : "2023-06-26 06:10:21",
+		"updated_at" : "2023-06-26 06:10:21"
+	},
+	{
+		"id" : 127,
+		"parent_id" : 7,
+		"name" : "Computer Vision: OpenCV",
+		"created_at" : "2023-06-26 06:10:22",
+		"updated_at" : "2023-06-26 06:10:22"
+	},
+	{
+		"id" : 128,
+		"parent_id" : 7,
+		"name" : "Computer Vision: PIL",
+		"created_at" : "2023-06-26 06:10:23",
+		"updated_at" : "2023-06-26 06:10:23"
+	},
+	{
+		"id" : 129,
+		"parent_id" : 8,
+		"name" : "Blockchain Platforms: Ethereum",
+		"created_at" : "2023-06-26 06:10:24",
+		"updated_at" : "2023-06-26 06:10:24"
+	},
+	{
+		"id" : 130,
+		"parent_id" : 8,
+		"name" : "Blockchain Platforms: Hyperledger Fabric",
+		"created_at" : "2023-06-26 06:10:24",
+		"updated_at" : "2023-06-26 06:10:24"
+	},
+	{
+		"id" : 131,
+		"parent_id" : 8,
+		"name" : "Blockchain Platforms: Corda",
+		"created_at" : "2023-06-26 06:10:26",
+		"updated_at" : "2023-06-26 06:10:26"
+	},
+	{
+		"id" : 132,
+		"parent_id" : 8,
+		"name" : "Blockchain Platforms: EOS",
+		"created_at" : "2023-06-26 06:10:26",
+		"updated_at" : "2023-06-26 06:10:26"
+	},
+	{
+		"id" : 133,
+		"parent_id" : 8,
+		"name" : "Decentralized Apps (DApps): MetaMask",
+		"created_at" : "2023-06-26 06:10:27",
+		"updated_at" : "2023-06-26 06:10:27"
+	},
+	{
+		"id" : 134,
+		"parent_id" : 8,
+		"name" : "Decentralized Apps (DApps): IPFS",
+		"created_at" : "2023-06-26 06:10:28",
+		"updated_at" : "2023-06-26 06:10:28"
+	},
+	{
+		"id" : 135,
+		"parent_id" : 9,
+		"name" : "Statistical Analysis: R",
+		"created_at" : "2023-06-26 06:10:29",
+		"updated_at" : "2023-06-26 06:10:29"
+	},
+	{
+		"id" : 136,
+		"parent_id" : 9,
+		"name" : "Statistical Analysis: SAS",
+		"created_at" : "2023-06-26 06:10:30",
+		"updated_at" : "2023-06-26 06:10:30"
+	},
+	{
+		"id" : 137,
+		"parent_id" : 9,
+		"name" : "Statistical Analysis: Stata",
+		"created_at" : "2023-06-26 06:10:30",
+		"updated_at" : "2023-06-26 06:10:30"
+	},
+	{
+		"id" : 138,
+		"parent_id" : 9,
+		"name" : "Big Data Processing: Apache Hadoop",
+		"created_at" : "2023-06-26 06:10:31",
+		"updated_at" : "2023-06-26 06:10:31"
+	},
+	{
+		"id" : 139,
+		"parent_id" : 9,
+		"name" : "Big Data Processing: Apache Spark",
+		"created_at" : "2023-06-26 06:10:31",
+		"updated_at" : "2023-06-26 06:10:31"
+	},
+	{
+		"id" : 140,
+		"parent_id" : 9,
+		"name" : "Big Data Processing: Apache Flink",
+		"created_at" : "2023-06-26 06:10:32",
+		"updated_at" : "2023-06-26 06:10:32"
+	},
+	{
+		"id" : 141,
+		"parent_id" : 9,
+		"name" : "Data Visualization: Matplotlib",
+		"created_at" : "2023-06-26 06:10:32",
+		"updated_at" : "2023-06-26 06:10:32"
+	},
+	{
+		"id" : 142,
+		"parent_id" : 9,
+		"name" : "Data Visualization: Seaborn",
+		"created_at" : "2023-06-26 06:10:32",
+		"updated_at" : "2023-06-26 06:10:32"
+	},
+	{
+		"id" : 143,
+		"parent_id" : 9,
+		"name" : "Data Visualization: D3.js",
+		"created_at" : "2023-06-26 06:10:33",
+		"updated_at" : "2023-06-26 06:10:33"
+	},
+	{
+		"id" : 144,
+		"parent_id" : 9,
+		"name" : "Data Visualization: Tableau",
+		"created_at" : "2023-06-26 06:10:33",
+		"updated_at" : "2023-06-26 06:10:33"
+	},
+	{
+		"id" : 145,
+		"parent_id" : 9,
+		"name" : "Data Mining: Weka",
+		"created_at" : "2023-06-26 06:10:34",
+		"updated_at" : "2023-06-26 06:10:34"
+	},
+	{
+		"id" : 146,
+		"parent_id" : 9,
+		"name" : "Data Mining: RapidMiner",
+		"created_at" : "2023-06-26 06:10:35",
+		"updated_at" : "2023-06-26 06:10:35"
+	},
+	{
+		"id" : 147,
+		"parent_id" : 9,
+		"name" : "Data Mining: Orange",
+		"created_at" : "2023-06-26 06:10:36",
+		"updated_at" : "2023-06-26 06:10:36"
+	},
+	{
+		"id" : 148,
+		"parent_id" : 9,
+		"name" : "ETL Tools: Informatica",
+		"created_at" : "2023-06-26 06:10:36",
+		"updated_at" : "2023-06-26 06:10:36"
+	},
+	{
+		"id" : 149,
+		"parent_id" : 9,
+		"name" : "ETL Tools: Talend",
+		"created_at" : "2023-06-26 06:10:37",
+		"updated_at" : "2023-06-26 06:10:37"
+	},
+	{
+		"id" : 150,
+		"parent_id" : 9,
+		"name" : "ETL Tools: Pentaho",
+		"created_at" : "2023-06-26 06:10:38",
+		"updated_at" : "2023-06-26 06:10:38"
+	},
+	{
+		"id" : 151,
+		"parent_id" : 9,
+		"name" : "IoT: Azure IoT",
+		"created_at" : "2023-06-26 06:10:39",
+		"updated_at" : "2023-06-26 06:10:39"
+	},
+	{
+		"id" : 152,
+		"parent_id" : 9,
+		"name" : "IoT: AWS IoT",
+		"created_at" : "2023-06-26 06:10:40",
+		"updated_at" : "2023-06-26 06:10:40"
+	},
+	{
+		"id" : 153,
+		"parent_id" : 9,
+		"name" : "IoT: Siemens MindSphere",
+		"created_at" : "2023-06-26 06:10:40",
+		"updated_at" : "2023-06-26 06:10:40"
+	},
+	{
+		"id" : 154,
+		"parent_id" : 10,
+		"name" : "Operating Systems: Linux (Ubuntu, CentOS, Red Hat)",
+		"created_at" : "2023-06-26 06:10:40",
+		"updated_at" : "2023-06-26 06:10:40"
+	},
+	{
+		"id" : 155,
+		"parent_id" : 10,
+		"name" : "Operating Systems: Windows Server",
+		"created_at" : "2023-06-26 06:10:41",
+		"updated_at" : "2023-06-26 06:10:41"
+	},
+	{
+		"id" : 156,
+		"parent_id" : 10,
+		"name" : "Virtualization: VMWare",
+		"created_at" : "2023-06-26 06:10:42",
+		"updated_at" : "2023-06-26 06:10:42"
+	},
+	{
+		"id" : 157,
+		"parent_id" : 10,
+		"name" : "Virtualization: Hyper-V",
+		"created_at" : "2023-06-26 06:10:42",
+		"updated_at" : "2023-06-26 06:10:42"
+	},
+	{
+		"id" : 158,
+		"parent_id" : 10,
+		"name" : "Virtualization: VirtualBox",
+		"created_at" : "2023-06-26 06:10:43",
+		"updated_at" : "2023-06-26 06:10:43"
+	},
+	{
+		"id" : 159,
+		"parent_id" : 10,
+		"name" : "Networking: TCP/IP",
+		"created_at" : "2023-06-26 06:10:44",
+		"updated_at" : "2023-06-26 06:10:44"
+	},
+	{
+		"id" : 160,
+		"parent_id" : 10,
+		"name" : "Networking: Routing",
+		"created_at" : "2023-06-26 06:10:45",
+		"updated_at" : "2023-06-26 06:10:45"
+	},
+	{
+		"id" : 161,
+		"parent_id" : 10,
+		"name" : "Networking: Switching",
+		"created_at" : "2023-06-26 06:10:46",
+		"updated_at" : "2023-06-26 06:10:46"
+	},
+	{
+		"id" : 162,
+		"parent_id" : 10,
+		"name" : "Networking: Network Troubleshooting",
+		"created_at" : "2023-06-26 06:10:47",
+		"updated_at" : "2023-06-26 06:10:47"
+	},
+	{
+		"id" : 163,
+		"parent_id" : 10,
+		"name" : "ITIL: Service Strategy",
+		"created_at" : "2023-06-26 06:10:48",
+		"updated_at" : "2023-06-26 06:10:48"
+	},
+	{
+		"id" : 164,
+		"parent_id" : 10,
+		"name" : "ITIL: Service Design",
+		"created_at" : "2023-06-26 06:10:48",
+		"updated_at" : "2023-06-26 06:10:48"
+	},
+	{
+		"id" : 165,
+		"parent_id" : 10,
+		"name" : "ITIL: Service Transition",
+		"created_at" : "2023-06-26 06:10:49",
+		"updated_at" : "2023-06-26 06:10:49"
+	},
+	{
+		"id" : 166,
+		"parent_id" : 10,
+		"name" : "ITIL: Service Operation",
+		"created_at" : "2023-06-26 06:10:50",
+		"updated_at" : "2023-06-26 06:10:50"
+	},
+	{
+		"id" : 167,
+		"parent_id" : 10,
+		"name" : "ITIL: Continual Service Improvement",
+		"created_at" : "2023-06-26 06:10:50",
+		"updated_at" : "2023-06-26 06:10:50"
+	},
+	{
+		"id" : 168,
+		"parent_id" : 10,
+		"name" : "Containerization: Docker",
+		"created_at" : "2023-06-26 06:10:51",
+		"updated_at" : "2023-06-26 06:10:51"
+	},
+	{
+		"id" : 169,
+		"parent_id" : 10,
+		"name" : "Containerization: Kubernetes",
+		"created_at" : "2023-06-26 06:10:51",
+		"updated_at" : "2023-06-26 06:10:51"
+	},
+	{
+		"id" : 170,
+		"parent_id" : 10,
+		"name" : "Containerization: Rancher",
+		"created_at" : "2023-06-26 06:10:52",
+		"updated_at" : "2023-06-26 06:10:52"
+	},
+	{
+		"id" : 171,
+		"parent_id" : 10,
+		"name" : "DevOps: CI/CD",
+		"created_at" : "2023-06-26 06:10:52",
+		"updated_at" : "2023-06-26 06:10:52"
+	},
+	{
+		"id" : 172,
+		"parent_id" : 10,
+		"name" : "DevOps: Jenkins",
+		"created_at" : "2023-06-26 06:10:53",
+		"updated_at" : "2023-06-26 06:10:53"
+	},
+	{
+		"id" : 173,
+		"parent_id" : 10,
+		"name" : "DevOps: GitLab CI",
+		"created_at" : "2023-06-26 06:10:54",
+		"updated_at" : "2023-06-26 06:10:54"
+	},
+	{
+		"id" : 174,
+		"parent_id" : 10,
+		"name" : "DevOps: Ansible",
+		"created_at" : "2023-06-26 06:10:54",
+		"updated_at" : "2023-06-26 06:10:54"
+	},
+	{
+		"id" : 175,
+		"parent_id" : 10,
+		"name" : "DevOps: Terraform",
+		"created_at" : "2023-06-26 06:10:56",
+		"updated_at" : "2023-06-26 06:10:56"
+	},
+	{
+		"id" : 176,
+		"parent_id" : 10,
+		"name" : "Virtualization: Red Hat",
+		"created_at" : "2023-06-26 06:10:56",
+		"updated_at" : "2023-06-26 06:10:56"
+	},
+	{
+		"id" : 177,
+		"parent_id" : 10,
+		"name" : "Hardware: Enterprise Servers",
+		"created_at" : "2023-06-26 06:10:57",
+		"updated_at" : "2023-06-26 06:10:57"
+	},
+	{
+		"id" : 178,
+		"parent_id" : 10,
+		"name" : "Hardware: Enterprise Storage",
+		"created_at" : "2023-06-26 06:10:58",
+		"updated_at" : "2023-06-26 06:10:58"
+	},
+	{
+		"id" : 179,
+		"parent_id" : 10,
+		"name" : "Data Protection: Backup Software",
+		"created_at" : "2023-06-26 06:10:59",
+		"updated_at" : "2023-06-26 06:10:59"
+	},
+	{
+		"id" : 180,
+		"parent_id" : 10,
+		"name" : "Data Protection: Disaster Recovery",
+		"created_at" : "2023-06-26 06:10:59",
+		"updated_at" : "2023-06-26 06:10:59"
+	},
+	{
+		"id" : 181,
+		"parent_id" : 10,
+		"name" : "Systems Management: IT Monitoring and Observability",
+		"created_at" : "2023-06-26 06:11:00",
+		"updated_at" : "2023-06-26 06:11:00"
+	},
+	{
+		"id" : 182,
+		"parent_id" : 10,
+		"name" : "Systems Management: IT Deployment Software",
+		"created_at" : "2023-06-26 06:11:00",
+		"updated_at" : "2023-06-26 06:11:00"
+	},
+	{
+		"id" : 183,
+		"parent_id" : 10,
+		"name" : "Systems Management: Application Performance Management",
+		"created_at" : "2023-06-26 06:11:01",
+		"updated_at" : "2023-06-26 06:11:01"
+	},
+	{
+		"id" : 184,
+		"parent_id" : 11,
+		"name" : "CRM: Salesforce",
+		"created_at" : "2023-06-26 06:11:02",
+		"updated_at" : "2023-06-26 06:11:02"
+	},
+	{
+		"id" : 185,
+		"parent_id" : 11,
+		"name" : "CRM: Microsoft Dynamics",
+		"created_at" : "2023-06-26 06:11:02",
+		"updated_at" : "2023-06-26 06:11:02"
+	},
+	{
+		"id" : 186,
+		"parent_id" : 11,
+		"name" : "CRM: Zoho CRM",
+		"created_at" : "2023-06-26 06:11:02",
+		"updated_at" : "2023-06-26 06:11:02"
+	},
+	{
+		"id" : 187,
+		"parent_id" : 11,
+		"name" : "CRM: Hubspot",
+		"created_at" : "2023-06-26 06:11:04",
+		"updated_at" : "2023-06-26 06:11:04"
+	},
+	{
+		"id" : 188,
+		"parent_id" : 11,
+		"name" : "CRM: Pipedrive",
+		"created_at" : "2023-06-26 06:11:05",
+		"updated_at" : "2023-06-26 06:11:05"
+	},
+	{
+		"id" : 189,
+		"parent_id" : 11,
+		"name" : "ERP: SAP ERP",
+		"created_at" : "2023-06-26 06:11:06",
+		"updated_at" : "2023-06-26 06:11:06"
+	},
+	{
+		"id" : 190,
+		"parent_id" : 11,
+		"name" : "ERP: Oracle ERP Cloud",
+		"created_at" : "2023-06-26 06:11:06",
+		"updated_at" : "2023-06-26 06:11:06"
+	},
+	{
+		"id" : 191,
+		"parent_id" : 11,
+		"name" : "ERP: Microsoft Dynamics 365",
+		"created_at" : "2023-06-26 06:11:07",
+		"updated_at" : "2023-06-26 06:11:07"
+	},
+	{
+		"id" : 192,
+		"parent_id" : 11,
+		"name" : "ERP: NetSuite ERP",
+		"created_at" : "2023-06-26 06:11:08",
+		"updated_at" : "2023-06-26 06:11:08"
+	},
+	{
+		"id" : 193,
+		"parent_id" : 11,
+		"name" : "ERP: Sage X3",
+		"created_at" : "2023-06-26 06:11:09",
+		"updated_at" : "2023-06-26 06:11:09"
+	},
+	{
+		"id" : 194,
+		"parent_id" : 11,
+		"name" : "Supply Chain Management: SAP SCM",
+		"created_at" : "2023-06-26 06:11:09",
+		"updated_at" : "2023-06-26 06:11:09"
+	},
+	{
+		"id" : 195,
+		"parent_id" : 11,
+		"name" : "Supply Chain Management: Oracle SCM Cloud",
+		"created_at" : "2023-06-26 06:11:10",
+		"updated_at" : "2023-06-26 06:11:10"
+	},
+	{
+		"id" : 196,
+		"parent_id" : 11,
+		"name" : "Supply Chain Management: Infor CloudSuite SCM",
+		"created_at" : "2023-06-26 06:11:11",
+		"updated_at" : "2023-06-26 06:11:11"
+	},
+	{
+		"id" : 197,
+		"parent_id" : 11,
+		"name" : "Supply Chain Management: JDA SCM",
+		"created_at" : "2023-06-26 06:11:12",
+		"updated_at" : "2023-06-26 06:11:12"
+	},
+	{
+		"id" : 198,
+		"parent_id" : 11,
+		"name" : "Supply Chain Management: Manhattan SCM",
+		"created_at" : "2023-06-26 06:11:12",
+		"updated_at" : "2023-06-26 06:11:12"
+	},
+	{
+		"id" : 199,
+		"parent_id" : 11,
+		"name" : "Human Capital Management: SAP SuccessFactors",
+		"created_at" : "2023-06-26 06:11:13",
+		"updated_at" : "2023-06-26 06:11:13"
+	},
+	{
+		"id" : 200,
+		"parent_id" : 11,
+		"name" : "Human Capital Management: Oracle HCM Cloud",
+		"created_at" : "2023-06-26 06:11:14",
+		"updated_at" : "2023-06-26 06:11:14"
+	},
+	{
+		"id" : 201,
+		"parent_id" : 11,
+		"name" : "Human Capital Management: Workday HCM",
+		"created_at" : "2023-06-26 06:11:14",
+		"updated_at" : "2023-06-26 06:11:14"
+	},
+	{
+		"id" : 202,
+		"parent_id" : 11,
+		"name" : "Human Capital Management: ADP Workforce Now",
+		"created_at" : "2023-06-26 06:11:15",
+		"updated_at" : "2023-06-26 06:11:15"
+	},
+	{
+		"id" : 203,
+		"parent_id" : 11,
+		"name" : "Human Capital Management: Zenefits",
+		"created_at" : "2023-06-26 06:11:15",
+		"updated_at" : "2023-06-26 06:11:15"
+	},
+	{
+		"id" : 204,
+		"parent_id" : 11,
+		"name" : "E-commerce: Magento",
+		"created_at" : "2023-06-26 06:11:15",
+		"updated_at" : "2023-06-26 06:11:15"
+	},
+	{
+		"id" : 205,
+		"parent_id" : 11,
+		"name" : "E-commerce: Shopify",
+		"created_at" : "2023-06-26 06:11:15",
+		"updated_at" : "2023-06-26 06:11:15"
+	},
+	{
+		"id" : 206,
+		"parent_id" : 11,
+		"name" : "E-commerce: BigCommerce",
+		"created_at" : "2023-06-26 06:11:16",
+		"updated_at" : "2023-06-26 06:11:16"
+	},
+	{
+		"id" : 207,
+		"parent_id" : 11,
+		"name" : "E-commerce: WooCommerce",
+		"created_at" : "2023-06-26 06:11:16",
+		"updated_at" : "2023-06-26 06:11:16"
+	},
+	{
+		"id" : 208,
+		"parent_id" : 11,
+		"name" : "E-commerce: Squarespace",
+		"created_at" : "2023-06-26 06:11:16",
+		"updated_at" : "2023-06-26 06:11:16"
+	},
+	{
+		"id" : 209,
+		"parent_id" : 11,
+		"name" : "Business Intelligence: Tableau",
+		"created_at" : "2023-06-26 06:11:17",
+		"updated_at" : "2023-06-26 06:11:17"
+	},
+	{
+		"id" : 210,
+		"parent_id" : 11,
+		"name" : "Business Intelligence: QlikView",
+		"created_at" : "2023-06-26 06:11:17",
+		"updated_at" : "2023-06-26 06:11:17"
+	},
+	{
+		"id" : 211,
+		"parent_id" : 11,
+		"name" : "Business Intelligence: Power BI",
+		"created_at" : "2023-06-26 06:11:17",
+		"updated_at" : "2023-06-26 06:11:17"
+	},
+	{
+		"id" : 212,
+		"parent_id" : 11,
+		"name" : "Business Intelligence: SAS Business Intelligence",
+		"created_at" : "2023-06-26 06:11:18",
+		"updated_at" : "2023-06-26 06:11:18"
+	},
+	{
+		"id" : 213,
+		"parent_id" : 11,
+		"name" : "Business Intelligence: IBM Cognos Analytics",
+		"created_at" : "2023-06-26 06:11:18",
+		"updated_at" : "2023-06-26 06:11:18"
+	},
+	{
+		"id" : 214,
+		"parent_id" : 11,
+		"name" : "Content Management System: WordPress",
+		"created_at" : "2023-06-26 06:11:18",
+		"updated_at" : "2023-06-26 06:11:18"
+	},
+	{
+		"id" : 215,
+		"parent_id" : 11,
+		"name" : "Content Management System: Joomla",
+		"created_at" : "2023-06-26 06:11:19",
+		"updated_at" : "2023-06-26 06:11:19"
+	},
+	{
+		"id" : 216,
+		"parent_id" : 11,
+		"name" : "Content Management System: Drupal",
+		"created_at" : "2023-06-26 06:11:19",
+		"updated_at" : "2023-06-26 06:11:19"
+	},
+	{
+		"id" : 217,
+		"parent_id" : 11,
+		"name" : "Content Management System: Adobe Experience Manager",
+		"created_at" : "2023-06-26 06:11:19",
+		"updated_at" : "2023-06-26 06:11:19"
+	},
+	{
+		"id" : 218,
+		"parent_id" : 11,
+		"name" : "Content Management System: Sitecore",
+		"created_at" : "2023-06-26 06:11:20",
+		"updated_at" : "2023-06-26 06:11:20"
+	},
+	{
+		"id" : 219,
+		"parent_id" : 11,
+		"name" : "Product Lifecycle Management (PLM): Siemens Teamcenter",
+		"created_at" : "2023-06-26 06:11:20",
+		"updated_at" : "2023-06-26 06:11:20"
+	},
+	{
+		"id" : 220,
+		"parent_id" : 11,
+		"name" : "Product Lifecycle Management (PLM): PTC Windchill",
+		"created_at" : "2023-06-26 06:11:20",
+		"updated_at" : "2023-06-26 06:11:20"
+	},
+	{
+		"id" : 221,
+		"parent_id" : 11,
+		"name" : "Product Lifecycle Management (PLM): Dassault Enovia",
+		"created_at" : "2023-06-26 06:11:21",
+		"updated_at" : "2023-06-26 06:11:21"
+	},
+	{
+		"id" : 222,
+		"parent_id" : 11,
+		"name" : "Product Lifecycle Management (PLM): Oracle Agile",
+		"created_at" : "2023-06-26 06:11:21",
+		"updated_at" : "2023-06-26 06:11:21"
+	},
+	{
+		"id" : 223,
+		"parent_id" : 11,
+		"name" : "Product Lifecycle Management (PLM): SAP PLM",
+		"created_at" : "2023-06-26 06:11:21",
+		"updated_at" : "2023-06-26 06:11:21"
+	},
+	{
+		"id" : 224,
+		"parent_id" : 11,
+		"name" : "Enterprise Asset Management (EAM): IBM Maximo",
+		"created_at" : "2023-06-26 06:11:22",
+		"updated_at" : "2023-06-26 06:11:22"
+	},
+	{
+		"id" : 225,
+		"parent_id" : 11,
+		"name" : "Enterprise Asset Management (EAM): SAP EAM",
+		"created_at" : "2023-06-26 06:11:22",
+		"updated_at" : "2023-06-26 06:11:22"
+	},
+	{
+		"id" : 226,
+		"parent_id" : 11,
+		"name" : "Enterprise Asset Management (EAM): Infor EAM",
+		"created_at" : "2023-06-26 06:11:22",
+		"updated_at" : "2023-06-26 06:11:22"
+	},
+	{
+		"id" : 227,
+		"parent_id" : 11,
+		"name" : "Enterprise Asset Management (EAM): Oracle EAM",
+		"created_at" : "2023-06-26 06:11:22",
+		"updated_at" : "2023-06-26 06:11:22"
+	},
+	{
+		"id" : 228,
+		"parent_id" : 11,
+		"name" : "Enterprise Asset Management (EAM): IFS EAM",
+		"created_at" : "2023-06-26 06:11:23",
+		"updated_at" : "2023-06-26 06:11:23"
+	},
+	{
+		"id" : 229,
+		"parent_id" : 11,
+		"name" : "IT Service Management (ITSM): ServiceNow",
+		"created_at" : "2023-06-26 06:11:23",
+		"updated_at" : "2023-06-26 06:11:23"
+	},
+	{
+		"id" : 230,
+		"parent_id" : 11,
+		"name" : "IT Service Management (ITSM): JIRA Service Desk",
+		"created_at" : "2023-06-26 06:11:24",
+		"updated_at" : "2023-06-26 06:11:24"
+	},
+	{
+		"id" : 231,
+		"parent_id" : 11,
+		"name" : "IT Service Management (ITSM): Freshservice",
+		"created_at" : "2023-06-26 06:11:24",
+		"updated_at" : "2023-06-26 06:11:24"
+	},
+	{
+		"id" : 232,
+		"parent_id" : 11,
+		"name" : "IT Service Management (ITSM): ManageEngine ServiceDesk Plus",
+		"created_at" : "2023-06-26 06:11:24",
+		"updated_at" : "2023-06-26 06:11:24"
+	},
+	{
+		"id" : 233,
+		"parent_id" : 11,
+		"name" : "IT Service Management (ITSM): Cherwell ITSM",
+		"created_at" : "2023-06-26 06:11:24",
+		"updated_at" : "2023-06-26 06:11:24"
+	},
+	{
+		"id" : 234,
+		"parent_id" : 11,
+		"name" : "Financial Systems: Oracle Financials",
+		"created_at" : "2023-06-26 06:11:25",
+		"updated_at" : "2023-06-26 06:11:25"
+	},
+	{
+		"id" : 235,
+		"parent_id" : 11,
+		"name" : "Financial Systems: SAP S/4HANA Finance",
+		"created_at" : "2023-06-26 06:11:25",
+		"updated_at" : "2023-06-26 06:11:25"
+	},
+	{
+		"id" : 236,
+		"parent_id" : 11,
+		"name" : "Financial Systems: Workday Financial Management",
+		"created_at" : "2023-06-26 06:11:26",
+		"updated_at" : "2023-06-26 06:11:26"
+	},
+	{
+		"id" : 237,
+		"parent_id" : 11,
+		"name" : "Financial Systems: Infor CloudSuite Financials",
+		"created_at" : "2023-06-26 06:11:26",
+		"updated_at" : "2023-06-26 06:11:26"
+	},
+	{
+		"id" : 238,
+		"parent_id" : 11,
+		"name" : "Financial Systems: Microsoft Dynamics GP",
+		"created_at" : "2023-06-26 06:11:26",
+		"updated_at" : "2023-06-26 06:11:26"
+	},
+	{
+		"id" : 239,
+		"parent_id" : 11,
+		"name" : "Marketing Automation: HubSpot",
+		"created_at" : "2023-06-26 06:11:27",
+		"updated_at" : "2023-06-26 06:11:27"
+	},
+	{
+		"id" : 240,
+		"parent_id" : 11,
+		"name" : "Marketing Automation: Salesforce Marketing Cloud",
+		"created_at" : "2023-06-26 06:11:27",
+		"updated_at" : "2023-06-26 06:11:27"
+	},
+	{
+		"id" : 241,
+		"parent_id" : 11,
+		"name" : "Marketing Automation: Adobe Campaign",
+		"created_at" : "2023-06-26 06:11:27",
+		"updated_at" : "2023-06-26 06:11:27"
+	},
+	{
+		"id" : 242,
+		"parent_id" : 11,
+		"name" : "Marketing Automation: Oracle Eloqua",
+		"created_at" : "2023-06-26 06:11:28",
+		"updated_at" : "2023-06-26 06:11:28"
+	},
+	{
+		"id" : 243,
+		"parent_id" : 11,
+		"name" : "Marketing Automation: Marketo",
+		"created_at" : "2023-06-26 06:11:28",
+		"updated_at" : "2023-06-26 06:11:28"
+	},
+	{
+		"id" : 244,
+		"parent_id" : 11,
+		"name" : "Business Applications: Warehouse Management Systems",
+		"created_at" : "2023-06-26 06:11:29",
+		"updated_at" : "2023-06-26 06:11:29"
+	},
+	{
+		"id" : 245,
+		"parent_id" : 12,
+		"name" : "Strategy Development: Needs Assessment",
+		"created_at" : "2023-06-26 06:11:29",
+		"updated_at" : "2023-06-26 06:11:29"
+	},
+	{
+		"id" : 246,
+		"parent_id" : 12,
+		"name" : "Strategy Development: Roadmapping",
+		"created_at" : "2023-06-26 06:11:29",
+		"updated_at" : "2023-06-26 06:11:29"
+	},
+	{
+		"id" : 247,
+		"parent_id" : 12,
+		"name" : "Strategy Development: KPI Definition",
+		"created_at" : "2023-06-26 06:11:30",
+		"updated_at" : "2023-06-26 06:11:30"
+	},
+	{
+		"id" : 248,
+		"parent_id" : 12,
+		"name" : "Change Management: Organizational Alignment",
+		"created_at" : "2023-06-26 06:11:30",
+		"updated_at" : "2023-06-26 06:11:30"
+	},
+	{
+		"id" : 249,
+		"parent_id" : 12,
+		"name" : "Change Management: Process Redesign",
+		"created_at" : "2023-06-26 06:11:30",
+		"updated_at" : "2023-06-26 06:11:30"
+	},
+	{
+		"id" : 250,
+		"parent_id" : 12,
+		"name" : "Change Management: Culture Change",
+		"created_at" : "2023-06-26 06:11:30",
+		"updated_at" : "2023-06-26 06:11:30"
+	},
+	{
+		"id" : 251,
+		"parent_id" : 13,
+		"name" : "IT Infrastructure Planning: Cloud Migration",
+		"created_at" : "2023-06-26 06:11:31",
+		"updated_at" : "2023-06-26 06:11:31"
+	},
+	{
+		"id" : 252,
+		"parent_id" : 13,
+		"name" : "IT Infrastructure Planning: IT Consolidation",
+		"created_at" : "2023-06-26 06:11:31",
+		"updated_at" : "2023-06-26 06:11:31"
+	},
+	{
+		"id" : 253,
+		"parent_id" : 13,
+		"name" : "IT Infrastructure Planning: Network Design",
+		"created_at" : "2023-06-26 06:11:31",
+		"updated_at" : "2023-06-26 06:11:31"
+	},
+	{
+		"id" : 254,
+		"parent_id" : 13,
+		"name" : "IT Investment Planning: ROI Analysis",
+		"created_at" : "2023-06-26 06:11:32",
+		"updated_at" : "2023-06-26 06:11:32"
+	},
+	{
+		"id" : 255,
+		"parent_id" : 13,
+		"name" : "IT Investment Planning: Cost-Benefit Analysis",
+		"created_at" : "2023-06-26 06:11:32",
+		"updated_at" : "2023-06-26 06:11:32"
+	},
+	{
+		"id" : 256,
+		"parent_id" : 13,
+		"name" : "IT Investment Planning: Risk Assessment",
+		"created_at" : "2023-06-26 06:11:32",
+		"updated_at" : "2023-06-26 06:11:32"
+	},
+	{
+		"id" : 257,
+		"parent_id" : 13,
+		"name" : "Cyber Security: Cyber Security Risk Management",
+		"created_at" : "2023-06-26 06:11:32",
+		"updated_at" : "2023-06-26 06:11:32"
+	},
+	{
+		"id" : 258,
+		"parent_id" : 14,
+		"name" : "Process Mapping: As-Is Process Documentation",
+		"created_at" : "2023-06-26 06:11:33",
+		"updated_at" : "2023-06-26 06:11:33"
+	},
+	{
+		"id" : 259,
+		"parent_id" : 14,
+		"name" : "Process Mapping: To-Be Process Design",
+		"created_at" : "2023-06-26 06:11:33",
+		"updated_at" : "2023-06-26 06:11:33"
+	},
+	{
+		"id" : 260,
+		"parent_id" : 14,
+		"name" : "Process Optimization: Lean Six Sigma",
+		"created_at" : "2023-06-26 06:11:33",
+		"updated_at" : "2023-06-26 06:11:33"
+	},
+	{
+		"id" : 261,
+		"parent_id" : 14,
+		"name" : "Process Optimization: Total Quality Management",
+		"created_at" : "2023-06-26 06:11:34",
+		"updated_at" : "2023-06-26 06:11:34"
+	},
+	{
+		"id" : 262,
+		"parent_id" : 14,
+		"name" : "Process Optimization: Business Process Reengineering",
+		"created_at" : "2023-06-26 06:11:34",
+		"updated_at" : "2023-06-26 06:11:34"
+	},
+	{
+		"id" : 263,
+		"parent_id" : 15,
+		"name" : "Requirements Gathering: Functional Requirements",
+		"created_at" : "2023-06-26 06:11:34",
+		"updated_at" : "2023-06-26 06:11:34"
+	},
+	{
+		"id" : 264,
+		"parent_id" : 15,
+		"name" : "Requirements Gathering: Non-Functional Requirements",
+		"created_at" : "2023-06-26 06:11:35",
+		"updated_at" : "2023-06-26 06:11:35"
+	},
+	{
+		"id" : 265,
+		"parent_id" : 15,
+		"name" : "Vendor Evaluation: RFP/RFI Process",
+		"created_at" : "2023-06-26 06:11:35",
+		"updated_at" : "2023-06-26 06:11:35"
+	},
+	{
+		"id" : 266,
+		"parent_id" : 15,
+		"name" : "Vendor Evaluation: Scoring & Selection",
+		"created_at" : "2023-06-26 06:11:35",
+		"updated_at" : "2023-06-26 06:11:35"
+	},
+	{
+		"id" : 267,
+		"parent_id" : 15,
+		"name" : "Contract Negotiation: Pricing Negotiation",
+		"created_at" : "2023-06-26 06:11:36",
+		"updated_at" : "2023-06-26 06:11:36"
+	},
+	{
+		"id" : 268,
+		"parent_id" : 15,
+		"name" : "Contract Negotiation: SLA Definition",
+		"created_at" : "2023-06-26 06:11:36",
+		"updated_at" : "2023-06-26 06:11:36"
+	},
+	{
+		"id" : 269,
+		"parent_id" : 16,
+		"name" : "IT Governance Frameworks: COBIT",
+		"created_at" : "2023-06-26 06:11:36",
+		"updated_at" : "2023-06-26 06:11:36"
+	},
+	{
+		"id" : 270,
+		"parent_id" : 16,
+		"name" : "IT Governance Frameworks: ITIL",
+		"created_at" : "2023-06-26 06:11:37",
+		"updated_at" : "2023-06-26 06:11:37"
+	},
+	{
+		"id" : 271,
+		"parent_id" : 16,
+		"name" : "IT Risk Management: Risk Assessment",
+		"created_at" : "2023-06-26 06:11:37",
+		"updated_at" : "2023-06-26 06:11:37"
+	},
+	{
+		"id" : 272,
+		"parent_id" : 16,
+		"name" : "IT Risk Management: Risk Mitigation Planning",
+		"created_at" : "2023-06-26 06:11:38",
+		"updated_at" : "2023-06-26 06:11:38"
+	},
+	{
+		"id" : 273,
+		"parent_id" : 16,
+		"name" : "Compliance: GDPR Compliance",
+		"created_at" : "2023-06-26 06:11:38",
+		"updated_at" : "2023-06-26 06:11:38"
+	},
+	{
+		"id" : 274,
+		"parent_id" : 16,
+		"name" : "Compliance: CCPA Compliance",
+		"created_at" : "2023-06-26 06:11:38",
+		"updated_at" : "2023-06-26 06:11:38"
+	},
+	{
+		"id" : 275,
+		"parent_id" : 16,
+		"name" : "Compliance: ISO 27001 Compliance",
+		"created_at" : "2023-06-26 06:11:39",
+		"updated_at" : "2023-06-26 06:11:39"
+	},
+	{
+		"id" : 276,
+		"parent_id" : 17,
+		"name" : "Data Governance: Data Quality",
+		"created_at" : "2023-06-26 06:11:39",
+		"updated_at" : "2023-06-26 06:11:39"
+	},
+	{
+		"id" : 277,
+		"parent_id" : 17,
+		"name" : "Data Governance: Data Architecture",
+		"created_at" : "2023-06-26 06:11:39",
+		"updated_at" : "2023-06-26 06:11:39"
+	},
+	{
+		"id" : 278,
+		"parent_id" : 17,
+		"name" : "Data Governance: Data Security",
+		"created_at" : "2023-06-26 06:11:39",
+		"updated_at" : "2023-06-26 06:11:39"
+	},
+	{
+		"id" : 279,
+		"parent_id" : 17,
+		"name" : "Data Monetization: Data Product Development",
+		"created_at" : "2023-06-26 06:11:40",
+		"updated_at" : "2023-06-26 06:11:40"
+	},
+	{
+		"id" : 280,
+		"parent_id" : 17,
+		"name" : "Data Monetization: Data Marketplace",
+		"created_at" : "2023-06-26 06:11:40",
+		"updated_at" : "2023-06-26 06:11:40"
+	},
+	{
+		"id" : 281,
+		"parent_id" : 17,
+		"name" : "AI Strategy: AI Use Case Identification",
+		"created_at" : "2023-06-26 06:11:41",
+		"updated_at" : "2023-06-26 06:11:41"
+	},
+	{
+		"id" : 282,
+		"parent_id" : 17,
+		"name" : "AI Strategy: AI Implementation Planning",
+		"created_at" : "2023-06-26 06:11:41",
+		"updated_at" : "2023-06-26 06:11:41"
+	},
+	{
+		"id" : 283,
+		"parent_id" : 17,
+		"name" : "Data Architecture: IoT",
+		"created_at" : "2023-06-26 06:11:41",
+		"updated_at" : "2023-06-26 06:11:41"
+	},
+	{
+		"id" : 284,
+		"parent_id" : 18,
+		"name" : "Innovation Models: Open Innovation",
+		"created_at" : "2023-06-26 06:11:42",
+		"updated_at" : "2023-06-26 06:11:42"
+	},
+	{
+		"id" : 285,
+		"parent_id" : 18,
+		"name" : "Innovation Models: Disruptive Innovation",
+		"created_at" : "2023-06-26 06:11:42",
+		"updated_at" : "2023-06-26 06:11:42"
+	},
+	{
+		"id" : 286,
+		"parent_id" : 18,
+		"name" : "Innovation Models: Sustaining Innovation",
+		"created_at" : "2023-06-26 06:11:42",
+		"updated_at" : "2023-06-26 06:11:42"
+	},
+	{
+		"id" : 287,
+		"parent_id" : 18,
+		"name" : "Innovation Ecosystem: Startup Partnerships",
+		"created_at" : "2023-06-26 06:11:43",
+		"updated_at" : "2023-06-26 06:11:43"
+	},
+	{
+		"id" : 288,
+		"parent_id" : 18,
+		"name" : "Innovation Ecosystem: University Research Partnerships",
+		"created_at" : "2023-06-26 06:11:43",
+		"updated_at" : "2023-06-26 06:11:43"
+	},
+	{
+		"id" : 289,
+		"parent_id" : 18,
+		"name" : "Innovation Ecosystem: Innovation Lab Setup",
+		"created_at" : "2023-06-26 06:11:43",
+		"updated_at" : "2023-06-26 06:11:43"
+	},
+	{
+		"id" : 290,
+		"parent_id" : 19,
+		"name" : "Technology: Energy Management Systems",
+		"created_at" : "2023-06-26 06:11:44",
+		"updated_at" : "2023-06-26 06:11:44"
+	},
+	{
+		"id" : 291,
+		"parent_id" : 19,
+		"name" : "Technology: Smart Building Solutions",
+		"created_at" : "2023-06-26 06:11:44",
+		"updated_at" : "2023-06-26 06:11:44"
+	},
+	{
+		"id" : 292,
+		"parent_id" : 19,
+		"name" : "Technology: Internet of Things (IoT) for Sustainability",
+		"created_at" : "2023-06-26 06:11:44",
+		"updated_at" : "2023-06-26 06:11:44"
+	},
+	{
+		"id" : 293,
+		"parent_id" : 19,
+		"name" : "Technology: Data Analytics for Sustainability",
+		"created_at" : "2023-06-26 06:11:45",
+		"updated_at" : "2023-06-26 06:11:45"
+	},
+	{
+		"id" : 294,
+		"parent_id" : 19,
+		"name" : "Technology: Life Cycle Assessment (LCA) Software",
+		"created_at" : "2023-06-26 06:11:45",
+		"updated_at" : "2023-06-26 06:11:45"
+	},
+	{
+		"id" : 295,
+		"parent_id" : 19,
+		"name" : "Technology: Environmental Monitoring and Reporting Systems",
+		"created_at" : "2023-06-26 06:11:45",
+		"updated_at" : "2023-06-26 06:11:45"
+	},
+	{
+		"id" : 296,
+		"parent_id" : 19,
+		"name" : "Technology: Remote Monitoring and Control Systems",
+		"created_at" : "2023-06-26 06:11:46",
+		"updated_at" : "2023-06-26 06:11:46"
+	},
+	{
+		"id" : 297,
+		"parent_id" : 19,
+		"name" : "Technology: Renewable Energy Systems Integration",
+		"created_at" : "2023-06-26 06:11:46",
+		"updated_at" : "2023-06-26 06:11:46"
+	},
+	{
+		"id" : 298,
+		"parent_id" : 19,
+		"name" : "Technology: Waste Tracking and Management Software",
+		"created_at" : "2023-06-26 06:11:46",
+		"updated_at" : "2023-06-26 06:11:46"
+	},
+	{
+		"id" : 299,
+		"parent_id" : 19,
+		"name" : "Technology: Sustainable Supply Chain Technologies",
+		"created_at" : "2023-06-26 06:11:47",
+		"updated_at" : "2023-06-26 06:11:47"
+	},
+	{
+		"id" : 300,
+		"parent_id" : 19,
+		"name" : "Technology: Building Information Modeling (BIM)",
+		"created_at" : "2023-06-26 06:11:47",
+		"updated_at" : "2023-06-26 06:11:47"
+	},
+	{
+		"id" : 301,
+		"parent_id" : 19,
+		"name" : "Technology: Sustainable Agriculture Technologies",
+		"created_at" : "2023-06-26 06:11:47",
+		"updated_at" : "2023-06-26 06:11:47"
+	},
+	{
+		"id" : 302,
+		"parent_id" : 19,
+		"name" : "Technology: Sustainable Transportation Solutions",
+		"created_at" : "2023-06-26 06:11:48",
+		"updated_at" : "2023-06-26 06:11:48"
+	},
+	{
+		"id" : 303,
+		"parent_id" : 19,
+		"name" : "Technology: Digital Collaboration and Communication Tools",
+		"created_at" : "2023-06-26 06:11:48",
+		"updated_at" : "2023-06-26 06:11:48"
+	},
+	{
+		"id" : 304,
+		"parent_id" : 19,
+		"name" : "Technology: Sustainability Performance Management Systems",
+		"created_at" : "2023-06-26 06:11:48",
+		"updated_at" : "2023-06-26 06:11:48"
+	},
+	{
+		"id" : 305,
+		"parent_id" : 19,
+		"name" : "Strategy: Sustainability Strategy Development",
+		"created_at" : "2023-06-26 06:11:49",
+		"updated_at" : "2023-06-26 06:11:49"
+	},
+	{
+		"id" : 306,
+		"parent_id" : 19,
+		"name" : "Strategy: Environmental Impact Assessment",
+		"created_at" : "2023-06-26 06:11:49",
+		"updated_at" : "2023-06-26 06:11:49"
+	},
+	{
+		"id" : 307,
+		"parent_id" : 19,
+		"name" : "Strategy: Carbon Footprint Analysis",
+		"created_at" : "2023-06-26 06:11:49",
+		"updated_at" : "2023-06-26 06:11:49"
+	},
+	{
+		"id" : 308,
+		"parent_id" : 19,
+		"name" : "Strategy: Energy Efficiency Consulting",
+		"created_at" : "2023-06-26 06:11:50",
+		"updated_at" : "2023-06-26 06:11:50"
+	},
+	{
+		"id" : 309,
+		"parent_id" : 19,
+		"name" : "Strategy: Renewable Energy Integration",
+		"created_at" : "2023-06-26 06:11:50",
+		"updated_at" : "2023-06-26 06:11:50"
+	},
+	{
+		"id" : 310,
+		"parent_id" : 19,
+		"name" : "Strategy: Waste Management and Recycling Strategies",
+		"created_at" : "2023-06-26 06:11:50",
+		"updated_at" : "2023-06-26 06:11:50"
+	},
+	{
+		"id" : 311,
+		"parent_id" : 19,
+		"name" : "Strategy: Water Resource Management",
+		"created_at" : "2023-06-26 06:11:50",
+		"updated_at" : "2023-06-26 06:11:50"
+	},
+	{
+		"id" : 312,
+		"parent_id" : 19,
+		"name" : "Strategy: Sustainable Supply Chain Management",
+		"created_at" : "2023-06-26 06:11:51",
+		"updated_at" : "2023-06-26 06:11:51"
+	},
+	{
+		"id" : 313,
+		"parent_id" : 19,
+		"name" : "Strategy: Sustainable Product Development",
+		"created_at" : "2023-06-26 06:11:51",
+		"updated_at" : "2023-06-26 06:11:51"
+	},
+	{
+		"id" : 314,
+		"parent_id" : 19,
+		"name" : "Strategy: Sustainable Packaging Solutions",
+		"created_at" : "2023-06-26 06:11:52",
+		"updated_at" : "2023-06-26 06:11:52"
+	},
+	{
+		"id" : 315,
+		"parent_id" : 19,
+		"name" : "Strategy: Sustainability Reporting and Certification",
+		"created_at" : "2023-06-26 06:11:52",
+		"updated_at" : "2023-06-26 06:11:52"
+	},
+	{
+		"id" : 316,
+		"parent_id" : 19,
+		"name" : "Strategy: Stakeholder Engagement and Communication",
+		"created_at" : "2023-06-26 06:11:52",
+		"updated_at" : "2023-06-26 06:11:52"
+	},
+	{
+		"id" : 317,
+		"parent_id" : 19,
+		"name" : "Strategy: Employee Sustainability Training",
+		"created_at" : "2023-06-26 06:11:53",
+		"updated_at" : "2023-06-26 06:11:53"
+	},
+	{
+		"id" : 318,
+		"parent_id" : 19,
+		"name" : "Strategy: Sustainable Event Management",
+		"created_at" : "2023-06-26 06:11:53",
+		"updated_at" : "2023-06-26 06:11:53"
+	},
+	{
+		"id" : 319,
+		"parent_id" : 19,
+		"name" : "Strategy: Green Building Certification",
+		"created_at" : "2023-06-26 06:11:53",
+		"updated_at" : "2023-06-26 06:11:53"
+	},
+	{
+		"id" : 320,
+		"parent_id" : 19,
+		"name" : "Strategy: Climate Change Adaptation and Resilience Planning",
+		"created_at" : "2023-06-26 06:11:54",
+		"updated_at" : "2023-06-26 06:11:54"
+	},
+	{
+		"id" : 321,
+		"parent_id" : 19,
+		"name" : "Strategy: Circular Economy Transition",
+		"created_at" : "2023-06-26 06:11:54",
+		"updated_at" : "2023-06-26 06:11:54"
+	},
+	{
+		"id" : 322,
+		"parent_id" : 19,
+		"name" : "Strategy: Sustainable Transportation Solutions",
+		"created_at" : "2023-06-26 06:11:54",
+		"updated_at" : "2023-06-26 06:11:54"
+	},
+	{
+		"id" : 323,
+		"parent_id" : 19,
+		"name" : "Strategy: Social Impact and Corporate Social Responsibility (CSR)",
+		"created_at" : "2023-06-26 06:11:55",
+		"updated_at" : "2023-06-26 06:11:55"
+	},
+	{
+		"id" : 324,
+		"parent_id" : 19,
+		"name" : "Strategy: Green Finance and Investment",
+		"created_at" : "2023-06-26 06:11:55",
+		"updated_at" : "2023-06-26 06:11:55"
+	}
+]

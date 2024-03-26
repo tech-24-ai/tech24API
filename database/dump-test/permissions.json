@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "permission_group_id": 1,
+        "code": "can_access_user_manager",
+        "description": "can access user manager ?"
+    },
+    {
+        "id": 2,
+        "permission_group_id": 2,
+        "code": "can_access_master_manager",
+        "description": "can access master manager ?"
+    },
+    {
+        "id": 3,
+        "permission_group_id": 3,
+        "code": "can_access_vendor_manager",
+        "description": "can access vendor manager ?"
+    },
+    {
+        "id": 4,
+        "permission_group_id": 4,
+        "code": "can_access_visitor_manager",
+        "description": "can access visitor manager ?"
+    },
+    {
+        "id": 5,
+        "permission_group_id": 5,
+        "code": "can_access_contact_manager",
+        "description": "can access contact manager ?"
+    },
+    {
+        "id": 6,
+        "permission_group_id": 6,
+        "code": "can_access_module_manager",
+        "description": "can access module manager ?"
+    },
+    {
+        "id": 7,
+        "permission_group_id": 7,
+        "code": "can_access_question_manager",
+        "description": "can access question manager ?"
+    },
+    {
+        "id": 8,
+        "permission_group_id": 8,
+        "code": "can_access_flow_manager",
+        "description": "can access flow manager ?"
+    },
+    {
+        "id": 9,
+        "permission_group_id": 9,
+        "code": "can_access_report_manager",
+        "description": "can access report manager ?"
+    }
+]

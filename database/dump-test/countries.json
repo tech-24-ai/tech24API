@@ -1,0 +1,1042 @@
+[
+    {
+        "id": 1,
+        "group_id": 2,
+        "sortname": "AF",
+        "name": "Afghanistan",
+        "phonecode": "93",
+        "active": 1
+    },
+    {
+        "id": 2,
+        "group_id": 3,
+        "sortname": "AL",
+        "name": "Albania",
+        "phonecode": "355",
+        "active": 1
+    },
+    {
+        "id": 3,
+        "group_id": 7,
+        "sortname": "DZ",
+        "name": "Algeria",
+        "phonecode": "213",
+        "active": 1
+    },
+    {
+        "id": 10,
+        "group_id": 4,
+        "sortname": "AR",
+        "name": "Argentina",
+        "phonecode": "54",
+        "active": 1
+    },
+    {
+        "id": 11,
+        "group_id": 3,
+        "sortname": "AM",
+        "name": "Armenia",
+        "phonecode": "374",
+        "active": 1
+    },
+    {
+        "id": 13,
+        "group_id": 5,
+        "sortname": "AU",
+        "name": "Australia",
+        "phonecode": "61",
+        "active": 1
+    },
+    {
+        "id": 14,
+        "group_id": 3,
+        "sortname": "AT",
+        "name": "Austria",
+        "phonecode": "43",
+        "active": 1
+    },
+    {
+        "id": 15,
+        "group_id": 2,
+        "sortname": "AZ",
+        "name": "Azerbaijan",
+        "phonecode": "994",
+        "active": 1
+    },
+    {
+        "id": 17,
+        "group_id": 7,
+        "sortname": "BH",
+        "name": "Bahrain",
+        "phonecode": "973",
+        "active": 1
+    },
+    {
+        "id": 18,
+        "group_id": 2,
+        "sortname": "BD",
+        "name": "Bangladesh",
+        "phonecode": "880",
+        "active": 1
+    },
+    {
+        "id": 19,
+        "group_id": 4,
+        "sortname": "BB",
+        "name": "Barbados",
+        "phonecode": "1246",
+        "active": 1
+    },
+    {
+        "id": 20,
+        "group_id": 3,
+        "sortname": "BY",
+        "name": "Belarus",
+        "phonecode": "375",
+        "active": 1
+    },
+    {
+        "id": 21,
+        "group_id": 6,
+        "sortname": "BE",
+        "name": "Belgium",
+        "phonecode": "32",
+        "active": 1
+    },
+    {
+        "id": 26,
+        "group_id": 4,
+        "sortname": "BO",
+        "name": "Bolivia",
+        "phonecode": "591",
+        "active": 1
+    },
+    {
+        "id": 30,
+        "group_id": 4,
+        "sortname": "BR",
+        "name": "Brazil",
+        "phonecode": "55",
+        "active": 1
+    },
+    {
+        "id": 32,
+        "group_id": 2,
+        "sortname": "BN",
+        "name": "Brunei",
+        "phonecode": "673",
+        "active": 1
+    },
+    {
+        "id": 33,
+        "group_id": 3,
+        "sortname": "BG",
+        "name": "Bulgaria",
+        "phonecode": "359",
+        "active": 1
+    },
+    {
+        "id": 37,
+        "group_id": 7,
+        "sortname": "CM",
+        "name": "Cameroon",
+        "phonecode": "237",
+        "active": 1
+    },
+    {
+        "id": 38,
+        "group_id": 8,
+        "sortname": "CA",
+        "name": "Canada",
+        "phonecode": "1",
+        "active": 1
+    },
+    {
+        "id": 43,
+        "group_id": 4,
+        "sortname": "CL",
+        "name": "Chile",
+        "phonecode": "56",
+        "active": 1
+    },
+    {
+        "id": 44,
+        "group_id": 1,
+        "sortname": "CN",
+        "name": "China",
+        "phonecode": "86",
+        "active": 1
+    },
+    {
+        "id": 47,
+        "group_id": 4,
+        "sortname": "CO",
+        "name": "Colombia",
+        "phonecode": "57",
+        "active": 1
+    },
+    {
+        "id": 50,
+        "group_id": 7,
+        "sortname": "CD",
+        "name": "Democratic Republic Of The Congo",
+        "phonecode": "242",
+        "active": 1
+    },
+    {
+        "id": 52,
+        "group_id": 4,
+        "sortname": "CR",
+        "name": "Costa Rica",
+        "phonecode": "506",
+        "active": 1
+    },
+    {
+        "id": 54,
+        "group_id": 3,
+        "sortname": "HR",
+        "name": "Croatia (Hrvatska)",
+        "phonecode": "385",
+        "active": 1
+    },
+    {
+        "id": 55,
+        "group_id": 4,
+        "sortname": "CU",
+        "name": "Cuba",
+        "phonecode": "53",
+        "active": 1
+    },
+    {
+        "id": 56,
+        "group_id": 3,
+        "sortname": "CY",
+        "name": "Cyprus",
+        "phonecode": "357",
+        "active": 1
+    },
+    {
+        "id": 57,
+        "group_id": 3,
+        "sortname": "CZ",
+        "name": "Czech Republic",
+        "phonecode": "420",
+        "active": 1
+    },
+    {
+        "id": 58,
+        "group_id": 6,
+        "sortname": "DK",
+        "name": "Denmark",
+        "phonecode": "45",
+        "active": 1
+    },
+    {
+        "id": 61,
+        "group_id": 4,
+        "sortname": "DO",
+        "name": "Dominican Republic",
+        "phonecode": "1809",
+        "active": 1
+    },
+    {
+        "id": 63,
+        "group_id": 4,
+        "sortname": "EC",
+        "name": "Ecuador",
+        "phonecode": "593",
+        "active": 1
+    },
+    {
+        "id": 64,
+        "group_id": 7,
+        "sortname": "EG",
+        "name": "Egypt",
+        "phonecode": "20",
+        "active": 1
+    },
+    {
+        "id": 65,
+        "group_id": 4,
+        "sortname": "SV",
+        "name": "El Salvador",
+        "phonecode": "503",
+        "active": 1
+    },
+    {
+        "id": 68,
+        "group_id": 3,
+        "sortname": "EE",
+        "name": "Estonia",
+        "phonecode": "372",
+        "active": 1
+    },
+    {
+        "id": 69,
+        "group_id": 7,
+        "sortname": "ET",
+        "name": "Ethiopia",
+        "phonecode": "251",
+        "active": 1
+    },
+    {
+        "id": 74,
+        "group_id": 6,
+        "sortname": "FI",
+        "name": "Finland",
+        "phonecode": "358",
+        "active": 1
+    },
+    {
+        "id": 75,
+        "group_id": 6,
+        "sortname": "FR",
+        "name": "France",
+        "phonecode": "33",
+        "active": 1
+    },
+    {
+        "id": 81,
+        "group_id": 3,
+        "sortname": "GE",
+        "name": "Georgia",
+        "phonecode": "995",
+        "active": 1
+    },
+    {
+        "id": 82,
+        "group_id": 6,
+        "sortname": "DE",
+        "name": "Germany",
+        "phonecode": "49",
+        "active": 1
+    },
+    {
+        "id": 83,
+        "group_id": 7,
+        "sortname": "GH",
+        "name": "Ghana",
+        "phonecode": "233",
+        "active": 1
+    },
+    {
+        "id": 84,
+        "group_id": 3,
+        "sortname": "GI",
+        "name": "Gibraltar",
+        "phonecode": "350",
+        "active": 1
+    },
+    {
+        "id": 85,
+        "group_id": 3,
+        "sortname": "GR",
+        "name": "Greece",
+        "phonecode": "30",
+        "active": 1
+    },
+    {
+        "id": 87,
+        "group_id": 4,
+        "sortname": "GD",
+        "name": "Grenada",
+        "phonecode": "1473",
+        "active": 1
+    },
+    {
+        "id": 90,
+        "group_id": 4,
+        "sortname": "GT",
+        "name": "Guatemala",
+        "phonecode": "502",
+        "active": 1
+    },
+    {
+        "id": 94,
+        "group_id": 4,
+        "sortname": "GY",
+        "name": "Guyana",
+        "phonecode": "592",
+        "active": 1
+    },
+    {
+        "id": 95,
+        "group_id": 4,
+        "sortname": "HT",
+        "name": "Haiti",
+        "phonecode": "509",
+        "active": 1
+    },
+    {
+        "id": 97,
+        "group_id": 4,
+        "sortname": "HN",
+        "name": "Honduras",
+        "phonecode": "504",
+        "active": 1
+    },
+    {
+        "id": 98,
+        "group_id": 5,
+        "sortname": "HK",
+        "name": "Hong Kong S.A.R.",
+        "phonecode": "852",
+        "active": 1
+    },
+    {
+        "id": 99,
+        "group_id": 3,
+        "sortname": "HU",
+        "name": "Hungary",
+        "phonecode": "36",
+        "active": 1
+    },
+    {
+        "id": 100,
+        "group_id": 3,
+        "sortname": "IS",
+        "name": "Iceland",
+        "phonecode": "354",
+        "active": 1
+    },
+    {
+        "id": 101,
+        "group_id": 5,
+        "sortname": "IN",
+        "name": "India",
+        "phonecode": "91",
+        "active": 1
+    },
+    {
+        "id": 102,
+        "group_id": 5,
+        "sortname": "ID",
+        "name": "Indonesia",
+        "phonecode": "62",
+        "active": 1
+    },
+    {
+        "id": 103,
+        "group_id": 7,
+        "sortname": "IR",
+        "name": "Iran",
+        "phonecode": "98",
+        "active": 1
+    },
+    {
+        "id": 104,
+        "group_id": 7,
+        "sortname": "IQ",
+        "name": "Iraq",
+        "phonecode": "964",
+        "active": 1
+    },
+    {
+        "id": 105,
+        "group_id": 6,
+        "sortname": "IE",
+        "name": "Ireland",
+        "phonecode": "353",
+        "active": 1
+    },
+    {
+        "id": 106,
+        "group_id": 7,
+        "sortname": "IL",
+        "name": "Israel",
+        "phonecode": "972",
+        "active": 1
+    },
+    {
+        "id": 107,
+        "group_id": 6,
+        "sortname": "IT",
+        "name": "Italy",
+        "phonecode": "39",
+        "active": 1
+    },
+    {
+        "id": 108,
+        "group_id": 4,
+        "sortname": "JM",
+        "name": "Jamaica",
+        "phonecode": "1876",
+        "active": 1
+    },
+    {
+        "id": 109,
+        "group_id": 5,
+        "sortname": "JP",
+        "name": "Japan",
+        "phonecode": "81",
+        "active": 1
+    },
+    {
+        "id": 111,
+        "group_id": 7,
+        "sortname": "JO",
+        "name": "Jordan",
+        "phonecode": "962",
+        "active": 1
+    },
+    {
+        "id": 112,
+        "group_id": 2,
+        "sortname": "KZ",
+        "name": "Kazakhstan",
+        "phonecode": "7",
+        "active": 1
+    },
+    {
+        "id": 113,
+        "group_id": 7,
+        "sortname": "KE",
+        "name": "Kenya",
+        "phonecode": "254",
+        "active": 1
+    },
+    {
+        "id": 116,
+        "group_id": 5,
+        "sortname": "KR",
+        "name": "Korea South",
+        "phonecode": "82",
+        "active": 1
+    },
+    {
+        "id": 117,
+        "group_id": 7,
+        "sortname": "KW",
+        "name": "Kuwait",
+        "phonecode": "965",
+        "active": 1
+    },
+    {
+        "id": 121,
+        "group_id": 7,
+        "sortname": "LB",
+        "name": "Lebanon",
+        "phonecode": "961",
+        "active": 1
+    },
+    {
+        "id": 124,
+        "group_id": 7,
+        "sortname": "LY",
+        "name": "Libya",
+        "phonecode": "218",
+        "active": 1
+    },
+    {
+        "id": 127,
+        "group_id": 6,
+        "sortname": "LU",
+        "name": "Luxembourg",
+        "phonecode": "352",
+        "active": 1
+    },
+    {
+        "id": 128,
+        "group_id": 5,
+        "sortname": "MO",
+        "name": "Macau S.A.R.",
+        "phonecode": "853",
+        "active": 1
+    },
+    {
+        "id": 132,
+        "group_id": 2,
+        "sortname": "MY",
+        "name": "Malaysia",
+        "phonecode": "60",
+        "active": 1
+    },
+    {
+        "id": 133,
+        "group_id": 2,
+        "sortname": "MV",
+        "name": "Maldives",
+        "phonecode": "960",
+        "active": 1
+    },
+    {
+        "id": 135,
+        "group_id": 6,
+        "sortname": "MT",
+        "name": "Malta",
+        "phonecode": "356",
+        "active": 1
+    },
+    {
+        "id": 140,
+        "group_id": 2,
+        "sortname": "MU",
+        "name": "Mauritius",
+        "phonecode": "230",
+        "active": 1
+    },
+    {
+        "id": 142,
+        "group_id": 4,
+        "sortname": "MX",
+        "name": "Mexico",
+        "phonecode": "52",
+        "active": 1
+    },
+    {
+        "id": 148,
+        "group_id": 7,
+        "sortname": "MA",
+        "name": "Morocco",
+        "phonecode": "212",
+        "active": 1
+    },
+    {
+        "id": 149,
+        "group_id": 7,
+        "sortname": "MZ",
+        "name": "Mozambique",
+        "phonecode": "258",
+        "active": 1
+    },
+    {
+        "id": 150,
+        "group_id": 2,
+        "sortname": "MM",
+        "name": "Myanmar",
+        "phonecode": "95",
+        "active": 1
+    },
+    {
+        "id": 151,
+        "group_id": 7,
+        "sortname": "NA",
+        "name": "Namibia",
+        "phonecode": "264",
+        "active": 1
+    },
+    {
+        "id": 153,
+        "group_id": 2,
+        "sortname": "NP",
+        "name": "Nepal",
+        "phonecode": "977",
+        "active": 1
+    },
+    {
+        "id": 154,
+        "group_id": null,
+        "sortname": "AN",
+        "name": "Netherlands Antilles",
+        "phonecode": "599",
+        "active": 1
+    },
+    {
+        "id": 157,
+        "group_id": 5,
+        "sortname": "NZ",
+        "name": "New Zealand",
+        "phonecode": "64",
+        "active": 1
+    },
+    {
+        "id": 158,
+        "group_id": 4,
+        "sortname": "NI",
+        "name": "Nicaragua",
+        "phonecode": "505",
+        "active": 1
+    },
+    {
+        "id": 159,
+        "group_id": 7,
+        "sortname": "NE",
+        "name": "Niger",
+        "phonecode": "227",
+        "active": 1
+    },
+    {
+        "id": 160,
+        "group_id": 7,
+        "sortname": "NG",
+        "name": "Nigeria",
+        "phonecode": "234",
+        "active": 1
+    },
+    {
+        "id": 164,
+        "group_id": 6,
+        "sortname": "NO",
+        "name": "Norway",
+        "phonecode": "47",
+        "active": 1
+    },
+    {
+        "id": 165,
+        "group_id": 7,
+        "sortname": "OM",
+        "name": "Oman",
+        "phonecode": "968",
+        "active": 1
+    },
+    {
+        "id": 166,
+        "group_id": 2,
+        "sortname": "PK",
+        "name": "Pakistan",
+        "phonecode": "92",
+        "active": 1
+    },
+    {
+        "id": 168,
+        "group_id": 7,
+        "sortname": "PS",
+        "name": "Palestinian Territory Occupied",
+        "phonecode": "970",
+        "active": 1
+    },
+    {
+        "id": 169,
+        "group_id": 4,
+        "sortname": "PA",
+        "name": "Panama",
+        "phonecode": "507",
+        "active": 1
+    },
+    {
+        "id": 171,
+        "group_id": 4,
+        "sortname": "PY",
+        "name": "Paraguay",
+        "phonecode": "595",
+        "active": 1
+    },
+    {
+        "id": 172,
+        "group_id": 4,
+        "sortname": "PE",
+        "name": "Peru",
+        "phonecode": "51",
+        "active": 1
+    },
+    {
+        "id": 173,
+        "group_id": 2,
+        "sortname": "PH",
+        "name": "Philippines",
+        "phonecode": "63",
+        "active": 1
+    },
+    {
+        "id": 175,
+        "group_id": 3,
+        "sortname": "PL",
+        "name": "Poland",
+        "phonecode": "48",
+        "active": 1
+    },
+    {
+        "id": 176,
+        "group_id": 3,
+        "sortname": "PT",
+        "name": "Portugal",
+        "phonecode": "351",
+        "active": 1
+    },
+    {
+        "id": 177,
+        "group_id": 4,
+        "sortname": "PR",
+        "name": "Puerto Rico",
+        "phonecode": "1787",
+        "active": 1
+    },
+    {
+        "id": 178,
+        "group_id": 7,
+        "sortname": "QA",
+        "name": "Qatar",
+        "phonecode": "974",
+        "active": 1
+    },
+    {
+        "id": 180,
+        "group_id": 3,
+        "sortname": "RO",
+        "name": "Romania",
+        "phonecode": "40",
+        "active": 1
+    },
+    {
+        "id": 181,
+        "group_id": 3,
+        "sortname": "RU",
+        "name": "Russia",
+        "phonecode": "70",
+        "active": 1
+    },
+    {
+        "id": 182,
+        "group_id": 7,
+        "sortname": "RW",
+        "name": "Rwanda",
+        "phonecode": "250",
+        "active": 1
+    },
+    {
+        "id": 191,
+        "group_id": 7,
+        "sortname": "SA",
+        "name": "Saudi Arabia",
+        "phonecode": "966",
+        "active": 1
+    },
+    {
+        "id": 192,
+        "group_id": 7,
+        "sortname": "SN",
+        "name": "Senegal",
+        "phonecode": "221",
+        "active": 1
+    },
+    {
+        "id": 193,
+        "group_id": 3,
+        "sortname": "RS",
+        "name": "Serbia",
+        "phonecode": "381",
+        "active": 1
+    },
+    {
+        "id": 196,
+        "group_id": 5,
+        "sortname": "SG",
+        "name": "Singapore",
+        "phonecode": "65",
+        "active": 1
+    },
+    {
+        "id": 197,
+        "group_id": 3,
+        "sortname": "SK",
+        "name": "Slovakia",
+        "phonecode": "421",
+        "active": 1
+    },
+    {
+        "id": 198,
+        "group_id": 3,
+        "sortname": "SI",
+        "name": "Slovenia",
+        "phonecode": "386",
+        "active": 1
+    },
+    {
+        "id": 202,
+        "group_id": 7,
+        "sortname": "ZA",
+        "name": "South Africa",
+        "phonecode": "27",
+        "active": 1
+    },
+    {
+        "id": 205,
+        "group_id": 6,
+        "sortname": "ES",
+        "name": "Spain",
+        "phonecode": "34",
+        "active": 1
+    },
+    {
+        "id": 206,
+        "group_id": 2,
+        "sortname": "LK",
+        "name": "Sri Lanka",
+        "phonecode": "94",
+        "active": 1
+    },
+    {
+        "id": 207,
+        "group_id": 7,
+        "sortname": "SD",
+        "name": "Sudan",
+        "phonecode": "249",
+        "active": 1
+    },
+    {
+        "id": 211,
+        "group_id": 6,
+        "sortname": "SE",
+        "name": "Sweden",
+        "phonecode": "46",
+        "active": 1
+    },
+    {
+        "id": 212,
+        "group_id": 6,
+        "sortname": "CH",
+        "name": "Switzerland",
+        "phonecode": "41",
+        "active": 1
+    },
+    {
+        "id": 213,
+        "group_id": 7,
+        "sortname": "SY",
+        "name": "Syria",
+        "phonecode": "963",
+        "active": 1
+    },
+    {
+        "id": 214,
+        "group_id": 5,
+        "sortname": "TW",
+        "name": "Taiwan",
+        "phonecode": "886",
+        "active": 1
+    },
+    {
+        "id": 216,
+        "group_id": 7,
+        "sortname": "TZ",
+        "name": "Tanzania",
+        "phonecode": "255",
+        "active": 1
+    },
+    {
+        "id": 217,
+        "group_id": 2,
+        "sortname": "TH",
+        "name": "Thailand",
+        "phonecode": "66",
+        "active": 1
+    },
+    {
+        "id": 221,
+        "group_id": 4,
+        "sortname": "TT",
+        "name": "Trinidad And Tobago",
+        "phonecode": "1868",
+        "active": 1
+    },
+    {
+        "id": 222,
+        "group_id": 7,
+        "sortname": "TN",
+        "name": "Tunisia",
+        "phonecode": "216",
+        "active": 1
+    },
+    {
+        "id": 223,
+        "group_id": 7,
+        "sortname": "TR",
+        "name": "Turkey",
+        "phonecode": "90",
+        "active": 1
+    },
+    {
+        "id": 227,
+        "group_id": 7,
+        "sortname": "UG",
+        "name": "Uganda",
+        "phonecode": "256",
+        "active": 1
+    },
+    {
+        "id": 228,
+        "group_id": 3,
+        "sortname": "UA",
+        "name": "Ukraine",
+        "phonecode": "380",
+        "active": 1
+    },
+    {
+        "id": 229,
+        "group_id": 7,
+        "sortname": "AE",
+        "name": "United Arab Emirates",
+        "phonecode": "971",
+        "active": 1
+    },
+    {
+        "id": 230,
+        "group_id": 6,
+        "sortname": "GB",
+        "name": "United Kingdom",
+        "phonecode": "44",
+        "active": 1
+    },
+    {
+        "id": 231,
+        "group_id": 8,
+        "sortname": "US",
+        "name": "United States",
+        "phonecode": "1",
+        "active": 1
+    },
+    {
+        "id": 233,
+        "group_id": 4,
+        "sortname": "UY",
+        "name": "Uruguay",
+        "phonecode": "598",
+        "active": 1
+    },
+    {
+        "id": 234,
+        "group_id": 2,
+        "sortname": "UZ",
+        "name": "Uzbekistan",
+        "phonecode": "998",
+        "active": 1
+    },
+    {
+        "id": 236,
+        "group_id": 6,
+        "sortname": "VA",
+        "name": "Vatican City State (Holy See)",
+        "phonecode": "39",
+        "active": 1
+    },
+    {
+        "id": 237,
+        "group_id": 4,
+        "sortname": "VE",
+        "name": "Venezuela",
+        "phonecode": "58",
+        "active": 1
+    },
+    {
+        "id": 238,
+        "group_id": 2,
+        "sortname": "VN",
+        "name": "Vietnam",
+        "phonecode": "84",
+        "active": 1
+    },
+    {
+        "id": 243,
+        "group_id": 7,
+        "sortname": "YE",
+        "name": "Yemen",
+        "phonecode": "967",
+        "active": 1
+    },
+    {
+        "id": 244,
+        "group_id": 3,
+        "sortname": "YU",
+        "name": "Yugoslavia",
+        "phonecode": "38",
+        "active": 1
+    },
+    {
+        "id": 245,
+        "group_id": 7,
+        "sortname": "ZM",
+        "name": "Zambia",
+        "phonecode": "260",
+        "active": 1
+    }
+]

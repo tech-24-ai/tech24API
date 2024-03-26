@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Vendor Insights",
+    "description": "Vendor Insights",
+    "order_no": 4
+  },
+  {
+    "name": "Buyer’ Insight",
+    "description": "Buyer’ Insight",
+    "order_no": 1
+  },
+  {
+    "name": "Lead generation",
+    "description": "Lead generation",
+    "order_no": 2
+  },
+  {
+    "name": "Pricing Insights",
+    "description": "Pricing Insights",
+    "order_no": 3
+  },
+  {
+    "name": "Channel Insights",
+    "description": "Channel Insights",
+    "order_no": 6
+  },
+  {
+    "name": "Competitive Landscape",
+    "description": "Competitive Landscape",
+    "order_no": 5
+  }
+]

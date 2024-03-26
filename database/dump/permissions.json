@@ -1,0 +1,2786 @@
+[
+	{
+		"id" : 1,
+		"permission_group_id" : 1,
+		"code" : "view_user_manager",
+		"description" : "User Manager Access",
+		"created_at" : "2021-06-24 13:28:10",
+		"updated_at" : "2022-11-15 13:44:15"
+	},
+	{
+		"id" : 2,
+		"permission_group_id" : 2,
+		"code" : "view_master_manager",
+		"description" : "Master Manager Access",
+		"created_at" : "2021-06-24 13:28:10",
+		"updated_at" : "2022-01-11 12:20:00"
+	},
+	{
+		"id" : 3,
+		"permission_group_id" : 3,
+		"code" : "view_vendor_manager",
+		"description" : "Vendor Manager Access",
+		"created_at" : "2021-06-24 13:28:10",
+		"updated_at" : "2021-06-24 13:28:10"
+	},
+	{
+		"id" : 4,
+		"permission_group_id" : 4,
+		"code" : "view_visitor_manager",
+		"description" : "Visitor Manager Access",
+		"created_at" : "2021-06-24 13:28:11",
+		"updated_at" : "2021-06-24 13:28:11"
+	},
+	{
+		"id" : 5,
+		"permission_group_id" : 5,
+		"code" : "view_contact_manager",
+		"description" : "Contact Manager Access",
+		"created_at" : "2021-06-24 13:28:11",
+		"updated_at" : "2021-06-24 13:28:11"
+	},
+	{
+		"id" : 6,
+		"permission_group_id" : 6,
+		"code" : "view_module_manager",
+		"description" : "Module Manager Access",
+		"created_at" : "2021-06-24 13:28:11",
+		"updated_at" : "2021-06-24 13:28:11"
+	},
+	{
+		"id" : 7,
+		"permission_group_id" : 7,
+		"code" : "view_question_manager",
+		"description" : "Question Manager Access",
+		"created_at" : "2021-06-24 13:28:11",
+		"updated_at" : "2021-06-24 13:28:11"
+	},
+	{
+		"id" : 8,
+		"permission_group_id" : 8,
+		"code" : "view_flow_manager",
+		"description" : "Flow Manager Access",
+		"created_at" : "2021-06-24 13:28:12",
+		"updated_at" : "2021-06-24 13:28:12"
+	},
+	{
+		"id" : 9,
+		"permission_group_id" : 9,
+		"code" : "view_visitor_report_manager",
+		"description" : "Visitor Report Manager Access",
+		"created_at" : "2021-06-24 13:28:12",
+		"updated_at" : "2021-06-24 13:28:12"
+	},
+	{
+		"id" : 10,
+		"permission_group_id" : 1,
+		"code" : "view_permission_group",
+		"description" : "View Permission Group",
+		"created_at" : "2021-06-24 13:28:12",
+		"updated_at" : "2021-06-24 13:28:12"
+	},
+	{
+		"id" : 11,
+		"permission_group_id" : 1,
+		"code" : "edit_permission_group",
+		"description" : "Edit Permission Group",
+		"created_at" : "2021-06-24 13:28:12",
+		"updated_at" : "2021-06-24 13:28:12"
+	},
+	{
+		"id" : 12,
+		"permission_group_id" : 1,
+		"code" : "view_permission",
+		"description" : "View Permission",
+		"created_at" : "2021-06-24 13:28:13",
+		"updated_at" : "2021-06-24 13:28:13"
+	},
+	{
+		"id" : 13,
+		"permission_group_id" : 1,
+		"code" : "edit_permission",
+		"description" : "Edit Permission",
+		"created_at" : "2021-06-24 13:28:13",
+		"updated_at" : "2021-06-24 13:28:13"
+	},
+	{
+		"id" : 14,
+		"permission_group_id" : 1,
+		"code" : "view_roles",
+		"description" : "View Roles",
+		"created_at" : "2021-06-24 13:28:13",
+		"updated_at" : "2021-06-24 13:28:13"
+	},
+	{
+		"id" : 15,
+		"permission_group_id" : 1,
+		"code" : "add_roles",
+		"description" : "Add Roles",
+		"created_at" : "2021-06-24 13:28:14",
+		"updated_at" : "2021-06-24 13:28:14"
+	},
+	{
+		"id" : 16,
+		"permission_group_id" : 1,
+		"code" : "edit_roles",
+		"description" : "Edit Roles",
+		"created_at" : "2021-06-24 13:28:14",
+		"updated_at" : "2021-06-24 13:28:14"
+	},
+	{
+		"id" : 17,
+		"permission_group_id" : 1,
+		"code" : "delete_roles",
+		"description" : "Delete Roles",
+		"created_at" : "2021-06-24 13:28:14",
+		"updated_at" : "2021-06-24 13:28:14"
+	},
+	{
+		"id" : 18,
+		"permission_group_id" : 1,
+		"code" : "view_users",
+		"description" : "View Users",
+		"created_at" : "2021-06-24 13:28:14",
+		"updated_at" : "2021-06-24 13:28:14"
+	},
+	{
+		"id" : 19,
+		"permission_group_id" : 1,
+		"code" : "edit_users",
+		"description" : "Edit Users",
+		"created_at" : "2021-06-24 13:28:15",
+		"updated_at" : "2021-06-24 13:28:15"
+	},
+	{
+		"id" : 20,
+		"permission_group_id" : 1,
+		"code" : "delete_users",
+		"description" : "Delete Users",
+		"created_at" : "2021-06-24 13:28:15",
+		"updated_at" : "2021-06-24 13:28:15"
+	},
+	{
+		"id" : 21,
+		"permission_group_id" : 1,
+		"code" : "update_user_password",
+		"description" : "Update User Password",
+		"created_at" : "2021-06-24 13:28:15",
+		"updated_at" : "2021-06-24 13:28:15"
+	},
+	{
+		"id" : 22,
+		"permission_group_id" : 1,
+		"code" : "add_users",
+		"description" : "Add Users",
+		"created_at" : "2021-06-24 13:28:15",
+		"updated_at" : "2021-06-24 13:28:15"
+	},
+	{
+		"id" : 23,
+		"permission_group_id" : 2,
+		"code" : "view_country_groups",
+		"description" : "View Country Groups",
+		"created_at" : "2021-06-24 13:28:16",
+		"updated_at" : "2021-06-24 13:28:16"
+	},
+	{
+		"id" : 24,
+		"permission_group_id" : 2,
+		"code" : "edit_country_groups",
+		"description" : "Edit Country Groups",
+		"created_at" : "2021-06-24 13:28:16",
+		"updated_at" : "2021-06-24 13:28:16"
+	},
+	{
+		"id" : 25,
+		"permission_group_id" : 2,
+		"code" : "delete_country_groups",
+		"description" : "Delete Country Groups",
+		"created_at" : "2021-06-24 13:28:16",
+		"updated_at" : "2021-06-24 13:28:16"
+	},
+	{
+		"id" : 26,
+		"permission_group_id" : 2,
+		"code" : "add_country_groups",
+		"description" : "Add Country Groups",
+		"created_at" : "2021-06-24 13:28:16",
+		"updated_at" : "2021-06-24 13:28:16"
+	},
+	{
+		"id" : 27,
+		"permission_group_id" : 2,
+		"code" : "view_countries",
+		"description" : "View Countries",
+		"created_at" : "2021-06-24 13:28:17",
+		"updated_at" : "2021-06-24 13:28:17"
+	},
+	{
+		"id" : 28,
+		"permission_group_id" : 2,
+		"code" : "add_countries",
+		"description" : "Add Countries",
+		"created_at" : "2021-06-24 13:28:17",
+		"updated_at" : "2021-06-24 13:28:17"
+	},
+	{
+		"id" : 29,
+		"permission_group_id" : 2,
+		"code" : "edit_countries",
+		"description" : "Edit Countries",
+		"created_at" : "2021-06-24 13:28:17",
+		"updated_at" : "2021-06-24 13:28:17"
+	},
+	{
+		"id" : 30,
+		"permission_group_id" : 2,
+		"code" : "delete_countries",
+		"description" : "Delete Countries",
+		"created_at" : "2021-06-24 13:28:17",
+		"updated_at" : "2021-06-24 13:28:17"
+	},
+	{
+		"id" : 31,
+		"permission_group_id" : 2,
+		"code" : "view_industries",
+		"description" : "View Industries",
+		"created_at" : "2021-06-24 13:28:18",
+		"updated_at" : "2021-06-24 13:28:18"
+	},
+	{
+		"id" : 32,
+		"permission_group_id" : 2,
+		"code" : "add_industries",
+		"description" : "Add Industries",
+		"created_at" : "2021-06-24 13:28:18",
+		"updated_at" : "2021-06-24 13:28:18"
+	},
+	{
+		"id" : 33,
+		"permission_group_id" : 2,
+		"code" : "edit_industries",
+		"description" : "Edit Industries",
+		"created_at" : "2021-06-24 13:28:18",
+		"updated_at" : "2021-06-24 13:28:18"
+	},
+	{
+		"id" : 34,
+		"permission_group_id" : 2,
+		"code" : "delete_industries",
+		"description" : "Delete Industries",
+		"created_at" : "2021-06-24 13:28:18",
+		"updated_at" : "2021-06-24 13:28:18"
+	},
+	{
+		"id" : 35,
+		"permission_group_id" : 2,
+		"code" : "view_pages",
+		"description" : "View Pages",
+		"created_at" : "2021-06-24 13:28:19",
+		"updated_at" : "2021-06-24 13:28:19"
+	},
+	{
+		"id" : 36,
+		"permission_group_id" : 2,
+		"code" : "edit_pages",
+		"description" : "Edit Pages",
+		"created_at" : "2021-06-24 13:28:19",
+		"updated_at" : "2021-06-24 13:28:19"
+	},
+	{
+		"id" : 37,
+		"permission_group_id" : 3,
+		"code" : "view_vendors",
+		"description" : "View Vendor",
+		"created_at" : "2021-06-24 13:28:19",
+		"updated_at" : "2021-06-24 13:28:19"
+	},
+	{
+		"id" : 38,
+		"permission_group_id" : 3,
+		"code" : "edit_vendors",
+		"description" : "Edit Vendor",
+		"created_at" : "2021-06-24 13:28:19",
+		"updated_at" : "2021-06-24 13:28:19"
+	},
+	{
+		"id" : 39,
+		"permission_group_id" : 3,
+		"code" : "add_vendors",
+		"description" : "Add Vendor",
+		"created_at" : "2021-06-24 13:28:20",
+		"updated_at" : "2021-06-24 13:28:20"
+	},
+	{
+		"id" : 40,
+		"permission_group_id" : 3,
+		"code" : "delete_vendors",
+		"description" : "Delete Vendor",
+		"created_at" : "2021-06-24 13:28:20",
+		"updated_at" : "2021-06-24 13:28:20"
+	},
+	{
+		"id" : 41,
+		"permission_group_id" : 3,
+		"code" : "import_vendor_template",
+		"description" : "Import Vendor Template",
+		"created_at" : "2021-06-24 13:28:20",
+		"updated_at" : "2021-06-24 13:28:20"
+	},
+	{
+		"id" : 42,
+		"permission_group_id" : 3,
+		"code" : "export_vendor_template",
+		"description" : "Export Vendor Template",
+		"created_at" : "2021-06-24 13:28:20",
+		"updated_at" : "2021-06-24 13:28:20"
+	},
+	{
+		"id" : 43,
+		"permission_group_id" : 4,
+		"code" : "view_visitor_groups",
+		"description" : "View Visitor Group",
+		"created_at" : "2021-06-24 13:28:21",
+		"updated_at" : "2021-06-24 13:28:21"
+	},
+	{
+		"id" : 44,
+		"permission_group_id" : 4,
+		"code" : "add_visitor_groups",
+		"description" : "Add Visitor Group",
+		"created_at" : "2021-06-24 13:28:21",
+		"updated_at" : "2021-06-24 13:28:21"
+	},
+	{
+		"id" : 45,
+		"permission_group_id" : 4,
+		"code" : "edit_visitor_groups",
+		"description" : "Edit Visitor Group",
+		"created_at" : "2021-06-24 13:28:21",
+		"updated_at" : "2021-06-24 13:28:21"
+	},
+	{
+		"id" : 46,
+		"permission_group_id" : 4,
+		"code" : "delete_visitor_groups",
+		"description" : "Delete Visitor Group",
+		"created_at" : "2021-06-24 13:28:21",
+		"updated_at" : "2021-06-24 13:28:21"
+	},
+	{
+		"id" : 47,
+		"permission_group_id" : 4,
+		"code" : "view_visitors",
+		"description" : "View Visitors",
+		"created_at" : "2021-06-24 13:28:22",
+		"updated_at" : "2022-03-21 06:20:40"
+	},
+	{
+		"id" : 48,
+		"permission_group_id" : 4,
+		"code" : "add_visitors",
+		"description" : "Add Visitor",
+		"created_at" : "2021-06-24 13:28:22",
+		"updated_at" : "2021-06-24 13:28:22"
+	},
+	{
+		"id" : 49,
+		"permission_group_id" : 4,
+		"code" : "edit_visitors",
+		"description" : "Edit Visitor",
+		"created_at" : "2021-06-24 13:28:22",
+		"updated_at" : "2021-06-24 13:28:22"
+	},
+	{
+		"id" : 50,
+		"permission_group_id" : 4,
+		"code" : "delete_visitors",
+		"description" : "Delete Visitor",
+		"created_at" : "2021-06-24 13:28:22",
+		"updated_at" : "2021-06-24 13:28:22"
+	},
+	{
+		"id" : 51,
+		"permission_group_id" : 4,
+		"code" : "update_visitor_password",
+		"description" : "Update Visitor Password",
+		"created_at" : "2021-06-24 13:28:23",
+		"updated_at" : "2021-06-24 13:28:23"
+	},
+	{
+		"id" : 52,
+		"permission_group_id" : 5,
+		"code" : "view_contact_types",
+		"description" : "View Contact Types",
+		"created_at" : "2021-06-24 13:28:23",
+		"updated_at" : "2021-06-24 13:28:23"
+	},
+	{
+		"id" : 53,
+		"permission_group_id" : 5,
+		"code" : "edit_contact_types",
+		"description" : "Edit Contact Types",
+		"created_at" : "2021-06-24 13:28:23",
+		"updated_at" : "2021-06-24 13:28:23"
+	},
+	{
+		"id" : 54,
+		"permission_group_id" : 5,
+		"code" : "edit_contact_details",
+		"description" : "Edit Contact Details",
+		"created_at" : "2021-06-24 13:28:23",
+		"updated_at" : "2021-06-24 13:28:23"
+	},
+	{
+		"id" : 55,
+		"permission_group_id" : 5,
+		"code" : "view_contact_details",
+		"description" : "View Contact Details",
+		"created_at" : "2021-06-24 13:28:24",
+		"updated_at" : "2021-06-24 13:28:24"
+	},
+	{
+		"id" : 56,
+		"permission_group_id" : 5,
+		"code" : "delete_contact_details",
+		"description" : "Delete Contact Details",
+		"created_at" : "2021-06-24 13:28:24",
+		"updated_at" : "2021-06-24 13:28:24"
+	},
+	{
+		"id" : 57,
+		"permission_group_id" : 6,
+		"code" : "view_module_categories",
+		"description" : "View Module Categories",
+		"created_at" : "2021-06-24 13:28:24",
+		"updated_at" : "2021-06-24 13:28:24"
+	},
+	{
+		"id" : 58,
+		"permission_group_id" : 6,
+		"code" : "edit_module_categories",
+		"description" : "Edit Module Categories",
+		"created_at" : "2021-06-24 13:28:24",
+		"updated_at" : "2021-06-24 13:28:24"
+	},
+	{
+		"id" : 59,
+		"permission_group_id" : 6,
+		"code" : "view_document_types",
+		"description" : "View Document Types",
+		"created_at" : "2021-06-24 13:28:25",
+		"updated_at" : "2021-06-24 13:28:25"
+	},
+	{
+		"id" : 60,
+		"permission_group_id" : 6,
+		"code" : "edit_document_types",
+		"description" : "Edit Document Types",
+		"created_at" : "2021-06-24 13:28:25",
+		"updated_at" : "2021-06-24 13:28:25"
+	},
+	{
+		"id" : 61,
+		"permission_group_id" : 6,
+		"code" : "add_document_types",
+		"description" : "Add Document Types",
+		"created_at" : "2021-06-24 13:28:25",
+		"updated_at" : "2021-06-24 13:28:25"
+	},
+	{
+		"id" : 62,
+		"permission_group_id" : 6,
+		"code" : "delete_document_types",
+		"description" : "Delete Document Types",
+		"created_at" : "2021-06-24 13:28:25",
+		"updated_at" : "2021-06-24 13:28:25"
+	},
+	{
+		"id" : 63,
+		"permission_group_id" : 6,
+		"code" : "view_documents",
+		"description" : "View Documents",
+		"created_at" : "2021-06-24 13:28:26",
+		"updated_at" : "2021-06-24 13:28:26"
+	},
+	{
+		"id" : 64,
+		"permission_group_id" : 6,
+		"code" : "add_documents",
+		"description" : "Add Documents",
+		"created_at" : "2021-06-24 13:28:26",
+		"updated_at" : "2021-06-24 13:28:26"
+	},
+	{
+		"id" : 65,
+		"permission_group_id" : 6,
+		"code" : "edit_documents",
+		"description" : "Edit Documents",
+		"created_at" : "2021-06-24 13:28:26",
+		"updated_at" : "2021-06-24 13:28:26"
+	},
+	{
+		"id" : 66,
+		"permission_group_id" : 6,
+		"code" : "delete_documents",
+		"description" : "Delete Documents",
+		"created_at" : "2021-06-24 13:28:26",
+		"updated_at" : "2021-06-24 13:28:26"
+	},
+	{
+		"id" : 67,
+		"permission_group_id" : 6,
+		"code" : "view_modules",
+		"description" : "View Modules",
+		"created_at" : "2021-06-24 13:28:27",
+		"updated_at" : "2021-06-24 13:28:27"
+	},
+	{
+		"id" : 68,
+		"permission_group_id" : 6,
+		"code" : "add_modules",
+		"description" : "Add Modules",
+		"created_at" : "2021-06-24 13:28:27",
+		"updated_at" : "2021-06-24 13:28:27"
+	},
+	{
+		"id" : 69,
+		"permission_group_id" : 6,
+		"code" : "edit_modules",
+		"description" : "Edit Modules",
+		"created_at" : "2021-06-24 13:28:27",
+		"updated_at" : "2021-06-24 13:28:27"
+	},
+	{
+		"id" : 70,
+		"permission_group_id" : 6,
+		"code" : "delete_modules",
+		"description" : "Delete Modules",
+		"created_at" : "2021-06-24 13:28:27",
+		"updated_at" : "2021-06-24 13:28:27"
+	},
+	{
+		"id" : 71,
+		"permission_group_id" : 6,
+		"code" : "view_products",
+		"description" : "View Products",
+		"created_at" : "2021-06-24 13:28:28",
+		"updated_at" : "2021-06-24 13:28:28"
+	},
+	{
+		"id" : 72,
+		"permission_group_id" : 6,
+		"code" : "add_products",
+		"description" : "Add Products",
+		"created_at" : "2021-06-24 13:28:28",
+		"updated_at" : "2021-06-24 13:28:28"
+	},
+	{
+		"id" : 73,
+		"permission_group_id" : 6,
+		"code" : "edit_products",
+		"description" : "Edit Products",
+		"created_at" : "2021-06-24 13:28:28",
+		"updated_at" : "2021-06-24 13:28:28"
+	},
+	{
+		"id" : 74,
+		"permission_group_id" : 6,
+		"code" : "delete_products",
+		"description" : "Delete Products",
+		"created_at" : "2021-06-24 13:28:29",
+		"updated_at" : "2021-06-24 13:28:29"
+	},
+	{
+		"id" : 75,
+		"permission_group_id" : 6,
+		"code" : "import_export_products",
+		"description" : "Import/Export Products",
+		"created_at" : "2021-06-24 13:28:29",
+		"updated_at" : "2021-06-24 13:28:29"
+	},
+	{
+		"id" : 76,
+		"permission_group_id" : 7,
+		"code" : "view_question_steps",
+		"description" : "View Question Steps",
+		"created_at" : "2021-06-24 13:28:29",
+		"updated_at" : "2021-06-24 13:28:29"
+	},
+	{
+		"id" : 77,
+		"permission_group_id" : 7,
+		"code" : "edit_question_steps",
+		"description" : "Edit Question Steps",
+		"created_at" : "2021-06-24 13:28:29",
+		"updated_at" : "2021-06-24 13:28:29"
+	},
+	{
+		"id" : 78,
+		"permission_group_id" : 7,
+		"code" : "add_question_steps",
+		"description" : "Add Question Steps",
+		"created_at" : "2021-06-24 13:28:30",
+		"updated_at" : "2021-06-24 13:28:30"
+	},
+	{
+		"id" : 79,
+		"permission_group_id" : 7,
+		"code" : "delete_question_steps",
+		"description" : "Delete Question Steps",
+		"created_at" : "2021-06-24 13:28:30",
+		"updated_at" : "2021-06-24 13:28:30"
+	},
+	{
+		"id" : 80,
+		"permission_group_id" : 7,
+		"code" : "view_options",
+		"description" : "View Options",
+		"created_at" : "2021-06-24 13:28:30",
+		"updated_at" : "2021-06-24 13:28:30"
+	},
+	{
+		"id" : 81,
+		"permission_group_id" : 7,
+		"code" : "add_options",
+		"description" : "Add Options",
+		"created_at" : "2021-06-24 13:28:30",
+		"updated_at" : "2021-06-24 13:28:30"
+	},
+	{
+		"id" : 82,
+		"permission_group_id" : 7,
+		"code" : "edit_options",
+		"description" : "Edit Options",
+		"created_at" : "2021-06-24 13:28:31",
+		"updated_at" : "2021-06-24 13:28:31"
+	},
+	{
+		"id" : 83,
+		"permission_group_id" : 7,
+		"code" : "delete_options",
+		"description" : "Delete Options",
+		"created_at" : "2021-06-24 13:28:31",
+		"updated_at" : "2021-06-24 13:28:31"
+	},
+	{
+		"id" : 84,
+		"permission_group_id" : 7,
+		"code" : "view_sub_options",
+		"description" : "View Sub Options",
+		"created_at" : "2021-06-24 13:28:31",
+		"updated_at" : "2021-06-24 13:28:31"
+	},
+	{
+		"id" : 85,
+		"permission_group_id" : 7,
+		"code" : "add_sub_options",
+		"description" : "Add Sub Options",
+		"created_at" : "2021-06-24 13:28:32",
+		"updated_at" : "2021-06-24 13:28:32"
+	},
+	{
+		"id" : 86,
+		"permission_group_id" : 7,
+		"code" : "edit_sub_options",
+		"description" : "Edit Sub Options",
+		"created_at" : "2021-06-24 13:28:32",
+		"updated_at" : "2021-06-24 13:28:32"
+	},
+	{
+		"id" : 87,
+		"permission_group_id" : 7,
+		"code" : "delete_sub_options",
+		"description" : "Delete Sub Options",
+		"created_at" : "2021-06-24 13:28:32",
+		"updated_at" : "2021-06-24 13:28:32"
+	},
+	{
+		"id" : 88,
+		"permission_group_id" : 7,
+		"code" : "view_questions",
+		"description" : "View Questions",
+		"created_at" : "2021-06-24 13:28:32",
+		"updated_at" : "2021-06-24 13:28:32"
+	},
+	{
+		"id" : 89,
+		"permission_group_id" : 7,
+		"code" : "edit_questions",
+		"description" : "Edit Questions",
+		"created_at" : "2021-06-24 13:28:33",
+		"updated_at" : "2021-06-24 13:28:33"
+	},
+	{
+		"id" : 90,
+		"permission_group_id" : 7,
+		"code" : "add_questions",
+		"description" : "Add Questions",
+		"created_at" : "2021-06-24 13:28:33",
+		"updated_at" : "2021-06-24 13:28:33"
+	},
+	{
+		"id" : 91,
+		"permission_group_id" : 7,
+		"code" : "delete_questions",
+		"description" : "Delete Questions",
+		"created_at" : "2021-06-24 13:28:33",
+		"updated_at" : "2021-06-24 13:28:33"
+	},
+	{
+		"id" : 92,
+		"permission_group_id" : 8,
+		"code" : "view_flow",
+		"description" : "View Flow",
+		"created_at" : "2021-06-24 13:28:33",
+		"updated_at" : "2021-06-24 13:28:33"
+	},
+	{
+		"id" : 93,
+		"permission_group_id" : 8,
+		"code" : "add_flow",
+		"description" : "Add Flow",
+		"created_at" : "2021-06-24 13:28:34",
+		"updated_at" : "2021-06-24 13:28:34"
+	},
+	{
+		"id" : 94,
+		"permission_group_id" : 8,
+		"code" : "edit_flow",
+		"description" : "Edit Flow",
+		"created_at" : "2021-06-24 13:28:34",
+		"updated_at" : "2021-06-24 13:28:34"
+	},
+	{
+		"id" : 95,
+		"permission_group_id" : 8,
+		"code" : "delete_flow",
+		"description" : "Delete Flow",
+		"created_at" : "2021-06-24 13:28:34",
+		"updated_at" : "2021-06-24 13:28:34"
+	},
+	{
+		"id" : 96,
+		"permission_group_id" : 9,
+		"code" : "view_search_report",
+		"description" : "View Visitor Search Report",
+		"created_at" : "2021-06-24 13:28:34",
+		"updated_at" : "2021-06-24 13:28:34"
+	},
+	{
+		"id" : 97,
+		"permission_group_id" : 9,
+		"code" : "view_product_search_report",
+		"description" : "View Visitor Product Search Report",
+		"created_at" : "2021-06-24 13:28:35",
+		"updated_at" : "2021-06-24 13:28:35"
+	},
+	{
+		"id" : 98,
+		"permission_group_id" : 9,
+		"code" : "view_option_search_report",
+		"description" : "View Visitor QA Report",
+		"created_at" : "2021-06-24 13:28:35",
+		"updated_at" : "2021-06-24 13:28:35"
+	},
+	{
+		"id" : 99,
+		"permission_group_id" : 10,
+		"code" : "edit_mi_segment",
+		"description" : "Edit Segment",
+		"created_at" : "2021-06-24 13:28:35",
+		"updated_at" : "2021-06-24 13:28:35"
+	},
+	{
+		"id" : 100,
+		"permission_group_id" : 10,
+		"code" : "add_mi_segment",
+		"description" : "Add Segment",
+		"created_at" : "2021-06-24 13:28:36",
+		"updated_at" : "2021-06-24 13:28:36"
+	},
+	{
+		"id" : 101,
+		"permission_group_id" : 10,
+		"code" : "delete_mi_segment",
+		"description" : "Delete Segment",
+		"created_at" : "2021-06-24 13:28:36",
+		"updated_at" : "2021-06-24 13:28:36"
+	},
+	{
+		"id" : 102,
+		"permission_group_id" : 10,
+		"code" : "add_investor",
+		"description" : "Add Investor",
+		"created_at" : "2021-06-24 13:28:36",
+		"updated_at" : "2021-06-24 13:28:36"
+	},
+	{
+		"id" : 103,
+		"permission_group_id" : 10,
+		"code" : "edit_investor",
+		"description" : "Edit Investor",
+		"created_at" : "2021-06-24 13:28:36",
+		"updated_at" : "2021-06-24 13:28:36"
+	},
+	{
+		"id" : 104,
+		"permission_group_id" : 10,
+		"code" : "delete_investor",
+		"description" : "Delete Investor",
+		"created_at" : "2021-06-24 13:28:37",
+		"updated_at" : "2022-03-21 07:41:30"
+	},
+	{
+		"id" : 111,
+		"permission_group_id" : 11,
+		"code" : "update_investor_password",
+		"description" : "Change Investor Password?",
+		"created_at" : "2021-06-24 13:28:38",
+		"updated_at" : "2022-11-14 13:09:03"
+	},
+	{
+		"id" : 115,
+		"permission_group_id" : 11,
+		"code" : "edit_vendor_key_people",
+		"description" : "Edit Vendor Key People",
+		"created_at" : "2021-06-24 13:28:39",
+		"updated_at" : "2021-06-24 13:28:39"
+	},
+	{
+		"id" : 116,
+		"permission_group_id" : 11,
+		"code" : "add_vendor_key_people",
+		"description" : "Add Vendor Key People",
+		"created_at" : "2021-06-24 13:28:41",
+		"updated_at" : "2021-06-24 13:28:41"
+	},
+	{
+		"id" : 117,
+		"permission_group_id" : 11,
+		"code" : "delete_vendor_key_people",
+		"description" : "Delete Vendor Key People",
+		"created_at" : "2021-06-24 13:28:41",
+		"updated_at" : "2021-06-24 13:28:41"
+	},
+	{
+		"id" : 118,
+		"permission_group_id" : 12,
+		"code" : "edit_vendor_locations",
+		"description" : "Edit Vendor Locations",
+		"created_at" : "2021-06-24 13:28:41",
+		"updated_at" : "2021-06-24 13:28:41"
+	},
+	{
+		"id" : 119,
+		"permission_group_id" : 12,
+		"code" : "add_vendor_locations",
+		"description" : "Add Vendor Locations",
+		"created_at" : "2021-06-24 13:28:41",
+		"updated_at" : "2021-06-24 13:28:41"
+	},
+	{
+		"id" : 120,
+		"permission_group_id" : 12,
+		"code" : "delete_vendor_locations",
+		"description" : "Delete Vendor Locations",
+		"created_at" : "2021-06-24 13:28:42",
+		"updated_at" : "2021-06-24 13:28:42"
+	},
+	{
+		"id" : 121,
+		"permission_group_id" : 13,
+		"code" : "edit_vendor_financials",
+		"description" : "Edit Vendor Financial",
+		"created_at" : "2021-06-24 13:28:42",
+		"updated_at" : "2022-11-14 12:54:13"
+	},
+	{
+		"id" : 122,
+		"permission_group_id" : 13,
+		"code" : "add_vendor_financials",
+		"description" : "Add Vendor Financial",
+		"created_at" : "2021-06-24 13:28:42",
+		"updated_at" : "2022-11-14 12:54:23"
+	},
+	{
+		"id" : 123,
+		"permission_group_id" : 13,
+		"code" : "delete_vendor_financials",
+		"description" : "Delete Vendor Financial",
+		"created_at" : "2021-06-24 13:28:42",
+		"updated_at" : "2022-11-14 12:54:39"
+	},
+	{
+		"id" : 124,
+		"permission_group_id" : 14,
+		"code" : "edit_vendor_funding",
+		"description" : "Edit Vendor Funding",
+		"created_at" : "2021-06-24 13:28:43",
+		"updated_at" : "2021-06-24 13:28:43"
+	},
+	{
+		"id" : 125,
+		"permission_group_id" : 14,
+		"code" : "add_vendor_funding",
+		"description" : "Add Vendor Funding",
+		"created_at" : "2021-06-24 13:28:43",
+		"updated_at" : "2021-06-24 13:28:43"
+	},
+	{
+		"id" : 126,
+		"permission_group_id" : 14,
+		"code" : "delete_vendor_funding",
+		"description" : "Delete Vendor Funding",
+		"created_at" : "2021-06-24 13:28:43",
+		"updated_at" : "2021-06-24 13:28:43"
+	},
+	{
+		"id" : 127,
+		"permission_group_id" : 15,
+		"code" : "edit_vendor_employee_job_count",
+		"description" : "Edit Vendor Employee Job cunt",
+		"created_at" : "2021-06-24 13:28:43",
+		"updated_at" : "2021-06-24 13:28:43"
+	},
+	{
+		"id" : 128,
+		"permission_group_id" : 15,
+		"code" : "add_vendor_employee_job_count",
+		"description" : "Add Vendor Employee Job Count",
+		"created_at" : "2021-06-24 13:28:44",
+		"updated_at" : "2022-03-21 07:22:18"
+	},
+	{
+		"id" : 129,
+		"permission_group_id" : 15,
+		"code" : "delete_vendor_employee_job_count",
+		"description" : "Delete Vendor Employee Job cunt",
+		"created_at" : "2021-06-24 13:28:44",
+		"updated_at" : "2021-06-24 13:28:44"
+	},
+	{
+		"id" : 130,
+		"permission_group_id" : 16,
+		"code" : "edit_vendor_acquisition",
+		"description" : "Edit Vendor Acquisition",
+		"created_at" : "2021-06-24 13:28:44",
+		"updated_at" : "2021-06-24 13:28:44"
+	},
+	{
+		"id" : 131,
+		"permission_group_id" : 16,
+		"code" : "add_vendor_acquisition",
+		"description" : "Add Vendor Acquisition",
+		"created_at" : "2021-06-24 13:28:44",
+		"updated_at" : "2021-06-24 13:28:44"
+	},
+	{
+		"id" : 132,
+		"permission_group_id" : 16,
+		"code" : "delete_vendor_acquisition",
+		"description" : "Delete Vendor Acquisition",
+		"created_at" : "2021-06-24 13:28:45",
+		"updated_at" : "2021-06-24 13:28:45"
+	},
+	{
+		"id" : 133,
+		"permission_group_id" : 13,
+		"code" : "fetch_vendor_financials",
+		"description" : "Fetch Vendor Financials",
+		"created_at" : "2021-06-24 13:28:45",
+		"updated_at" : "2021-06-24 13:28:45"
+	},
+	{
+		"id" : 134,
+		"permission_group_id" : 15,
+		"code" : "fetch_vendor_employee_job_count",
+		"description" : "Fetch Vendor Employee Job count",
+		"created_at" : "2021-06-24 13:28:45",
+		"updated_at" : "2021-06-24 13:28:45"
+	},
+	{
+		"id" : 135,
+		"permission_group_id" : 17,
+		"code" : "edit_vendor_twitter_data",
+		"description" : "Edit Vendor Twitter Data",
+		"created_at" : "2021-06-24 13:28:45",
+		"updated_at" : "2021-06-24 13:28:45"
+	},
+	{
+		"id" : 136,
+		"permission_group_id" : 17,
+		"code" : "add_vendor_twitter_data",
+		"description" : "Add Vendor Twitter Data",
+		"created_at" : "2021-06-24 13:28:46",
+		"updated_at" : "2021-06-24 13:28:46"
+	},
+	{
+		"id" : 137,
+		"permission_group_id" : 17,
+		"code" : "delete_vendor_twitter_data",
+		"description" : "Delete Vendor Twitter Data",
+		"created_at" : "2021-06-24 13:28:46",
+		"updated_at" : "2021-06-24 13:28:46"
+	},
+	{
+		"id" : 138,
+		"permission_group_id" : 19,
+		"code" : "edit_vendor_web_traffic",
+		"description" : "Edit Vendor Web Traffic",
+		"created_at" : "2021-06-24 13:28:46",
+		"updated_at" : "2022-11-14 12:55:29"
+	},
+	{
+		"id" : 139,
+		"permission_group_id" : 19,
+		"code" : "add_vendor_web_traffic",
+		"description" : "Add Vendor Web Traffic",
+		"created_at" : "2021-06-24 13:28:47",
+		"updated_at" : "2022-11-14 12:55:41"
+	},
+	{
+		"id" : 140,
+		"permission_group_id" : 19,
+		"code" : "delete_vendor_web_traffic",
+		"description" : "Delete Vendor Web Traffic",
+		"created_at" : "2021-06-24 13:28:47",
+		"updated_at" : "2022-11-14 12:55:52"
+	},
+	{
+		"id" : 141,
+		"permission_group_id" : 18,
+		"code" : "edit_vendor_ips",
+		"description" : "Edit Vendor IPS",
+		"created_at" : "2021-06-24 13:28:47",
+		"updated_at" : "2021-06-24 13:28:47"
+	},
+	{
+		"id" : 142,
+		"permission_group_id" : 18,
+		"code" : "add_vendor_ips",
+		"description" : "Add Vendor IPS",
+		"created_at" : "2021-06-24 13:28:47",
+		"updated_at" : "2021-06-24 13:28:47"
+	},
+	{
+		"id" : 143,
+		"permission_group_id" : 18,
+		"code" : "delete_vendor_ips",
+		"description" : "Delete Vendor IPS",
+		"created_at" : "2021-06-24 13:28:48",
+		"updated_at" : "2022-11-14 12:56:12"
+	},
+	{
+		"id" : 144,
+		"permission_group_id" : 20,
+		"code" : "edit_vendor_itmap_score",
+		"description" : "Edit Vendor ITMAP Score",
+		"created_at" : "2021-06-24 13:28:48",
+		"updated_at" : "2021-06-24 13:28:48"
+	},
+	{
+		"id" : 145,
+		"permission_group_id" : 20,
+		"code" : "add_vendor_itmap_score",
+		"description" : "Add Vendor ITMAP Score",
+		"created_at" : "2021-06-24 13:28:48",
+		"updated_at" : "2021-06-24 13:28:48"
+	},
+	{
+		"id" : 146,
+		"permission_group_id" : 20,
+		"code" : "delete_vendor_itmap_score",
+		"description" : "Delete Vendor ITMAP Score",
+		"created_at" : "2021-06-24 13:28:49",
+		"updated_at" : "2021-06-24 13:28:49"
+	},
+	{
+		"id" : 147,
+		"permission_group_id" : 21,
+		"code" : "edit_vendor_google_trend",
+		"description" : "Edit Vendor Google Trend",
+		"created_at" : "2021-06-24 13:28:49",
+		"updated_at" : "2021-06-24 13:28:49"
+	},
+	{
+		"id" : 148,
+		"permission_group_id" : 21,
+		"code" : "add_vendor_google_trend",
+		"description" : "Add Vendor Google Trend",
+		"created_at" : "2021-06-24 13:28:49",
+		"updated_at" : "2021-06-24 13:28:49"
+	},
+	{
+		"id" : 149,
+		"permission_group_id" : 22,
+		"code" : "fetch_vendor_news",
+		"description" : "Fetch Vendor News",
+		"created_at" : "2021-06-24 13:28:49",
+		"updated_at" : "2021-06-24 13:28:49"
+	},
+	{
+		"id" : 150,
+		"permission_group_id" : 17,
+		"code" : "fetch_vendor_twitter_data",
+		"description" : "Fetch Vendor Twitter Data",
+		"created_at" : "2021-06-24 13:28:50",
+		"updated_at" : "2021-06-24 13:28:50"
+	},
+	{
+		"id" : 151,
+		"permission_group_id" : 18,
+		"code" : "fetch_vendor_ips",
+		"description" : "Fetch Vendor IPS",
+		"created_at" : "2021-06-24 13:28:50",
+		"updated_at" : "2021-06-24 13:28:50"
+	},
+	{
+		"id" : 152,
+		"permission_group_id" : 21,
+		"code" : "delete_vendor_google_trend",
+		"description" : "Delete Vendor Google Trend",
+		"created_at" : "2021-06-24 13:28:50",
+		"updated_at" : "2021-06-24 13:28:50"
+	},
+	{
+		"id" : 153,
+		"permission_group_id" : 22,
+		"code" : "edit_vendor_news",
+		"description" : "Edit Vendor News",
+		"created_at" : "2021-06-24 13:28:51",
+		"updated_at" : "2021-06-24 13:28:51"
+	},
+	{
+		"id" : 154,
+		"permission_group_id" : 22,
+		"code" : "add_vendor_news",
+		"description" : "Add Vendor News",
+		"created_at" : "2021-06-24 13:28:51",
+		"updated_at" : "2021-06-24 13:28:51"
+	},
+	{
+		"id" : 155,
+		"permission_group_id" : 22,
+		"code" : "delete_vendor_news",
+		"description" : "Delete Vendor News",
+		"created_at" : "2021-06-24 13:28:51",
+		"updated_at" : "2021-06-24 13:28:51"
+	},
+	{
+		"id" : 156,
+		"permission_group_id" : 23,
+		"code" : "edit_vendor_competitive_dynamic",
+		"description" : "Edit Vendor Competitive Dynamic",
+		"created_at" : "2021-06-24 13:28:51",
+		"updated_at" : "2021-06-24 13:28:51"
+	},
+	{
+		"id" : 157,
+		"permission_group_id" : 23,
+		"code" : "add_vendor_competitive_dynamic",
+		"description" : "Add Vendor Competitive Dynamic",
+		"created_at" : "2021-06-24 13:28:52",
+		"updated_at" : "2021-06-24 13:28:52"
+	},
+	{
+		"id" : 158,
+		"permission_group_id" : 23,
+		"code" : "delete_vendor_competitive_dynamic",
+		"description" : "Delete Vendor Competitive Dynamic",
+		"created_at" : "2021-06-24 13:28:52",
+		"updated_at" : "2021-06-24 13:28:52"
+	},
+	{
+		"id" : 159,
+		"permission_group_id" : 21,
+		"code" : "fetch_vendor_google_trend",
+		"description" : "Fetch Vendor Google Trend",
+		"created_at" : "2021-06-24 13:28:52",
+		"updated_at" : "2021-06-24 13:28:52"
+	},
+	{
+		"id" : 160,
+		"permission_group_id" : 13,
+		"code" : "can_access_vendor_financials",
+		"description" : "Can Access Vendor Financials",
+		"created_at" : "2021-06-24 13:28:52",
+		"updated_at" : "2021-06-24 13:28:52"
+	},
+	{
+		"id" : 161,
+		"permission_group_id" : 12,
+		"code" : "can_access_vendor_locations",
+		"description" : "Can Access Vendor Locations",
+		"created_at" : "2021-06-24 13:28:53",
+		"updated_at" : "2021-06-24 13:28:53"
+	},
+	{
+		"id" : 162,
+		"permission_group_id" : 15,
+		"code" : "can_access_vendor_emo_job_count",
+		"description" : "Can Access Vendor Employee Job Count",
+		"created_at" : "2021-06-24 13:28:53",
+		"updated_at" : "2021-06-24 13:28:53"
+	},
+	{
+		"id" : 163,
+		"permission_group_id" : 14,
+		"code" : "can_access_vendor_funding",
+		"description" : "Can Access Vendor Funding",
+		"created_at" : "2021-06-24 13:28:53",
+		"updated_at" : "2021-06-24 13:28:53"
+	},
+	{
+		"id" : 164,
+		"permission_group_id" : 16,
+		"code" : "can_access_vendor_acquisition",
+		"description" : "Can Access Vendor Acquisition",
+		"created_at" : "2021-06-24 13:28:53",
+		"updated_at" : "2021-06-24 13:28:53"
+	},
+	{
+		"id" : 165,
+		"permission_group_id" : 18,
+		"code" : "can_access_vendor_ips",
+		"description" : "Can Access Vendor IPS",
+		"created_at" : "2021-06-24 13:28:54",
+		"updated_at" : "2022-11-14 12:59:09"
+	},
+	{
+		"id" : 166,
+		"permission_group_id" : 20,
+		"code" : "can_access_vendor_itmap_score",
+		"description" : "Can Access Vendor ITMAP Score",
+		"created_at" : "2021-06-24 13:28:54",
+		"updated_at" : "2021-06-24 13:28:54"
+	},
+	{
+		"id" : 167,
+		"permission_group_id" : 19,
+		"code" : "can_access_vendor_web_traffic",
+		"description" : "Can Access Vendor Web Traffic",
+		"created_at" : "2021-06-24 13:28:54",
+		"updated_at" : "2021-06-24 13:28:54"
+	},
+	{
+		"id" : 168,
+		"permission_group_id" : 21,
+		"code" : "can_access_vendor_google_trends",
+		"description" : "Can Access Vendor Google Trends",
+		"created_at" : "2021-06-24 13:28:54",
+		"updated_at" : "2021-06-24 13:28:54"
+	},
+	{
+		"id" : 169,
+		"permission_group_id" : 17,
+		"code" : "can_access_vendor_twitter_data",
+		"description" : "Can Access Vendor Twitter data",
+		"created_at" : "2021-06-24 13:28:55",
+		"updated_at" : "2021-06-24 13:28:55"
+	},
+	{
+		"id" : 170,
+		"permission_group_id" : 23,
+		"code" : "can_access_vendor_competitive_dynamic",
+		"description" : "Can Access Vendor Competitive Dynamic",
+		"created_at" : "2021-06-24 13:28:55",
+		"updated_at" : "2021-06-24 13:28:55"
+	},
+	{
+		"id" : 171,
+		"permission_group_id" : 22,
+		"code" : "can_access_vendor_news_list",
+		"description" : "Can Access Vendor News List",
+		"created_at" : "2021-06-24 13:28:55",
+		"updated_at" : "2021-06-24 13:28:55"
+	},
+	{
+		"id" : 172,
+		"permission_group_id" : 24,
+		"code" : "can_access_vendor_document_list",
+		"description" : "Can Access Vendor Document List",
+		"created_at" : "2021-06-24 13:28:56",
+		"updated_at" : "2021-06-24 13:28:56"
+	},
+	{
+		"id" : 173,
+		"permission_group_id" : 11,
+		"code" : "can_access_vendor_key_people",
+		"description" : "Can Access Vendor Key People",
+		"created_at" : "2021-06-24 13:28:56",
+		"updated_at" : "2021-06-24 13:28:56"
+	},
+	{
+		"id" : 174,
+		"permission_group_id" : 24,
+		"code" : "edit_vendor_documents",
+		"description" : "Edit Vendor Documents",
+		"created_at" : "2021-06-24 13:28:56",
+		"updated_at" : "2021-06-24 13:28:56"
+	},
+	{
+		"id" : 175,
+		"permission_group_id" : 24,
+		"code" : "add_vendor_documents",
+		"description" : "Add Vendor Documents",
+		"created_at" : "2021-06-24 13:28:56",
+		"updated_at" : "2021-06-24 13:28:56"
+	},
+	{
+		"id" : 176,
+		"permission_group_id" : 24,
+		"code" : "delete_vendor_documents",
+		"description" : "Delete Vendor Documents",
+		"created_at" : "2021-06-24 13:28:57",
+		"updated_at" : "2021-06-24 13:28:57"
+	},
+	{
+		"id" : 178,
+		"permission_group_id" : 6,
+		"code" : "add_module_categories",
+		"description" : "Add Module Categories",
+		"created_at" : "2021-06-24 13:28:57",
+		"updated_at" : "2022-11-14 12:44:50"
+	},
+	{
+		"id" : 179,
+		"permission_group_id" : 6,
+		"code" : "delete_module_categories",
+		"description" : "Delete Module Categories",
+		"created_at" : "2021-06-24 13:28:58",
+		"updated_at" : "2022-11-14 12:45:22"
+	},
+	{
+		"id" : 180,
+		"permission_group_id" : 2,
+		"code" : "view_rss",
+		"description" : "View RSS",
+		"created_at" : "2021-06-24 13:28:58",
+		"updated_at" : "2021-06-24 13:28:58"
+	},
+	{
+		"id" : 181,
+		"permission_group_id" : 2,
+		"code" : "view_currency",
+		"description" : "View Currency",
+		"created_at" : "2021-06-24 13:28:58",
+		"updated_at" : "2021-06-24 13:28:58"
+	},
+	{
+		"id" : 182,
+		"permission_group_id" : 2,
+		"code" : "edit_rss",
+		"description" : "Edit RSS",
+		"created_at" : "2021-06-24 13:28:58",
+		"updated_at" : "2021-06-24 13:28:58"
+	},
+	{
+		"id" : 183,
+		"permission_group_id" : 2,
+		"code" : "add_rss",
+		"description" : "Add RSS",
+		"created_at" : "2021-06-24 13:28:59",
+		"updated_at" : "2021-06-24 13:28:59"
+	},
+	{
+		"id" : 184,
+		"permission_group_id" : 2,
+		"code" : "delete_rss",
+		"description" : "Delete RSS",
+		"created_at" : "2021-06-24 13:28:59",
+		"updated_at" : "2021-06-24 13:28:59"
+	},
+	{
+		"id" : 185,
+		"permission_group_id" : 2,
+		"code" : "edit_currency",
+		"description" : "Edit Currency",
+		"created_at" : "2021-06-24 13:28:59",
+		"updated_at" : "2021-06-24 13:28:59"
+	},
+	{
+		"id" : 186,
+		"permission_group_id" : 2,
+		"code" : "add_currency",
+		"description" : "Add Currency",
+		"created_at" : "2021-06-24 13:29:00",
+		"updated_at" : "2021-06-24 13:29:00"
+	},
+	{
+		"id" : 187,
+		"permission_group_id" : 2,
+		"code" : "delete_currency",
+		"description" : "Delete Currency",
+		"created_at" : "2021-06-24 13:29:00",
+		"updated_at" : "2021-06-24 13:29:00"
+	},
+	{
+		"id" : 188,
+		"permission_group_id" : 25,
+		"code" : "can_access_vendor_patent_list",
+		"description" : "Access Vendor patent list",
+		"created_at" : "2021-06-24 13:29:00",
+		"updated_at" : "2021-06-24 13:29:00"
+	},
+	{
+		"id" : 189,
+		"permission_group_id" : 25,
+		"code" : "delete_vendor_patent_list",
+		"description" : "Delete Vendor patent list",
+		"created_at" : "2021-06-24 13:29:00",
+		"updated_at" : "2021-06-24 13:29:00"
+	},
+	{
+		"id" : 190,
+		"permission_group_id" : 25,
+		"code" : "edit_vendor_patent_list",
+		"description" : "Edit Vendor patent list",
+		"created_at" : "2021-06-24 13:29:00",
+		"updated_at" : "2021-06-24 13:29:00"
+	},
+	{
+		"id" : 191,
+		"permission_group_id" : 25,
+		"code" : "add_vendor_patent_list",
+		"description" : "Add Vendor patent list",
+		"created_at" : "2021-06-24 13:29:00",
+		"updated_at" : "2021-06-24 13:29:00"
+	},
+	{
+		"id" : 196,
+		"permission_group_id" : 26,
+		"code" : "can_access_settings",
+		"description" : "Access settings",
+		"created_at" : "2021-06-24 13:29:00",
+		"updated_at" : "2021-06-24 13:29:00"
+	},
+	{
+		"id" : 197,
+		"permission_group_id" : 26,
+		"code" : "delete_settings",
+		"description" : "Delete settings",
+		"created_at" : "2021-06-24 13:29:00",
+		"updated_at" : "2021-06-24 13:29:00"
+	},
+	{
+		"id" : 198,
+		"permission_group_id" : 26,
+		"code" : "edit_settings",
+		"description" : "Edit settings",
+		"created_at" : "2021-06-24 13:29:00",
+		"updated_at" : "2021-06-24 13:29:00"
+	},
+	{
+		"id" : 199,
+		"permission_group_id" : 26,
+		"code" : "add_settings",
+		"description" : "Add settings",
+		"created_at" : "2021-06-24 13:29:00",
+		"updated_at" : "2021-06-24 13:29:00"
+	},
+	{
+		"id" : 200,
+		"permission_group_id" : 32,
+		"code" : "view_faq_list",
+		"description" : "View FAQ List",
+		"created_at" : "2022-01-04 07:27:58",
+		"updated_at" : "2022-01-04 07:27:58"
+	},
+	{
+		"id" : 201,
+		"permission_group_id" : 32,
+		"code" : "add_faq_list",
+		"description" : "Add FAQ List",
+		"created_at" : "2022-01-04 07:28:19",
+		"updated_at" : "2022-01-04 07:28:19"
+	},
+	{
+		"id" : 202,
+		"permission_group_id" : 32,
+		"code" : "delete_faq_list",
+		"description" : "Delete FAQ List",
+		"created_at" : "2022-01-04 07:28:40",
+		"updated_at" : "2022-01-04 07:28:40"
+	},
+	{
+		"id" : 203,
+		"permission_group_id" : 32,
+		"code" : "edit_faq_list",
+		"description" : "Edit FAQ List",
+		"created_at" : "2022-01-04 07:28:58",
+		"updated_at" : "2022-01-04 07:28:58"
+	},
+	{
+		"id" : 204,
+		"permission_group_id" : 32,
+		"code" : "view_faq_category",
+		"description" : "View FAQ Category",
+		"created_at" : "2022-01-04 07:29:17",
+		"updated_at" : "2022-01-04 07:29:17"
+	},
+	{
+		"id" : 205,
+		"permission_group_id" : 32,
+		"code" : "add_faq_category",
+		"description" : "Add FAQ Category",
+		"created_at" : "2022-01-04 07:29:34",
+		"updated_at" : "2022-01-04 07:29:34"
+	},
+	{
+		"id" : 206,
+		"permission_group_id" : 32,
+		"code" : "edit_faq_category",
+		"description" : "Edit FAQ Category",
+		"created_at" : "2022-01-04 07:29:54",
+		"updated_at" : "2022-01-04 07:29:54"
+	},
+	{
+		"id" : 207,
+		"permission_group_id" : 32,
+		"code" : "delete_faq_category",
+		"description" : "Delete FAQ Category",
+		"created_at" : "2022-01-04 07:30:09",
+		"updated_at" : "2022-01-04 07:30:09"
+	},
+	{
+		"id" : 208,
+		"permission_group_id" : 29,
+		"code" : "View_blog_manager",
+		"description" : "View Blog Manager",
+		"created_at" : "2022-01-04 07:30:44",
+		"updated_at" : "2022-01-04 07:30:44"
+	},
+	{
+		"id" : 209,
+		"permission_group_id" : 29,
+		"code" : "add_blog_manager",
+		"description" : "Add Blog Manager",
+		"created_at" : "2022-01-04 07:31:00",
+		"updated_at" : "2022-01-04 07:31:00"
+	},
+	{
+		"id" : 210,
+		"permission_group_id" : 29,
+		"code" : "export_blog_manager",
+		"description" : "Export Blog Manager",
+		"created_at" : "2022-01-04 07:31:19",
+		"updated_at" : "2022-01-04 07:31:19"
+	},
+	{
+		"id" : 211,
+		"permission_group_id" : 29,
+		"code" : "delete_blog_manager",
+		"description" : "Delete Blog Manager",
+		"created_at" : "2022-01-04 07:41:52",
+		"updated_at" : "2022-03-21 07:40:45"
+	},
+	{
+		"id" : 212,
+		"permission_group_id" : 29,
+		"code" : "edit_blog_manager",
+		"description" : "Edit Blog Manager",
+		"created_at" : "2022-01-04 07:42:14",
+		"updated_at" : "2022-01-04 07:42:14"
+	},
+	{
+		"id" : 213,
+		"permission_group_id" : 30,
+		"code" : "view_partners",
+		"description" : "View Partners",
+		"created_at" : "2022-01-04 07:43:13",
+		"updated_at" : "2022-01-04 07:43:13"
+	},
+	{
+		"id" : 214,
+		"permission_group_id" : 30,
+		"code" : "delete_partners",
+		"description" : "Delete Partners",
+		"created_at" : "2022-01-04 07:43:34",
+		"updated_at" : "2022-01-04 07:43:34"
+	},
+	{
+		"id" : 215,
+		"permission_group_id" : 30,
+		"code" : "edit_partners",
+		"description" : "Edit Partners",
+		"created_at" : "2022-01-04 07:43:48",
+		"updated_at" : "2022-01-04 07:43:48"
+	},
+	{
+		"id" : 216,
+		"permission_group_id" : 30,
+		"code" : "add_partners",
+		"description" : "Add Partners",
+		"created_at" : "2022-01-04 07:44:04",
+		"updated_at" : "2022-01-04 07:44:04"
+	},
+	{
+		"id" : 217,
+		"permission_group_id" : 30,
+		"code" : "export_partners",
+		"description" : "Export Partners",
+		"created_at" : "2022-01-04 07:44:32",
+		"updated_at" : "2022-01-04 07:44:32"
+	},
+	{
+		"id" : 218,
+		"permission_group_id" : 30,
+		"code" : "view_partners_types",
+		"description" : "View Partners Types",
+		"created_at" : "2022-01-04 07:44:56",
+		"updated_at" : "2022-01-04 07:44:56"
+	},
+	{
+		"id" : 219,
+		"permission_group_id" : 30,
+		"code" : "delete_partners_types",
+		"description" : "Delete Partners Types",
+		"created_at" : "2022-01-04 07:45:15",
+		"updated_at" : "2022-01-04 07:45:15"
+	},
+	{
+		"id" : 220,
+		"permission_group_id" : 30,
+		"code" : "add_partners_types",
+		"description" : "Add Partners Types",
+		"created_at" : "2022-01-04 07:45:33",
+		"updated_at" : "2022-01-04 07:45:33"
+	},
+	{
+		"id" : 221,
+		"permission_group_id" : 30,
+		"code" : "edit_partners_types",
+		"description" : "Edit Partners Types",
+		"created_at" : "2022-01-04 07:45:49",
+		"updated_at" : "2022-01-04 07:45:49"
+	},
+	{
+		"id" : 222,
+		"permission_group_id" : 30,
+		"code" : "export_partners_types",
+		"description" : "Export Partners Types",
+		"created_at" : "2022-01-04 07:46:14",
+		"updated_at" : "2022-01-04 07:46:14"
+	},
+	{
+		"id" : 224,
+		"permission_group_id" : 3,
+		"code" : "view_vendor_category",
+		"description" : "View Vendor Category",
+		"created_at" : "2022-01-04 08:12:16",
+		"updated_at" : "2022-01-04 08:12:16"
+	},
+	{
+		"id" : 225,
+		"permission_group_id" : 3,
+		"code" : "edit_vendor_category",
+		"description" : "Edit Vendor Category",
+		"created_at" : "2022-01-04 08:12:39",
+		"updated_at" : "2022-03-21 07:29:20"
+	},
+	{
+		"id" : 226,
+		"permission_group_id" : 3,
+		"code" : "delete_vendor_category",
+		"description" : "Delete Vendor Category",
+		"created_at" : "2022-01-04 08:14:04",
+		"updated_at" : "2022-03-21 07:41:08"
+	},
+	{
+		"id" : 227,
+		"permission_group_id" : 3,
+		"code" : "add_vendor_category",
+		"description" : "Add Vendor Category",
+		"created_at" : "2022-01-04 08:14:24",
+		"updated_at" : "2022-03-21 07:23:51"
+	},
+	{
+		"id" : 228,
+		"permission_group_id" : 31,
+		"code" : "view_pricing_model",
+		"description" : "View Pricing Model",
+		"created_at" : "2022-01-04 08:16:45",
+		"updated_at" : "2022-03-21 06:22:20"
+	},
+	{
+		"id" : 229,
+		"permission_group_id" : 31,
+		"code" : "edit_pricing_model",
+		"description" : "Edit Pricing Model",
+		"created_at" : "2022-01-04 08:17:25",
+		"updated_at" : "2022-03-21 07:29:51"
+	},
+	{
+		"id" : 230,
+		"permission_group_id" : 31,
+		"code" : "delete_pricing_model",
+		"description" : "Delete Pricing Model",
+		"created_at" : "2022-01-04 08:17:48",
+		"updated_at" : "2022-03-21 07:41:53"
+	},
+	{
+		"id" : 231,
+		"permission_group_id" : 31,
+		"code" : "add_pricing_model",
+		"description" : "Add Pricing Model ",
+		"created_at" : "2022-01-04 08:22:03",
+		"updated_at" : "2022-01-04 08:22:03"
+	},
+	{
+		"id" : 232,
+		"permission_group_id" : 31,
+		"code" : "view_pricing_configuration",
+		"description" : "View Pricing Configuration",
+		"created_at" : "2022-01-04 08:25:07",
+		"updated_at" : "2022-03-21 06:22:56"
+	},
+	{
+		"id" : 233,
+		"permission_group_id" : 31,
+		"code" : "delete_pricing_configuration",
+		"description" : "Delete Pricing Configuration",
+		"created_at" : "2022-01-04 08:26:00",
+		"updated_at" : "2022-03-21 07:20:31"
+	},
+	{
+		"id" : 234,
+		"permission_group_id" : 31,
+		"code" : "edit_pricing_configuration",
+		"description" : "Edit Pricing Configuration",
+		"created_at" : "2022-01-04 08:26:10",
+		"updated_at" : "2022-03-21 07:20:53"
+	},
+	{
+		"id" : 235,
+		"permission_group_id" : 31,
+		"code" : "add_pricing_configuration",
+		"description" : "Add Pricing Configuration",
+		"created_at" : "2022-01-04 08:26:20",
+		"updated_at" : "2022-03-21 07:21:13"
+	},
+	{
+		"id" : 236,
+		"permission_group_id" : 33,
+		"code" : "view_competative_manager",
+		"description" : "View Competitive Manager",
+		"created_at" : "2022-01-04 08:28:01",
+		"updated_at" : "2022-03-21 06:28:20"
+	},
+	{
+		"id" : 237,
+		"permission_group_id" : 33,
+		"code" : "edit_competative_manager",
+		"description" : "Edit Competative Manager",
+		"created_at" : "2022-01-04 08:28:19",
+		"updated_at" : "2022-03-21 07:30:18"
+	},
+	{
+		"id" : 238,
+		"permission_group_id" : 33,
+		"code" : "delete_competative_manager",
+		"description" : "Delete Competitive Manager",
+		"created_at" : "2022-01-04 08:28:31",
+		"updated_at" : "2022-03-21 07:42:45"
+	},
+	{
+		"id" : 239,
+		"permission_group_id" : 33,
+		"code" : "add_competative_manager",
+		"description" : "Add Competitive Manager",
+		"created_at" : "2022-01-04 08:28:41",
+		"updated_at" : "2022-03-21 07:24:25"
+	},
+	{
+		"id" : 240,
+		"permission_group_id" : 10,
+		"code" : "view_mi_segment",
+		"description" : "View MI Segment",
+		"created_at" : "2022-01-04 08:29:38",
+		"updated_at" : "2022-03-21 06:28:57"
+	},
+	{
+		"id" : 241,
+		"permission_group_id" : 10,
+		"code" : "view_mi_investor",
+		"description" : "View MI Investor",
+		"created_at" : "2022-01-04 08:29:50",
+		"updated_at" : "2022-03-21 06:31:11"
+	},
+	{
+		"id" : 242,
+		"permission_group_id" : 10,
+		"code" : "view_transactions",
+		"description" : "View Transactions",
+		"created_at" : "2022-01-04 08:30:16",
+		"updated_at" : "2022-03-21 06:32:39"
+	},
+	{
+		"id" : 243,
+		"permission_group_id" : 10,
+		"code" : "add_transactions",
+		"description" : "Add Transactions",
+		"created_at" : "2022-01-04 08:30:45",
+		"updated_at" : "2022-03-21 07:24:51"
+	},
+	{
+		"id" : 244,
+		"permission_group_id" : 10,
+		"code" : "delete_transactions",
+		"description" : "Delete Transactions",
+		"created_at" : "2022-01-04 08:30:54",
+		"updated_at" : "2022-03-21 07:43:05"
+	},
+	{
+		"id" : 245,
+		"permission_group_id" : 10,
+		"code" : "edit_transactions",
+		"description" : "Edit Transactions",
+		"created_at" : "2022-01-04 08:31:04",
+		"updated_at" : "2022-03-21 07:30:49"
+	},
+	{
+		"id" : 246,
+		"permission_group_id" : 10,
+		"code" : "view_subscriptions",
+		"description" : "View Subscriptions",
+		"created_at" : "2022-01-04 08:31:36",
+		"updated_at" : "2022-03-21 06:33:10"
+	},
+	{
+		"id" : 247,
+		"permission_group_id" : 10,
+		"code" : "edit_subscriptions",
+		"description" : "Edit Subscriptions",
+		"created_at" : "2022-01-04 08:32:06",
+		"updated_at" : "2022-03-21 07:31:13"
+	},
+	{
+		"id" : 248,
+		"permission_group_id" : 10,
+		"code" : "delete_subscriptions",
+		"description" : "Delete Subscriptions",
+		"created_at" : "2022-01-04 08:32:23",
+		"updated_at" : "2022-03-21 07:43:25"
+	},
+	{
+		"id" : 249,
+		"permission_group_id" : 10,
+		"code" : "add_subscriptions",
+		"description" : "Add Subscriptions",
+		"created_at" : "2022-01-04 08:37:52",
+		"updated_at" : "2022-03-21 07:25:18"
+	},
+	{
+		"id" : 250,
+		"permission_group_id" : 10,
+		"code" : "export_subscriptions",
+		"description" : "Export Subscriptions",
+		"created_at" : "2022-01-04 08:38:03",
+		"updated_at" : "2022-03-21 07:36:56"
+	},
+	{
+		"id" : 251,
+		"permission_group_id" : 10,
+		"code" : "view_subscription_plan",
+		"description" : "View Subscription Plan",
+		"created_at" : "2022-01-04 08:38:41",
+		"updated_at" : "2022-03-21 06:34:17"
+	},
+	{
+		"id" : 252,
+		"permission_group_id" : 10,
+		"code" : "edit_subscription_plan",
+		"description" : "Edit Subscription Plan",
+		"created_at" : "2022-01-04 08:38:53",
+		"updated_at" : "2022-03-21 07:31:43"
+	},
+	{
+		"id" : 253,
+		"permission_group_id" : 10,
+		"code" : "delete_subscription_plan",
+		"description" : "Delete Subscription Plan",
+		"created_at" : "2022-01-04 08:39:02",
+		"updated_at" : "2022-03-21 07:43:54"
+	},
+	{
+		"id" : 254,
+		"permission_group_id" : 10,
+		"code" : "add_subscription_plan",
+		"description" : "Add Subscription Plan",
+		"created_at" : "2022-01-04 08:39:11",
+		"updated_at" : "2022-03-21 07:25:49"
+	},
+	{
+		"id" : 255,
+		"permission_group_id" : 10,
+		"code" : "export_subscription_plan",
+		"description" : "Export Subscription Plan",
+		"created_at" : "2022-01-04 08:39:20",
+		"updated_at" : "2022-03-21 07:37:17"
+	},
+	{
+		"id" : 256,
+		"permission_group_id" : 10,
+		"code" : "delete_mi_contacts",
+		"description" : "Delete MI Contacts",
+		"created_at" : "2022-01-04 08:39:52",
+		"updated_at" : "2022-03-21 07:44:24"
+	},
+	{
+		"id" : 257,
+		"permission_group_id" : 10,
+		"code" : "view_mi_contacts",
+		"description" : "View MI Contacts",
+		"created_at" : "2022-01-04 08:40:03",
+		"updated_at" : "2022-03-21 06:15:04"
+	},
+	{
+		"id" : 258,
+		"permission_group_id" : 10,
+		"code" : "edit_mi_contacts",
+		"description" : "Edit MI Contacts",
+		"created_at" : "2022-01-04 08:40:12",
+		"updated_at" : "2022-03-21 07:32:07"
+	},
+	{
+		"id" : 259,
+		"permission_group_id" : 10,
+		"code" : "add_mi_contacts",
+		"description" : "Add MI Contacts",
+		"created_at" : "2022-01-04 08:40:21",
+		"updated_at" : "2022-03-21 07:26:15"
+	},
+	{
+		"id" : 260,
+		"permission_group_id" : 10,
+		"code" : "export_mi_contacts",
+		"description" : "Export MI Contacts",
+		"created_at" : "2022-01-04 08:40:29",
+		"updated_at" : "2022-03-21 07:37:45"
+	},
+	{
+		"id" : 261,
+		"permission_group_id" : 28,
+		"code" : "view_eudocpurchases",
+		"description" : "View Eu Doc Purchases",
+		"created_at" : "2022-01-05 03:10:44",
+		"updated_at" : "2022-03-21 06:40:44"
+	},
+	{
+		"id" : 262,
+		"permission_group_id" : 28,
+		"code" : "add_eudocpurchases",
+		"description" : "Add Eu Doc Purchases",
+		"created_at" : "2022-01-05 03:11:25",
+		"updated_at" : "2022-03-21 07:26:46"
+	},
+	{
+		"id" : 263,
+		"permission_group_id" : 28,
+		"code" : "edit_eudocpurchases",
+		"description" : "Edit Eu Doc Purchases",
+		"created_at" : "2022-01-05 03:11:40",
+		"updated_at" : "2022-03-21 07:32:38"
+	},
+	{
+		"id" : 264,
+		"permission_group_id" : 28,
+		"code" : "delete_eudocpurchases",
+		"description" : "Delete Eu Doc Purchases",
+		"created_at" : "2022-01-05 03:11:53",
+		"updated_at" : "2022-03-21 07:44:49"
+	},
+	{
+		"id" : 265,
+		"permission_group_id" : 28,
+		"code" : "export_eudocpurchases",
+		"description" : "Export Eu Doc Purchases",
+		"created_at" : "2022-01-05 03:12:10",
+		"updated_at" : "2022-03-21 07:38:05"
+	},
+	{
+		"id" : 266,
+		"permission_group_id" : 28,
+		"code" : "view_eutransactions",
+		"description" : "View Eu Transactions",
+		"created_at" : "2022-01-05 03:12:29",
+		"updated_at" : "2022-03-21 06:41:16"
+	},
+	{
+		"id" : 267,
+		"permission_group_id" : 28,
+		"code" : "edit_eutransactions",
+		"description" : "Edit Eu Transactions",
+		"created_at" : "2022-01-05 03:13:03",
+		"updated_at" : "2022-03-21 07:33:04"
+	},
+	{
+		"id" : 268,
+		"permission_group_id" : 28,
+		"code" : "delete_eutransactions",
+		"description" : "Delete Eu Transactions",
+		"created_at" : "2022-01-05 03:13:14",
+		"updated_at" : "2022-03-21 07:45:18"
+	},
+	{
+		"id" : 269,
+		"permission_group_id" : 28,
+		"code" : "export_eutransactions",
+		"description" : "Export Eu Transactions",
+		"created_at" : "2022-01-05 03:13:25",
+		"updated_at" : "2022-03-21 07:38:22"
+	},
+	{
+		"id" : 270,
+		"permission_group_id" : 28,
+		"code" : "add_eutransactions",
+		"description" : "Add Eu Transactions",
+		"created_at" : "2022-01-05 03:13:44",
+		"updated_at" : "2022-03-21 07:27:12"
+	},
+	{
+		"id" : 271,
+		"permission_group_id" : 28,
+		"code" : "view_eusubscriptions",
+		"description" : "View Eu Subscriptions",
+		"created_at" : "2022-01-05 03:15:28",
+		"updated_at" : "2022-03-21 06:41:41"
+	},
+	{
+		"id" : 272,
+		"permission_group_id" : 28,
+		"code" : "edit_eusubscriptions",
+		"description" : "Edit Eu Subscriptions",
+		"created_at" : "2022-01-05 03:15:42",
+		"updated_at" : "2022-03-21 07:33:26"
+	},
+	{
+		"id" : 273,
+		"permission_group_id" : 28,
+		"code" : "delete_eusubscriptions",
+		"description" : "Delete Eu Subscriptions",
+		"created_at" : "2022-01-05 03:15:53",
+		"updated_at" : "2022-03-21 07:45:46"
+	},
+	{
+		"id" : 274,
+		"permission_group_id" : 28,
+		"code" : "add_eusubscriptions",
+		"description" : "Add Eu Subscriptions",
+		"created_at" : "2022-01-05 03:16:12",
+		"updated_at" : "2022-03-21 07:27:41"
+	},
+	{
+		"id" : 275,
+		"permission_group_id" : 28,
+		"code" : "export_eusubscriptions",
+		"description" : "Export Eu Subscriptions",
+		"created_at" : "2022-01-05 03:16:22",
+		"updated_at" : "2022-03-21 07:39:33"
+	},
+	{
+		"id" : 276,
+		"permission_group_id" : 28,
+		"code" : "view_eusubscription_plan",
+		"description" : "View Eu Subscription Plan",
+		"created_at" : "2022-01-05 03:16:55",
+		"updated_at" : "2022-03-21 06:42:07"
+	},
+	{
+		"id" : 277,
+		"permission_group_id" : 28,
+		"code" : "edit_eusubscription_plan",
+		"description" : "Edit Eu Subscription Plan",
+		"created_at" : "2022-01-05 03:17:05",
+		"updated_at" : "2022-03-21 07:34:01"
+	},
+	{
+		"id" : 278,
+		"permission_group_id" : 28,
+		"code" : "delete_eusubscription_plan",
+		"description" : "Delete Eu Subscription Plan",
+		"created_at" : "2022-01-05 03:17:34",
+		"updated_at" : "2022-03-21 07:46:24"
+	},
+	{
+		"id" : 279,
+		"permission_group_id" : 28,
+		"code" : "add_eusubscription_plan",
+		"description" : "Add Eu Subscription Plan",
+		"created_at" : "2022-01-05 03:17:44",
+		"updated_at" : "2022-03-21 07:28:07"
+	},
+	{
+		"id" : 280,
+		"permission_group_id" : 28,
+		"code" : "export_eusubscription_plan",
+		"description" : "Export Eu Subscription Plan",
+		"created_at" : "2022-01-05 03:17:53",
+		"updated_at" : "2022-03-21 07:39:19"
+	},
+	{
+		"id" : 281,
+		"permission_group_id" : 28,
+		"code" : "view_subscription_manager",
+		"description" : "View Subscription Manager",
+		"created_at" : "2022-01-05 03:18:24",
+		"updated_at" : "2022-03-21 06:42:59"
+	},
+	{
+		"id" : 282,
+		"permission_group_id" : 26,
+		"code" : "view_setting_manager",
+		"description" : "View Setting Manager",
+		"created_at" : "2022-01-05 03:26:25",
+		"updated_at" : "2022-03-21 06:43:33"
+	},
+	{
+		"id" : 283,
+		"permission_group_id" : 10,
+		"code" : "update_mi_investor_password",
+		"description" : "Update MI Investor Password",
+		"created_at" : "2022-01-12 06:42:10",
+		"updated_at" : "2022-03-21 07:36:39"
+	},
+	{
+		"id" : 284,
+		"permission_group_id" : 10,
+		"code" : "delete_mi_investor",
+		"description" : "Delete MI Investor",
+		"created_at" : "2022-01-12 06:42:31",
+		"updated_at" : "2022-03-21 07:46:52"
+	},
+	{
+		"id" : 285,
+		"permission_group_id" : 10,
+		"code" : "export_mi_investor",
+		"description" : "Export MI Investor",
+		"created_at" : "2022-01-12 06:46:01",
+		"updated_at" : "2022-03-21 07:39:56"
+	},
+	{
+		"id" : 286,
+		"permission_group_id" : 10,
+		"code" : "add_mi_investor",
+		"description" : "Add MI Investor",
+		"created_at" : "2022-01-12 06:48:45",
+		"updated_at" : "2022-03-21 07:28:28"
+	},
+	{
+		"id" : 287,
+		"permission_group_id" : 10,
+		"code" : "edit_mi_investor",
+		"description" : "Edit MI Investor",
+		"created_at" : "2022-01-12 06:49:39",
+		"updated_at" : "2022-03-21 07:18:54"
+	},
+	{
+		"id" : 288,
+		"permission_group_id" : 10,
+		"code" : "view_mi_segment_manager",
+		"description" : "View MI Segment Manager",
+		"created_at" : "2022-01-19 07:47:23",
+		"updated_at" : "2022-03-21 06:44:09"
+	},
+	{
+		"id" : 289,
+		"permission_group_id" : 28,
+		"code" : "view_mi_subscription_manager",
+		"description" : "View MI Subscription Manager",
+		"created_at" : "2022-01-19 09:26:33",
+		"updated_at" : "2022-03-21 06:44:54"
+	},
+	{
+		"id" : 290,
+		"permission_group_id" : 32,
+		"code" : "view_faq_manager",
+		"description" : "View FAQ Manager",
+		"created_at" : "2022-01-19 09:31:47",
+		"updated_at" : "2022-03-21 06:45:30"
+	},
+	{
+		"id" : 291,
+		"permission_group_id" : 30,
+		"code" : "view_partner_manager",
+		"description" : "View Partner Manager",
+		"created_at" : "2022-01-19 09:54:16",
+		"updated_at" : "2022-03-21 06:46:05"
+	},
+	{
+		"id" : 292,
+		"permission_group_id" : 30,
+		"code" : "view_pricing_manager",
+		"description" : "View Pricing Manager",
+		"created_at" : "2022-01-21 08:35:18",
+		"updated_at" : "2022-01-21 08:35:18"
+	},
+	{
+		"id" : 293,
+		"permission_group_id" : 1,
+		"code" : "export_users",
+		"description" : "Export Users",
+		"created_at" : "2022-03-22 14:09:40",
+		"updated_at" : "2022-03-22 14:09:40"
+	},
+	{
+		"id" : 294,
+		"permission_group_id" : 2,
+		"code" : "export_countries",
+		"description" : "Export Countries",
+		"created_at" : "2022-03-22 14:11:32",
+		"updated_at" : "2022-03-22 14:11:32"
+	},
+	{
+		"id" : 295,
+		"permission_group_id" : 5,
+		"code" : "export_contacts",
+		"description" : "Export Contacts",
+		"created_at" : "2022-03-22 14:14:27",
+		"updated_at" : "2022-03-22 14:14:27"
+	},
+	{
+		"id" : 296,
+		"permission_group_id" : 10,
+		"code" : "export_transactions",
+		"description" : "Export Transactions",
+		"created_at" : "2022-03-22 14:20:19",
+		"updated_at" : "2022-03-22 14:20:19"
+	},
+	{
+		"id" : 297,
+		"permission_group_id" : 31,
+		"code" : "export_pricing_configuration",
+		"description" : "Export  pricing configuration",
+		"created_at" : "2022-03-22 14:21:38",
+		"updated_at" : "2022-03-22 14:21:38"
+	},
+	{
+		"id" : 298,
+		"permission_group_id" : 27,
+		"code" : "export_search_reports",
+		"description" : "Export Search Reports",
+		"created_at" : "2022-03-23 02:37:28",
+		"updated_at" : "2022-03-23 02:37:28"
+	},
+	{
+		"id" : 299,
+		"permission_group_id" : 27,
+		"code" : "export_question_reports",
+		"description" : "Export Question Reports",
+		"created_at" : "2022-03-23 02:39:21",
+		"updated_at" : "2022-03-23 02:39:21"
+	},
+	{
+		"id" : 300,
+		"permission_group_id" : 27,
+		"code" : "export_product_reports",
+		"description" : "Export product reports",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 301,
+		"permission_group_id" : 2,
+		"code" : "add_pages",
+		"description" : "Add Pages",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 302,
+		"permission_group_id" : 36,
+		"code" : "view_cron_logs",
+		"description" : "View Cron Logs",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 303,
+		"permission_group_id" : 35,
+		"code" : "add_cron_job",
+		"description" : "Add Cron Job",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 304,
+		"permission_group_id" : 35,
+		"code" : "edit_cron_job",
+		"description" : "Edit Cron Job",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 305,
+		"permission_group_id" : 35,
+		"code" : "delete_cron_job",
+		"description" : "Delete Cron Job",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 306,
+		"permission_group_id" : 36,
+		"code" : "view_visitor_ip_logs",
+		"description" : "View Visitor IP Logs",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 307,
+		"permission_group_id" : 36,
+		"code" : "view_visitor_login_logs",
+		"description" : "View Visitor Login Logs",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 308,
+		"permission_group_id" : 36,
+		"code" : "view_api_logs",
+		"description" : "View API Logs",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 309,
+		"permission_group_id" : 36,
+		"code" : "view_nubela_logs",
+		"description" : "View Nubela Logs",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 310,
+		"permission_group_id" : 36,
+		"code" : "view_signal_hire_logs",
+		"description" : "View Signal Hire Logs",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 311,
+		"permission_group_id" : 35,
+		"code" : "view_cron_manager",
+		"description" : "View Cron Manager",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 312,
+		"permission_group_id" : 36,
+		"code" : "view_logs_manager",
+		"description" : "View Logs Manager",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 313,
+		"permission_group_id" : 36,
+		"code" : "view_anomaly_logs",
+		"description" : "View Anomaly",
+		"created_at" : "2022-03-23 02:42:02",
+		"updated_at" : "2022-03-23 02:42:02"
+	},
+	{
+		"id" : 314,
+		"permission_group_id" : 37,
+		"code" : "view_consultant_manager",
+		"description" : "Consultant Manager Access",
+		"created_at" : "2023-04-21 15:39:07",
+		"updated_at" : "2023-04-21 15:39:07"
+	},
+	{
+		"id" : 315,
+		"permission_group_id" : 37,
+		"code" : "view_consultant",
+		"description" : "View Consultant",
+		"created_at" : "2023-04-21 15:50:41",
+		"updated_at" : "2023-04-21 15:50:41"
+	},
+	{
+		"id" : 316,
+		"permission_group_id" : 37,
+		"code" : "view_work_experience",
+		"description" : "View Work Experience",
+		"created_at" : "2023-04-21 16:00:01",
+		"updated_at" : "2023-04-21 16:00:01"
+	},
+	{
+		"id" : 317,
+		"permission_group_id" : 37,
+		"code" : "view_technology",
+		"description" : "View Technology",
+		"created_at" : "2023-04-21 16:02:06",
+		"updated_at" : "2023-04-21 16:02:06"
+	},
+	{
+		"id" : 318,
+		"permission_group_id" : 37,
+		"code" : "view_rate_card",
+		"description" : "View Rate Card",
+		"created_at" : "2023-04-21 16:02:30",
+		"updated_at" : "2023-04-21 16:02:30"
+	},
+	{
+		"id" : 319,
+		"permission_group_id" : 37,
+		"code" : "view_booking",
+		"description" : "View Booking",
+		"created_at" : "2023-04-21 16:02:59",
+		"updated_at" : "2023-04-21 16:02:59"
+	},
+	{
+		"id" : 320,
+		"permission_group_id" : 37,
+		"code" : "add_booking",
+		"description" : "Add Booking",
+		"created_at" : "2023-04-21 16:03:20",
+		"updated_at" : "2023-04-21 16:03:20"
+	},
+	{
+		"id" : 321,
+		"permission_group_id" : 37,
+		"code" : "add_work_experience",
+		"description" : "Add Work Experience",
+		"created_at" : "2023-04-21 16:04:05",
+		"updated_at" : "2023-04-21 16:04:05"
+	},
+	{
+		"id" : 322,
+		"permission_group_id" : 37,
+		"code" : "edit_work_experience",
+		"description" : "Edit Work Experience",
+		"created_at" : "2023-04-21 16:04:36",
+		"updated_at" : "2023-04-21 16:04:36"
+	},
+	{
+		"id" : 323,
+		"permission_group_id" : 37,
+		"code" : "delete_work_experience",
+		"description" : "Delete Work Experience",
+		"created_at" : "2023-04-21 16:05:03",
+		"updated_at" : "2023-04-21 16:05:03"
+	},
+	{
+		"id" : 324,
+		"permission_group_id" : 37,
+		"code" : "add_technology",
+		"description" : "Add Technology",
+		"created_at" : "2023-04-21 16:05:28",
+		"updated_at" : "2023-04-21 16:05:28"
+	},
+	{
+		"id" : 325,
+		"permission_group_id" : 37,
+		"code" : "edit_technology",
+		"description" : "Edit Technology",
+		"created_at" : "2023-04-21 16:05:57",
+		"updated_at" : "2023-04-21 16:05:57"
+	},
+	{
+		"id" : 326,
+		"permission_group_id" : 37,
+		"code" : "delete_technology",
+		"description" : "Delete Technology",
+		"created_at" : "2023-04-21 16:06:23",
+		"updated_at" : "2023-04-21 16:06:23"
+	},
+	{
+		"id" : 327,
+		"permission_group_id" : 37,
+		"code" : "add_rate_card",
+		"description" : "Add Rate Card",
+		"created_at" : "2023-04-21 16:11:46",
+		"updated_at" : "2023-04-21 16:11:46"
+	},
+	{
+		"id" : 328,
+		"permission_group_id" : 37,
+		"code" : "edit_rate_card",
+		"description" : "Edit Rate Card",
+		"created_at" : "2023-04-21 16:12:09",
+		"updated_at" : "2023-04-21 16:12:09"
+	},
+	{
+		"id" : 329,
+		"permission_group_id" : 37,
+		"code" : "delete_rate_card",
+		"description" : "Delete Rate Card",
+		"created_at" : "2023-04-21 16:12:32",
+		"updated_at" : "2023-04-21 16:12:32"
+	},
+	{
+		"id" : 330,
+		"permission_group_id" : 37,
+		"code" : "edit_booking",
+		"description" : "Edit Booking",
+		"created_at" : "2023-04-21 16:13:45",
+		"updated_at" : "2023-04-21 16:13:45"
+	},
+	{
+		"id" : 331,
+		"permission_group_id" : 37,
+		"code" : "view_schedule",
+		"description" : "view_schedule",
+		"created_at" : "2023-04-21 16:15:05",
+		"updated_at" : "2023-04-21 16:15:05"
+	},
+	{
+		"id" : 332,
+		"permission_group_id" : 37,
+		"code" : "add_schedule",
+		"description" : "Add Schedule",
+		"created_at" : "2023-04-21 16:15:22",
+		"updated_at" : "2023-04-21 16:15:22"
+	},
+	{
+		"id" : 333,
+		"permission_group_id" : 37,
+		"code" : "edit_schedule",
+		"description" : "Edit Schedule",
+		"created_at" : "2023-04-21 16:15:44",
+		"updated_at" : "2023-04-21 16:15:44"
+	},
+	{
+		"id" : 334,
+		"permission_group_id" : 37,
+		"code" : "delete_schedule",
+		"description" : "Delete Schedule",
+		"created_at" : "2023-04-21 16:19:37",
+		"updated_at" : "2023-04-21 16:19:37"
+	},
+	{
+		"id" : 335,
+		"permission_group_id" : 37,
+		"code" : "view_consultant_payout",
+		"description" : "View Consultant Payout",
+		"created_at" : "2023-04-21 16:24:03",
+		"updated_at" : "2023-04-21 16:24:03"
+	},
+	{
+		"id" : 336,
+		"permission_group_id" : 37,
+		"code" : "add_consultant_payout",
+		"description" : "Add Consultant Payout",
+		"created_at" : "2023-04-21 16:24:29",
+		"updated_at" : "2023-04-21 16:24:29"
+	},
+	{
+		"id" : 337,
+		"permission_group_id" : 37,
+		"code" : "edit_consultant_payout",
+		"description" : "Edit Consultant Payout",
+		"created_at" : "2023-04-21 16:25:06",
+		"updated_at" : "2023-04-21 16:25:06"
+	},
+	{
+		"id" : 338,
+		"permission_group_id" : 37,
+		"code" : "delete_consultant_payout",
+		"description" : "Delete Consultant Payout",
+		"created_at" : "2023-04-21 16:25:31",
+		"updated_at" : "2023-04-21 16:25:31"
+	},
+	{
+		"id" : 339,
+		"permission_group_id" : 37,
+		"code" : "view_chat_history",
+		"description" : "View Chat History",
+		"created_at" : "2023-04-21 16:26:51",
+		"updated_at" : "2023-04-21 16:26:51"
+	},
+	{
+		"id" : 340,
+		"permission_group_id" : 37,
+		"code" : "view_chat_logs",
+		"description" : "View Chat Logs",
+		"created_at" : "2023-04-21 16:27:19",
+		"updated_at" : "2023-04-21 16:27:19"
+	},
+	{
+		"id" : 341,
+		"permission_group_id" : 37,
+		"code" : "view_refund_request",
+		"description" : "View Refund Request",
+		"created_at" : "2023-04-21 16:33:08",
+		"updated_at" : "2023-04-21 16:33:08"
+	},
+	{
+		"id" : 342,
+		"permission_group_id" : 37,
+		"code" : "edit_refund_request",
+		"description" : "Edit Refund Request",
+		"created_at" : "2023-04-21 16:34:25",
+		"updated_at" : "2023-04-21 16:34:25"
+	},
+	{
+		"id" : 343,
+		"permission_group_id" : 37,
+		"code" : "view_reviews",
+		"description" : "View Reviews",
+		"created_at" : "2023-04-21 16:35:10",
+		"updated_at" : "2023-04-21 16:35:10"
+	},
+	{
+		"id" : 344,
+		"permission_group_id" : 37,
+		"code" : "edit_reviews",
+		"description" : "Edit Reviews",
+		"created_at" : "2023-04-21 16:35:38",
+		"updated_at" : "2023-04-21 16:35:38"
+	},
+	{
+		"id" : 345,
+		"permission_group_id" : 37,
+		"code" : "view_credit_purchase",
+		"description" : "View Credit Purchase",
+		"created_at" : "2023-04-21 16:38:57",
+		"updated_at" : "2023-04-21 16:38:57"
+	},
+	{
+		"id" : 346,
+		"permission_group_id" : 37,
+		"code" : "add_credit_purchase",
+		"description" : "Add Credit Purchase",
+		"created_at" : "2023-04-21 16:40:29",
+		"updated_at" : "2023-04-21 16:40:29"
+	},
+	{
+		"id" : 347,
+		"permission_group_id" : 37,
+		"code" : "edit_credit_purchase",
+		"description" : "Edit Credit Purchase",
+		"created_at" : "2023-04-21 16:40:53",
+		"updated_at" : "2023-04-21 16:40:53"
+	},
+	{
+		"id" : 348,
+		"permission_group_id" : 37,
+		"code" : "delete_credit_purchase",
+		"description" : "Delete Credit Purchase",
+		"created_at" : "2023-04-21 16:41:31",
+		"updated_at" : "2023-04-21 16:41:31"
+	},
+	{
+		"id" : 349,
+		"permission_group_id" : 37,
+		"code" : "view_free_addons",
+		"description" : "View Free Addons",
+		"created_at" : "2023-04-21 17:06:38",
+		"updated_at" : "2023-04-21 17:06:38"
+	},
+	{
+		"id" : 350,
+		"permission_group_id" : 37,
+		"code" : "add_free_addons",
+		"description" : "Add Free Addons",
+		"created_at" : "2023-04-21 17:06:57",
+		"updated_at" : "2023-04-21 17:06:57"
+	},
+	{
+		"id" : 351,
+		"permission_group_id" : 37,
+		"code" : "edit_free_addons",
+		"description" : "Edit Free Addons",
+		"created_at" : "2023-04-21 17:07:14",
+		"updated_at" : "2023-04-21 17:07:14"
+	},
+	{
+		"id" : 352,
+		"permission_group_id" : 37,
+		"code" : "delete_free_addons",
+		"description" : "Delete Free Addons",
+		"created_at" : "2023-04-21 17:07:35",
+		"updated_at" : "2023-04-21 17:07:35"
+	},
+	{
+		"id" : 353,
+		"permission_group_id" : 37,
+		"code" : "view_complaints",
+		"description" : "View Complaints",
+		"created_at" : "2023-04-21 17:08:39",
+		"updated_at" : "2023-04-21 17:08:39"
+	},
+	{
+		"id" : 354,
+		"permission_group_id" : 37,
+		"code" : "view_booking_logs",
+		"description" : "View Booking Logs",
+		"created_at" : "2023-04-21 17:13:51",
+		"updated_at" : "2023-04-21 17:13:51"
+	},
+	{
+		"id" : 355,
+		"permission_group_id" : 37,
+		"code" : "view_booking_transactions",
+		"description" : "View Booking Transactions",
+		"created_at" : "2023-04-21 17:14:23",
+		"updated_at" : "2023-04-21 17:14:23"
+	},
+	{
+		"id" : 356,
+		"permission_group_id" : 37,
+		"code" : "add_consultant",
+		"description" : "Add Consultant",
+		"created_at" : "2023-04-24 10:06:47",
+		"updated_at" : "2023-04-24 10:06:47"
+	},
+	{
+		"id" : 357,
+		"permission_group_id" : 37,
+		"code" : "edit_consultant",
+		"description" : "Edit Consultant",
+		"created_at" : "2023-04-24 10:07:22",
+		"updated_at" : "2023-04-24 10:07:22"
+	},
+	{
+		"id" : 358,
+		"permission_group_id" : 37,
+		"code" : "delete_consultant",
+		"description" : "Delete Consultant",
+		"created_at" : "2023-04-24 10:07:41",
+		"updated_at" : "2023-04-24 10:07:41"
+	},
+	{
+		"id" : 359,
+		"permission_group_id" : 37,
+		"code" : "view_consultant_report",
+		"description" : "View Consultant Report",
+		"created_at" : "2023-04-24 12:44:15",
+		"updated_at" : "2023-04-24 12:44:15"
+	},
+	{
+		"id" : 360,
+		"permission_group_id" : 37,
+		"code" : "export_consultant_reports",
+		"description" : "Export Consultant Reports",
+		"created_at" : "2023-04-24 12:44:58",
+		"updated_at" : "2023-04-24 12:44:58"
+	},
+	{
+		"id" : 361,
+		"permission_group_id" : 37,
+		"code" : "export_booking_reports",
+		"description" : "Export Booking Reports",
+		"created_at" : "2023-04-24 12:45:22",
+		"updated_at" : "2023-04-24 12:45:22"
+	},
+	{
+		"id" : 362,
+		"permission_group_id" : 37,
+		"code" : "export_consultant_payout_reports",
+		"description" : "Export Consultant Payout Reports",
+		"created_at" : "2023-04-24 12:46:02",
+		"updated_at" : "2023-04-24 12:46:02"
+	},
+	{
+		"id" : 363,
+		"permission_group_id" : 37,
+		"code" : "export_credit_purchase_reports",
+		"description" : "Export Credit Purchase Reports",
+		"created_at" : "2023-04-24 12:47:38",
+		"updated_at" : "2023-04-24 12:47:38"
+	}
+]

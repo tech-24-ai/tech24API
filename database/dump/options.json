@@ -1,0 +1,446 @@
+[
+    {
+        "id": 1,
+        "name": "Yes",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 2,
+        "name": "No",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 3,
+        "name": "None",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 4,
+        "name": "Not on the list",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 5,
+        "name": "Not applicable",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 6,
+        "name": "Not Required",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 7,
+        "name": "0 - 50",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 8,
+        "name": "0 - 100",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 9,
+        "name": "50 - 100",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 10,
+        "name": "100 - 500",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 11,
+        "name": "500 - 1000",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 12,
+        "name": "More than 1000",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 13,
+        "name": "No VMs",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 14,
+        "name": "No Physical Server",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 15,
+        "name": "1TB - 100TB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 16,
+        "name": "100TB - 250TB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 17,
+        "name": "250TB - 500TB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 18,
+        "name": "500TB - 1PB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 19,
+        "name": "More than 1PB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 20,
+        "name": "KVM",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 21,
+        "name": "Microsoft Hyper - V",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 22,
+        "name": "VMWare",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 23,
+        "name": "Nutanix AHV",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 24,
+        "name": "Oracle Virtual Machine",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 25,
+        "name": "Microsoft Windows Server",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 26,
+        "name": "Suse Linux",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 27,
+        "name": "Redhat Linux",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 28,
+        "name": "MS Exchange",
+        "have_priority": 1,
+        "have_sub_option": 0
+    },
+    {
+        "id": 29,
+        "name": "NAS Systems",
+        "have_priority": 1,
+        "have_sub_option": 0
+    },
+    {
+        "id": 30,
+        "name": "SharePoint",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 31,
+        "name": "SAP HANA (in-memory databases)",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 32,
+        "name": "Active Directory",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 33,
+        "name": "RDBMS",
+        "have_priority": 0,
+        "have_sub_option": 1
+    },
+    {
+        "id": 34,
+        "name": "AWS",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 35,
+        "name": "Microsoft",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 36,
+        "name": "Google",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 37,
+        "name": "MongoDB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 38,
+        "name": "Cassandra",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 39,
+        "name": "PostgreSQL",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 40,
+        "name": "AIX",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 41,
+        "name": "HP - UX",
+        "have_priority": 1,
+        "have_sub_option": null
+    },
+    {
+        "id": 42,
+        "name": "Solaris",
+        "have_priority": 1,
+        "have_sub_option": null
+    },
+    {
+        "id": 43,
+        "name": "Mature",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 44,
+        "name": "Emerging",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 45,
+        "name": "10TB  - 100TB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 48,
+        "name": "> 500TB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 49,
+        "name": "Basic",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 50,
+        "name": "High",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 51,
+        "name": "Solid-State Array",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 52,
+        "name": "Hybrid array",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 53,
+        "name": "Solid-State Array (with NVMe media for persistent storage)",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 54,
+        "name": "iSCSI",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 55,
+        "name": "FC ",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 56,
+        "name": "NFS",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 57,
+        "name": "SMB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 58,
+        "name": "NVMe/FC",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 59,
+        "name": "NVMe/ROCE",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 60,
+        "name": "500TB - 1PB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 61,
+        "name": "> 1PB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 62,
+        "name": "Appliance",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 63,
+        "name": "Reference Design",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 64,
+        "name": "Software",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 65,
+        "name": "File Storage",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 66,
+        "name": "Analytics",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 67,
+        "name": "AI ",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 68,
+        "name": "HPC",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 69,
+        "name": "100TB - 150TB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 70,
+        "name": "10TB - 20TB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 71,
+        "name": "20TB - 30TB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 72,
+        "name": "30TB - 50TB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 73,
+        "name": "1TB - 5TB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 74,
+        "name": "5TB - 10TB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 75,
+        "name": "50TB - 100TB",
+        "have_priority": 0,
+        "have_sub_option": 0
+    },
+    {
+        "id": 76,
+        "name": "Medium",
+        "have_priority": 0,
+        "have_sub_option": 0
+    }
+]

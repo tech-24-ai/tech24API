@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "option_id": 33,
+        "sub_option_id": 1,
+        "sort_order": null        
+    },
+    {
+        "id": 2,
+        "option_id": 33,
+        "sub_option_id": 2,
+        "sort_order": null        
+    },
+    {
+        "id": 3,
+        "option_id": 33,
+        "sub_option_id": 3,
+        "sort_order": null        
+    },
+    {
+        "id": 4,
+        "option_id": 33,
+        "sub_option_id": 4,
+        "sort_order": null        
+    }
+]

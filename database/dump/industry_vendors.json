@@ -1,0 +1,514 @@
+[
+    {
+        "vendor_id": 1,
+        "industry_id": 6
+    },
+    {
+        "vendor_id": 1,
+        "industry_id": 7
+    },
+    {
+        "vendor_id": 1,
+        "industry_id": 8
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 1
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 2
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 3
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 4
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 5
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 6
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 7
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 8
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 9
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 10
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 11
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 12
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 13
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 14
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 15
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 16
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 17
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 18
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 19
+    },
+    {
+        "vendor_id": 2,
+        "industry_id": 20
+    },
+    {
+        "vendor_id": 3,
+        "industry_id": 1
+    },
+    {
+        "vendor_id": 3,
+        "industry_id": 4
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 1
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 2
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 3
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 4
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 5
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 6
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 7
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 8
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 9
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 10
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 11
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 12
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 13
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 14
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 15
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 16
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 17
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 18
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 19
+    },
+    {
+        "vendor_id": 4,
+        "industry_id": 20
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 1
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 2
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 3
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 4
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 5
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 6
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 7
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 8
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 9
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 10
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 11
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 12
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 13
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 14
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 15
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 16
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 17
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 18
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 19
+    },
+    {
+        "vendor_id": 5,
+        "industry_id": 20
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 1
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 2
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 3
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 4
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 5
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 6
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 7
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 8
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 9
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 10
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 11
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 12
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 13
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 14
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 15
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 16
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 17
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 18
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 19
+    },
+    {
+        "vendor_id": 6,
+        "industry_id": 20
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 1
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 2
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 3
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 4
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 5
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 6
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 7
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 8
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 9
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 10
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 11
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 12
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 13
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 14
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 15
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 16
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 17
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 18
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 19
+    },
+    {
+        "vendor_id": 7,
+        "industry_id": 20
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 1
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 2
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 3
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 4
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 5
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 6
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 7
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 8
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 9
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 10
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 11
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 12
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 13
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 14
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 15
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 16
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 17
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 18
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 19
+    },
+    {
+        "vendor_id": 10,
+        "industry_id": 20
+    },
+    {
+        "vendor_id": 11,
+        "industry_id": 4
+    },
+    {
+        "vendor_id": 11,
+        "industry_id": 5
+    },
+    {
+        "vendor_id": 12,
+        "industry_id": 5
+    }
+]

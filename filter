@@ -1,0 +1,67 @@
+{
+    "questions": {
+        $all: [
+            {
+                $elemMatch: {
+                    "id": 26,
+                    "value": {
+                        $in: [
+                            "72"
+                        ]
+                    }
+                }
+            },
+            {
+                $elemMatch: {
+                    "id": 18,
+                    "value": {
+                        $in: [
+                            "49"
+                        ]
+                    }
+                }
+            },
+            {
+                $elemMatch: {
+                    "id": 23,
+                    "value": {
+                        $in: [
+                            "62"
+                        ]
+                    }
+                }
+            },
+            {
+                $elemMatch: {
+                    "id": 24,
+                    "value": {
+                        $in: [
+                            "66"
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "vendor": {
+        $in: [
+            "DDN",
+            "Dell EMC",
+            "Hitachi",
+            "HPE",
+            "Huawei",
+            "IBM",
+            "NetApp"
+        ]
+    },
+    "countryCategories": {
+        $in: [
+            "5"
+        ]
+    },
+    "module": {
+        $in: [
+            "File Storage"
+        ]
+    }
+}

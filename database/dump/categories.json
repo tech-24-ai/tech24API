@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Digital Technologies",
+        "color": "#10acdc",
+        "bg_color": "#d4e0fe",
+        "image": "https://itmap-bucket.s3.amazonaws.com/img1.svg",
+        "no_flow": 0,
+        "sort_order": 1,
+        "detail": ""
+    },
+    {
+        "id": 2,
+        "name": "Business Applications",
+        "color": "#ffa867",
+        "bg_color": "#d4e0fe",
+        "image": "https://itmap-bucket.s3.amazonaws.com/img2.svg",
+        "no_flow": 0,
+        "sort_order": 3,
+        "detail": ""
+    },
+    {
+        "id": 3,
+        "name": "IT infrastructure",
+        "color": "#075aee",
+        "bg_color": "#d4e0fe",
+        "image": "https://itmap-bucket.s3.amazonaws.com/img3.svg",
+        "no_flow": 0,
+        "sort_order": 4,
+        "detail": ""
+    },
+    {
+        "id": 4,
+        "name": "Cybersecurity",
+        "color": "#8592ac",
+        "bg_color": "#d4e0fe",
+        "image": "https://itmap-bucket.s3.amazonaws.com/img4.svg",
+        "no_flow": 0,
+        "sort_order": 6,
+        "detail": ""
+    },
+    {
+        "id": 5,
+        "name": "Templates and Toolkits",
+        "color": "#5878ef",
+        "bg_color": "#d4e0fe",
+        "image": "https://itmap-bucket.s3.amazonaws.com/tt.png",
+        "no_flow": 1,
+        "sort_order": 2,
+        "detail": ""
+    },
+    {
+        "id": 6,
+        "name": "Data management",
+        "color": "#42c656",
+        "bg_color": "#d4e0fe",
+        "image": "https://itmap-bucket.s3.amazonaws.com/db_bg.png",
+        "no_flow": 0,
+        "sort_order": 5,
+        "detail": ""
+    },
+    {
+        "id": 7,
+        "name": "Physical Security",
+        "color": "#b155ef",
+        "bg_color": "#d4e0fe",
+        "image": "https://itmap-bucket.s3.amazonaws.com/img5.svg",
+        "no_flow": 0,
+        "sort_order": 7,
+        "detail": ""
+    }
+]

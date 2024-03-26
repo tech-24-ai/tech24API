@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "In-depth Product Evaluation",
+        "sort_order": 1        
+    },
+    {
+        "id": 2,
+        "name": "Templates & Tools",
+        "sort_order": 2        
+    },
+    {
+        "id": 3,
+        "name": "Market Trends & Best Practices",
+        "sort_order": 3        
+    },
+    {
+        "id": 4,
+        "name": "IT Policies",
+        "sort_order": 3        
+    },
+    {
+        "id": 5,
+        "name": "Jobs",
+        "sort_order": 4        
+    },
+    {
+        "id": 6,
+        "name": "Strategy Templates",
+        "sort_order": 5        
+    },
+    {
+        "id": 7,
+        "name": "RFP Templates",
+        "sort_order": 6        
+    }
+]

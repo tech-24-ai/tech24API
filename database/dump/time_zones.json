@@ -1,0 +1,1322 @@
+[
+	{
+		"id" : 1,
+		"name" : "Midway Island, Samoa",
+		"sort_name" : "UM",
+		"country_name" : "United States Minor Outlying Islands",
+		"zone" : "Pacific/Midway",
+		"offset" : "UTC -11:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 2,
+		"name" : "Pago Pago",
+		"sort_name" : "AS",
+		"country_name" : "American Samoa",
+		"zone" : "Pacific/Pago_Pago",
+		"offset" : "UTC -11:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 3,
+		"name" : "Hawaii",
+		"sort_name" : "US",
+		"country_name" : "United States",
+		"zone" : "Pacific/Honolulu",
+		"offset" : "UTC -10:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 4,
+		"name" : "Alaska",
+		"sort_name" : "US",
+		"country_name" : "United States",
+		"zone" : "America/Anchorage",
+		"offset" : "UTC -08:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 5,
+		"name" : "Vancouver",
+		"sort_name" : "CA",
+		"country_name" : "Canada",
+		"zone" : "America/Vancouver",
+		"offset" : "UTC -07:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 6,
+		"name" : "Pacific Time (US and Canada)",
+		"sort_name" : "US",
+		"country_name" : "United States",
+		"zone" : "America/Los_Angeles",
+		"offset" : "UTC -07:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 7,
+		"name" : "Tijuana",
+		"sort_name" : "MX",
+		"country_name" : "Mexico",
+		"zone" : "America/Tijuana",
+		"offset" : "UTC -07:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 8,
+		"name" : "Edmonton",
+		"sort_name" : "CA",
+		"country_name" : "Canada",
+		"zone" : "America/Edmonton",
+		"offset" : "UTC -06:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 9,
+		"name" : "Mountain Time (US and Canada)",
+		"sort_name" : "US",
+		"country_name" : "United States",
+		"zone" : "America/Denver",
+		"offset" : "UTC -06:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 10,
+		"name" : "Arizona",
+		"sort_name" : "US",
+		"country_name" : "United States",
+		"zone" : "America/Phoenix",
+		"offset" : "UTC -07:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 11,
+		"name" : "Mazatlan",
+		"sort_name" : "MX",
+		"country_name" : "Mexico",
+		"zone" : "America/Mazatlan",
+		"offset" : "UTC -06:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 12,
+		"name" : "Winnipeg",
+		"sort_name" : "CA",
+		"country_name" : "Canada",
+		"zone" : "America/Winnipeg",
+		"offset" : "UTC -05:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 13,
+		"name" : "Saskatchewan",
+		"sort_name" : "CA",
+		"country_name" : "Canada",
+		"zone" : "America/Regina",
+		"offset" : "UTC -06:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 14,
+		"name" : "Central Time (US and Canada)",
+		"sort_name" : "US",
+		"country_name" : "United States",
+		"zone" : "America/Chicago",
+		"offset" : "UTC -05:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 15,
+		"name" : "Mexico City",
+		"sort_name" : "MX",
+		"country_name" : "Mexico",
+		"zone" : "America/Mexico_City",
+		"offset" : "UTC -05:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 16,
+		"name" : "Guatemala",
+		"sort_name" : "GT",
+		"country_name" : "Guatemala",
+		"zone" : "America/Guatemala",
+		"offset" : "UTC -06:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 17,
+		"name" : "El Salvador",
+		"sort_name" : "SV",
+		"country_name" : "El Salvador",
+		"zone" : "America/El_Salvador",
+		"offset" : "UTC -06:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 18,
+		"name" : "Managua",
+		"sort_name" : "NI",
+		"country_name" : "Nicaragua",
+		"zone" : "America/Managua",
+		"offset" : "UTC -06:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 19,
+		"name" : "Costa Rica",
+		"sort_name" : "CR",
+		"country_name" : "Costa Rica",
+		"zone" : "America/Costa_Rica",
+		"offset" : "UTC -06:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 20,
+		"name" : "Montreal",
+		"sort_name" : "CA",
+		"country_name" : "Canada",
+		"zone" : "America/Montreal",
+		"offset" : "UTC -04:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 21,
+		"name" : "Eastern Time (US and Canada)",
+		"sort_name" : "US",
+		"country_name" : "United States",
+		"zone" : "America/New_York",
+		"offset" : "UTC -04:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 22,
+		"name" : "Indiana (East)",
+		"sort_name" : "US",
+		"country_name" : "United States",
+		"zone" : "America/Indianapolis",
+		"offset" : "UTC -04:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 23,
+		"name" : "Panama",
+		"sort_name" : "PA",
+		"country_name" : "Panama",
+		"zone" : "America/Panama",
+		"offset" : "UTC -05:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 24,
+		"name" : "Bogota",
+		"sort_name" : "CO",
+		"country_name" : "Colombia",
+		"zone" : "America/Bogota",
+		"offset" : "UTC -05:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 25,
+		"name" : "Lima",
+		"sort_name" : "PE",
+		"country_name" : "Peru",
+		"zone" : "America/Lima",
+		"offset" : "UTC -05:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 26,
+		"name" : "Halifax",
+		"sort_name" : "CA",
+		"country_name" : "Canada",
+		"zone" : "America/Halifax",
+		"offset" : "UTC -03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 27,
+		"name" : "Puerto Rico",
+		"sort_name" : "PR",
+		"country_name" : "Puerto Rico",
+		"zone" : "America/Puerto_Rico",
+		"offset" : "UTC -04:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 28,
+		"name" : "Caracas",
+		"sort_name" : "VE",
+		"country_name" : "Venezuela",
+		"zone" : "America/Caracas",
+		"offset" : "UTC -04:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 29,
+		"name" : "Santiago",
+		"sort_name" : "CL",
+		"country_name" : "Chile",
+		"zone" : "America/Santiago",
+		"offset" : "UTC -04:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 30,
+		"name" : "Newfoundland and Labrador",
+		"sort_name" : "CA",
+		"country_name" : "Canada",
+		"zone" : "America/St_Johns",
+		"offset" : "UTC -02:30",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 31,
+		"name" : "Montevideo",
+		"sort_name" : "UY",
+		"country_name" : "Uruguay",
+		"zone" : "America/Montevideo",
+		"offset" : "UTC -03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 32,
+		"name" : "Brasilia",
+		"sort_name" : "BR",
+		"country_name" : "Brazil",
+		"zone" : "America/Araguaina",
+		"offset" : "UTC -03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 33,
+		"name" : "Buenos Aires, Georgetown",
+		"sort_name" : "AR",
+		"country_name" : "Argentina",
+		"zone" : "America/Argentina/Buenos_Aires",
+		"offset" : "UTC -03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 34,
+		"name" : "Greenland",
+		"sort_name" : "GL",
+		"country_name" : "Greenland",
+		"zone" : "America/Godthab",
+		"offset" : "UTC -02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 35,
+		"name" : "Sao Paulo",
+		"sort_name" : "BR",
+		"country_name" : "Brazil",
+		"zone" : "America/Sao_Paulo",
+		"offset" : "UTC -03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 36,
+		"name" : "Azores",
+		"sort_name" : "PT",
+		"country_name" : "Portugal",
+		"zone" : "Atlantic/Azores",
+		"offset" : "UTC -01:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 37,
+		"name" : "Atlantic Time (Canada)",
+		"sort_name" : "CA",
+		"country_name" : "Canada",
+		"zone" : "Canada/Atlantic",
+		"offset" : "UTC -04:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 38,
+		"name" : "Cape Verde Islands",
+		"sort_name" : "CV",
+		"country_name" : "Cape Verde",
+		"zone" : "Atlantic/Cape_Verde",
+		"offset" : "UTC -01:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 39,
+		"name" : "Belgrade, Bratislava, Ljubljana",
+		"sort_name" : "RS",
+		"country_name" : "Serbia",
+		"zone" : "Europe/Belgrade",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 40,
+		"name" : "Reykjavik",
+		"sort_name" : "IS",
+		"country_name" : "Iceland",
+		"zone" : "Atlantic/Reykjavik",
+		"offset" : "UTC +00:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 41,
+		"name" : "Dublin",
+		"sort_name" : "IE",
+		"country_name" : "Ireland",
+		"zone" : "Europe/Dublin",
+		"offset" : "UTC +01:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 42,
+		"name" : "London",
+		"sort_name" : "GB",
+		"country_name" : "United Kingdom",
+		"zone" : "Europe/London",
+		"offset" : "UTC +01:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 43,
+		"name" : "Lisbon",
+		"sort_name" : "PT",
+		"country_name" : "Portugal",
+		"zone" : "Europe/Lisbon",
+		"offset" : "UTC +01:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 44,
+		"name" : "Casablanca",
+		"sort_name" : "MA",
+		"country_name" : "Morocco",
+		"zone" : "Africa/Casablanca",
+		"offset" : "UTC +01:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 45,
+		"name" : "Nouakchott",
+		"sort_name" : "MR",
+		"country_name" : "Mauritania",
+		"zone" : "Africa/Nouakchott",
+		"offset" : "UTC +00:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 46,
+		"name" : "Oslo",
+		"sort_name" : "NO",
+		"country_name" : "Norway",
+		"zone" : "Europe/Oslo",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 47,
+		"name" : "Copenhagen",
+		"sort_name" : "DK",
+		"country_name" : "Denmark",
+		"zone" : "Europe/Copenhagen",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 48,
+		"name" : "Brussels",
+		"sort_name" : "BE",
+		"country_name" : "Belgium",
+		"zone" : "Europe/Brussels",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 49,
+		"name" : "Amsterdam, Berlin, Rome, Stockholm, Vienna",
+		"sort_name" : "DE",
+		"country_name" : "Germany",
+		"zone" : "Europe/Berlin",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 50,
+		"name" : "Helsinki",
+		"sort_name" : "FI",
+		"country_name" : "Finland",
+		"zone" : "Europe/Helsinki",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 51,
+		"name" : "Amsterdam",
+		"sort_name" : "NL",
+		"country_name" : "Netherlands",
+		"zone" : "Europe/Amsterdam",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 52,
+		"name" : "Rome",
+		"sort_name" : "IT",
+		"country_name" : "Italy",
+		"zone" : "Europe/Rome",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 53,
+		"name" : "Stockholm",
+		"sort_name" : "SE",
+		"country_name" : "Sweden",
+		"zone" : "Europe/Stockholm",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 54,
+		"name" : "Vienna",
+		"sort_name" : "AT",
+		"country_name" : "Austria",
+		"zone" : "Europe/Vienna",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 55,
+		"name" : "Luxembourg",
+		"sort_name" : "LU",
+		"country_name" : "Luxembourg",
+		"zone" : "Europe/Luxembourg",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 56,
+		"name" : "Paris",
+		"sort_name" : "FR",
+		"country_name" : "France",
+		"zone" : "Europe/Paris",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 57,
+		"name" : "Zurich",
+		"sort_name" : "CH",
+		"country_name" : "Switzerland",
+		"zone" : "Europe/Zurich",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 58,
+		"name" : "Madrid",
+		"sort_name" : "ES",
+		"country_name" : "Spain",
+		"zone" : "Europe/Madrid",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 59,
+		"name" : "West Central Africa",
+		"sort_name" : "CF",
+		"country_name" : "Central African Republic",
+		"zone" : "Africa/Bangui",
+		"offset" : "UTC +01:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 60,
+		"name" : "Algiers",
+		"sort_name" : "DZ",
+		"country_name" : "Algeria",
+		"zone" : "Africa/Algiers",
+		"offset" : "UTC +01:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 61,
+		"name" : "Tunis",
+		"sort_name" : "TN",
+		"country_name" : "Tunisia",
+		"zone" : "Africa/Tunis",
+		"offset" : "UTC +01:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 62,
+		"name" : "Harare, Pretoria",
+		"sort_name" : "ZW",
+		"country_name" : "Zimbabwe",
+		"zone" : "Africa/Harare",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 63,
+		"name" : "Nairobi",
+		"sort_name" : "KE",
+		"country_name" : "Kenya",
+		"zone" : "Africa/Nairobi",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 64,
+		"name" : "Warsaw",
+		"sort_name" : "PL",
+		"country_name" : "Poland",
+		"zone" : "Europe/Warsaw",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 65,
+		"name" : "Prague Bratislava",
+		"sort_name" : "CZ",
+		"country_name" : "Czech Republic",
+		"zone" : "Europe/Prague",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 66,
+		"name" : "Budapest",
+		"sort_name" : "HU",
+		"country_name" : "Hungary",
+		"zone" : "Europe/Budapest",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 67,
+		"name" : "Sofia",
+		"sort_name" : "BG",
+		"country_name" : "Bulgaria",
+		"zone" : "Europe/Sofia",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 68,
+		"name" : "Istanbul",
+		"sort_name" : "TR",
+		"country_name" : "Turkey",
+		"zone" : "Europe/Istanbul",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 69,
+		"name" : "Athens",
+		"sort_name" : "GR",
+		"country_name" : "Greece",
+		"zone" : "Europe/Athens",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 70,
+		"name" : "Bucharest",
+		"sort_name" : "RO",
+		"country_name" : "Romania",
+		"zone" : "Europe/Bucharest",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 71,
+		"name" : "Nicosia",
+		"sort_name" : "CY",
+		"country_name" : "Cyprus",
+		"zone" : "Asia/Nicosia",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 72,
+		"name" : "Beirut",
+		"sort_name" : "LB",
+		"country_name" : "Lebanon",
+		"zone" : "Asia/Beirut",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 73,
+		"name" : "Damascus",
+		"sort_name" : "SY",
+		"country_name" : "Syria",
+		"zone" : "Asia/Damascus",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 74,
+		"name" : "Jerusalem",
+		"sort_name" : "IL",
+		"country_name" : "Israel",
+		"zone" : "Asia/Jerusalem",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 75,
+		"name" : "Amman",
+		"sort_name" : "JO",
+		"country_name" : "Jordan",
+		"zone" : "Asia/Amman",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 76,
+		"name" : "Tripoli",
+		"sort_name" : "LY",
+		"country_name" : "Libya",
+		"zone" : "Africa/Tripoli",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 77,
+		"name" : "Cairo",
+		"sort_name" : "EG",
+		"country_name" : "Egypt",
+		"zone" : "Africa/Cairo",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 78,
+		"name" : "Johannesburg",
+		"sort_name" : "ZA",
+		"country_name" : "South Africa",
+		"zone" : "Africa/Johannesburg",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 79,
+		"name" : "Moscow",
+		"sort_name" : "RU",
+		"country_name" : "Russia",
+		"zone" : "Europe/Moscow",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 80,
+		"name" : "Baghdad",
+		"sort_name" : "IQ",
+		"country_name" : "Iraq",
+		"zone" : "Asia/Baghdad",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 81,
+		"name" : "Kuwait",
+		"sort_name" : "KW",
+		"country_name" : "Kuwait",
+		"zone" : "Asia/Kuwait",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 82,
+		"name" : "Riyadh",
+		"sort_name" : "SA",
+		"country_name" : "Saudi Arabia",
+		"zone" : "Asia/Riyadh",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 83,
+		"name" : "Bahrain",
+		"sort_name" : "BH",
+		"country_name" : "Bahrain",
+		"zone" : "Asia/Bahrain",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 84,
+		"name" : "Qatar",
+		"sort_name" : "QA",
+		"country_name" : "Qatar",
+		"zone" : "Asia/Qatar",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 85,
+		"name" : "Aden",
+		"sort_name" : "YE",
+		"country_name" : "Yemen",
+		"zone" : "Asia/Aden",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 86,
+		"name" : "Tehran",
+		"sort_name" : "IR",
+		"country_name" : "Iran",
+		"zone" : "Asia/Tehran",
+		"offset" : "UTC +04:30",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 87,
+		"name" : "Khartoum",
+		"sort_name" : "SD",
+		"country_name" : "Sudan",
+		"zone" : "Africa/Khartoum",
+		"offset" : "UTC +02:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 88,
+		"name" : "Djibouti",
+		"sort_name" : "DJ",
+		"country_name" : "Djibouti",
+		"zone" : "Africa/Djibouti",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 89,
+		"name" : "Mogadishu",
+		"sort_name" : "SO",
+		"country_name" : "Somalia",
+		"zone" : "Africa/Mogadishu",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 90,
+		"name" : "Dubai",
+		"sort_name" : "AE",
+		"country_name" : "United Arab Emirates",
+		"zone" : "Asia/Dubai",
+		"offset" : "UTC +04:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 91,
+		"name" : "Muscat",
+		"sort_name" : "OM",
+		"country_name" : "Oman",
+		"zone" : "Asia/Muscat",
+		"offset" : "UTC +04:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 92,
+		"name" : "Baku, Tbilisi, Yerevan",
+		"sort_name" : "AZ",
+		"country_name" : "Azerbaijan",
+		"zone" : "Asia/Baku",
+		"offset" : "UTC +04:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 93,
+		"name" : "Kabul",
+		"sort_name" : "AF",
+		"country_name" : "Afghanistan",
+		"zone" : "Asia/Kabul",
+		"offset" : "UTC +04:30",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 94,
+		"name" : "Yekaterinburg",
+		"sort_name" : "RU",
+		"country_name" : "Russia",
+		"zone" : "Asia/Yekaterinburg",
+		"offset" : "UTC +05:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 95,
+		"name" : "Islamabad, Karachi, Tashkent",
+		"sort_name" : "UZ",
+		"country_name" : "Uzbekistan",
+		"zone" : "Asia/Tashkent",
+		"offset" : "UTC +05:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 96,
+		"name" : "India",
+		"sort_name" : "IN",
+		"country_name" : "India",
+		"zone" : "Asia/Calcutta",
+		"offset" : "UTC +05:30",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 97,
+		"name" : "Kathmandu",
+		"sort_name" : "NP",
+		"country_name" : "Nepal",
+		"zone" : "Asia/Kathmandu",
+		"offset" : "UTC +05:45",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 98,
+		"name" : "Novosibirsk",
+		"sort_name" : "RU",
+		"country_name" : "Russia",
+		"zone" : "Asia/Novosibirsk",
+		"offset" : "UTC +07:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 99,
+		"name" : "Almaty",
+		"sort_name" : "KZ",
+		"country_name" : "Kazakhstan",
+		"zone" : "Asia/Almaty",
+		"offset" : "UTC +06:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 100,
+		"name" : "Dacca",
+		"sort_name" : "BD",
+		"country_name" : "Bangladesh",
+		"zone" : "Asia/Dacca",
+		"offset" : "UTC +06:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 101,
+		"name" : "Krasnoyarsk",
+		"sort_name" : "RU",
+		"country_name" : "Russia",
+		"zone" : "Asia/Krasnoyarsk",
+		"offset" : "UTC +08:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 102,
+		"name" : "Astana, Dhaka",
+		"sort_name" : "BD",
+		"country_name" : "Bangladesh",
+		"zone" : "Asia/Dhaka",
+		"offset" : "UTC +06:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 103,
+		"name" : "Bangkok",
+		"sort_name" : "TH",
+		"country_name" : "Thailand",
+		"zone" : "Asia/Bangkok",
+		"offset" : "UTC +07:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 104,
+		"name" : "Vietnam",
+		"sort_name" : "VN",
+		"country_name" : "Vietnam",
+		"zone" : "Asia/Saigon",
+		"offset" : "UTC +07:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 105,
+		"name" : "Jakarta",
+		"sort_name" : "ID",
+		"country_name" : "Indonesia",
+		"zone" : "Asia/Jakarta",
+		"offset" : "UTC +07:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 106,
+		"name" : "Irkutsk, Ulaanbaatar",
+		"sort_name" : "RU",
+		"country_name" : "Russian Federation",
+		"zone" : "Asia/Irkutsk",
+		"offset" : "UTC +08:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 107,
+		"name" : "Beijing, Shanghai",
+		"sort_name" : "CN",
+		"country_name" : "China",
+		"zone" : "Asia/Shanghai",
+		"offset" : "UTC +08:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 108,
+		"name" : "Hong Kong",
+		"sort_name" : "HK",
+		"country_name" : "Hong Kong",
+		"zone" : "Asia/Hong_Kong",
+		"offset" : "UTC +08:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 109,
+		"name" : "Taipei",
+		"sort_name" : "TW",
+		"country_name" : "Taiwan",
+		"zone" : "Asia/Taipei",
+		"offset" : "UTC +08:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 110,
+		"name" : "Kuala Lumpur",
+		"sort_name" : "MY",
+		"country_name" : "Malaysia",
+		"zone" : "Asia/Kuala_Lumpur",
+		"offset" : "UTC +08:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 111,
+		"name" : "Singapore",
+		"sort_name" : "SG",
+		"country_name" : "Singapore",
+		"zone" : "Asia/Singapore",
+		"offset" : "UTC +08:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 112,
+		"name" : "Perth",
+		"sort_name" : "AU",
+		"country_name" : "Australia",
+		"zone" : "Australia/Perth",
+		"offset" : "UTC +08:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 113,
+		"name" : "Yakutsk",
+		"sort_name" : "RU",
+		"country_name" : "Russia",
+		"zone" : "Asia/Yakutsk",
+		"offset" : "UTC +09:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 114,
+		"name" : "Seoul",
+		"sort_name" : "KR",
+		"country_name" : "South Korea",
+		"zone" : "Asia/Seoul",
+		"offset" : "UTC +09:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 115,
+		"name" : "Osaka, Sapporo, Tokyo",
+		"sort_name" : "JP",
+		"country_name" : "Japan",
+		"zone" : "Asia/Tokyo",
+		"offset" : "UTC +09:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 116,
+		"name" : "Darwin",
+		"sort_name" : "AU",
+		"country_name" : "Australia",
+		"zone" : "Australia/Darwin",
+		"offset" : "UTC +09:30",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 117,
+		"name" : "Adelaide",
+		"sort_name" : "AU",
+		"country_name" : "Australia",
+		"zone" : "Australia/Adelaide",
+		"offset" : "UTC +10:30",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 118,
+		"name" : "Vladivostok",
+		"sort_name" : "RU",
+		"country_name" : "Russia",
+		"zone" : "Asia/Vladivostok",
+		"offset" : "UTC +10:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 119,
+		"name" : "Guam, Port Moresby",
+		"sort_name" : "PG",
+		"country_name" : "Papua New Guinea",
+		"zone" : "Pacific/Port_Moresby",
+		"offset" : "UTC +10:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 120,
+		"name" : "Brisbane",
+		"sort_name" : "AU",
+		"country_name" : "Australia",
+		"zone" : "Australia/Brisbane",
+		"offset" : "UTC +10:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 121,
+		"name" : "Canberra, Melbourne, Sydney",
+		"sort_name" : "AU",
+		"country_name" : "Australia",
+		"zone" : "Australia/Sydney",
+		"offset" : "UTC +10:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 122,
+		"name" : "Hobart",
+		"sort_name" : "AU",
+		"country_name" : "Australia",
+		"zone" : "Australia/Hobart",
+		"offset" : "UTC +10:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 123,
+		"name" : "Magadan",
+		"sort_name" : "RU",
+		"country_name" : "Russia",
+		"zone" : "Asia/Magadan",
+		"offset" : "UTC +11:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 124,
+		"name" : "Solomon Islands",
+		"sort_name" : "SB",
+		"country_name" : "Solomon Islands",
+		"zone" : "SST",
+		"offset" : "UTC +11:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 125,
+		"name" : "New Caledonia",
+		"sort_name" : "NC",
+		"country_name" : "New Caledonia",
+		"zone" : "Pacific/Noumea",
+		"offset" : "UTC +11:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 126,
+		"name" : "Kamchatka",
+		"sort_name" : "RU",
+		"country_name" : "Russia",
+		"zone" : "Asia/Kamchatka",
+		"offset" : "UTC +12:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 127,
+		"name" : "Fiji Islands, Marshall Islands",
+		"sort_name" : "FJ",
+		"country_name" : "Fiji",
+		"zone" : "Pacific/Fiji",
+		"offset" : "UTC +12:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 128,
+		"name" : "Auckland, Wellington",
+		"sort_name" : "NZ",
+		"country_name" : "New Zealand",
+		"zone" : "Pacific/Auckland",
+		"offset" : "UTC +12:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 129,
+		"name" : "Mumbai, Kolkata, New Delhi",
+		"sort_name" : "IN",
+		"country_name" : "India",
+		"zone" : "Asia/Kolkata",
+		"offset" : "UTC +05:30",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 130,
+		"name" : "Kiev",
+		"sort_name" : "UA",
+		"country_name" : "Ukraine",
+		"zone" : "Europe/Kiev",
+		"offset" : "UTC +03:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 131,
+		"name" : "Tegucigalpa",
+		"sort_name" : "HN",
+		"country_name" : "Honduras",
+		"zone" : "America/Tegucigalpa",
+		"offset" : "UTC -06:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	},
+	{
+		"id" : 132,
+		"name" : "Independent State of Samoa",
+		"sort_name" : "WS",
+		"country_name" : "Samoa",
+		"zone" : "Pacific/Apia",
+		"offset" : "UTC +13:00",
+		"created_at" : "2023-04-11 12:10:00",
+		"updated_at" : "2023-04-11 12:10:00"
+	}
+]

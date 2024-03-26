@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "document_type_id": 1,
+        "name": " Report Name 1",
+        "price": null,
+        "url": "https://itmap-bucket.s3.amazonaws.com/Opstoolv2.pdf"
+    },
+    {
+        "id": 2,
+        "document_type_id": 1,
+        "name": " Report Name 2",
+        "price": null,
+        "url": "https://itmap-bucket.s3.amazonaws.com/Opstoolv2.pdf"
+    },
+    {
+        "id": 3,
+        "document_type_id": 1,
+        "name": " Report Name 3",
+        "price": null,
+        "url": "https://itmap-bucket.s3.amazonaws.com/Opstoolv2.pdf"
+    },
+    {
+        "id": 4,
+        "document_type_id": 2,
+        "name": " Report Name 1",
+        "price": null,
+        "url": "https://itmap-bucket.s3.amazonaws.com/Opstoolv2.pdf"
+    },
+    {
+        "id": 5,
+        "document_type_id": 2,
+        "name": " Report Name 2",
+        "price": null,
+        "url": "https://itmap-bucket.s3.amazonaws.com/Opstoolv2.pdf"
+    },
+    {
+        "id": 6,
+        "document_type_id": 2,
+        "name": " Report Name 3",
+        "price": null,
+        "url": "https://itmap-bucket.s3.amazonaws.com/Opstoolv2.pdf"
+    },
+    {
+        "id": 7,
+        "document_type_id": 3,
+        "name": " Report Name 1",
+        "price": null,
+        "url": "https://itmap-bucket.s3.amazonaws.com/Opstoolv2.pdf"
+    },
+    {
+        "id": 8,
+        "document_type_id": 3,
+        "name": " Report Name 2",
+        "price": null,
+        "url": "https://itmap-bucket.s3.amazonaws.com/Opstoolv2.pdf"
+    },
+    {
+        "id": 9,
+        "document_type_id": 3,
+        "name": " Report Name 3",
+        "price": null,
+        "url": "https://itmap-bucket.s3.amazonaws.com/Opstoolv2.pdf"
+    },
+    {
+        "id": 10,
+        "document_type_id": 7,
+        "name": "RFP1",
+        "price": "0",
+        "url": "https://itmap-bucket.s3.amazonaws.com/BasicWireframe.pdf"
+    },
+    {
+        "id": 12,
+        "document_type_id": 5,
+        "name": "JB101",
+        "price": "0",
+        "url": "https://itmap-bucket.s3.amazonaws.com/BasicWireframe.pdf"
+    },
+    {
+        "id": 13,
+        "document_type_id": 4,
+        "name": "PLC1002",
+        "price": "0",
+        "url": "https://itmap-bucket.s3.amazonaws.com/BasicWireframe.pdf"
+    },
+    {
+        "id": 14,
+        "document_type_id": 6,
+        "name": "ST1",
+        "price": "0",
+        "url": "https://itmap-bucket.s3.amazonaws.com/BasicWireframe.pdf"
+    }
+]

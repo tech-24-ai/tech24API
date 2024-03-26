@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "name": "Digital Technologies",
+        "color": "#44addc",
+        "header_color": "#10acdc",
+        "bg_color": "#E6EEFD",
+        "image": "https://itmap-bucket.s3.amazonaws.com/img1.svg",
+        "no_flow": 0,
+        "sort_order": 1,
+        "detail": "Provides insights on digital technologies such as AI/ML, IoT, AR/VR and Robotics in each industry vertical"        
+    },
+    {
+        "id": 2,
+        "name": "Business Applications",
+        "color": "#075aee",
+        "header_color": "#87ff66",
+        "bg_color": "#E6EEFD",
+        "image": "https://itmap-bucket.s3.amazonaws.com/img2.svg",
+        "no_flow": 0,
+        "sort_order": 3,
+        "detail": "Provides insights on common enterprise applications as well as applications specific to your industry"        
+    },
+    {
+        "id": 3,
+        "name": "IT infrastructure",
+        "color": "#869cac",
+        "header_color": "#07a8ed",
+        "bg_color": "#e7eefd",
+        "image": "https://itmap-bucket.s3.amazonaws.com/img3.svg",
+        "no_flow": 0,
+        "sort_order": 4,
+        "detail": "Gain insights on data center systems, software and public clouds."        
+    },
+    {
+        "id": 4,
+        "name": "Cybersecurity",
+        "color": "#5bc657",
+        "header_color": "#8592ac",
+        "bg_color": "#E6EEFD",
+        "image": "https://itmap-bucket.s3.amazonaws.com/img4.svg",
+        "no_flow": 0,
+        "sort_order": 6,
+        "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venom."        
+    },
+    {
+        "id": 5,
+        "name": "Templates and Toolkits",
+        "color": "#f4a766",
+        "header_color": "#5878ef",
+        "bg_color": "#E6EEFD",
+        "image": "https://itmap-bucket.s3.amazonaws.com/tt.png",
+        "no_flow": 1,
+        "sort_order": 2,
+        "detail": "Download templates for RFPs, IT strategies, Policy documents and Jobs"        
+    },
+    {
+        "id": 6,
+        "name": "Data management",
+        "color": "#5878ef",
+        "header_color": "#42c656",
+        "bg_color": "#E6EEFD",
+        "image": "https://itmap-bucket.s3.amazonaws.com/db_bg.png",
+        "no_flow": 0,
+        "sort_order": 5,
+        "detail": "Databases, Data management platforms, analytics and more"        
+    },
+    {
+        "id": 7,
+        "name": "Physical Security",
+        "color": "#b155ef",
+        "header_color": "#b155ef",
+        "bg_color": "#E6EEFD",
+        "image": "https://itmap-bucket.s3.amazonaws.com/img5.svg",
+        "no_flow": 0,
+        "sort_order": 7,
+        "detail": "Gain insights on various aspects of physical security including video cameras, access control systems, face recognition and others"        
+    }
+]

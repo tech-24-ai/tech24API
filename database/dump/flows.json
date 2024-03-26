@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "module_id": 9,
+        "name": "Flow 1",
+        "notes": null
+    },
+    {
+        "id": 2,
+        "module_id": 13,
+        "name": "SAN Storage Flow",
+        "notes": null
+    },
+    {
+        "id": 3,
+        "module_id": 14,
+        "name": "Container Storage Flow",
+        "notes": null
+    },
+    {
+        "id": 4,
+        "module_id": 15,
+        "name": "Object Storage Flow",
+        "notes": null
+    },
+    {
+        "id": 5,
+        "module_id": 16,
+        "name": "File Storage Flow",
+        "notes": null
+    }
+]

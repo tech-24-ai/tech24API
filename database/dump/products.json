@@ -1,0 +1,9125 @@
+[
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    43,
+                    44
+                ],
+                "subValue": []
+            },
+            {
+                "id": 16,
+                "value": 45,
+                "subValue": []
+            },
+            {
+                "id": 17,
+                "value": 51,
+                "subValue": []
+            },
+            {
+                "id": 18,
+                "value": 76,
+                "subValue": []
+            },
+            {
+                "id": 19,
+                "value": [
+                    54,
+                    55
+                ],
+                "subValue": []
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd350",
+        "id": 14560011,
+        "name": "Dell EMC Unity XT 680 Hybrid Flash Storage",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": "",
+        "notes": "abcd",
+        "rating": "2",
+        "module": "SAN"
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd358",
+        "id": 14560019,
+        "name": "Dell EMC PowerMax 2000",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd357",
+        "id": 14560018,
+        "name": "Dell EMC SC9000 Array Controller",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd398",
+        "id": 14560084,
+        "name": "OceanStor 18800F V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3c0",
+        "id": 14560124,
+        "name": "Infinibox F6300",
+        "vendor": "Infinidat",
+        "vendorId": 8,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd35a",
+        "id": 14560021,
+        "name": "Dell EMC Unity XT 380F",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd366",
+        "id": 14560034,
+        "name": "ETERNUS AF650",
+        "vendor": "Fujitsu",
+        "vendorId": 3,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd38b",
+        "id": 14560070,
+        "name": "HPE 3PAR 20450",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd397",
+        "id": 14560082,
+        "name": "OceanStor Dorado18000 V3",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3a0",
+        "id": 14560072,
+        "name": "HPE 3PAR 20840",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3a2",
+        "id": 14560092,
+        "name": "OceanStor 5500F V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3b1",
+        "id": 14560099,
+        "name": "OceanStor 5600 V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd36b",
+        "id": 14560038,
+        "name": "Hitachi Virtual Storage Platform 5500H",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd35c",
+        "id": 14560006,
+        "name": "Tintri T1000",
+        "vendor": "DDN",
+        "vendorId": 1,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd378",
+        "id": 14560050,
+        "name": "HPE Primera A650 2-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "49"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd389",
+        "id": 14560067,
+        "name": "HPE Nimble Storage HF20",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57",
+                    "58"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd39d",
+        "id": 14560089,
+        "name": "OceanStor Dorado 18000 V6",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3ac",
+        "id": 14560103,
+        "name": "OceanStor 18800 V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "58",
+                    "59",
+                    "77"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3af",
+        "id": 14560106,
+        "name": "IBM Storwize V7000F",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "58"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3b4",
+        "id": 14560111,
+        "name": "IBM FlashSystem 900",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd362",
+        "id": 14560029,
+        "name": "ETERNUS DX600",
+        "vendor": "Fujitsu",
+        "vendorId": 3,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd373",
+        "id": 14560044,
+        "name": "Hitachi VSP G350",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd37a",
+        "id": 14560054,
+        "name": "HPE Primera A670 2-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd39f",
+        "id": 14560091,
+        "name": "OceanStor 5300F V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3a1",
+        "id": 14560093,
+        "name": "OceanStor 5600F V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "58,55,54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3c1",
+        "id": 14560125,
+        "name": "K2.N",
+        "vendor": "Kaminario",
+        "vendorId": 9,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "49"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd349",
+        "id": 14560001,
+        "name": "Tintri EC6090",
+        "vendor": "DDN",
+        "vendorId": 1,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "49"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd352",
+        "id": 14560013,
+        "name": "Dell EMC Unity 300 Hybrid Flash Storage",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd351",
+        "id": 14560012,
+        "name": "Dell EMC Unity XT 880 Hybrid Flash Storage",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd367",
+        "id": 14560035,
+        "name": "Hitachi Virtual Storage Platform 5100",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd37d",
+        "id": 14560053,
+        "name": "HPE Primera A670 1TB 4-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd392",
+        "id": 14560077,
+        "name": "HPE 3PAR StoreServ 8440",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "49"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3a4",
+        "id": 14560095,
+        "name": "OceanStor 2200 V3",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            6,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3be",
+        "id": 14560122,
+        "name": "Infinibox F2300",
+        "vendor": "Infinidat",
+        "vendorId": 8,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3c2",
+        "id": 14560126,
+        "name": "K2",
+        "vendor": "Kaminario",
+        "vendorId": 9,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "49"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd35b",
+        "id": 14560008,
+        "name": "Tintri VMstore T850",
+        "vendor": "DDN",
+        "vendorId": 1,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd360",
+        "id": 14560027,
+        "name": "ETERNUS DX200",
+        "vendor": "Fujitsu",
+        "vendorId": 3,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd36d",
+        "id": 14560040,
+        "name": "Hitachi VSP F370",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd372",
+        "id": 14560045,
+        "name": "Hitachi VSP G370",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd380",
+        "id": 14560058,
+        "name": "HPE Primera C650 4-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd388",
+        "id": 14560065,
+        "name": "HPE Nimble Storage AF60",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd393",
+        "id": 14560079,
+        "name": "OceanStor Dorado3000 V3",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3aa",
+        "id": 14560102,
+        "name": "OceanStor 18500 V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3ab",
+        "id": 14560100,
+        "name": "OceanStor 5800 V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3bf",
+        "id": 14560123,
+        "name": "Infinibox F4300",
+        "vendor": "Infinidat",
+        "vendorId": 8,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57",
+                    "58"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3c6",
+        "id": 14560129,
+        "name": "AFF A320",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd363",
+        "id": 14560023,
+        "name": "Dell EMC Unity XT 680F",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd375",
+        "id": 14560048,
+        "name": "Hitachi VSP G1500",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd376",
+        "id": 14560047,
+        "name": "Hitachi VSP G900",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "49"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd386",
+        "id": 14560064,
+        "name": "HPE Nimble Storage AF40",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd390",
+        "id": 14560075,
+        "name": "HPE 3PAR StoreServ 8200",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3a8",
+        "id": 14560081,
+        "name": "OceanStor Dorado6000 V3",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "58",
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3b2",
+        "id": 14560086,
+        "name": "OceanStor Dorado 5000 V6",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "58",
+                    "59",
+                    "77"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3b3",
+        "id": 14560110,
+        "name": "IBM FlashSystem 9152",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "58",
+                    "59",
+                    "77"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3b8",
+        "id": 14560116,
+        "name": "IBM Storwize V7000",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "58",
+                    "59",
+                    "77"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3ba",
+        "id": 14560117,
+        "name": "IBM Storwize V5100",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd34a",
+        "id": 14560002,
+        "name": "Tintri EC6091",
+        "vendor": "DDN",
+        "vendorId": 1,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd353",
+        "id": 14560015,
+        "name": "Dell EMC Unity 500 Hybrid Flash Storage",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd356",
+        "id": 14560016,
+        "name": "Dell EMC Unity 600 Hybrid Flash Storage",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "58",
+                    "59",
+                    "77"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3b7",
+        "id": 14560108,
+        "name": "IBM FlashSystem 9110",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd34c",
+        "id": 14560004,
+        "name": "Tintri EC6050",
+        "vendor": "DDN",
+        "vendorId": 1,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd34d",
+        "id": 14560005,
+        "name": "Tintri EC6030",
+        "vendor": "DDN",
+        "vendorId": 1,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd371",
+        "id": 14560037,
+        "name": "Hitachi Virtual Storage Platform 5500",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd379",
+        "id": 14560051,
+        "name": "HPE Primera A650 4-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd37b",
+        "id": 14560055,
+        "name": "HPE Primera A670 4-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd37e",
+        "id": 14560057,
+        "name": "HPE Primera C650 2-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd381",
+        "id": 14560060,
+        "name": "HPE Primera C670 1TB 4-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd399",
+        "id": 14560085,
+        "name": "OceanStor Dorado 3000 V6",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3a9",
+        "id": 14560101,
+        "name": "OceanStor 6800 V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "58",
+                    "59",
+                    "77"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3b9",
+        "id": 14560109,
+        "name": "IBM FlashSystem 9150",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd361",
+        "id": 14560028,
+        "name": "ETERNUS DX500",
+        "vendor": "Fujitsu",
+        "vendorId": 3,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd36c",
+        "id": 14560039,
+        "name": "Hitachi VSP F350",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd36e",
+        "id": 14560022,
+        "name": "Dell EMC Unity XT 480F",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd36f",
+        "id": 14560041,
+        "name": "Hitachi VSP F700",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd374",
+        "id": 14560046,
+        "name": "Hitachi VSP G700",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd38c",
+        "id": 14560068,
+        "name": "HPE Nimble Storage HF40",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd38d",
+        "id": 14560071,
+        "name": "HPE 3PAR 20800",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd38e",
+        "id": 14560052,
+        "name": "HPE Primera A670 1TB 2-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd391",
+        "id": 14560076,
+        "name": "HPE 3PAR StoreServ 8400",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd396",
+        "id": 14560073,
+        "name": "HPE 3PAR 20850",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "58",
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd39b",
+        "id": 14560087,
+        "name": "OceanStor Dorado 6000 V6",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "49"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3bb",
+        "id": 14560119,
+        "name": "IBM Storwize V5010E",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd34e",
+        "id": 14560010,
+        "name": "Dell EMC Unity XT 480 Hybrid Flash Storage",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd35e",
+        "id": 14560024,
+        "name": "Dell EMC Unity XT 880F",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "49"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd35f",
+        "id": 14560026,
+        "name": "ETERNUS DX100",
+        "vendor": "Fujitsu",
+        "vendorId": 3,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd382",
+        "id": 14560043,
+        "name": "Hitachi VSP F1500",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd38a",
+        "id": 14560069,
+        "name": "HPE Nimble Storage HF60",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3a5",
+        "id": 14560096,
+        "name": "OceanStor 2600 V3",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3a6",
+        "id": 14560097,
+        "name": "OceanStor 5300 V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "58",
+                    "59",
+                    "77"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3ad",
+        "id": 14560104,
+        "name": "IBM Storwize V5100F",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3b5",
+        "id": 14560112,
+        "name": "IBM DS8910F",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd355",
+        "id": 14560017,
+        "name": "Dell EMC SC5020 Storage Array",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "49"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd385",
+        "id": 14560063,
+        "name": "HPE Nimble Storage AF20",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3a3",
+        "id": 14560094,
+        "name": "OceanStor 5800F V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "58",
+                    "59",
+                    "77"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3b0",
+        "id": 14560107,
+        "name": "IBM FlashSystem 9110",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3c4",
+        "id": 14560127,
+        "name": "AFF A220",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "49"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd348",
+        "id": 14560009,
+        "name": "Dell EMC Unity XT 380 Hybrid Flash Storage",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "49"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd35d",
+        "id": 14560025,
+        "name": "ETERNUS DX60",
+        "vendor": "Fujitsu",
+        "vendorId": 3,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd354",
+        "id": 14560014,
+        "name": "Dell EMC Unity 400 Hybrid Flash Storage",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd365",
+        "id": 14560033,
+        "name": "ETERNUS AF250",
+        "vendor": "Fujitsu",
+        "vendorId": 3,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            5,
+            6
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd368",
+        "id": 14560031,
+        "name": "ETERNUS DX8900",
+        "vendor": "Fujitsu",
+        "vendorId": 3,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd384",
+        "id": 14560062,
+        "name": "HPE Primera C670 4-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd395",
+        "id": 14560080,
+        "name": "OceanStor Dorado5000 V3",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd39a",
+        "id": 14560083,
+        "name": "OceanStor 18500F V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "58",
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd39c",
+        "id": 14560088,
+        "name": "OceanStor Dorado 8000 V6",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd39e",
+        "id": 14560090,
+        "name": "OceanStor 6800F V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "58",
+                    "59",
+                    "77"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3ae",
+        "id": 14560105,
+        "name": "IBM Storwize V5100F",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3b6",
+        "id": 14560114,
+        "name": "IBM A9000R",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3bc",
+        "id": 14560113,
+        "name": "IBM DS8950F",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "49"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd364",
+        "id": 14560032,
+        "name": "ETERNUS AF150",
+        "vendor": "Fujitsu",
+        "vendorId": 3,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd370",
+        "id": 14560042,
+        "name": "Hitachi VSP F900",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3a7",
+        "id": 14560098,
+        "name": "OceanStor 5500 V5",
+        "vendor": "Huawei",
+        "vendorId": 6,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd359",
+        "id": 14560020,
+        "name": "Dell EMC PowerMax 8000",
+        "vendor": "Dell EMC",
+        "vendorId": 2,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd377",
+        "id": 14560049,
+        "name": "HPE Primera A630 2-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd37c",
+        "id": 14560056,
+        "name": "HPE Primera C630 2-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd38f",
+        "id": 14560074,
+        "name": "HPE 3PAR 9450",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd394",
+        "id": 14560078,
+        "name": "HPE 3PAR StoreServ 8450",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57",
+                    "58"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3c5",
+        "id": 14560128,
+        "name": "AFF A300",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57",
+                    "58"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3c7",
+        "id": 14560130,
+        "name": "AFF A400",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd34b",
+        "id": 14560003,
+        "name": "Tintri EC6070",
+        "vendor": "DDN",
+        "vendorId": 1,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd34f",
+        "id": 14560007,
+        "name": "Tintri VMstore T885",
+        "vendor": "DDN",
+        "vendorId": 1,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd369",
+        "id": 14560036,
+        "name": "Hitachi Virtual Storage Platform 5100H",
+        "vendor": "Hitachi",
+        "vendorId": 4,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            5,
+            6
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd36a",
+        "id": 14560030,
+        "name": "ETERNUS DX900",
+        "vendor": "Fujitsu",
+        "vendorId": 3,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd37f",
+        "id": 14560059,
+        "name": "HPE Primera C670 1TB 2-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd383",
+        "id": 14560061,
+        "name": "HPE Primera C670 2-node Controller",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd387",
+        "id": 14560066,
+        "name": "HPE Nimble Storage AF80",
+        "vendor": "HPE",
+        "vendorId": 5,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3bd",
+        "id": 14560121,
+        "name": "IBM DS8886",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3c3",
+        "id": 14560115,
+        "name": "IBM A9000",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3dc",
+        "id": 14560148,
+        "name": "E2824",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57",
+                    "58"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3d3",
+        "id": 14560132,
+        "name": "AFF A700s",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            5,
+            6,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "59,55,54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3df",
+        "id": 14560153,
+        "name": "FlashArray //X50",
+        "vendor": "Pure Storage",
+        "vendorId": 11,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3cf",
+        "id": 14560138,
+        "name": "H610S-1",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3ca",
+        "id": 14560134,
+        "name": "AFF C190",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            5,
+            6,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "59,55,54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3e3",
+        "id": 14560158,
+        "name": "C60-878",
+        "vendor": "Pure Storage",
+        "vendorId": 11,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3cc",
+        "id": 14560135,
+        "name": "H610S-4",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            5,
+            6,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "59,55,54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3e4",
+        "id": 14560157,
+        "name": "C60-367",
+        "vendor": "Pure Storage",
+        "vendorId": 11,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3d7",
+        "id": 14560120,
+        "name": "IBM DS8884",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57",
+                    "58"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3c8",
+        "id": 14560131,
+        "name": "AFF A700",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3db",
+        "id": 14560150,
+        "name": "E2812",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            5,
+            6,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "59,55,54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3e2",
+        "id": 14560156,
+        "name": "C60-366",
+        "vendor": "Pure Storage",
+        "vendorId": 11,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3e7",
+        "id": 14560149,
+        "name": "E2812",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3d2",
+        "id": 14560140,
+        "name": "EF280",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3c9",
+        "id": 14560118,
+        "name": "IBM Storwize V5030E",
+        "vendor": "IBM",
+        "vendorId": 7,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3d5",
+        "id": 14560143,
+        "name": "FAS2750",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            5,
+            6,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "59,55,54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3e5",
+        "id": 14560159,
+        "name": "C60-1390",
+        "vendor": "Pure Storage",
+        "vendorId": 11,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3d9",
+        "id": 14560146,
+        "name": "E5760",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3d0",
+        "id": 14560139,
+        "name": "EF570",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            5,
+            6,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "59,55,54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3e1",
+        "id": 14560155,
+        "name": "FlashArray //X90",
+        "vendor": "Pure Storage",
+        "vendorId": 11,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3ce",
+        "id": 14560137,
+        "name": "H610S-1",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "51"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3cd",
+        "id": 14560136,
+        "name": "H610S-2",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            5,
+            6,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "59,55,54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3dd",
+        "id": 14560151,
+        "name": "FlashArray //X10",
+        "vendor": "Pure Storage",
+        "vendorId": 11,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3d8",
+        "id": 14560145,
+        "name": "E2860",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            5,
+            6,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "16"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "59,55,54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3e0",
+        "id": 14560154,
+        "name": "FlashArray //X70",
+        "vendor": "Pure Storage",
+        "vendorId": 11,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57",
+                    "58"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3cb",
+        "id": 14560133,
+        "name": "AFF A800",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "48"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3d1",
+        "id": 14560141,
+        "name": "FAS9000",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3d4",
+        "id": 14560142,
+        "name": "FAS8200",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "76"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55",
+                    "56",
+                    "57"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3d6",
+        "id": 14560144,
+        "name": "FAS2720",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            6
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43",
+                    "44"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "52"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "54",
+                    "55"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3da",
+        "id": 14560147,
+        "name": "E5724",
+        "vendor": "NetApp",
+        "vendorId": 10,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "17"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "58"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3e6",
+        "id": 14560160,
+        "name": "VX100",
+        "vendor": "Vexata",
+        "vendorId": 12,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    },
+    {
+        "countryCategories": [
+            5,
+            6,
+            8
+        ],
+        "questions": [
+            {
+                "id": 15,
+                "value": [
+                    "43"
+                ]
+            },
+            {
+                "id": 16,
+                "value": [
+                    "45"
+                ]
+            },
+            {
+                "id": 17,
+                "value": [
+                    "53"
+                ]
+            },
+            {
+                "id": 18,
+                "value": [
+                    "50"
+                ]
+            },
+            {
+                "id": 19,
+                "value": [
+                    "59,55,54"
+                ]
+            }
+        ],
+        "_id": "5efb5415c0b3ecb75adcd3de",
+        "id": 14560152,
+        "name": "FlashArray //X20",
+        "vendor": "Pure Storage",
+        "vendorId": 11,
+        "categoryId": 3,
+        "moduleId": 2,
+        "subModuleId": 13,
+        "flowId": 2,
+        "price": "",
+        "sku": "",
+        "image": ""
+    }
+]

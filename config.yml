@@ -1,0 +1,22 @@
+branch-defaults:
+  master:
+    environment: development
+environment-defaults:
+  development:
+    branch: null
+    repository: null
+global:
+  container_commands:
+    google_chrome:
+        command: "curl https://intoli.com/install-google-chrome.sh  --insecure | bash"  
+  application_name: itmapBackendAPI
+  default_ec2_keyname: aws-eb
+  default_platform: Node.js 12 running on 64bit Amazon Linux 2
+  default_region: us-east-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  sc: git
+  workspace_type: Application

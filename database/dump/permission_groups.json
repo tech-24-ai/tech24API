@@ -1,0 +1,218 @@
+[
+	{
+		"id" : 1,
+		"name" : "User Manager",
+		"created_at" : "2021-06-24 13:27:54",
+		"updated_at" : "2022-03-25 07:59:29"
+	},
+	{
+		"id" : 2,
+		"name" : "Master Manager",
+		"created_at" : "2021-06-24 13:27:54",
+		"updated_at" : "2021-06-24 13:27:54"
+	},
+	{
+		"id" : 3,
+		"name" : "Vendor Manager",
+		"created_at" : "2021-06-24 13:27:54",
+		"updated_at" : "2021-06-24 13:27:54"
+	},
+	{
+		"id" : 4,
+		"name" : "Visitor Manager",
+		"created_at" : "2021-06-24 13:27:55",
+		"updated_at" : "2021-06-24 13:27:55"
+	},
+	{
+		"id" : 5,
+		"name" : "Contact Manager",
+		"created_at" : "2021-06-24 13:27:55",
+		"updated_at" : "2021-06-24 13:27:55"
+	},
+	{
+		"id" : 6,
+		"name" : "Module Manager",
+		"created_at" : "2021-06-24 13:27:55",
+		"updated_at" : "2021-06-24 13:27:55"
+	},
+	{
+		"id" : 7,
+		"name" : "Question Manager",
+		"created_at" : "2021-06-24 13:27:55",
+		"updated_at" : "2021-06-24 13:27:55"
+	},
+	{
+		"id" : 8,
+		"name" : "Flow Manager",
+		"created_at" : "2021-06-24 13:27:56",
+		"updated_at" : "2021-06-24 13:27:56"
+	},
+	{
+		"id" : 9,
+		"name" : "Visitor Manager",
+		"created_at" : "2021-06-24 13:27:56",
+		"updated_at" : "2021-06-24 13:27:56"
+	},
+	{
+		"id" : 10,
+		"name" : "Market Intelligence",
+		"created_at" : "2021-06-24 13:27:56",
+		"updated_at" : "2021-06-24 13:27:56"
+	},
+	{
+		"id" : 11,
+		"name" : "Vendor Key People",
+		"created_at" : "2021-06-24 13:27:56",
+		"updated_at" : "2021-06-24 13:27:56"
+	},
+	{
+		"id" : 12,
+		"name" : "Vendor Locations",
+		"created_at" : "2021-06-24 13:27:57",
+		"updated_at" : "2021-06-24 13:27:57"
+	},
+	{
+		"id" : 13,
+		"name" : "Vendor Financials",
+		"created_at" : "2021-06-24 13:27:57",
+		"updated_at" : "2021-06-24 13:27:57"
+	},
+	{
+		"id" : 14,
+		"name" : "Vendor Funding",
+		"created_at" : "2021-06-24 13:27:57",
+		"updated_at" : "2021-06-24 13:27:57"
+	},
+	{
+		"id" : 15,
+		"name" : "Vendor Employee Job Count",
+		"created_at" : "2021-06-24 13:27:57",
+		"updated_at" : "2021-06-24 13:27:57"
+	},
+	{
+		"id" : 16,
+		"name" : "Vendor Acquisition",
+		"created_at" : "2021-06-24 13:27:58",
+		"updated_at" : "2021-06-24 13:27:58"
+	},
+	{
+		"id" : 17,
+		"name" : "Vendor Twitter Data",
+		"created_at" : "2021-06-24 13:27:58",
+		"updated_at" : "2021-06-24 13:27:58"
+	},
+	{
+		"id" : 18,
+		"name" : "Vendor IPS",
+		"created_at" : "2021-06-24 13:27:58",
+		"updated_at" : "2021-06-24 13:27:58"
+	},
+	{
+		"id" : 19,
+		"name" : "Vendor Web Traffic",
+		"created_at" : "2021-06-24 13:27:59",
+		"updated_at" : "2021-06-24 13:27:59"
+	},
+	{
+		"id" : 20,
+		"name" : "Vendor ITMAP Score",
+		"created_at" : "2021-06-24 13:27:59",
+		"updated_at" : "2021-06-24 13:27:59"
+	},
+	{
+		"id" : 21,
+		"name" : "Vendor Google Trends Score",
+		"created_at" : "2021-06-24 13:27:59",
+		"updated_at" : "2021-06-24 13:27:59"
+	},
+	{
+		"id" : 22,
+		"name" : "Vendor News",
+		"created_at" : "2021-06-24 13:27:59",
+		"updated_at" : "2021-06-24 13:27:59"
+	},
+	{
+		"id" : 23,
+		"name" : "Vendor Competitive Dynamics",
+		"created_at" : "2021-06-24 13:28:00",
+		"updated_at" : "2021-06-24 13:28:00"
+	},
+	{
+		"id" : 24,
+		"name" : "Vendor Documents",
+		"created_at" : "2021-06-24 13:28:00",
+		"updated_at" : "2021-06-24 13:28:00"
+	},
+	{
+		"id" : 25,
+		"name" : "Vendor Patent List",
+		"created_at" : null,
+		"updated_at" : null
+	},
+	{
+		"id" : 26,
+		"name" : "Settings",
+		"created_at" : null,
+		"updated_at" : null
+	},
+	{
+		"id" : 27,
+		"name" : "Report Manager",
+		"created_at" : null,
+		"updated_at" : "2022-03-23 02:37:00"
+	},
+	{
+		"id" : 28,
+		"name" : "Subscription Manager",
+		"created_at" : null,
+		"updated_at" : null
+	},
+	{
+		"id" : 29,
+		"name" : "Blog Manager",
+		"created_at" : null,
+		"updated_at" : null
+	},
+	{
+		"id" : 30,
+		"name" : "Partner Manager",
+		"created_at" : null,
+		"updated_at" : null
+	},
+	{
+		"id" : 31,
+		"name" : "Pricing Manager",
+		"created_at" : null,
+		"updated_at" : null
+	},
+	{
+		"id" : 32,
+		"name" : "FAQ Manager",
+		"created_at" : null,
+		"updated_at" : null
+	},
+	{
+		"id" : 33,
+		"name" : "Competitive Manager",
+		"created_at" : null,
+		"updated_at" : null
+	},
+	{
+		"id" : 35,
+		"name" : "Cron Manager",
+		"created_at" : null,
+		"updated_at" : null
+	},
+	{
+		"id" : 36,
+		"name" : "Logs Manager",
+		"created_at" : null,
+		"updated_at" : null
+	},
+	{
+		"id" : 37,
+		"name" : "Consultant Manager",
+		"created_at" : "2023-06-19 14:33:23",
+		"updated_at" : "2023-06-19 14:33:23"
+	}
+]

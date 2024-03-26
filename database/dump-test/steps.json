@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Scale",
+        "sort_order": 1
+    },
+    {
+        "id": 2,
+        "name": "Environment",
+        "sort_order": 2
+    },
+    {
+        "id": 3,
+        "name": "Additional Information",
+        "sort_order": 3
+    }
+]

@@ -1,0 +1,107 @@
+{
+    "questions": {
+        "$all": [
+            {
+                "$elemMatch": {
+                    "id": 18,
+                    "value": {
+                        "$in": [
+                            "76"
+                        ]
+                    }
+                }
+            },
+            {
+                "$elemMatch": {
+                    "id": 19,
+                    "value": {
+                        "$in": [
+                            "54"
+                        ]
+                    }
+                }
+            },
+            {
+                "$elemMatch": {
+                    "id": 20,
+                    "value": {
+                        "$in": [
+                            "1"
+                        ]
+                    }
+                }
+            },
+            {
+                "$elemMatch": {
+                    "id": 24,
+                    "value": {
+                        "$in": [
+                            "65"
+                        ]
+                    }
+                }
+            },
+            {
+                "$elemMatch": {
+                    "id": 25,
+                    "value": {
+                        "$in": [
+                            "1"
+                        ]
+                    }
+                }
+            },
+            {
+                "$elemMatch": {
+                    "id": 31,
+                    "value": {
+                        "$in": [
+                            "1"
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "vendor": {
+        "$in": [
+            "DDN",
+            "Dell",
+            "Cloudian",
+            "Minio",
+            "Suse",
+            "Spectra",
+            "RedHat",
+            "Ctera",
+            "Scality",
+            "Fujitsu",
+            "Hitachi",
+            "HPE",
+            "Huawei",
+            "Infinidat",
+            "Kaminario",
+            "NetApp",
+            "Vexata",
+            "IBM",
+            "Pure Storage",
+            "Cisco",
+            "Dell EMC",
+            "Test1",
+            "Test2",
+            "Test3",
+            "Test4",
+            "Test5",
+            "Test6"
+        ]
+    },
+    "countryCategories": {
+        "$in": [
+            "2"
+        ]
+    },
+    "moduleId": {
+        "$in": [
+            13
+        ]
+    }
+}

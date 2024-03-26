@@ -1,0 +1,427 @@
+[
+    {
+        "id": 1,
+        "name": "Advanced Electronics",
+        "parent_id": null        
+    },
+    {
+        "id": 2,
+        "name": "Agriculture",
+        "parent_id": null        
+    },
+    {
+        "id": 3,
+        "name": "Cargo Transporation",
+        "parent_id": null        
+    },
+    {
+        "id": 4,
+        "name": "Construction",
+        "parent_id": null        
+    },
+    {
+        "id": 5,
+        "name": "Education",
+        "parent_id": null        
+    },
+    {
+        "id": 6,
+        "name": "Energy",
+        "parent_id": null        
+    },
+    {
+        "id": 7,
+        "name": "Financial Services",
+        "parent_id": null        
+    },
+    {
+        "id": 8,
+        "name": "Government services",
+        "parent_id": null        
+    },
+    {
+        "id": 9,
+        "name": "Healthcare",
+        "parent_id": null        
+    },
+    {
+        "id": 10,
+        "name": "Hotels and Entertainment",
+        "parent_id": null        
+    },
+    {
+        "id": 11,
+        "name": "Logistics",
+        "parent_id": null        
+    },
+    {
+        "id": 12,
+        "name": "Manufacturing",
+        "parent_id": null        
+    },
+    {
+        "id": 13,
+        "name": "Media",
+        "parent_id": null        
+    },
+    {
+        "id": 14,
+        "name": "Mining",
+        "parent_id": null        
+    },
+    {
+        "id": 15,
+        "name": "Property management",
+        "parent_id": null        
+    },
+    {
+        "id": 16,
+        "name": "Public transportation",
+        "parent_id": null        
+    },
+    {
+        "id": 17,
+        "name": "Retail",
+        "parent_id": null        
+    },
+    {
+        "id": 18,
+        "name": "Sustainibility and Environment",
+        "parent_id": null        
+    },
+    {
+        "id": 19,
+        "name": "Telecommunications",
+        "parent_id": null        
+    },
+    {
+        "id": 20,
+        "name": "Utilties",
+        "parent_id": null        
+    },
+    {
+        "id": 21,
+        "name": "Semiconductors",
+        "parent_id": 1        
+    },
+    {
+        "id": 22,
+        "name": "High-tech equipment",
+        "parent_id": 1        
+    },
+    {
+        "id": 23,
+        "name": "Medical Electronics",
+        "parent_id": 1        
+    },
+    {
+        "id": 24,
+        "name": "Animal Husbandry",
+        "parent_id": 2        
+    },
+    {
+        "id": 25,
+        "name": "Farming",
+        "parent_id": 2        
+    },
+    {
+        "id": 26,
+        "name": "Fishing",
+        "parent_id": 2        
+    },
+    {
+        "id": 27,
+        "name": "Maritime Cargo",
+        "parent_id": 3        
+    },
+    {
+        "id": 28,
+        "name": "Air Cargo",
+        "parent_id": 3        
+    },
+    {
+        "id": 29,
+        "name": "Freight Train",
+        "parent_id": 3        
+    },
+    {
+        "id": 30,
+        "name": "Trucking",
+        "parent_id": 3        
+    },
+    {
+        "id": 31,
+        "name": "Building Construction",
+        "parent_id": 4        
+    },
+    {
+        "id": 32,
+        "name": "Capital Projects",
+        "parent_id": 4        
+    },
+    {
+        "id": 33,
+        "name": "Elementary",
+        "parent_id": 5        
+    },
+    {
+        "id": 34,
+        "name": "Senior School",
+        "parent_id": 5        
+    },
+    {
+        "id": 35,
+        "name": "University",
+        "parent_id": 5        
+    },
+    {
+        "id": 36,
+        "name": "Oil and Gas",
+        "parent_id": 6        
+    },
+    {
+        "id": 37,
+        "name": "Solar Energy",
+        "parent_id": 6        
+    },
+    {
+        "id": 38,
+        "name": "Wind Energy",
+        "parent_id": 6        
+    },
+    {
+        "id": 39,
+        "name": "Hydroelectricity",
+        "parent_id": 6        
+    },
+    {
+        "id": 40,
+        "name": "Tidal energy",
+        "parent_id": 6        
+    },
+    {
+        "id": 41,
+        "name": "Banking",
+        "parent_id": 7        
+    },
+    {
+        "id": 42,
+        "name": "Credit services",
+        "parent_id": 7        
+    },
+    {
+        "id": 43,
+        "name": "Insurance",
+        "parent_id": 7        
+    },
+    {
+        "id": 44,
+        "name": "Securities and Investment Services",
+        "parent_id": 7        
+    },
+    {
+        "id": 45,
+        "name": "Citizen services",
+        "parent_id": 8        
+    },
+    {
+        "id": 46,
+        "name": "Street lighting",
+        "parent_id": 8        
+    },
+    {
+        "id": 47,
+        "name": "Surveillance",
+        "parent_id": 8        
+    },
+    {
+        "id": 48,
+        "name": "Traffic management",
+        "parent_id": 8        
+    },
+    {
+        "id": 49,
+        "name": "Healthcare delivery organizations",
+        "parent_id": 9        
+    },
+    {
+        "id": 50,
+        "name": "Medical equipment",
+        "parent_id": 9        
+    },
+    {
+        "id": 51,
+        "name": "Life Sciences",
+        "parent_id": 9        
+    },
+    {
+        "id": 52,
+        "name": "Pharmaceuticals",
+        "parent_id": 9        
+    },
+    {
+        "id": 53,
+        "name": "Parks and Resorts",
+        "parent_id": 10        
+    },
+    {
+        "id": 54,
+        "name": "Hotels",
+        "parent_id": 10        
+    },
+    {
+        "id": 55,
+        "name": "Casinos",
+        "parent_id": 10        
+    },
+    {
+        "id": 56,
+        "name": "Automotive",
+        "parent_id": 12        
+    },
+    {
+        "id": 57,
+        "name": "Chemicals",
+        "parent_id": 12        
+    },
+    {
+        "id": 58,
+        "name": "Consumer Products",
+        "parent_id": 12        
+    },
+    {
+        "id": 59,
+        "name": "Food and Beverage",
+        "parent_id": 12        
+    },
+    {
+        "id": 60,
+        "name": "Industry Heavy Equipment",
+        "parent_id": 12        
+    },
+    {
+        "id": 61,
+        "name": "Textiles",
+        "parent_id": 12        
+    },
+    {
+        "id": 62,
+        "name": "Broadcast",
+        "parent_id": 13        
+    },
+    {
+        "id": 63,
+        "name": "Post-Production",
+        "parent_id": 13        
+    },
+    {
+        "id": 64,
+        "name": "Cable",
+        "parent_id": 13        
+    },
+    {
+        "id": 65,
+        "name": "Gaming",
+        "parent_id": 13        
+    },
+    {
+        "id": 66,
+        "name": "Publishing",
+        "parent_id": 13        
+    },
+    {
+        "id": 67,
+        "name": "Studios",
+        "parent_id": 13        
+    },
+    {
+        "id": 68,
+        "name": "Building management",
+        "parent_id": 15        
+    },
+    {
+        "id": 69,
+        "name": "Energy management",
+        "parent_id": 15        
+    },
+    {
+        "id": 70,
+        "name": "Workforce management",
+        "parent_id": 15        
+    },
+    {
+        "id": 71,
+        "name": "Airports",
+        "parent_id": 16        
+    },
+    {
+        "id": 72,
+        "name": "Buses",
+        "parent_id": 16        
+    },
+    {
+        "id": 73,
+        "name": "Cruises",
+        "parent_id": 16        
+    },
+    {
+        "id": 74,
+        "name": "Cars",
+        "parent_id": 16        
+    },
+    {
+        "id": 75,
+        "name": "Railways",
+        "parent_id": 16        
+    },
+    {
+        "id": 76,
+        "name": "Physical Stores",
+        "parent_id": 17        
+    },
+    {
+        "id": 77,
+        "name": "e-Commerce",
+        "parent_id": 17        
+    },
+    {
+        "id": 78,
+        "name": "Air Purification",
+        "parent_id": 18        
+    },
+    {
+        "id": 79,
+        "name": "Sewage treatment",
+        "parent_id": 18        
+    },
+    {
+        "id": 80,
+        "name": "Solid Waste Management",
+        "parent_id": 18        
+    },
+    {
+        "id": 81,
+        "name": "Water purification",
+        "parent_id": 18        
+    },
+    {
+        "id": 82,
+        "name": "Desalination",
+        "parent_id": 18        
+    },
+    {
+        "id": 83,
+        "name": "Power distribution",
+        "parent_id": 20        
+    },
+    {
+        "id": 84,
+        "name": "Natural Gas distribution",
+        "parent_id": 20        
+    },
+    {
+        "id": 85,
+        "name": "Water Purification and delivery",
+        "parent_id": 20        
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "China"
+    },
+    {
+        "id": 2,
+        "name": "Emerging Asia-Pacific"
+    },
+    {
+        "id": 3,
+        "name": "Emerging Europe"
+    },
+    {
+        "id": 4,
+        "name": "Latin America"
+    },
+    {
+        "id": 5,
+        "name": "Mature Asia-Pacific"
+    },
+    {
+        "id": 6,
+        "name": "Mature Europe"
+    },
+    {
+        "id": 7,
+        "name": "MENA"
+    },
+    {
+        "id": 8,
+        "name": "North America"
+    }
+]
