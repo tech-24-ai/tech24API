@@ -1,4 +1,4 @@
-# Itmap web services
+# Tech24 web services
 
 ## Setup
 
