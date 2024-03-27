@@ -11,9 +11,9 @@ class CommunityPostReply extends Model {
 		);
 	}
 	
-	parentData() {
-		return this.belongsTo(
-			"App/Models/Admin/CommunityModule/CommunityPostReply", "parent_id", "id"
+	comments() {
+		return this.hasMany(
+			"App/Models/Admin/CommunityModule/CommunityPostReply", "id", "parent_id",
 		);
 	}
 	
@@ -34,6 +34,13 @@ class CommunityPostReply extends Model {
 			"App/Models/Admin/CommunityModule/CommunityPost"
 		);
 	}
+	
+	communityPostVote() {
+		return this.hasMany(
+			"App/Models/Admin/CommunityModule/Vote", "community_post_id", "community_post_id"
+		);
+	}
+	
 }
 
 module.exports = CommunityPostReply
