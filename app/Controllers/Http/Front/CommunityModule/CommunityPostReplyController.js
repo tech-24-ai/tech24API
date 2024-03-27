@@ -4,6 +4,8 @@ const Database = use("Database");
 
 const CommunityPostReply = use("App/Models/Admin/CommunityModule/CommunityPostReply");
 const Vote = use("App/Models/Admin/CommunityModule/Vote");
+const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVisitorPoint");
+const {	getSubmitAnswerPoints, getUpvoteAnswerPoints, getCorrectAnswerPoints } = require("../../../../Helper/visitorPoints");
 
 const requestOnly = [
 	"parent_id",
@@ -32,13 +34,14 @@ class CommunityPostReplyController {
 		const query = CommunityPostReply.query();
 		query.where('community_post_id', request.input("community_post_id"));
 		query.where('status', 1);
+		query.where('parent_id', null);
 		
 		query.with('visitor',(builder)=>{
 			builder.select('id','name')
 		});	
 		
-		query.with('parentData');	
-		query.with('parentData.visitor',(builder)=>{
+		query.with('comments');	
+		query.with('comments.visitor',(builder)=>{
 			builder.select('id','name')
 		});	
 		query.withCount('postReplyVote as total_helpful');
@@ -105,7 +108,7 @@ class CommunityPostReplyController {
 				},
 				trx
 			);
-		 
+			
 			await trx.commit();
 			return response.status(200).json({ message: "Create successfully" });
 		} catch (error) {
@@ -121,7 +124,6 @@ class CommunityPostReplyController {
 		const trx = await Database.beginTransaction();
 		
 		try {	
-		
 			var community_post_reply_id = request.input("community_post_reply_id");
 
 			const isExist = await Vote.findBy({
@@ -137,6 +139,17 @@ class CommunityPostReplyController {
 					community_post_reply_id: community_post_reply_id,
 					vote_type: request.input("vote_type"),
 					visitor_id: userId,
+				},
+				trx
+			);
+
+			const upvoteAnsPoints = await getUpvoteAnswerPoints();
+			const addPoints = await CommunityVisitorPoint.create(
+				{
+					visitor_id: userId,
+					type: 1,
+					points: upvoteAnsPoints,
+					community_post_reply_id: community_post_reply_id,
 				},
 				trx
 			);
@@ -170,6 +183,18 @@ class CommunityPostReplyController {
 			
 			updateData.is_correct_answer = 1;
 			await updateData.save();
+
+			const correctAnsPoints = await getCorrectAnswerPoints();
+			const addPoints = await CommunityVisitorPoint.create(
+				{
+					visitor_id: userId,
+					type: 3,
+					points: correctAnsPoints,
+					community_post_reply_id: community_post_reply_id,
+				},
+				trx
+			);
+
 			await trx.commit();
 			return response.status(200).json({ message: "Data update successfully" });
 		} catch (error) {

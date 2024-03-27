@@ -2607,7 +2607,15 @@ Route.group(() => {
 	Route.get("/posts_reply/:id", "Admin/CommunityModule/CommunityPostReplyController.show");
 	Route.put("/posts_reply/status_update/:id", "Admin/CommunityModule/CommunityPostReplyController.status_update");
 	Route.delete("/posts_reply/:id", "Admin/CommunityModule/CommunityPostReplyController.destroy");
+  Route.get("/posts_reply_comments", "Admin/CommunityModule/CommunityPostReplyController.get_reply_comments");
 
+  // Badge
+	Route.get("/badge", "Admin/CommunityModule/BadgeController.index");
+	Route.post("/badge", "Admin/CommunityModule/BadgeController.store").validator("StoreBadge");
+	Route.get("/badge/:id", "Admin/CommunityModule/BadgeController.show");
+	Route.put("/badge/:id", "Admin/CommunityModule/BadgeController.update").validator("StoreBadge");
+	Route.delete("/badge/:id", "Admin/CommunityModule/BadgeController.destroy");
+	
 	// Community APIs
 	Route.get("/", "Admin/CommunityModule/CommunityController.index");
 	Route.post("/", "Admin/CommunityModule/CommunityController.store").validator("StoreCommunity");

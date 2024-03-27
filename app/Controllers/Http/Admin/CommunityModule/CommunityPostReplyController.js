@@ -4,6 +4,8 @@ const Database = use("Database");
 
 const CommunityPostReply = use("App/Models/Admin/CommunityModule/CommunityPostReply");
 const { dateFilterExtractor } = require("../../../../Helper/globalFunctions");
+const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVisitorPoint");
+const {	getSubmitAnswerPoints } = require("../../../../Helper/visitorPoints");
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -31,17 +33,19 @@ class CommunityPostReplyController {
 		const searchQuery = new Query(request, { order: "id" });
 
 		query.where('community_post_id', request.input("community_post_id"));
+    query.where('parent_id', null);
 		
 		query.with('visitor',(builder)=>{
 			builder.select('id','name')
 		});	
-    
+
     query.with('communityPost.community',(builder)=>{
 			builder.select('id','name')
 		});	
 
 		query.withCount('postReplyVote as total_helpful');
-		
+    query.withCount('comments as total_comments');
+    
     if (orderBy && orderDirection) {
 			query.orderBy(`${orderBy}`, orderDirection);
 		} else {
@@ -148,13 +152,16 @@ class CommunityPostReplyController {
 		query.with('visitor',(builder)=>{
 			builder.select('id','name')
 		});
-    query.with('communityPost.community',(builder)=>{
+
+    	query.with('communityPost',(builder)=>{
 			builder.select('id','name')
 		});	
-		query.with('parentData');	
-		query.with('parentData.visitor',(builder)=>{
+		query.withCount('communityPostVote as total_post_helpful');
+
+    	query.with('communityPost.visitor',(builder)=>{
 			builder.select('id','name')
-		});
+		});	
+    
 		query.withCount('postReplyVote as total_helpful');
 		query.where("id", params.id);
 		const result = await query.firstOrFail();
@@ -168,8 +175,9 @@ class CommunityPostReplyController {
 		return response.status(200).send(result);	
 	}
 
-	async status_update ({ params, request, response }) {
+	async status_update ({ params, request, response, auth }) {
 		
+		const userId = auth.user.id;
 		const trx = await Database.beginTransaction();
 		
 		try {	
@@ -178,7 +186,24 @@ class CommunityPostReplyController {
 			const updateData = await CommunityPostReply.findOrFail(params.id);
 			updateData.status = reply_status;
 			await updateData.save();
+
+			const query = CommunityVisitorPoint.query();
+			const isExist = await query.where('community_post_reply_id', params.id).where('visitor_id', updateData.visitor_id).first();
 			
+			if (!isExist && reply_status == 1) 
+			{
+				const answerSubmitPoints = await getSubmitAnswerPoints();
+				const addPoints = await CommunityVisitorPoint.create(
+					{
+						visitor_id: updateData.visitor_id,
+						type: 2,
+						points: answerSubmitPoints,
+						community_post_reply_id: params.id,
+					},
+					trx
+				);
+			}
+
 			await trx.commit();
 			return response.status(200).json({ message: "Status update successfully" });
 		} catch (error) {
@@ -232,6 +257,55 @@ class CommunityPostReplyController {
 			});
 		}
   }
+
+  async get_reply_comments ({ request, response, view }) {
+		
+		const query = CommunityPostReply.query();
+		const search = request.input("search");
+		const orderBy = request.input("orderBy");
+		const orderDirection = request.input("orderDirection");
+		const searchQuery = new Query(request, { order: "id" });
+
+		query.where('parent_id', request.input("parent_id"));
+		
+		query.with('visitor',(builder)=>{
+			builder.select('id','name')
+		});	
+
+    query.with('communityPost.community',(builder)=>{
+			builder.select('id','name')
+		});	
+
+		query.withCount('postReplyVote as total_helpful');
+		
+    if (orderBy && orderDirection) {
+			query.orderBy(`${orderBy}`, orderDirection);
+		} else {
+      query.orderBy("id", "DESC");
+    }
+		
+		if (search) {
+			query.where(searchQuery.search(['description']));
+		}
+
+		let page = null;
+		let pageSize = null;
+
+		if (request.input("page")) {
+			page = request.input("page");
+		}
+		if (request.input("pageSize")) {
+			pageSize = request.input("pageSize");
+		}
+		var result;
+		if (page && pageSize) {
+			result = (await query.paginate(page, pageSize)).toJSON();
+		} else {
+			result = (await query.fetch()).toJSON();
+		}
+		
+		return response.status(200).send(result);
+	}
 }
 
 module.exports = CommunityPostReplyController
