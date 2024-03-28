@@ -2616,6 +2616,10 @@ Route.group(() => {
 	Route.put("/badge/:id", "Admin/CommunityModule/BadgeController.update").validator("StoreBadge");
 	Route.delete("/badge/:id", "Admin/CommunityModule/BadgeController.destroy");
 	
+  // Community Visitory Profile
+  Route.get("/visitor_profile", "Admin/CommunityModule/VisitorCommunityPorfileController.index");
+  Route.get("/visitor_profile/:id", "Admin/CommunityModule/VisitorCommunityPorfileController.show");
+
 	// Community APIs
 	Route.get("/", "Admin/CommunityModule/CommunityController.index");
 	Route.post("/", "Admin/CommunityModule/CommunityController.store").validator("StoreCommunity");
