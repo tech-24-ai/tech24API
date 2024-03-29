@@ -48,7 +48,9 @@ class CommunityPostController {
 			builder.select('id','name')
 		});
 		query.withCount('communityVote as total_helpful');
-    query.withCount('communityPostReply as total_reply');
+    query.withCount('communityPostReply as total_reply', (builder) => {
+      builder.where('parent_id', null)
+    });
 
     if (request.input("filters")) {
 			const filters = JSON.parse(request.input("filters"));

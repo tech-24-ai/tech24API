@@ -17,6 +17,12 @@ class CommunityPostReply extends Model {
 		);
 	}
 	
+	parentData() {
+		return this.hasMany(
+			"App/Models/Admin/CommunityModule/CommunityPostReply", "parent_id", "id",
+		);
+	}
+	
 	postReplyVote() {
 		return this.hasMany(
 			"App/Models/Admin/CommunityModule/Vote"

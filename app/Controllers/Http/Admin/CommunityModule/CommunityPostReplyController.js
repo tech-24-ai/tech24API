@@ -152,7 +152,7 @@ class CommunityPostReplyController {
 		query.with('visitor',(builder)=>{
 			builder.select('id','name')
 		});
-
+		query.with('parentData')
     	query.with('communityPost',(builder)=>{
 			builder.select('id','name')
 		});	
@@ -271,7 +271,7 @@ class CommunityPostReplyController {
 		query.with('visitor',(builder)=>{
 			builder.select('id','name')
 		});	
-
+		query.withCount('comments as total_comments');
     query.with('communityPost.community',(builder)=>{
 			builder.select('id','name')
 		});	
