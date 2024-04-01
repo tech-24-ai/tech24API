@@ -249,6 +249,58 @@ class CommunityPostReplyController {
    */
   async destroy ({ params, request, response }) {
   }
+
+  async get_reply_comments ({ request, response, view }) {
+		
+	const query = CommunityPostReply.query();
+	const search = request.input("search");
+	const orderBy = request.input("orderBy");
+	const orderDirection = request.input("orderDirection");
+	const searchQuery = new Query(request, { order: "id" });
+
+	query.where('parent_id', request.input("parent_id"));
+	
+	query.select('id','visitor_id', 'description');
+		
+	query.with('visitor',(builder)=>{
+		builder.select('id','name')
+	});	
+
+	query.with('comments');	
+	query.with('comments.visitor',(builder)=>{
+		builder.select('id','name')
+	});
+
+	query.withCount('postReplyVote as total_helpful');
+
+	if (orderBy && orderDirection) {
+		query.orderBy(`${orderBy}`, orderDirection);
+	} else {
+		query.orderBy("id", "DESC");
+	}
+	
+	if (search) {
+		query.where(searchQuery.search(['description']));
+	}
+
+	let page = null;
+	let pageSize = null;
+
+	if (request.input("page")) {
+		page = request.input("page");
+	}
+	if (request.input("pageSize")) {
+		pageSize = request.input("pageSize");
+	}
+	var result;
+	if (page && pageSize) {
+		result = (await query.paginate(page, pageSize)).toJSON();
+	} else {
+		result = (await query.fetch()).toJSON();
+	}
+	
+	return response.status(200).send(result);
+}
 }
 
 module.exports = CommunityPostReplyController

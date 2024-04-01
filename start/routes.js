@@ -2676,11 +2676,14 @@ Route.group(() => {
 	Route.post("/communitypostreply", "Front/CommunityModule/CommunityPostReplyController.store").validator('StoreCommunityPostReply');
 	Route.post("/communitypostreply/vote", "Front/CommunityModule/CommunityPostReplyController.voting").validator('StoreCommunityPostReplyVote');
 	Route.post("/communitypostreply/mark_correct_answer", "Front/CommunityModule/CommunityPostReplyController.mark_correct_answer");
-	
+	Route.get("/communitypostreply/comments", "Front/CommunityModule/CommunityPostReplyController.get_reply_comments");
+
 	Route.get("/repost_abuse/types", "Front/CommunityModule/ReportAbuseController.getTypes");
 	Route.post("/repost_abuse", "Front/CommunityModule/ReportAbuseController.store").validator('StoreReportAbuse');
 	
 	Route.get("/visitorcommunityprofile", "Front/CommunityModule/VisitorCommunityPorfileController.index");
 	Route.get("/visitor_queries_history", "Front/CommunityModule/VisitorCommunityPorfileController.queries_history");
+	Route.get("/visitor_answer_history", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_answer_history");
+  Route.get("/visitor_points_history", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_points_history");
 	
 }).prefix("/app").middleware("auth:visitorAuth");
