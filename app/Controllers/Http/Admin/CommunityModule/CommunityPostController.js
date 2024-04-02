@@ -4,6 +4,7 @@ const Database = use("Database");
 
 const CommunityPost = use("App/Models/Admin/CommunityModule/CommunityPost");
 const { dateFilterExtractor } = require("../../../../Helper/globalFunctions");
+const Role = use("App/Models/Admin/UserModule/Role");
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
 /** @typedef {import('@adonisjs/framework/src/View')} View */
@@ -21,15 +22,18 @@ class CommunityPostController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async index ({ request, response, view }) {
+	async index ({ request, response, view, auth }) {
 		
+    const role_id = auth.user.role_id;
 		const community_id = request.input("community_id");
 		const query = CommunityPost.query();
 		const search = request.input("search");
 		const orderBy = request.input("orderBy");
 		const orderDirection = request.input("orderDirection");
 		const searchQuery = new Query(request, { order: "id" });
-		
+		const role = await Role.findOrFail(role_id);
+    let role_name = role.name;
+    
 		if (orderBy && orderDirection) {
 			query.orderBy(`${orderBy}`, orderDirection);
 		} else {
@@ -40,11 +44,17 @@ class CommunityPostController {
 			query.where(searchQuery.search(['name']));
 		}
 
+    if(role && role_name.toLowerCase().includes('moderator')) {
+      query.whereHas('userCommunities', (builder) => {
+        builder.where('user_id', auth.user.id)
+      })
+    }
+
     if (community_id) {
       query.where("community_id", community_id);
     }
-
-		query.with('visitor',(builder)=>{
+    
+    query.with('visitor',(builder)=>{
 			builder.select('id','name')
 		});
 		query.withCount('communityVote as total_helpful');

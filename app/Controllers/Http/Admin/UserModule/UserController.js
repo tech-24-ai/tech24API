@@ -84,6 +84,10 @@ class UserController {
     query.email = request.input("email");
     query.mobile = request.input("mobile");
     await query.save();
+
+    if(request.input("communities")) {
+      await query.userCommunities().attach(JSON.parse(request.input("communities")));
+    }  
     return response.status(200).send({ message: "Create successfully" });
   }
 
@@ -91,6 +95,9 @@ class UserController {
     const query = await User.findOrFail(params.id);
     const role = await query.role().fetch();
     query.role = role.name;
+
+    const community = await query.userCommunities().select('id','name').fetch();
+    query.communities = community;
     return response.status(200).send(query);
   }
 
@@ -101,6 +108,12 @@ class UserController {
     query.email = request.input("email");
     query.mobile = request.input("mobile");
     await query.save();
+
+    await query.userCommunities().detach();
+    if(request.input("communities")) {
+      await query.userCommunities().attach(JSON.parse(request.input("communities")));
+    }
+
     return response.status(200).send({ message: "Update successfully" });
   }
 

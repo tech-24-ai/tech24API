@@ -47,6 +47,10 @@ class CommunityPost extends Model {
 		);
 	}
 	
+	userCommunities() {
+		return this.hasMany("App/Models/Admin/CommunityModule/UserCommunity", "community_id", "community_id");
+	}
+
 	static castDates(field, value) {
         if (['created_at', 'updated_at'].includes(field)) {
             return moment(value).format('MM-DD-YYYY hh:m A')

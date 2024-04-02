@@ -28,6 +28,13 @@ class User extends Model {
   role() {
     return this.belongsTo('App/Models/Admin/UserModule/Role')
   }
+
+  userCommunities() {
+		return this.belongsToMany(
+			"App/Models/Admin/CommunityModule/Community"
+		).pivotModel("App/Models/Admin/CommunityModule/UserCommunity");
+	}
+
   static get dates() {
     return super.dates.concat(['created_at', 'updated_at'])
 }    

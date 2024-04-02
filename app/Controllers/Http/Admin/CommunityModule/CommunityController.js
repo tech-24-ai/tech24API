@@ -4,6 +4,7 @@ const Database = use("Database");
 
 const Community = use("App/Models/Admin/CommunityModule/Community");
 const { dateFilterExtractor } = require("../../../../Helper/globalFunctions");
+const Role = use("App/Models/Admin/UserModule/Role");
 const requestOnly = [
 	"name",
 	"description",
@@ -27,14 +28,17 @@ class CommunityController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async index ({ request, response, view }) {
+	async index ({ request, response, view, auth }) {
 	  
+		const role_id = auth.user.role_id;
 		const query = Community.query();
 		const search = request.input("search");
 		const orderBy = request.input("orderBy");
 		const orderDirection = request.input("orderDirection");
 		const searchQuery = new Query(request, { order: "id" });
-		
+		const role = await Role.findOrFail(role_id);
+		let role_name = role.name;
+
 		if (orderBy && orderDirection) {
 			query.orderBy(`${orderBy}`, orderDirection);
 		}
@@ -43,9 +47,18 @@ class CommunityController {
 			query.where(searchQuery.search(['name']));
 		}
 
+		if(role && role_name.toLowerCase().includes('moderator')) {
+			query.whereHas('userCommunities', (builder) => {
+				builder.where('user_id', auth.user.id)
+			})
+		}
+
 		query.select('id', 'name', 'description', 'url_slug', 'updated_at')
+		query.with('userCommunities');
 		query.withCount('communityPost as total_posts');
-		query.withCount('getCommunityPostReply as total_post_reply');
+		query.withCount('getCommunityPostReply as total_post_reply', (builder) => {
+			builder.where('parent_id', null)
+		});
 		
 		if (request.input("filters")) {
 			const filters = JSON.parse(request.input("filters"));
