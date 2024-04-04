@@ -1,11 +1,17 @@
 'use strict'
 
 /** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
-const Model = use('Model');
+const Model = use('Model')
 const moment = require("moment");
 
-class CommunityVisitor extends Model {
+class CommunityNewsAnnouncement extends Model {
 
+    community() {
+		return this.belongsTo(
+			"App/Models/Admin/CommunityModule/Community"
+		);
+	}
+    
     static castDates(field, value) {
         if (['created_at', 'updated_at'].includes(field)) {
             return moment(value).format('MM-DD-YYYY hh:m A')
@@ -14,4 +20,4 @@ class CommunityVisitor extends Model {
     }
 }
 
-module.exports = CommunityVisitor
+module.exports = CommunityNewsAnnouncement

@@ -2626,7 +2626,7 @@ Route.group(() => {
 	Route.get("/:id", "Admin/CommunityModule/CommunityController.show");
 	Route.put("/:id", "Admin/CommunityModule/CommunityController.update").validator("StoreCommunity");
 	Route.delete("/:id", "Admin/CommunityModule/CommunityController.destroy");
-	
+
 }).prefix("/community").middleware("auth");
 
 Route.group(() => {
@@ -2656,6 +2656,14 @@ Route.group(() => {
 	
 }).prefix("/report_abuse").middleware("auth");
 
+Route.group(() => {
+  Route.get("/", "Admin/CommunityModule/CommunityNewsAnnouncementController.index");
+	Route.post("/", "Admin/CommunityModule/CommunityNewsAnnouncementController.store").validator("StoreCommunityNewsAnnouncement");
+  Route.get("/:id", "Admin/CommunityModule/CommunityNewsAnnouncementController.show");
+	Route.put("/:id", "Admin/CommunityModule/CommunityNewsAnnouncementController.update").validator("StoreCommunityNewsAnnouncement");
+	Route.delete("/:id", "Admin/CommunityModule/CommunityNewsAnnouncementController.destroy");
+}).prefix("/news_announcements").middleware("auth"); 
+
 //Community module App APIs
 Route.group(() => {
 	
@@ -2664,11 +2672,15 @@ Route.group(() => {
 	// Get Community lists APIs
 	Route.get("/community", "Front/CommunityModule/CommunityController.index");
 	Route.get("/community/details/:slug", "Front/CommunityModule/CommunityController.show");
+  Route.post("/community/join", "Front/CommunityModule/CommunityController.join_community").validator("StoreJoinCommunity");
+  Route.post("/community/leave", "Front/CommunityModule/CommunityController.leave_community").validator("StoreJoinCommunity");
 	
 	// Community post APIs
+  Route.get("/tranding_question", "Front/CommunityModule/CommunityPostController.tranding_question");
 	Route.get("/communitypost/:community_slug", "Front/CommunityModule/CommunityPostController.index");
 	Route.get("/communitypost/details/:slug", "Front/CommunityModule/CommunityPostController.show");
 	Route.post("/communitypost", "Front/CommunityModule/CommunityPostController.store").validator('StoreCommunityPost');
+  Route.put("/communitypost/:id", "Front/CommunityModule/CommunityPostController.update").validator('StoreCommunityPost');
 	Route.post("/communitypost/vote", "Front/CommunityModule/CommunityPostController.voting").validator('StoreCommunityPostVote');
 	
 	// Community post reply APIs
@@ -2686,4 +2698,7 @@ Route.group(() => {
 	Route.get("/visitor_answer_history", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_answer_history");
   Route.get("/visitor_points_history", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_points_history");
 	
+  Route.get("/get_news_announcements", "Front/CommunityModule/CommunityNewsAnnouncementController.index");
+  Route.get("/get_news_announcements/:id", "Front/CommunityModule/CommunityNewsAnnouncementController.show");
+
 }).prefix("/app").middleware("auth:visitorAuth");

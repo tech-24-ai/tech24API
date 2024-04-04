@@ -1,9 +1,13 @@
 'use strict'
+
+const { QueryBuilder } = require('@adonisjs/lucid/src/Lucid/Model');
+
 const Query = use("Query");
 const Database = use("Database");
 
 const Tag = use("App/Models/Admin/CommunityModule/Tag");
 const Community = use("App/Models/Admin/CommunityModule/Community");
+const CommunityVisitor = use("App/Models/Admin/CommunityModule/CommunityVisitor");
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -22,8 +26,9 @@ class CommunityController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async index ({ request, response, view }) {
+	async index ({ request, response, view, auth }) {
 		
+   		const userId = auth.user.id;	
 		const search = request.input("search");
 		const searchQuery = new Query(request, { order: "id" });
 		
@@ -34,10 +39,34 @@ class CommunityController {
 		}
 		query.select('id', 'name', 'description', 'url_slug', 'image_url')
 
+		query.with('communityMember', (builder) => {
+			builder.select('id','visitor_id','community_id','created_at').where('visitor_id', userId)
+		});
+
 		query.withCount('communityPost as total_posts');
 		query.withCount('getCommunityPostReply as total_post_reply');
+		query.withCount('communityMember as total_members');
 		
-		var result = (await query.fetch()).toJSON();
+		if (orderBy && orderDirection) {
+			query.orderBy(`${orderBy}`, orderDirection);
+		}
+
+		let page = null;
+		let pageSize = null;
+
+		if (request.input("page")) {
+			page = request.input("page");
+		}
+		if (request.input("pageSize")) {
+			pageSize = request.input("pageSize");
+		}
+		var result;
+		if (page && pageSize) {
+			result = (await query.paginate(page, pageSize)).toJSON();
+		} else {
+			result = (await query.fetch()).toJSON();
+		}
+
 		return response.status(200).send(result);
 	}
 
@@ -73,11 +102,16 @@ class CommunityController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async show ({ params, request, response, view }) {
+	async show ({ params, request, response, view, auth }) {
 
+    const userId = auth.user.id;	
     const query = Community.query();
 		query.where("url_slug", params.slug);
+		query.with('communityMember', (builder) => {
+		builder.select('id','visitor_id','community_id','created_at').where('visitor_id', userId)
+		});
 		query.withCount('communityPost as total_posts');
+		query.withCount('communityMember as total_members');
 		
 		const result = await query.firstOrFail();
 		return response.status(200).send(result);
@@ -115,6 +149,61 @@ class CommunityController {
    * @param {Response} ctx.response
    */
 	async destroy ({ params, request, response }) {
+	}
+
+	async join_community ({ params, request, response, auth }) {
+		
+		const userId = auth.user.id;
+		const trx = await Database.beginTransaction();
+
+		try {	
+			var community_id = request.input("community_id");
+
+			const isExist = await CommunityVisitor.findBy({
+				visitor_id: userId,
+				community_id: community_id,
+			});
+			if (isExist) {
+				return response.status(423).send([{ message: "You are already joined." }]);
+			}	
+			
+			const query = await CommunityVisitor.create(
+				{
+					visitor_id: userId,
+					community_id: community_id,
+				},
+				trx
+			);
+
+			await trx.commit();
+			return response.status(200).json({ message: "Community joined successfully" });
+		} catch (error) {
+			console.log(error);
+			trx.rollback();
+			return response.status(423).json({ message: "Something went wrong", error });
+		}
+	}
+
+  async leave_community ({ params, request, response, auth }) {
+		
+		const userId = auth.user.id;
+		try {	
+			var community_id = request.input("community_id");
+
+			const isExist = await CommunityVisitor.findBy({
+				visitor_id: userId,
+				community_id: community_id,
+			});
+			if (isExist) {
+
+        await isExist.delete();
+				return response.status(200).json({ message: "You have been leaved from community" });
+			} else {
+        return response.status(423).json({ message: "Data not", error });
+      }	
+		} catch (error) {
+			return response.status(423).json({ message: "Something went wrong", error });
+		}
 	}
 }
 

@@ -95,6 +95,39 @@ class CommunityPostController {
 		return response.status(200).send(result);
 	}
 
+	async tranding_question ({ params, request, response, view }) {
+		
+		const query = CommunityPost.query();
+	
+		query.where('status', 1);
+		
+		query.with('visitor',(builder)=>{
+			builder.select('id','name')
+		});
+		
+		query.withCount('communityVote as total_helpful');
+		
+		query.with('postTags',(builder)=>{
+			builder.select('id','name')
+		});	
+		
+		query.orderBy('total_helpful', 'desc');
+		
+		let pageSize = null;
+
+		if (request.input("pageSize")) {
+			pageSize = request.input("pageSize");
+		}
+		var result;
+		if (pageSize) {
+			result = (await query.limit(pageSize).fetch()).toJSON();
+		} else {
+			result = (await query.fetch()).toJSON();
+		}
+		
+		return response.status(200).send(result);
+	}
+
   /**
    * Render a form to be used for creating a new communitypost.
    * GET communityposts/create
@@ -133,7 +166,7 @@ class CommunityPostController {
 			await query.postTags().attach(JSON.parse(request.input("tags")), null, trx);
 		
 			await trx.commit();
-			return response.status(200).json({ message: "Create successfully" });
+			return response.status(200).json({ message: "Question posted successfully" });
 		} catch (error) {
 			console.log(error);
 			trx.rollback();
@@ -232,6 +265,22 @@ class CommunityPostController {
    * @param {Response} ctx.response
    */
 	async update ({ params, request, response }) {
+
+		const body = request.only(requestOnly);
+		
+		try {
+			const updateData = await CommunityPost.findOrFail(params.id);
+			updateData.merge(body);
+			await updateData.save();
+
+			await updateData.postTags().detach();
+			await updateData.postTags().attach(JSON.parse(request.input("tags")));
+
+			return response.status(200).json({ message: "Question update successfully" });
+		} catch (error) {
+			console.log(error);
+			return response.status(200).json({ message: "Something went wrong" });
+		}
 	}
 
   /**

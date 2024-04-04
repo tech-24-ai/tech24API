@@ -1,0 +1,133 @@
+'use strict'
+const Query = use("Query");
+const Database = use("Database");
+
+const CommunityNewsAnnouncement = use("App/Models/Admin/CommunityModule/CommunityNewsAnnouncement");
+const { dateFilterExtractor } = require("../../../../Helper/globalFunctions");
+
+/** @typedef {import('@adonisjs/framework/src/Request')} Request */
+/** @typedef {import('@adonisjs/framework/src/Response')} Response */
+/** @typedef {import('@adonisjs/framework/src/View')} View */
+
+/**
+ * Resourceful controller for interacting with communitynewsannouncements
+ */
+class CommunityNewsAnnouncementController {
+  /**
+   * Show a list of all communitynewsannouncements.
+   * GET communitynewsannouncements
+   *
+   * @param {object} ctx
+   * @param {Request} ctx.request
+   * @param {Response} ctx.response
+   * @param {View} ctx.view
+   */
+  async index ({ request, response, view }) {
+
+    const query = CommunityNewsAnnouncement.query();
+		const orderBy = request.input("orderBy");
+		const orderDirection = request.input("orderDirection");
+
+    query.select('id', 'community_id', 'title', 'description', 'created_at');
+    
+    query.with('community', (builder) => {
+      builder.select('id', 'name')
+    })
+    query.where('community_id', request.input("community_id"));
+
+		let page = null;
+		let pageSize = null;
+
+		if (request.input("page")) {
+			page = request.input("page");
+		}
+		if (request.input("pageSize")) {
+			pageSize = request.input("pageSize");
+		}
+		var result;
+		if (page && pageSize) {
+			result = (await query.paginate(page, pageSize)).toJSON();
+		} else {
+			result = (await query.fetch()).toJSON();
+		}
+
+		return response.status(200).send(result);
+  }
+
+  /**
+   * Render a form to be used for creating a new communitynewsannouncement.
+   * GET communitynewsannouncements/create
+   *
+   * @param {object} ctx
+   * @param {Request} ctx.request
+   * @param {Response} ctx.response
+   * @param {View} ctx.view
+   */
+  async create ({ request, response, view }) {
+  }
+
+  /**
+   * Create/save a new communitynewsannouncement.
+   * POST communitynewsannouncements
+   *
+   * @param {object} ctx
+   * @param {Request} ctx.request
+   * @param {Response} ctx.response
+   */
+  async store ({ request, response }) {
+  }
+
+  /**
+   * Display a single communitynewsannouncement.
+   * GET communitynewsannouncements/:id
+   *
+   * @param {object} ctx
+   * @param {Request} ctx.request
+   * @param {Response} ctx.response
+   * @param {View} ctx.view
+   */
+  async show ({ params, request, response, view }) {
+
+    const query = CommunityNewsAnnouncement.query();
+		query.select("id", "title", "description");
+		query.where("id", params.id);
+		const result = await query.firstOrFail();
+		return response.status(200).send(result);	
+  }
+
+  /**
+   * Render a form to update an existing communitynewsannouncement.
+   * GET communitynewsannouncements/:id/edit
+   *
+   * @param {object} ctx
+   * @param {Request} ctx.request
+   * @param {Response} ctx.response
+   * @param {View} ctx.view
+   */
+  async edit ({ params, request, response, view }) {
+  }
+
+  /**
+   * Update communitynewsannouncement details.
+   * PUT or PATCH communitynewsannouncements/:id
+   *
+   * @param {object} ctx
+   * @param {Request} ctx.request
+   * @param {Response} ctx.response
+   */
+  async update ({ params, request, response }) {
+  }
+
+  /**
+   * Delete a communitynewsannouncement with id.
+   * DELETE communitynewsannouncements/:id
+   *
+   * @param {object} ctx
+   * @param {Request} ctx.request
+   * @param {Response} ctx.response
+   */
+  async destroy ({ params, request, response }) {
+  }
+}
+
+module.exports = CommunityNewsAnnouncementController

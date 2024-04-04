@@ -2,13 +2,14 @@
 const Query = use("Query");
 const Database = use("Database");
 
-const Community = use("App/Models/Admin/CommunityModule/Community");
+const CommunityNewsAnnouncement = use("App/Models/Admin/CommunityModule/CommunityNewsAnnouncement");
 const { dateFilterExtractor } = require("../../../../Helper/globalFunctions");
-const Role = use("App/Models/Admin/UserModule/Role");
+
 const requestOnly = [
-	"name",
+	"community_id",
+	"title",
 	"description",
-	"image_url"
+	"status"
 ];
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
@@ -16,73 +17,61 @@ const requestOnly = [
 /** @typedef {import('@adonisjs/framework/src/View')} View */
 
 /**
- * Resourceful controller for interacting with communities
+ * Resourceful controller for interacting with communitynewsannouncements
  */
-class CommunityController {
+class CommunityNewsAnnouncementController {
   /**
-   * Show a list of all communities.
-   * GET communities
+   * Show a list of all communitynewsannouncements.
+   * GET communitynewsannouncements
    *
    * @param {object} ctx
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async index ({ request, response, view, auth }) {
-	  
-		const role_id = auth.user.role_id;
-		const query = Community.query();
+  async index ({ request, response, view }) {
+
+		const query = CommunityNewsAnnouncement.query();
 		const search = request.input("search");
 		const orderBy = request.input("orderBy");
 		const orderDirection = request.input("orderDirection");
 		const searchQuery = new Query(request, { order: "id" });
-		const role = await Role.findOrFail(role_id);
-		let role_name = role.name;
+
+    query.with('community', (builder) => {
+      builder.select('id', 'name')
+    })
 
 		if (orderBy && orderDirection) {
 			query.orderBy(`${orderBy}`, orderDirection);
 		}
 		
 		if (search) {
-			query.where(searchQuery.search(['name']));
+			query.where(searchQuery.search(['title']));
 		}
 
-		if(role && role_name.toLowerCase().includes('moderator')) {
-			query.whereHas('userCommunities', (builder) => {
-				builder.where('user_id', auth.user.id)
-			})
-		}
-
-		query.select('id', 'name', 'description', 'url_slug', 'updated_at')
-		query.withCount('communityPost as total_posts');
-		query.withCount('getCommunityPostReply as total_post_reply', (builder) => {
-			builder.where('parent_id', null)
-		});
-		query.withCount('communityMember as total_members');
-		
-		if (request.input("filters")) {
+    if (request.input("filters")) {
 			const filters = JSON.parse(request.input("filters"));
 			filters.forEach(async (filter) => {
 				switch (filter.name) {
 					case "updated_at":
 				 		 query.whereRaw(
 							await dateFilterExtractor({
-					  			name: `communities.updated_at`,
+					  			name: `community_news_announcements.updated_at`,
 					  			date: filter.value,
 							})
 				  		);
-				 	 break;
-					case "__meta__.total_posts":
-						query.has('communityPost', '=', filter.value);
-					break;
-					case "__meta__.total_post_reply":
-				 		query.has('getCommunityPostReply', '=', filter.value);
 				 	break;
-					 case "__meta__.total_members":
-						  query.has('communityMember', '=', filter.value);
-					  break;
+          case "community.name":
+            query.whereHas('community', (builder) => {
+              builder.whereRaw(`name LIKE '%${filter.value}%'`)
+            })
+          break; 
+				 	break;
+          case "status":
+            query.whereIn('status', filter.value);
+          break; 
 					default:
-				 		query.whereRaw(`communities.${filter.name} LIKE '%${filter.value}%'`);
+				 		query.whereRaw(`community_news_announcements.${filter.name} LIKE '%${filter.value}%'`);
 				 	break;
 				}
 			});
@@ -105,35 +94,36 @@ class CommunityController {
 		}
 
 		return response.status(200).send(result);
-	}
+  }
 
   /**
-   * Render a form to be used for creating a new community.
-   * GET communities/create
+   * Render a form to be used for creating a new communitynewsannouncement.
+   * GET communitynewsannouncements/create
    *
    * @param {object} ctx
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async create ({ request, response, view }) {
-	}
+  async create ({ request, response, view }) {
+  }
 
   /**
-   * Create/save a new community.
-   * POST communities
+   * Create/save a new communitynewsannouncement.
+   * POST communitynewsannouncements
    *
    * @param {object} ctx
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-	async store ({ request, response, auth }) {
-		const userId = auth.user.id;	
+  async store ({ request, response, auth }) {
+
+    const userId = auth.user.id;	
 		const trx = await Database.beginTransaction();
 		const body = request.only(requestOnly);
 		
 		try {	
-			const query = await Community.create(
+			const query = await CommunityNewsAnnouncement.create(
 				{
 					...body,
 					created_by: userId,
@@ -149,51 +139,55 @@ class CommunityController {
 			trx.rollback();
 			return response.status(423).json({ message: "Something went wrong", error });
 		}
-	}
+  }
 
   /**
-   * Display a single community.
-   * GET communities/:id
+   * Display a single communitynewsannouncement.
+   * GET communitynewsannouncements/:id
    *
    * @param {object} ctx
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async show ({ params, request, response, view }) {
-		const query = Community.query();
+  async show ({ params, request, response, view }) {
+    const query = CommunityNewsAnnouncement.query();
 		query.where("id", params.id);
 		const result = await query.firstOrFail();
+
+    const st = result.status;
+		result.status = st.toString();
+
 		return response.status(200).send(result);	
-	}
+  }
 
   /**
-   * Render a form to update an existing community.
-   * GET communities/:id/edit
+   * Render a form to update an existing communitynewsannouncement.
+   * GET communitynewsannouncements/:id/edit
    *
    * @param {object} ctx
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async edit ({ params, request, response, view }) {
-	}
-	
+  async edit ({ params, request, response, view }) {
+  }
+
   /**
-   * Update community details.
-   * PUT or PATCH communities/:id
+   * Update communitynewsannouncement details.
+   * PUT or PATCH communitynewsannouncements/:id
    *
    * @param {object} ctx
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-	async update ({ params, request, response, auth }) {
-		
-		const body = request.only(requestOnly);
+  async update ({ params, request, response, auth }) {
+
+    const body = request.only(requestOnly);
 		const userId = auth.user.id;
 		
 		try {
-			const updateData = await Community.findOrFail(params.id);
+			const updateData = await CommunityNewsAnnouncement.findOrFail(params.id);
 			updateData.merge(body);
 			updateData.updated_by = userId;
 			await updateData.save();
@@ -202,18 +196,19 @@ class CommunityController {
 			console.log(error);
 			return response.status(200).json({ message: "Something went wrong" });
 		}
-	}
+  }
 
   /**
-   * Delete a community with id.
-   * DELETE communities/:id
+   * Delete a communitynewsannouncement with id.
+   * DELETE communitynewsannouncements/:id
    *
    * @param {object} ctx
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-	async destroy ({ params, request, response }) {
-		const query = await Community.findOrFail(params.id);
+  async destroy ({ params, request, response }) {
+
+    const query = await CommunityNewsAnnouncement.findOrFail(params.id);
 		try {
 			await query.delete();
 			return response.status(200).send({ message: "Delete successfully" });
@@ -223,7 +218,7 @@ class CommunityController {
 				message: "Something went wrong",
 			});
 		}
-	}
+  }
 }
 
-module.exports = CommunityController
+module.exports = CommunityNewsAnnouncementController
