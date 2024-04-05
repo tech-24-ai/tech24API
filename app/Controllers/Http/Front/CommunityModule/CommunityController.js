@@ -29,6 +29,8 @@ class CommunityController {
 	async index ({ request, response, view, auth }) {
 		
    		const userId = auth.user.id;	
+		const orderBy = request.input("orderBy");
+		const orderDirection = request.input("orderDirection");
 		const search = request.input("search");
 		const searchQuery = new Query(request, { order: "id" });
 		
@@ -47,8 +49,13 @@ class CommunityController {
 		query.withCount('getCommunityPostReply as total_post_reply');
 		query.withCount('communityMember as total_members');
 		
-		if (orderBy && orderDirection) {
+		if (orderBy == 'top_rated') {
+			query.orderBy('total_posts', 'DESC');
+			query.orderBy('total_post_reply', 'DESC');
+		} else if (orderBy && orderDirection) {
 			query.orderBy(`${orderBy}`, orderDirection);
+		} else {
+			query.orderBy('id', 'DESC');
 		}
 
 		let page = null;
