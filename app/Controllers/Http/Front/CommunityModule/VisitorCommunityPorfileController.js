@@ -7,7 +7,7 @@ const CommunityPostReply = use("App/Models/Admin/CommunityModule/CommunityPostRe
 const Vote = use("App/Models/Admin/CommunityModule/Vote");
 const Badge = use("App/Models/Admin/CommunityModule/Badge");
 const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVisitorPoint");
-
+const moment = require("moment");
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -50,12 +50,47 @@ class VisitorCommunityPorfileController {
     badgeQuery.where('max_range', '>=', totalPoints)
     const badgeResult = await badgeQuery.first();
     let currectBadge = (badgeResult) ? badgeResult.title : '-'
-		
+
+    let levelup_point = ""; let upcoming_badge_point = 0; let req_point = 0;
+    if(badgeResult)
+    {
+      const nextBadgeQuery = Badge.query()
+      nextBadgeQuery.where('id', '>', badgeResult.id)
+      const nextBadgeResult = await nextBadgeQuery.first();
+
+      if(nextBadgeResult) {
+        upcoming_badge_point = nextBadgeResult.min_range;
+        req_point = upcoming_badge_point - totalPoints;
+        levelup_point = `${req_point} points to level up`;
+      } else {
+        levelup_point = "You are already at maximum level.";
+      }    
+    } else {
+      const nextBadgeQuery = Badge.query()
+      nextBadgeQuery.orderBy('id', 'ASC')
+      const nextBadgeResult = await nextBadgeQuery.first();
+      upcoming_badge_point = (nextBadgeResult) ? nextBadgeResult.min_range : 0;
+
+      if(upcoming_badge_point > 0) {
+        req_point = upcoming_badge_point - totalPoints;
+        levelup_point = `${req_point} points to level up`;
+      } else {
+        req_point = totalPoints;
+        levelup_point = `${req_point} points`;
+      }    
+    }
+
+    let total_answer_given = await totalAnswerQuery.getCount();
+    let total_upvotes = await totalVoteQuery.getCount();
+
+    const visitor = await auth.authenticator("visitorAuth").getUser();
+
 		data.push({
-			'total_answer_given' : await totalAnswerQuery.getCount(),
+			'contributions' : total_answer_given + total_upvotes,
 			'total_points_earned' : totalPoints,
-			'total_upvotes' : await totalVoteQuery.getCount(),
 			'current_badge' : currectBadge,
+			'level_up_points' : levelup_point,
+			'joined_at' : moment(visitor.created_at).format("MMM, DD YYYY"),
 		})
 		
 		return response.status(200).send({ data });
