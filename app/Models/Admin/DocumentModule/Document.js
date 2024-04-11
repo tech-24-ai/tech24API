@@ -8,6 +8,25 @@ class Document extends Model {
     document_type() {
         return this.belongsTo('App/Models/Admin/DocumentModule/DocumentType')
     }
+
+    researchTopic() {
+        return this.belongsTo('App/Models/Admin/DocumentModule/ResearchTopic')
+    }
+
+    category() {
+        return this.belongsTo('App/Models/Admin/ProductModule/Category')
+    }
+
+    category_name() {
+        return this.belongsTo('App/Models/Admin/ProductModule/Category')
+    }
+
+    documentTags() {
+		return this.belongsToMany(
+			"App/Models/Admin/DocumentModule/ResearchTag"
+		).pivotModel("App/Models/Admin/DocumentModule/DocumentTag");
+	}
+
     static get dates() {
         return super.dates.concat(['created_at', 'updated_at'])
     }    

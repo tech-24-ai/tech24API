@@ -2702,3 +2702,20 @@ Route.group(() => {
   Route.get("/get_news_announcements/:id", "Front/CommunityModule/CommunityNewsAnnouncementController.show");
 
 }).prefix("/app").middleware("auth:visitorAuth");
+
+Route.group(() => {
+  Route.get("/", "Admin/DocumentModule/ResearchTopicController.index");
+	Route.post("/", "Admin/DocumentModule/ResearchTopicController.store").validator("StoreResearchTopic");
+  Route.get("/:id", "Admin/DocumentModule/ResearchTopicController.show");
+	Route.put("/:id", "Admin/DocumentModule/ResearchTopicController.update").validator("StoreResearchTopic");
+	Route.delete("/:id", "Admin/DocumentModule/ResearchTopicController.destroy");
+}).prefix("/research_topics").middleware("auth"); 
+
+
+Route.group(() => {
+  Route.get("/", "Admin/DocumentModule/ResearchTagController.index");
+	Route.post("/", "Admin/DocumentModule/ResearchTagController.store");
+  Route.get("/:id", "Admin/DocumentModule/ResearchTagController.show");
+	Route.put("/:id", "Admin/DocumentModule/ResearchTagController.update");
+	Route.delete("/:id", "Admin/DocumentModule/ResearchTagController.destroy");
+}).prefix("/research_tags").middleware("auth"); 

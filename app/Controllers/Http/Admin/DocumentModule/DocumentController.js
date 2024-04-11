@@ -4,6 +4,7 @@ const Document = use("App/Models/Admin/DocumentModule/Document");
 const Purchase = use(
   "App/Models/Admin/VisitorSubscriptionModule/ItmapEuDocPurchase"
 );
+const ResearchTag = use("App/Models/Admin/DocumentModule/ResearchTag");
 const Query = use("Query");
 const moment = require("moment");
 const Excel = require("exceljs");
@@ -30,7 +31,9 @@ class DocumentController {
       "document_types.id",
       "documents.document_type_id"
     );
-
+    query.with('category_name', (builder) => {
+      builder.select('id', 'name')
+    });
     const search = request.input("search");
     const orderBy = request.input("orderBy");
     const orderDirection = request.input("orderDirection");
@@ -86,6 +89,14 @@ class DocumentController {
           case "document_type":
             query.whereRaw(`document_types.name LIKE '%${filter.value}%'`);
             break;
+          case "category_name.name":
+            query.whereHas('category_name', (builder) => {
+              builder.whereRaw(`name LIKE '%${filter.value}%'`)
+            })
+          break;
+          case "status":
+            query.whereIn('status', filter.value);
+          break; 
           default:
             query.whereRaw(`documents.${filter.name} LIKE '%${filter.value}%'`);
             break;
@@ -116,25 +127,28 @@ class DocumentController {
     const query = new Document();
 
     query.document_type_id = request.input("document_type_id");
+    query.category_id = request.input("category_id");
+    query.research_topic_id = request.input("research_topic_id");
     query.name = request.input("name");
     query.url = request.input("url");
-    query.tag = request.input("tag");
+    // query.tag = request.input("tag");
     query.seo_url_slug = request.input("seo_url_slug");
-    query.is_embedded = request.input("is_embedded");
+    query.status = request.input("status");
+    // query.is_embedded = request.input("is_embedded");
     var path = require("path");
 
-    if (query.url && query.url.includes("//vimeo.com/")) {
-      query.url = query.url.replace("vimeo.com", "player.vimeo.com/video");
-    }
+    // if (query.url && query.url.includes("//vimeo.com/")) {
+    //   query.url = query.url.replace("vimeo.com", "player.vimeo.com/video");
+    // }
 
-    if (query.url && query.url.includes("//youtu.be/")) {
-      query.url = query.url.replace(
-        "youtu.be",
-        "www.youtube-nocookie.com/embed"
-      );
-      let videoId = query.url.slice(query.url.lastIndexOf("/") + 1);
-      query.thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-    }
+    // if (query.url && query.url.includes("//youtu.be/")) {
+    //   query.url = query.url.replace(
+    //     "youtu.be",
+    //     "www.youtube-nocookie.com/embed"
+    //   );
+    //   let videoId = query.url.slice(query.url.lastIndexOf("/") + 1);
+    //   query.thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+    // }
 
     var url = query.url;
     if (url) {
@@ -142,57 +156,59 @@ class DocumentController {
       var extension = path.extname(filename);
       extension = extension.substring(1);
       if (extension == "") {
-        extension =
-          url.includes("player.vimeo.com") ||
-          url.includes("youtube-nocookie.com")
-            ? "mp4"
-            : "";
+        extension = "";
       }
       query.extension = extension;
     }
 
-    if (url.includes("player.vimeo.com")) {
-      let videoId = url.slice(url.lastIndexOf("/") + 1);
-      const thumbnail = await fetchVimeoVideoThumbnail(videoId);
-      if (thumbnail) {
-        query.thumbnail = thumbnail;
-      }
-    }
+    // if (url.includes("player.vimeo.com")) {
+    //   let videoId = url.slice(url.lastIndexOf("/") + 1);
+    //   const thumbnail = await fetchVimeoVideoThumbnail(videoId);
+    //   if (thumbnail) {
+    //     query.thumbnail = thumbnail;
+    //   }
+    // }
 
+    query.details = request.input("details");
     query.description = request.input("description");
     query.document_category = request.input("document_category");
-    query.subscription_category = request.input("subscription_category");
+    // query.subscription_category = request.input("subscription_category");
 
-    if (query.subscription_category == 1) {
-      //Basic
-      //query.price = 0;
-      query.basic_document_price = 0;
-      query.basic_document_special_price = 0;
-      query.advance_document_price = 0;
-      query.advance_document_special_price = 0;
-    } else if (query.subscription_category == 2) {
-      //Advance
-      //query.price = 0;
-      query.basic_document_price = request.input("basic_document_price");
-      query.basic_document_special_price = request.input(
-        "basic_document_special_price"
-      );
-      query.advance_document_price = 0;
-      query.advance_document_special_price = 0;
-    } else {
-      //Enterprise
-      //query.price = 0;
-      query.basic_document_price = request.input("basic_document_price");
-      query.basic_document_special_price = request.input(
-        "basic_document_special_price"
-      );
-      query.advance_document_price = request.input("advance_document_price");
-      query.advance_document_special_price = request.input(
-        "advance_document_special_price"
-      );
-    }
+    // if (query.subscription_category == 1) {
+    //   //Basic
+    //   //query.price = 0;
+    //   query.basic_document_price = 0;
+    //   query.basic_document_special_price = 0;
+    //   query.advance_document_price = 0;
+    //   query.advance_document_special_price = 0;
+    // } else if (query.subscription_category == 2) {
+    //   //Advance
+    //   //query.price = 0;
+    //   query.basic_document_price = request.input("basic_document_price");
+    //   query.basic_document_special_price = request.input(
+    //     "basic_document_special_price"
+    //   );
+    //   query.advance_document_price = 0;
+    //   query.advance_document_special_price = 0;
+    // } else {
+    //   //Enterprise
+    //   //query.price = 0;
+    //   query.basic_document_price = request.input("basic_document_price");
+    //   query.basic_document_special_price = request.input(
+    //     "basic_document_special_price"
+    //   );
+    //   query.advance_document_price = request.input("advance_document_price");
+    //   query.advance_document_special_price = request.input(
+    //     "advance_document_special_price"
+    //   );
+    // }
     // console.log("Query", query);
     await query.save();
+
+    if(request.input("tags")) {
+      await query.documentTags().attach(JSON.parse(request.input("tags")));
+    }  
+
     return response.status(200).send({ message: "Created successfully" });
   }
 
@@ -204,27 +220,47 @@ class DocumentController {
     } else {
       query.document_type = "";
     }
+    const category_name = await query.category_name().fetch();
+    if (category_name) {
+      query.category_name = category_name.name;
+    } else {
+      query.category_name = "";
+    }
+    const topic_name = await query.researchTopic().fetch();
+    if (topic_name) {
+      query.topic_name = topic_name.title;
+    } else {
+      query.topic_name = "";
+    }
+    const tags = await query.documentTags().select('id','name').fetch();
+    query.tags = tags;
+
+    const st = query.status;
+		query.status = st.toString();
+
     return response.status(200).send(query);
   }
 
   async update({ params, request, response }) {
     const query = await Document.findOrFail(params.id);
+    query.category_id = request.input("category_id");
+    query.research_topic_id = request.input("research_topic_id");
     query.document_type_id = request.input("document_type_id");
     query.name = request.input("name");
     query.url = request.input("url");
     query.tag = request.input("tag");
-    if (query.url && query.url.includes("//vimeo.com/")) {
-      query.url = query.url.replace("vimeo.com", "player.vimeo.com/video");
-    }
+    // if (query.url && query.url.includes("//vimeo.com/")) {
+    //   query.url = query.url.replace("vimeo.com", "player.vimeo.com/video");
+    // }
 
-    if (query.url && query.url.includes("//youtu.be/")) {
-      query.url = query.url.replace(
-        "youtu.be",
-        "www.youtube-nocookie.com/embed"
-      );
-      let videoId = query.url.slice(query.url.lastIndexOf("/") + 1);
-      query.thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-    }
+    // if (query.url && query.url.includes("//youtu.be/")) {
+    //   query.url = query.url.replace(
+    //     "youtu.be",
+    //     "www.youtube-nocookie.com/embed"
+    //   );
+    //   let videoId = query.url.slice(query.url.lastIndexOf("/") + 1);
+    //   query.thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+    // }
 
     var url = query.url;
     const filename = url.replace(process.env.S3_BASE_URL, "");
@@ -232,55 +268,59 @@ class DocumentController {
     var extension = path.extname(filename);
     extension = extension.substring(1);
     if (extension == "") {
-      extension =
-        url.includes("player.vimeo.com") || url.includes("youtube-nocookie.com")
-          ? "mp4"
-          : "";
+      extension = "";
     }
     query.extension = extension;
 
-    if (url.includes("player.vimeo.com")) {
-      let videoId = url.slice(url.lastIndexOf("/") + 1);
-      const thumbnail = await fetchVimeoVideoThumbnail(videoId);
-      if (thumbnail) {
-        query.thumbnail = thumbnail;
-      }
-    }
+    // if (url.includes("player.vimeo.com")) {
+    //   let videoId = url.slice(url.lastIndexOf("/") + 1);
+    //   const thumbnail = await fetchVimeoVideoThumbnail(videoId);
+    //   if (thumbnail) {
+    //     query.thumbnail = thumbnail;
+    //   }
+    // }
 
+    query.status = request.input("status");
+    query.details = request.input("details");
     query.description = request.input("description");
     query.document_category = request.input("document_category");
-    query.subscription_category = request.input("subscription_category");
+    // query.subscription_category = request.input("subscription_category");
     query.seo_url_slug = request.input("seo_url_slug");
-    query.is_embedded = request.input("is_embedded");
+    // query.is_embedded = request.input("is_embedded");
 
-    if (query.subscription_category == 1) {
-      //Basic
-      //query.price = 0;
-      query.basic_document_price = 0;
-      query.basic_document_special_price = 0;
-      query.advance_document_price = 0;
-      query.advance_document_special_price = 0;
-    } else if (query.subscription_category == 2) {
-      //Advance
-      //query.price = 0;
-      query.basic_document_price = request.input("basic_document_price");
-      query.basic_document_special_price = request.input(
-        "basic_document_special_price"
-      );
-      query.advance_document_price = 0;
-      query.advance_document_special_price = 0;
-    } else {
-      //Enterprise
-      //query.price = 0;
-      query.basic_document_price = request.input("basic_document_price");
-      query.basic_document_special_price = request.input(
-        "basic_document_special_price"
-      );
-      query.advance_document_price = request.input("advance_document_price");
-      query.advance_document_special_price = request.input(
-        "advance_document_special_price"
-      );
-    }
+    // if (query.subscription_category == 1) {
+    //   //Basic
+    //   //query.price = 0;
+    //   query.basic_document_price = 0;
+    //   query.basic_document_special_price = 0;
+    //   query.advance_document_price = 0;
+    //   query.advance_document_special_price = 0;
+    // } else if (query.subscription_category == 2) {
+    //   //Advance
+    //   //query.price = 0;
+    //   query.basic_document_price = request.input("basic_document_price");
+    //   query.basic_document_special_price = request.input(
+    //     "basic_document_special_price"
+    //   );
+    //   query.advance_document_price = 0;
+    //   query.advance_document_special_price = 0;
+    // } else {
+    //   //Enterprise
+    //   //query.price = 0;
+    //   query.basic_document_price = request.input("basic_document_price");
+    //   query.basic_document_special_price = request.input(
+    //     "basic_document_special_price"
+    //   );
+    //   query.advance_document_price = request.input("advance_document_price");
+    //   query.advance_document_special_price = request.input(
+    //     "advance_document_special_price"
+    //   );
+    // }
+
+    await query.documentTags().detach();
+    if(request.input("tags")) {
+      await query.documentTags().attach(JSON.parse(request.input("tags")));
+    } 
     await query.save();
 
     return response.status(200).send({ message: "Updated successfully" });
