@@ -54,7 +54,7 @@ class VisitorCommunityPorfileController {
     const badgeResult = await badgeQuery.first();
     let currectBadge = (badgeResult) ? badgeResult.title : '-'
 
-    let levelup_point = ""; let upcoming_badge_point = 0; let req_point = 0;
+    let levelup_point = ""; let levelup_tx = ""; let upcoming_badge_point = 0; let req_point = 0;
     if(badgeResult)
     {
       const nextBadgeQuery = Badge.query()
@@ -64,9 +64,10 @@ class VisitorCommunityPorfileController {
       if(nextBadgeResult) {
         upcoming_badge_point = nextBadgeResult.min_range;
         req_point = upcoming_badge_point - totalPoints;
-        levelup_point = `${req_point} points to level up`;
+        levelup_point = req_point;
+        levelup_tx = 'points to level up';
       } else {
-        levelup_point = "You are already at maximum level.";
+        levelup_tx = "You are already at maximum level.";
       }    
     } else {
       const nextBadgeQuery = Badge.query()
@@ -76,10 +77,12 @@ class VisitorCommunityPorfileController {
 
       if(upcoming_badge_point > 0) {
         req_point = upcoming_badge_point - totalPoints;
-        levelup_point = `${req_point} points to level up`;
+        levelup_point = req_point;
+        levelup_tx = 'points to level up';
       } else {
         req_point = totalPoints;
-        levelup_point = `${req_point} points`;
+        levelup_point = req_point;
+        levelup_tx = 'points';
       }    
     }
 
@@ -89,10 +92,12 @@ class VisitorCommunityPorfileController {
     const visitor = await auth.authenticator("visitorAuth").getUser();
 
 		data.push({
+			'profile_pic_url' : visitor.profile_pic_url,
 			'contributions' : total_answer_given + total_upvotes,
 			'total_points_earned' : totalPoints,
 			'current_badge' : currectBadge,
 			'level_up_points' : levelup_point,
+			'level_up_text' : levelup_tx,
 			'joined_at' : moment(visitor.created_at).format("MMM, DD YYYY"),
 		})
 		
