@@ -40,6 +40,10 @@ class Visitor extends Model {
         return super.formatDates(field, value)
     }
 
+    country() {
+        return this.belongsTo('App/Models/Admin/LocationModule/Country')
+    }
+
     visitor_group() {
         return this.belongsTo('App/Models/Admin/VisitorModule/VisitorGroup')
     }

@@ -2694,6 +2694,9 @@ Route.group(() => {
 	Route.post("/repost_abuse", "Front/CommunityModule/ReportAbuseController.store").validator('StoreReportAbuse');
 	
 	Route.get("/visitorcommunityprofile", "Front/CommunityModule/VisitorCommunityPorfileController.index");
+	Route.get("/visitorprofile", "Front/CommunityModule/VisitorCommunityPorfileController.show");
+	Route.put("/visitorprofile/:id", "Front/CommunityModule/VisitorCommunityPorfileController.update").validator('UpdateVisitorProfile');
+	Route.get("/visitor_community", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_community");
 	Route.get("/visitor_queries_history", "Front/CommunityModule/VisitorCommunityPorfileController.queries_history");
 	Route.get("/visitor_answer_history", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_answer_history");
   Route.get("/visitor_points_history", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_points_history");
@@ -2701,6 +2704,7 @@ Route.group(() => {
   Route.get("/get_news_announcements", "Front/CommunityModule/CommunityNewsAnnouncementController.index");
   Route.get("/get_news_announcements/:id", "Front/CommunityModule/CommunityNewsAnnouncementController.show");
 
+  Route.post("/uploadimage", "FileController.image");
 }).prefix("/app").middleware("auth:visitorAuth");
 
 Route.group(() => {

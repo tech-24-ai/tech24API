@@ -2,11 +2,14 @@
 const Query = use("Query");
 const Database = use("Database");
 
+const Community = use("App/Models/Admin/CommunityModule/Community");
 const CommunityPost = use("App/Models/Admin/CommunityModule/CommunityPost");
 const CommunityPostReply = use("App/Models/Admin/CommunityModule/CommunityPostReply");
 const Vote = use("App/Models/Admin/CommunityModule/Vote");
 const Badge = use("App/Models/Admin/CommunityModule/Badge");
 const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVisitorPoint");
+const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
+
 const moment = require("moment");
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
@@ -96,15 +99,85 @@ class VisitorCommunityPorfileController {
 		return response.status(200).send({ data });
 	}
 
+	async visitor_community ({ request, response, view, auth }) {
+		
+		const userId = auth.user.id;
+    const search = request.input("search");
+		const orderBy = request.input("orderBy");
+		const orderDirection = request.input("orderDirection");
+		const searchQuery = new Query(request, { order: "id" });
+
+    const query = Community.query();
+		
+		if (search) {
+			query.where(searchQuery.search(['name']));
+		}
+		query.select('id', 'name', 'description', 'url_slug', 'image_url')
+
+    query.whereHas('communityMember', (builder) => {
+			builder.where('visitor_id', userId)
+		});
+
+		query.withCount('communityPost as total_posts');
+		query.withCount('getCommunityPostReply as total_post_reply');
+		query.withCount('communityMember as total_members');
+		
+		if (orderBy == 'top_rated') {
+			query.orderBy('total_posts', 'DESC');
+			query.orderBy('total_post_reply', 'DESC');
+		} else if (orderBy && orderDirection) {
+			query.orderBy(`${orderBy}`, orderDirection);
+		} else {
+			query.orderBy('id', 'DESC');
+		}
+
+		let page = null;
+		let pageSize = null;
+
+		if (request.input("page")) {
+			page = request.input("page");
+		}
+		if (request.input("pageSize")) {
+			pageSize = request.input("pageSize");
+		}
+		var result;
+		if (page && pageSize) {
+			result = (await query.paginate(page, pageSize)).toJSON();
+		} else {
+			result = (await query.fetch()).toJSON();
+		}
+
+		return response.status(200).send(result);
+  }
+
 	async queries_history ({ request, response, view, auth }) {
 		
 		const userId = auth.user.id;
+    const search = request.input("search");
 		const orderBy = request.input("orderBy");
 		const orderDirection = request.input("orderDirection");
-		
+		const searchQuery = new Query(request, { order: "id" });
+
 		const query = CommunityPost.query();
 		query.where("visitor_id", userId);
 
+    if (search) {
+			query.where(searchQuery.search(['title']));
+		}
+
+    query.with('community',(builder)=>{
+			builder.select('id','name')
+		});
+
+    query.with('postTags',(builder)=>{
+			builder.select('id','name')
+		});	
+    
+    query.with('visitor',(builder)=>{
+			builder.select('id','name','profile_pic_url')
+		});
+
+    query.withCount('communityPostReply as total_post_replies');
     query.withCount('communityVote as total_helpful');
 		
 		if (orderBy && orderDirection) {
@@ -242,7 +315,19 @@ class VisitorCommunityPorfileController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async show ({ params, request, response, view }) {
+	async show ({ params, request, response, view, auth }) {
+
+    const userId = auth.user.id;
+    
+    const query = Visitor.query();
+    query.with('country',(builder)=>{
+			builder.select('id','name')
+		});
+    query.where("id", userId);
+
+    const result = await query.firstOrFail();
+
+    return response.status(200).send(result);
 	}
 
   /**
@@ -266,6 +351,15 @@ class VisitorCommunityPorfileController {
    * @param {Response} ctx.response
    */
   async update ({ params, request, response }) {
+
+    const query = await Visitor.findOrFail(params.id);
+    query.alternate_email = request.input("alternate_email");
+    query.country_code = request.input("country_code");
+    query.mobile = request.input("mobile");
+    query.profile_pic_url = request.input("profile_pic_url");
+    
+    await query.save();
+    return response.status(200).send({ message: "Updated successfully" });
   }
 
   /**
