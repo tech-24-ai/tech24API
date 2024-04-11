@@ -2699,7 +2699,7 @@ Route.group(() => {
 	Route.get("/visitor_community", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_community");
 	Route.get("/visitor_queries_history", "Front/CommunityModule/VisitorCommunityPorfileController.queries_history");
 	Route.get("/visitor_answer_history", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_answer_history");
-  Route.get("/visitor_points_history", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_points_history");
+  Route.get("/visitor_profile_levels", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_profile_levels");
 	
   Route.get("/get_news_announcements", "Front/CommunityModule/CommunityNewsAnnouncementController.index");
   Route.get("/get_news_announcements/:id", "Front/CommunityModule/CommunityNewsAnnouncementController.show");

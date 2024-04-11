@@ -9,6 +9,7 @@ const Vote = use("App/Models/Admin/CommunityModule/Vote");
 const Badge = use("App/Models/Admin/CommunityModule/Badge");
 const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVisitorPoint");
 const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
+const {	getSubmitAnswerPoints, getUpvoteAnswerPoints, getCorrectAnswerPoints } = require("../../../../Helper/visitorPoints");
 
 const moment = require("moment");
 
@@ -250,42 +251,39 @@ class VisitorCommunityPorfileController {
 		return response.status(200).send(result);
 	}
 
-	async visitor_points_history ({ request, response, view, auth }) {
+	async visitor_profile_levels ({ request, response, view, auth }) {
 		
     const userId = auth.user.id;
-    const orderBy = request.input("orderBy");
-		const orderDirection = request.input("orderDirection");
+    let data = [];
 
-		const query = CommunityVisitorPoint.query();
+    const visitor = await auth.authenticator("visitorAuth").getUser();
+
+		const badgeQuery = Badge.query();
+    badgeQuery.select('id', 'title', 'min_range', 'max_range')
+		let badgeResult = (await badgeQuery.fetch()).toJSON();
+    
+    const query = CommunityVisitorPoint.query();
+    query.select('id','visitor_id')
     query.where("visitor_id", userId);
+    query.sum('points as totalPoints')
+    const result = await query.first();
+    let totalPoints = result.totalPoints;
+    totalPoints = (totalPoints > 0) ? totalPoints : 0;
 
-    query.with('communityPostReply')
-    query.with('communityPostReply.visitor', (builder) => {
-      builder.select('id','name')
-    })
+    const correctAnsPoints = await getCorrectAnswerPoints();
+    const ansPoints = await getUpvoteAnswerPoints();
+    const upvotePoints = await getUpvoteAnswerPoints();
 
-    if (orderBy && orderDirection) {
-			query.orderBy(`${orderBy}`, orderDirection);
-		} else {
-			query.orderBy('id', 'desc');
-		}
+    data.push({
+      'joined_at' : moment(visitor.created_at).format("MMM YYYY"),
+			'total_points_earned' : totalPoints,
+      'correct_answer_point_info' : correctAnsPoints,
+      'answer_point_info' : ansPoints,
+      'upvote_point_info' : upvotePoints,
+			'leavels' : badgeResult,
+		})
 
-    let page = null;
-		let pageSize = null;
-
-		if (request.input("page")) {
-			page = request.input("page");
-		}
-		if (request.input("pageSize")) {
-			pageSize = request.input("pageSize");
-		}
-    var result;
-		if (page && pageSize) {
-			result = (await query.paginate(page, pageSize)).toJSON();
-		} else {
-			result = (await query.fetch()).toJSON();
-		}
-    return response.status(200).send(result);
+    return response.status(200).send(data);
 	}
 
   /**
