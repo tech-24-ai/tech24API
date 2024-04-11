@@ -5,7 +5,7 @@ const Schema = use('Schema')
 
 class ResearchTopicSchema extends Schema {
   up () {
-    /* this.create('research_topics', (table) => {
+    this.create('research_topics', (table) => {
       table.increments()
 	  table.string("title").nullable();
 	  table.integer("created_by").unsigned().references("id").inTable("users").onDelete("restrict").onUpdate("cascade");
@@ -26,7 +26,7 @@ class ResearchTopicSchema extends Schema {
 	  table.integer("research_tag_id").unsigned().references("id").inTable("research_tags").onDelete("restrict").onUpdate("cascade");
 	  table.integer("document_id").unsigned().references("id").inTable("documents").onDelete("cascade").onUpdate("cascade");
       table.timestamps()
-    }) */
+    })
 	
 	this.table('documents', (table) => {
       // alter table
