@@ -23,6 +23,12 @@ class CommunityPost extends Model {
 		);
 	}
 	
+	attachments() {
+		return this.hasMany(
+			"App/Models/Admin/CommunityModule/CommunityPostAttachment"
+		);
+	}
+	
 	postTags() {
 		return this.belongsToMany(
 			"App/Models/Admin/CommunityModule/Tag"

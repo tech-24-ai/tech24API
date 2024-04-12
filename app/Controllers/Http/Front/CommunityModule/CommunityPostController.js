@@ -1,9 +1,11 @@
 'use strict'
 const Query = use("Query");
 const Database = use("Database");
+const Drive = use("Drive");
 
 const CommunityPost = use("App/Models/Admin/CommunityModule/CommunityPost");
 const Vote = use("App/Models/Admin/CommunityModule/Vote");
+const CommunityPostAttachment = use("App/Models/Admin/CommunityModule/CommunityPostAttachment");
 
 const requestOnly = [
 	"community_id",
@@ -166,9 +168,26 @@ class CommunityPostController {
 				},
 				trx
 			);
-			
+
+			let url = JSON.parse(request.input("url"));
+			let urlArr = [];
+			if(url)
+			{
+				for(var i = 0; i < url.length; i++)
+				{	
+					let mediaurl = url[i];
+					let extention = await this.getMediaType(mediaurl);
+
+					urlArr.push({
+						'community_post_id' : query.id,
+						'url' : mediaurl,
+						'extension' : (extention) ? extention : ""
+					})
+				}
+				await CommunityPostAttachment.createMany(urlArr, trx);
+			}
+
 			await query.postTags().attach(JSON.parse(request.input("tags")), null, trx);
-		
 			await trx.commit();
 			return response.status(200).json({ message: "Question posted successfully" });
 		} catch (error) {
@@ -176,6 +195,13 @@ class CommunityPostController {
 			trx.rollback();
 			return response.status(423).json({ message: "Something went wrong", error });
 		}
+	}
+
+	async getMediaType(url)
+	{
+		const filename = url.replace(process.env.S3_BASE_URL, "");
+		const file = await Drive.disk("s3").getObject(filename);
+		return file.ContentType;
 	}
 
   /**
@@ -211,6 +237,10 @@ class CommunityPostController {
 		
 		query.with('postTags',(builder)=>{
 			builder.select('id','name')
+		});	
+		
+		query.with('attachments',(builder)=>{
+			builder.select('id','community_post_id', 'name', 'url', 'extension')
 		});	
 		query.where("url_slug", params.slug);
 		
@@ -278,6 +308,26 @@ class CommunityPostController {
 			const updateData = await CommunityPost.findOrFail(params.id);
 			updateData.merge(body);
 			await updateData.save();
+
+			await CommunityPostAttachment.query().where('community_post_id', params.id).delete();
+
+			let url = JSON.parse(request.input("url"));
+			let urlArr = [];
+			if(url)
+			{
+				for(var i = 0; i < url.length; i++)
+				{	
+					let mediaurl = url[i];
+					let extention = await this.getMediaType(mediaurl);
+
+					urlArr.push({
+						'community_post_id' : params.id,
+						'url' : mediaurl,
+						'extension' : (extention) ? extention : ""
+					})
+				}
+				await CommunityPostAttachment.createMany(urlArr);
+			}
 
 			await updateData.postTags().detach();
 			await updateData.postTags().attach(JSON.parse(request.input("tags")));

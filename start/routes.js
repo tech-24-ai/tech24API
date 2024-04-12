@@ -2604,11 +2604,12 @@ Route.group(() => {
 	Route.delete("/posts/:id", "Admin/CommunityModule/CommunityPostController.destroy");
 	
 	Route.get("/posts_reply", "Admin/CommunityModule/CommunityPostReplyController.index");
-	Route.get("/posts_reply/:id", "Admin/CommunityModule/CommunityPostReplyController.show");
+  Route.get("/posts_reply/:id", "Admin/CommunityModule/CommunityPostReplyController.show");
 	Route.put("/posts_reply/status_update/:id", "Admin/CommunityModule/CommunityPostReplyController.status_update");
 	Route.delete("/posts_reply/:id", "Admin/CommunityModule/CommunityPostReplyController.destroy");
   Route.get("/posts_reply_comments", "Admin/CommunityModule/CommunityPostReplyController.get_reply_comments");
-
+  Route.post("/reply_mark_correct_answer", "Admin/CommunityModule/CommunityPostReplyController.mark_correct_answer");
+	
   // Badge
 	Route.get("/badge", "Admin/CommunityModule/BadgeController.index");
 	Route.post("/badge", "Admin/CommunityModule/BadgeController.store").validator("StoreBadge");
@@ -2622,6 +2623,8 @@ Route.group(() => {
 
 	// Community APIs
 	Route.get("/", "Admin/CommunityModule/CommunityController.index");
+	Route.get("/members", "Admin/CommunityModule/CommunityController.community_members");
+	Route.delete("/remove_member/:id", "Admin/CommunityModule/CommunityController.remove_community_member");
 	Route.post("/", "Admin/CommunityModule/CommunityController.store").validator("StoreCommunity");
 	Route.get("/:id", "Admin/CommunityModule/CommunityController.show");
 	Route.put("/:id", "Admin/CommunityModule/CommunityController.update").validator("StoreCommunity");
@@ -2705,6 +2708,7 @@ Route.group(() => {
   Route.get("/get_news_announcements/:id", "Front/CommunityModule/CommunityNewsAnnouncementController.show");
 
   Route.post("/uploadimage", "FileController.image");
+  Route.post("/uploadmedia", "FileController.media");
 }).prefix("/app").middleware("auth:visitorAuth");
 
 Route.group(() => {
@@ -2714,7 +2718,6 @@ Route.group(() => {
 	Route.put("/:id", "Admin/DocumentModule/ResearchTopicController.update").validator("StoreResearchTopic");
 	Route.delete("/:id", "Admin/DocumentModule/ResearchTopicController.destroy");
 }).prefix("/research_topics").middleware("auth"); 
-
 
 Route.group(() => {
   Route.get("/", "Admin/DocumentModule/ResearchTagController.index");

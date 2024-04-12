@@ -335,6 +335,43 @@ class FileController {
 
     await request.multipart.process();
   }
+
+  
+  async media({ request, response }) {
+    const validationOptions = {
+      types: ["png", "jpg", "jpeg", "svg", "mp4", "mov", "avi", "mkv"],
+      size: "10mb",
+    };
+
+    request.multipart.file("file", validationOptions, async (file) => {
+      // set file size from stream byteCount, so adonis can validate file size
+      file.size = file.stream.byteCount;
+
+      // run validation rules
+      await file.runValidations();
+
+      // catches validation errors, if any and then throw exception
+      const error = file.error();
+      if (error.message) {
+        throw new Error(error.message);
+      }
+      file.clientName = createRandomName(10);
+      const result = await Drive.disk("s3").put(file.clientName, file.stream, {
+        ContentType: file.headers["content-type"],
+        ACL: "public-read",
+      });
+
+      if (result) {
+        return response
+          .status(200)
+          .send({ message: "File upload successfully", result: result });
+      } else {
+        return response.status(500).send({ message: "File uploading failed" });
+      }
+    });
+
+    await request.multipart.process();
+  }
 }
 
 module.exports = FileController;

@@ -5,7 +5,7 @@ const Database = use("Database");
 const CommunityPostReply = use("App/Models/Admin/CommunityModule/CommunityPostReply");
 const { dateFilterExtractor } = require("../../../../Helper/globalFunctions");
 const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVisitorPoint");
-const {	getSubmitAnswerPoints } = require("../../../../Helper/visitorPoints");
+const {	getSubmitAnswerPoints, getCorrectAnswerPoints } = require("../../../../Helper/visitorPoints");
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -311,6 +311,49 @@ class CommunityPostReplyController {
 		}
 		
 		return response.status(200).send(result);
+	}
+
+	async mark_correct_answer ({ params, request, response }) 
+	{
+		var community_post_reply_id = request.input("id");
+		const trx = await Database.beginTransaction();
+		try {	
+      		const updateData = await CommunityPostReply.findOrFail(community_post_reply_id);
+
+     		const checkData = await CommunityPostReply.query().where("community_post_id", updateData.community_post_id).where("is_correct_answer", 1).first();
+			if(checkData) 
+			{
+				checkData.is_correct_answer = 0;
+				await checkData.save();
+
+				const removeEarnPoints = await CommunityVisitorPoint.query().where("community_post_reply_id", checkData.id).where("visitor_id", checkData.visitor_id).where('type', 3).first();
+				if(removeEarnPoints) 
+				{
+					await removeEarnPoints.delete();
+				}	
+      		}
+			
+			updateData.is_correct_answer = 1;
+			await updateData.save();
+
+			const correctAnsPoints = await getCorrectAnswerPoints();
+			const addPoints = await CommunityVisitorPoint.create(
+				{
+					visitor_id: updateData.visitor_id,
+					type: 3,
+					points: correctAnsPoints,
+					community_post_reply_id: community_post_reply_id,
+				},
+				trx
+			);
+
+			await trx.commit();
+			return response.status(200).json({ message: "Data update successfully" });
+		} catch (error) {
+			console.log(error);
+			trx.rollback();
+			return response.status(423).json({ message: "Something went wrong", error });
+		}	
 	}
 }
 

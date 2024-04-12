@@ -6,6 +6,12 @@ const moment = require("moment");
 
 class CommunityVisitor extends Model {
 
+    visitor() {
+		return this.belongsTo(
+			"App/Models/Admin/VisitorModule/Visitor"
+		);
+	}
+    
     static castDates(field, value) {
         if (['created_at', 'updated_at'].includes(field)) {
             return moment(value).format('MM-DD-YYYY hh:m A')

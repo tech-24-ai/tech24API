@@ -54,6 +54,10 @@ class CommunityPostController {
       query.where("community_id", community_id);
     }
     
+    query.with('community',(builder)=>{
+			builder.select('id','name')
+		});
+    
     query.with('visitor',(builder)=>{
 			builder.select('id','name')
 		});

@@ -3,6 +3,7 @@ const Query = use("Query");
 const Database = use("Database");
 
 const Community = use("App/Models/Admin/CommunityModule/Community");
+const CommunityVisitor = use("App/Models/Admin/CommunityModule/CommunityVisitor");
 const { dateFilterExtractor } = require("../../../../Helper/globalFunctions");
 const Role = use("App/Models/Admin/UserModule/Role");
 const requestOnly = [
@@ -214,6 +215,88 @@ class CommunityController {
    */
 	async destroy ({ params, request, response }) {
 		const query = await Community.findOrFail(params.id);
+		try {
+			await query.delete();
+			return response.status(200).send({ message: "Delete successfully" });
+		  
+		} catch (error) {
+			return response.status(423).send({
+				message: "Something went wrong",
+			});
+		}
+	}
+	
+	async community_members ({ request, response, view }) {
+	  
+		const query = CommunityVisitor.query();
+		const community_id = request.input("community_id");
+		const search = request.input("search");
+		const orderBy = request.input("orderBy");
+		const orderDirection = request.input("orderDirection");
+		const searchQuery = new Query(request, { order: "id" });
+
+		if (orderBy && orderDirection) {
+			query.orderBy(`${orderBy}`, orderDirection);
+		} else {
+			query.orderBy('id', 'DESC');
+		}
+		
+		if (search) {
+			query.whereHas('visitor', (builder) => {
+				builder.whereRaw(`name LIKE '%${search}%'`)
+			})
+		}
+
+		query.where('community_id', community_id)
+		query.select('id','visitor_id', 'created_at')
+
+		query.with('visitor', (builder) => {
+			builder.select('id','name')
+		})
+
+		if (request.input("filters")) {
+			const filters = JSON.parse(request.input("filters"));
+			filters.forEach(async (filter) => {
+				switch (filter.name) {
+					case "created_at":
+				 		 query.whereRaw(
+							await dateFilterExtractor({
+					  			name: `community_visitors.created_at`,
+					  			date: filter.value,
+							})
+				  		);
+				 	break;
+					case "visitor.name":
+						query.whereHas('visitor', (builder) => {
+							builder.whereRaw(`name LIKE '%${filter.value}%'`)
+						})
+					break;
+				}
+			});
+		}
+
+		let page = null;
+		let pageSize = null;
+
+		if (request.input("page")) {
+			page = request.input("page");
+		}
+		if (request.input("pageSize")) {
+			pageSize = request.input("pageSize");
+		}
+		var result;
+		if (page && pageSize) {
+			result = (await query.paginate(page, pageSize)).toJSON();
+		} else {
+			result = (await query.fetch()).toJSON();
+		}
+
+		return response.status(200).send(result);
+	}
+
+	async remove_community_member ({ params, request, response }) {
+
+		const query = await CommunityVisitor.findOrFail(params.id);
 		try {
 			await query.delete();
 			return response.status(200).send({ message: "Delete successfully" });
