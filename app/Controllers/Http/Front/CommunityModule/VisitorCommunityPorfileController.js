@@ -53,7 +53,22 @@ class VisitorCommunityPorfileController {
     badgeQuery.where('min_range', '<=', totalPoints)
     badgeQuery.where('max_range', '>=', totalPoints)
     const badgeResult = await badgeQuery.first();
-    let currectBadge = (badgeResult) ? badgeResult.title : '-'
+    let currectBadge = (badgeResult) ? badgeResult.title : '-';
+
+    const badgeListsQuery = Badge.query();
+    badgeListsQuery.select('id', 'title', 'min_range', 'max_range')
+    badgeListsQuery.orderBy('min_range', 'ASC')
+		let badgeListResult = (await badgeListsQuery.fetch()).toJSON();
+
+    let current_level = "";
+    if(totalPoints > 0 && badgeListResult)
+    {
+      badgeListResult.forEach((val, index) => {
+        if(val.min_range <= totalPoints && val.max_range >= totalPoints) {
+          current_level = index + 1;
+        }
+      });
+    }
 
     let levelup_point = ""; let levelup_tx = ""; let upcoming_badge_point = 0; let req_point = 0;
     if(badgeResult)
@@ -96,6 +111,7 @@ class VisitorCommunityPorfileController {
 			'profile_pic_url' : visitor.profile_pic_url,
 			'contributions' : total_answer_given + total_upvotes,
 			'total_points_earned' : totalPoints,
+			'current_level' : (current_level) ? `Level ${current_level}` : "",
 			'current_badge' : currectBadge,
 			'level_up_points' : levelup_point,
 			'level_up_text' : levelup_tx,
@@ -264,7 +280,14 @@ class VisitorCommunityPorfileController {
 
 		const badgeQuery = Badge.query();
     badgeQuery.select('id', 'title', 'min_range', 'max_range')
+    badgeQuery.orderBy('min_range', 'ASC')
 		let badgeResult = (await badgeQuery.fetch()).toJSON();
+
+    let cnt = 1;
+    badgeResult.forEach((val) => {
+      val.level = `Level ${cnt}`;
+      cnt++;
+    });
     
     const query = CommunityVisitorPoint.query();
     query.select('id','visitor_id')
