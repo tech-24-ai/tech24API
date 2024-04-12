@@ -37,14 +37,16 @@ class CommunityPostReplyController {
 		query.where('parent_id', null);
 		
 		query.with('visitor',(builder)=>{
-			builder.select('id','name')
+			builder.select('id','name','profile_pic_url')
 		});	
 		
 		query.with('comments');	
 		query.with('comments.visitor',(builder)=>{
-			builder.select('id','name')
+			builder.select('id','name','profile_pic_url')
 		});	
-		query.withCount('postReplyVote as total_helpful');
+		query.withCount('postReplyVote as total_helpful', (builder) => {
+			builder.where('vote_type', 1)
+		})
 		
 		query.with('postReplyVote',(builder)=>{
 			builder.select('id','community_post_reply_id').where('visitor_id', userId)
@@ -263,15 +265,17 @@ class CommunityPostReplyController {
 	query.select('id','visitor_id', 'description');
 		
 	query.with('visitor',(builder)=>{
-		builder.select('id','name')
+		builder.select('id','name','profile_pic_url')
 	});	
 
 	query.with('comments');	
 	query.with('comments.visitor',(builder)=>{
-		builder.select('id','name')
+		builder.select('id','name','profile_pic_url')
 	});
 
-	query.withCount('postReplyVote as total_helpful');
+	query.withCount('postReplyVote as total_helpful', (builder) => {
+		builder.where('vote_type', 1)
+	})
 
 	if (orderBy && orderDirection) {
 		query.orderBy(`${orderBy}`, orderDirection);

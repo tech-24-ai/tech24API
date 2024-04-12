@@ -43,7 +43,9 @@ class CommunityPostReplyController {
 			builder.select('id','name')
 		});	
 
-		query.withCount('postReplyVote as total_helpful');
+		query.withCount('postReplyVote as total_helpful', (builder) => {
+			builder.where('vote_type', 1)
+		})
     query.withCount('comments as total_comments');
     
     if (orderBy && orderDirection) {
@@ -162,7 +164,9 @@ class CommunityPostReplyController {
 			builder.select('id','name')
 		});	
     
-		query.withCount('postReplyVote as total_helpful');
+		query.withCount('postReplyVote as total_helpful', (builder) => {
+			builder.where('vote_type', 1)
+		})
 		query.where("id", params.id);
 		const result = await query.firstOrFail();
 
@@ -276,7 +280,9 @@ class CommunityPostReplyController {
 			builder.select('id','name')
 		});	
 
-		query.withCount('postReplyVote as total_helpful');
+		query.withCount('postReplyVote as total_helpful', (builder) => {
+			builder.where('vote_type', 1)
+		})
 		
     if (orderBy && orderDirection) {
 			query.orderBy(`${orderBy}`, orderDirection);

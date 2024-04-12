@@ -44,12 +44,14 @@ class CommunityPostController {
 		query.where('status', 1);
 		
 		query.with('visitor',(builder)=>{
-			builder.select('id','name')
+			builder.select('id','name','profile_pic_url')
 		});
 		
 		query.withCount('communityPostReply as total_post_replies');
-		query.withCount('communityVote as total_helpful');
-		
+		query.withCount('communityVote as total_helpful', (builder) => {
+			builder.where('vote_type', 1)
+		})
+
 		query.with('communityVote',(builder)=>{
 			builder.select('id','community_post_id').where('visitor_id', userId)
 		});	
@@ -102,10 +104,12 @@ class CommunityPostController {
 		query.where('status', 1);
 		
 		query.with('visitor',(builder)=>{
-			builder.select('id','name')
+			builder.select('id','name','profile_pic_url')
 		});
 		
-		query.withCount('communityVote as total_helpful');
+		query.withCount('communityVote as total_helpful', (builder) => {
+		builder.where('vote_type', 1)
+		})
 		
 		query.with('postTags',(builder)=>{
 			builder.select('id','name')
@@ -192,11 +196,13 @@ class CommunityPostController {
 
 		const query = CommunityPost.query();
 		query.with('visitor',(builder)=>{
-			builder.select('id','name')
+			builder.select('id','name','profile_pic_url')
 		});
 		query.select("id", "community_id", "title", "visitor_id", "url_slug", "description", "views_counter", "is_discussion_open", "created_at");
 		
-		query.withCount('communityVote as total_helpful');
+		query.withCount('communityVote as total_helpful', (builder) => {
+			builder.where('vote_type', 1)
+		})
 		query.withCount('communityPostReply as total_post_replies');
 
 		query.withCount('communityPostReply as is_answer_given',(builder)=>{

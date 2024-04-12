@@ -57,7 +57,9 @@ class CommunityPostController {
     query.with('visitor',(builder)=>{
 			builder.select('id','name')
 		});
-		query.withCount('communityVote as total_helpful');
+		query.withCount('communityVote as total_helpful', (builder) => {
+			builder.where('vote_type', 1)
+		})
     query.withCount('communityPostReply as total_reply', (builder) => {
       builder.where('parent_id', null)
     });
@@ -151,7 +153,9 @@ class CommunityPostController {
 		
 		const query = CommunityPost.query();
 		query.select("id", "community_id", "title", "visitor_id", "url_slug", "description", "is_discussion_open", "status", "created_at");
-		query.withCount('communityVote as total_helpful');
+		query.withCount('communityVote as total_helpful', (builder) => {
+			builder.where('vote_type', 1)
+		})
 		query.with('visitor',(builder)=>{
 			builder.select('id','name')
 		});

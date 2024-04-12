@@ -184,8 +184,10 @@ class VisitorCommunityPorfileController {
 		});
 
     query.withCount('communityPostReply as total_post_replies');
-    query.withCount('communityVote as total_helpful');
-		
+    query.withCount('communityVote as total_helpful', (builder) => {
+      builder.where('vote_type', 1)
+    })
+
 		if (orderBy && orderDirection) {
 			query.orderBy(`${orderBy}`, orderDirection);
 		} else {
@@ -224,7 +226,9 @@ class VisitorCommunityPorfileController {
 			builder.select('id','title')
 		});
 
-    query.withCount('postReplyVote as total_helpful');
+    query.withCount('postReplyVote as total_helpful', (builder) => {
+      builder.where('vote_type', 1)
+    })
 		
 		if (orderBy && orderDirection) {
 			query.orderBy(`${orderBy}`, orderDirection);

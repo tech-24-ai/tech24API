@@ -130,7 +130,7 @@ class DocumentController {
     query.category_id = request.input("category_id");
     query.research_topic_id = request.input("research_topic_id");
     query.name = request.input("name");
-    query.url = request.input("url");
+    query.url = (request.input("url")) ? request.input("url") : "";
     // query.tag = request.input("tag");
     query.seo_url_slug = request.input("seo_url_slug");
     query.status = request.input("status");
@@ -247,7 +247,7 @@ class DocumentController {
     query.research_topic_id = request.input("research_topic_id");
     query.document_type_id = request.input("document_type_id");
     query.name = request.input("name");
-    query.url = request.input("url");
+    query.url = (request.input("url")) ? request.input("url") : "";
     query.tag = request.input("tag");
     // if (query.url && query.url.includes("//vimeo.com/")) {
     //   query.url = query.url.replace("vimeo.com", "player.vimeo.com/video");
