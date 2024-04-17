@@ -107,7 +107,7 @@ class TagController {
 		
 		try {	
 			var tagName = request.input("name");
-			tagName = tagName.replace(/\s+/g, "");
+			tagName = tagName.replace(/[^a-z0-9A-Z' ]/g, "");
 			
 			const isExist = await Tag.findBy({
 				name: tagName,
@@ -176,8 +176,7 @@ class TagController {
 		
 		try {
 			var tagName = request.input("name");
-			tagName = tagName.replace(/\s+/g, "");
-			
+			tagName = tagName.replace(/[^a-z0-9A-Z' ]/g, "");
 			const query = Tag.query();
 			const isExist = await query.where('name', tagName).whereNot('id', params.id).first();
 			
@@ -188,7 +187,7 @@ class TagController {
 			const updateData = await Tag.findOrFail(params.id);
 			
 			var tagName = request.input("name");
-			tagName = tagName.replace(/\s+/g, "");
+			tagName = tagName.replace(/[^a-z0-9A-Z' ]/g, "");
 			
 			updateData.updated_by = userId;
 			updateData.name = tagName;
