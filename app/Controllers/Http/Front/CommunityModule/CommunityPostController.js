@@ -49,7 +49,10 @@ class CommunityPostController {
 			builder.select('id','name','profile_pic_url')
 		});
 		
-		query.withCount('communityPostReply as total_post_replies');
+		query.withCount('communityPostReply as total_post_replies', (builder) => {
+			builder.where('status', 1)
+		})
+
 		query.withCount('communityVote as total_helpful', (builder) => {
 			builder.where('vote_type', 1)
 		})
@@ -229,7 +232,9 @@ class CommunityPostController {
 		query.withCount('communityVote as total_helpful', (builder) => {
 			builder.where('vote_type', 1)
 		})
-		query.withCount('communityPostReply as total_post_replies');
+		query.withCount('communityPostReply as total_post_replies', (builder) => {
+			builder.where('status', 1)
+		})
 
 		query.withCount('communityPostReply as is_answer_given',(builder)=>{
 			builder.where('is_correct_answer', 1)

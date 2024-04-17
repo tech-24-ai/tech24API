@@ -42,12 +42,18 @@ class CommunityController {
 		query.select('id', 'name', 'description', 'url_slug', 'image_url')
 
 		query.with('communityMember', (builder) => {
-			builder.select('id','visitor_id','community_id','created_at').where('visitor_id', userId)
+			builder.select('id','visitor_id','community_id','created_at').where('status', 1).where('visitor_id', userId)
 		});
 
-		query.withCount('communityPost as total_posts');
-		query.withCount('getCommunityPostReply as total_post_reply');
-		query.withCount('communityMember as total_members');
+		query.withCount('communityPost as total_posts', (builder) => {
+			builder.where('status', 1)
+		})
+		query.withCount('getCommunityPostReply as total_post_reply', (builder) => {
+			builder.where('community_post_replies.status', 1)
+		})
+		query.withCount('communityMember as total_members', (builder) => {
+			builder.where('status', 1)
+		})
 		
 		if (orderBy == 'top_rated') {
 			query.orderBy('total_posts', 'DESC');
@@ -117,8 +123,12 @@ class CommunityController {
 		query.with('communityMember', (builder) => {
 		builder.select('id','visitor_id','community_id','created_at').where('visitor_id', userId)
 		});
-		query.withCount('communityPost as total_posts');
-		query.withCount('communityMember as total_members');
+		query.withCount('communityPost as total_posts', (builder) => {
+			builder.where('status', 1)
+		})
+		query.withCount('communityMember as total_members', (builder) => {
+			builder.where('status', 1)
+		})
 		
 		const result = await query.firstOrFail();
 		return response.status(200).send(result);
