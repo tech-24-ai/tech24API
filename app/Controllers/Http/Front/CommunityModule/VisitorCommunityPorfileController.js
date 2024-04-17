@@ -53,7 +53,7 @@ class VisitorCommunityPorfileController {
     badgeQuery.where('min_range', '<=', totalPoints)
     badgeQuery.where('max_range', '>=', totalPoints)
     const badgeResult = await badgeQuery.first();
-    let currectBadge = (badgeResult) ? badgeResult.title : '-';
+    let currectBadge = (badgeResult) ? badgeResult.title : '';
 
     const badgeListsQuery = Badge.query();
     badgeListsQuery.select('id', 'title', 'min_range', 'max_range')
@@ -111,7 +111,7 @@ class VisitorCommunityPorfileController {
 			'profile_pic_url' : visitor.profile_pic_url,
 			'contributions' : total_answer_given + total_upvotes,
 			'total_points_earned' : totalPoints,
-			'current_level' : (current_level) ? current_level : 0,
+			'current_level' : (current_level > 0) ? current_level : 0,
 			'current_badge' : currectBadge,
 			'level_up_points' : levelup_point,
 			'level_up_text' : levelup_tx,
