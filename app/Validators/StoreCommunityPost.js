@@ -5,7 +5,6 @@ class StoreCommunityPost {
 		const id = this.ctx.params.id
 		return {
 			community_id: 'required',
-			title: 'required',
 			description: 'required',
 		}
 	}
