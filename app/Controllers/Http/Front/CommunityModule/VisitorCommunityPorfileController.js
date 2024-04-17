@@ -111,11 +111,11 @@ class VisitorCommunityPorfileController {
 			'profile_pic_url' : visitor.profile_pic_url,
 			'contributions' : total_answer_given + total_upvotes,
 			'total_points_earned' : totalPoints,
-			'current_level' : (current_level) ? `Level ${current_level}` : "",
+			'current_level' : (current_level) ? current_level : 0,
 			'current_badge' : currectBadge,
 			'level_up_points' : levelup_point,
 			'level_up_text' : levelup_tx,
-			'joined_at' : moment(visitor.created_at).format("MMM, DD YYYY"),
+			'joined_at' : moment(visitor.created_at).format("MMM DD, YYYY"),
 		})
 		
 		return response.status(200).send({ data });

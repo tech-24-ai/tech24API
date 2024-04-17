@@ -163,6 +163,11 @@ class CommunityPostController {
 		query.with('visitor',(builder)=>{
 			builder.select('id','name')
 		});
+
+    query.with('attachments',(builder)=>{
+			builder.select('id','community_post_id', 'name', 'url', 'extension')
+		});	
+    
 		query.where("id", params.id);
 		const result = await query.firstOrFail();
 
