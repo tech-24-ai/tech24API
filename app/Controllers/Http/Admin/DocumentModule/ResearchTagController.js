@@ -109,7 +109,7 @@ class ResearchTagController {
 		try {	
 
       var tagName = request.input("name");
-			tagName = tagName.replace(/\s+/g, "");
+			tagName = tagName.replace(/[^a-z0-9A-Z' ]/g, "");
 			
 			const isExist = await ResearchTag.findBy({
 				name: tagName,
@@ -182,7 +182,7 @@ class ResearchTagController {
 		try {
 
       var tagName = request.input("name");
-			tagName = tagName.replace(/\s+/g, "");
+			tagName = tagName.replace(/[^a-z0-9A-Z' ]/g, "");
 			
 			const query = ResearchTag.query();
 			const isExist = await query.where('name', tagName).whereNot('id', params.id).first();

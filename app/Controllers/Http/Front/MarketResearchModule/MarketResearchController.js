@@ -40,7 +40,7 @@ class MarketResearchController {
 
     query.select('id', 'document_type_id', 'category_id', 'research_topic_id', 'name', 'seo_url_slug', 'image', 'details', 'created_at');
     
-    query.with('category_name', (builder) => {
+    query.with('category', (builder) => {
       builder.select('id', 'name')
     });
     query.where('status', 1);
@@ -83,6 +83,8 @@ class MarketResearchController {
 		var result;
 		if (page && pageSize) {
 			result = (await query.paginate(page, pageSize)).toJSON();
+		} else if (!page && pageSize) {
+			result = (await query.limit(pageSize).fetch()).toJSON();
 		} else {
 			result = (await query.fetch()).toJSON();
 		}
@@ -126,7 +128,7 @@ class MarketResearchController {
 
     const query = Document.query();
 		query.select("id", "document_type_id", "category_id", "research_topic_id", "name", "seo_url_slug", 'image', "details", "description", "url", "extension", "created_at");
-		query.with('category_name', (builder) => {
+		query.with('category', (builder) => {
       builder.select('id', 'name')
     });
     query.where("id", params.id);
