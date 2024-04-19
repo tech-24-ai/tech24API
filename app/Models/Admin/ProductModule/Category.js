@@ -8,6 +8,11 @@ class Category extends Model {
         return this.belongsToMany('App/Models/Admin/DocumentModule/Document')
             .pivotModel('App/Models/Admin/ProductModule/CategoryDocument')
     }
+
+    documents_data() {
+        return this.hasMany('App/Models/Admin/DocumentModule/Document').where('status', 1);
+    }
+
     children() {
         return this.hasMany('App/Models/Admin/ProductModule/Module').where('parent_id', null)
     }

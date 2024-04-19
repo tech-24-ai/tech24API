@@ -2709,7 +2709,20 @@ Route.group(() => {
 
   Route.post("/uploadimage", "FileController.image");
   Route.post("/uploadmedia", "FileController.media");
+
 }).prefix("/app").middleware("auth:visitorAuth");
+
+Route.group(() => {
+  
+  Route.get("/research_topics", "Front/MarketResearchModule/MarketResearchController.reseachTopics");
+  Route.get("/research_tags", "Front/MarketResearchModule/MarketResearchController.reseachTags");
+  Route.get("/research_document_types", "Front/MarketResearchModule/MarketResearchController.reseachDocumentTypes");
+  Route.get("/research_categories", "Front/MarketResearchModule/MarketResearchController.reseachCategories");
+
+  Route.get("/market_research", "Front/MarketResearchModule/MarketResearchController.index");
+  Route.get("/market_research/:id", "Front/MarketResearchModule/MarketResearchController.show");
+
+}).prefix("/app").middleware(["ipblocker"]);
 
 Route.group(() => {
   Route.get("/", "Admin/DocumentModule/ResearchTopicController.index");
