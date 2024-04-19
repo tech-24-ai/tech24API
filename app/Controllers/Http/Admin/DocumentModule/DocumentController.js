@@ -169,6 +169,7 @@ class DocumentController {
     //   }
     // }
 
+    query.image = request.input("image");
     query.details = request.input("details");
     query.description = request.input("description");
     query.document_category = request.input("document_category");
@@ -281,6 +282,7 @@ class DocumentController {
     // }
 
     query.status = request.input("status");
+    query.image = request.input("image");
     query.details = request.input("details");
     query.description = request.input("description");
     query.document_category = request.input("document_category");
