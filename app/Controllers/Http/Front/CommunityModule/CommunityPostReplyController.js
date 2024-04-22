@@ -6,6 +6,7 @@ const CommunityPostReply = use("App/Models/Admin/CommunityModule/CommunityPostRe
 const Vote = use("App/Models/Admin/CommunityModule/Vote");
 const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVisitorPoint");
 const {	getSubmitAnswerPoints, getUpvoteAnswerPoints, getCorrectAnswerPoints } = require("../../../../Helper/visitorPoints");
+const { getvisitorCurrentLevel } = require("../../../../Helper/visitorCurrentLevel");
 
 const requestOnly = [
 	"parent_id",
@@ -67,11 +68,27 @@ class CommunityPostReplyController {
 		if (request.input("pageSize")) {
 			pageSize = request.input("pageSize");
 		}
-		var result;
+		var result; var finalResult;
 		if (page && pageSize) {
-			result = (await query.paginate(page, pageSize)).toJSON();
+			result = (await query.paginate(page, pageSize));
+
+			await Promise.all(result.rows.map(async (val) => {
+				const visitor_id = val.visitor_id;
+				const visitor_level = await getvisitorCurrentLevel(visitor_id); // Fetch user level separately
+				val.visitor_level = visitor_level;
+			}));
+
+			finalResult = result.toJSON()
 		} else {
-			result = (await query.fetch()).toJSON();
+			result = (await query.fetch());
+
+			await Promise.all(result.rows.map(async (val) => {
+				const visitor_id = val.visitor_id;
+				const visitor_level = await getvisitorCurrentLevel(visitor_id); // Fetch user level separately
+				val.visitor_level = visitor_level;
+			}));
+
+			finalResult = result.toJSON()
 		}
 		
 		return response.status(200).send(result);
@@ -296,11 +313,28 @@ class CommunityPostReplyController {
 	if (request.input("pageSize")) {
 		pageSize = request.input("pageSize");
 	}
-	var result;
+	var result; var finalResult;
 	if (page && pageSize) {
-		result = (await query.paginate(page, pageSize)).toJSON();
+		result = (await query.paginate(page, pageSize));
+
+		await Promise.all(result.rows.map(async (val) => {
+			const visitor_id = val.visitor_id;
+			const visitor_level = await getvisitorCurrentLevel(visitor_id); // Fetch user level separately
+			val.visitor_level = visitor_level;
+		}));
+
+		finalResult = result.toJSON()
+
 	} else {
-		result = (await query.fetch()).toJSON();
+		result = (await query.fetch());
+
+		await Promise.all(result.rows.map(async (val) => {
+			const visitor_id = val.visitor_id;
+			const visitor_level = await getvisitorCurrentLevel(visitor_id); // Fetch user level separately
+			val.visitor_level = visitor_level;
+		}));
+
+		finalResult = result.toJSON()
 	}
 	
 	return response.status(200).send(result);

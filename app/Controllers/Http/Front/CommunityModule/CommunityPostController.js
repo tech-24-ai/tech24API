@@ -6,6 +6,8 @@ const Drive = use("Drive");
 const CommunityPost = use("App/Models/Admin/CommunityModule/CommunityPost");
 const Vote = use("App/Models/Admin/CommunityModule/Vote");
 const CommunityPostAttachment = use("App/Models/Admin/CommunityModule/CommunityPostAttachment");
+const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
+const { getvisitorCurrentLevel } = require("../../../../Helper/visitorCurrentLevel");
 
 const requestOnly = [
 	"community_id",
@@ -31,6 +33,10 @@ class CommunityPostController {
    */
 	async index ({ params, request, response, view, auth }) {
 		
+		// const visitor = await Visitor.find(317); // Fetch user level separately
+		// const level = await visitor.getLevel();
+		// var result = level;
+
 		const userId = auth.user.id;	
 		const query = CommunityPost.query();
 		const search = request.input("search");
@@ -46,7 +52,7 @@ class CommunityPostController {
 		query.where('status', 1);
 		
 		query.with('visitor',(builder)=>{
-			builder.select('id','name','profile_pic_url')
+			builder.select('id', 'name', 'profile_pic_url');
 		});
 		
 		query.withCount('communityPostReply as total_post_replies', (builder) => {
@@ -92,14 +98,31 @@ class CommunityPostController {
 		if (request.input("pageSize")) {
 			pageSize = request.input("pageSize");
 		}
-		var result;
+		var result; var finalResult;
 		if (page && pageSize) {
-			result = (await query.paginate(page, pageSize)).toJSON();
+			result = (await query.paginate(page, pageSize));
+
+			await Promise.all(result.rows.map(async (val) => {
+				const visitor_id = val.visitor_id;
+				const visitor_level = await getvisitorCurrentLevel(visitor_id); // Fetch user level separately
+				val.visitor_level = visitor_level;
+			  }));
+
+			finalResult = result.toJSON()
 		} else {
-			result = (await query.fetch()).toJSON();
+
+			result = (await query.fetch());
+
+			await Promise.all(result.rows.map(async (val) => {
+				const visitor_id = val.visitor_id;
+				const visitor_level = await getvisitorCurrentLevel(visitor_id); // Fetch user level separately
+				val.visitor_level = visitor_level;
+			  }));
+
+			finalResult = result.toJSON()
 		}
 		
-		return response.status(200).send(result);
+		return response.status(200).send(finalResult);
 	}
 
 	async tranding_question ({ params, request, response, view }) {
@@ -127,11 +150,28 @@ class CommunityPostController {
 		if (request.input("pageSize")) {
 			pageSize = request.input("pageSize");
 		}
-		var result;
+		var result; var finalResult;
 		if (pageSize) {
-			result = (await query.limit(pageSize).fetch()).toJSON();
+			result = (await query.limit(pageSize).fetch());
+
+			await Promise.all(result.rows.map(async (val) => {
+				const visitor_id = val.visitor_id;
+				const visitor_level = await getvisitorCurrentLevel(visitor_id); // Fetch user level separately
+				val.visitor_level = visitor_level;
+			  }));
+
+			finalResult = result.toJSON()
+
 		} else {
-			result = (await query.fetch()).toJSON();
+			result = (await query.fetch());
+
+			await Promise.all(result.rows.map(async (val) => {
+				const visitor_id = val.visitor_id;
+				const visitor_level = await getvisitorCurrentLevel(visitor_id); // Fetch user level separately
+				val.visitor_level = visitor_level;
+			  }));
+
+			finalResult = result.toJSON()
 		}
 		
 		return response.status(200).send(result);
@@ -250,6 +290,12 @@ class CommunityPostController {
 		query.where("url_slug", params.slug);
 		
 		const result = await query.firstOrFail();
+
+		if(result) {
+			const visitor_level = await getvisitorCurrentLevel(result.visitor_id); // Fetch user level separately
+			result.visitor_level = visitor_level;
+		}
+
 		return response.status(200).send(result);	
 	}
 	
