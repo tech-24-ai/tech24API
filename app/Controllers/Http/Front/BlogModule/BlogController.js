@@ -1,5 +1,5 @@
 'use strict'
-
+const Query = use("Query");
 const Blog = use('App/Models/Admin/BlogModule/Blog')
 
 
@@ -11,6 +11,7 @@ class BlogController {
         const search = request.input('search')
         const orderBy = request.input('orderBy')
         const orderPos = request.input('orderPos')
+        const searchQuery = new Query(request, { order: "id" });
 
         const blogQuery = Blog.query()
         blogQuery.select('blogs.blog_topic_id', 'blogs.name', 'blogs.image', 'blogs.banner', 'blogs.slug', 'blogs.status', 'blogs.created_at', 'blogs.details');
@@ -26,7 +27,7 @@ class BlogController {
             blogQuery.orderBy(orderBy, orderPos)
         }
         if (search) {
-            blogQuery.orWhereRaw(`${filed} LIKE '%${search}%'`)
+            blogQuery.where(searchQuery.search(['blogs.name']));
         }
 
         const result = await blogQuery.fetch()
