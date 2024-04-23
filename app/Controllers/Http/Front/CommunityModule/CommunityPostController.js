@@ -176,7 +176,6 @@ class CommunityPostController {
    * @param {Response} ctx.response
    */
 	async store ({ request, response, auth }) {
-		
 		const userId = auth.user.id;	
 		const trx = await Database.beginTransaction();
 		const body = request.only(requestOnly);
@@ -189,8 +188,7 @@ class CommunityPostController {
 				},
 				trx
 			);
-
-			let url = JSON.parse(request.input("url"));
+			let url = request.input("url")
 			let urlArr = [];
 			if(url)
 			{
@@ -219,7 +217,7 @@ class CommunityPostController {
 				trx
 			);
 
-			await query.postTags().attach(JSON.parse(request.input("tags")), null, trx);
+			await query.postTags().attach(request.input("tags"), null, trx);
 			await trx.commit();
 			return response.status(200).json({ message: "Question posted successfully" });
 		} catch (error) {
