@@ -107,7 +107,11 @@ class ConsultantController {
       builder.select("id", "group_id", "name");
     });
 
-    if (orderBy && orderDirection) {
+    query.withCount('booking as total_booking');
+
+    if (orderBy == 'top_consultants') {
+			query.orderBy('total_booking', 'DESC');
+		} else if (orderBy && orderDirection) {
       query.orderBy(`${orderBy}`, orderDirection);
     }
 
@@ -181,6 +185,11 @@ class ConsultantController {
     var result;
     if (page && pageSize) {
       result = (await query.paginate(page, pageSize)).toJSON();
+      result.data = await maskData(result.data, {
+        phone: ["first_name", "last_name", "country.name"],
+      });
+    } else if (!page && pageSize) {
+      result = (await query.limit(pageSize).fetch()).toJSON();
       result.data = await maskData(result.data, {
         phone: ["first_name", "last_name", "country.name"],
       });
