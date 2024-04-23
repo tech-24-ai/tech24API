@@ -35,6 +35,10 @@ class CommunityNewsAnnouncementController {
     })
     query.where('community_id', request.input("community_id"));
 
+    if (orderBy && orderDirection) {
+      query.orderBy(`${orderBy}`, orderDirection);
+    }
+    
 		let page = null;
 		let pageSize = null;
 
