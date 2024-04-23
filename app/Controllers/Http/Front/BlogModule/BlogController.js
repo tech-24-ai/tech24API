@@ -30,9 +30,26 @@ class BlogController {
             blogQuery.where(searchQuery.search(['blogs.name']));
         }
 
-        const result = await blogQuery.fetch()
-        return response.status(200).send(result)
+        let page = null;
+		let pageSize = null;
 
+		if (request.input("page")) {
+			page = request.input("page");
+		}
+		if (request.input("pageSize")) {
+			pageSize = request.input("pageSize");
+		}
+
+		var result;
+		if (page && pageSize) {
+			result = (await blogQuery.paginate(page, pageSize)).toJSON();
+		} else if (!page && pageSize) {
+			result = (await blogQuery.limit(pageSize).fetch()).toJSON();
+		} else {
+			result = (await blogQuery.fetch()).toJSON();
+		}
+
+        return response.status(200).send(result)
     }
 
     async show({ params, response }) {
@@ -40,9 +57,19 @@ class BlogController {
         const blogquery = Blog.query();
         blogquery.where('id', params.id);
         blogquery.with('blog_topic');
-        const result = await blogquery.fetch();
+        let result = await blogquery.fetch();
 
         if (result.size() > 0) {
+
+            result = result.toJSON();
+            const relatedQuery = Blog.query();
+            relatedQuery.with('blog_topic');
+            relatedQuery.whereNot('id', result[0].id);
+            relatedQuery.where('blog_topic_id', result[0].blog_topic_id);
+            relatedQuery.orderBy('id', 'DESC')
+            const relatedResult = (await relatedQuery.limit(3).fetch()).toJSON();
+
+            result[0].related_blogs = relatedResult;
             return response.status(200).send(result)
         } else {
             return response.status(200).send({"message": "No Blog Found"})
@@ -56,9 +83,20 @@ class BlogController {
         const blogquery = Blog.query();
         blogquery.where('slug', params.id);
         blogquery.with('blog_topic');
-        const result = await blogquery.fetch();
+        let result = await blogquery.fetch();
         
         if (result.size() > 0) {
+
+            result = result.toJSON();
+            const relatedQuery = Blog.query();
+            relatedQuery.with('blog_topic');
+            relatedQuery.whereNot('id', result[0].id);
+            relatedQuery.where('blog_topic_id', result[0].blog_topic_id);
+            relatedQuery.orderBy('id', 'DESC')
+            const relatedResult = (await relatedQuery.limit(3).fetch()).toJSON();
+
+            result[0].related_blogs = relatedResult;
+
             return response.status(200).send(result)
         } else {
             return response.status(200).send({"message": "No Blog Found"})
