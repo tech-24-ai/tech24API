@@ -286,7 +286,7 @@ class CommunityPostController {
 			result.visitor.visitor_level = visitor_level;
 
 			let curr_date = moment().format('YYYY-MM-DD');
-			const checkData = await CommunityVisitorActivity.query().where("visitor_id", userId).where("community_post_id", result.id).where("activity_type", 5).whereRaw(`DATE(created_at) = '${curr_date}'`).first();
+			const checkData = await CommunityVisitorActivity.query().where("visitor_id", userId).where("community_post_id", result.id).where("activity_type", 6).whereRaw(`DATE(created_at) = '${curr_date}'`).first();
 
 			if(!checkData)
 			{
