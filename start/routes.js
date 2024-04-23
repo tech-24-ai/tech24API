@@ -2723,6 +2723,7 @@ Route.group(() => {
 
   Route.get("/market_research", "Front/MarketResearchModule/MarketResearchController.index");
   Route.get("/market_research/:id", "Front/MarketResearchModule/MarketResearchController.show");
+  Route.get("/market_research/show/:slug", "Front/MarketResearchModule/MarketResearchController.showBySlug");
 
 }).prefix("/app").middleware(["ipblocker"]);
 

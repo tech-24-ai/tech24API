@@ -138,7 +138,37 @@ class MarketResearchController {
     {
       const relatedQuery = Document.query();
       relatedQuery.select("id", "category_id", "name", "seo_url_slug", 'image', "details", "created_at")
+      relatedQuery.with('category', (builder) => {
+        builder.select('id', 'name')
+      });
       relatedQuery.whereNot('id', params.id);
+      relatedQuery.where('category_id', result.category_id);
+      const relatedResult = (await relatedQuery.limit(3).fetch()).toJSON();
+
+      result.related_research = relatedResult;
+    }
+
+		return response.status(200).send(result);	
+  }
+
+  async showBySlug ({ params, request, response, view }) {
+
+    const query = Document.query();
+		query.select("id", "document_type_id", "category_id", "research_topic_id", "name", "seo_url_slug", 'image', "details", "description", "url", "extension", "created_at");
+		query.with('category', (builder) => {
+      builder.select('id', 'name')
+    });
+    query.where("seo_url_slug", params.slug);
+		const result = await query.firstOrFail();
+
+    if(result) 
+    {
+      const relatedQuery = Document.query();
+      relatedQuery.select("id", "category_id", "name", "seo_url_slug", 'image', "details", "created_at")
+      relatedQuery.with('category', (builder) => {
+        builder.select('id', 'name')
+      });
+      relatedQuery.whereNot('id', result.id);
       relatedQuery.where('category_id', result.category_id);
       const relatedResult = (await relatedQuery.limit(3).fetch()).toJSON();
 
