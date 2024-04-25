@@ -218,7 +218,7 @@ class CommunityPostController {
 		} catch (error) {
 			console.log(error);
 			trx.rollback();
-			return response.status(423).json({ message: "Something went wrong"+error, error });
+			return response.status(423).json({ message: "Something went wrong", error });
 		}	
 	}
 
