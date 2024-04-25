@@ -47,10 +47,17 @@ class CommunityPostReplyController {
 			builder.select('id','name','profile_pic_url')
 		});	
 		
-		query.with('comments');	
-		query.with('comments.visitor',(builder)=>{
-			builder.select('id','name','profile_pic_url')
+		query.with('comments',(builder)=>{
+			builder.where('status', 1)
+			builder.with('visitor',(builder)=>{
+				builder.select('id','name','profile_pic_url')
+			})
 		});	
+
+		// query.with('comments.visitor',(builder)=>{
+		// 	builder.select('id','name','profile_pic_url')
+		// });	
+
 		query.withCount('postReplyVote as total_helpful', (builder) => {
 			builder.where('vote_type', 1)
 		})
@@ -320,6 +327,7 @@ class CommunityPostReplyController {
 		const orderDirection = request.input("orderDirection");
 		const searchQuery = new Query(request, { order: "id" });
 
+		query.where('status', 1);
 		query.where('parent_id', request.input("parent_id"));
 		
 		query.select('id','visitor_id', 'description');
@@ -328,11 +336,13 @@ class CommunityPostReplyController {
 			builder.select('id','name','profile_pic_url')
 		});	
 
-		query.with('comments');	
-		query.with('comments.visitor',(builder)=>{
-			builder.select('id','name','profile_pic_url')
-		});
-
+		query.with('comments',(builder)=>{
+			builder.where('status', 1)
+			builder.with('visitor',(builder)=>{
+				builder.select('id','name','profile_pic_url')
+			})
+		});	
+		
 		query.withCount('postReplyVote as total_helpful', (builder) => {
 			builder.where('vote_type', 1)
 		})

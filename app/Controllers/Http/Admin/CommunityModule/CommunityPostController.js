@@ -5,6 +5,9 @@ const Database = use("Database");
 const CommunityPost = use("App/Models/Admin/CommunityModule/CommunityPost");
 const { dateFilterExtractor } = require("../../../../Helper/globalFunctions");
 const Role = use("App/Models/Admin/UserModule/Role");
+const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVisitorPoint");
+const {	getSubmitQuestionPoints } = require("../../../../Helper/visitorPoints");
+
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
 /** @typedef {import('@adonisjs/framework/src/View')} View */
@@ -192,13 +195,30 @@ class CommunityPostController {
 			updateData.is_discussion_open = is_discussion_open;
 			updateData.status = post_status;
 			await updateData.save();
+
+      const query = CommunityVisitorPoint.query();
+			const isExist = await query.where('community_post_reply_id', params.id).where('visitor_id', updateData.visitor_id).first();
+			
+			if (!isExist && post_status == 1) 
+			{
+				const answerSubmitPoints = await getSubmitQuestionPoints();
+				const addPoints = await CommunityVisitorPoint.create(
+					{
+						visitor_id: updateData.visitor_id,
+						type: 4,
+						points: answerSubmitPoints,
+						community_post_id: params.id,
+					},
+					trx
+				);
+			}
 			
 			await trx.commit();
 			return response.status(200).json({ message: "Status update successfully" });
 		} catch (error) {
 			console.log(error);
 			trx.rollback();
-			return response.status(423).json({ message: "Something went wrong", error });
+			return response.status(423).json({ message: "Something went wrong"+error, error });
 		}	
 	}
 

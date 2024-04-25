@@ -18,7 +18,7 @@ class BadgeSchema extends Schema {
 		this.create('community_visitor_points', (table) => {
 			table.increments()
 			table.integer("visitor_id").unsigned().references("id").inTable("visitors").onDelete("restrict").onUpdate("cascade")
-			table.integer("type").comment('1 - upvotes, 2 - answer, 3 - accept answer')
+			table.integer("type").comment('1 - upvotes, 2 - answer, 3 - accept answer, 4 - post question')
 			table.integer("points")
 			table.integer("community_post_reply_id").unsigned().references("id").inTable("community_post_replies").onDelete("cascade").onUpdate("cascade")
 			table.timestamps()
