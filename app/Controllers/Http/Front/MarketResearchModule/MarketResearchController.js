@@ -154,7 +154,7 @@ class MarketResearchController {
   async showBySlug ({ params, request, response, view }) {
 
     const query = Document.query();
-		query.select("id", "document_type_id", "category_id", "research_topic_id", "name", "seo_url_slug", 'image', "details", "description", "url", "extension", "created_at");
+		query.select("id", "document_type_id", "category_id", "research_topic_id", "name", "seo_url_slug", 'image', "details", "description", "document_content_type", "url", "extension", "created_at");
 		query.with('category', (builder) => {
       builder.select('id', 'name')
     });
