@@ -11,8 +11,8 @@ async function checkAccessToken() {
   const getRefreshToken = await Config.findBy("key", "GOOGLE_DRIVE_REFRESH_TOKEN");
   const tokenExpiredAt = await Config.findBy("key", "GOOGLE_DRIVE_TOKEN_EXPIRED_AT");
   
-  let accessToken = getAccessToken.value;
-  const refreshToken = getRefreshToken.value;
+  let accessToken = (getAccessToken) ? getAccessToken.value : "";
+  const refreshToken = (getRefreshToken) ? getRefreshToken.value : "";
 
   if(accessToken && refreshToken)
   {
