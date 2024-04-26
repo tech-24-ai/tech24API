@@ -23,6 +23,9 @@ const aws = require("aws-sdk");
 
 const s3 = new aws.S3();
 const createRandomName = require("../../Helper/randomString");
+const axios = require('axios')
+const {	checkAccessToken } = require("../../Helper/googleDrive");
+
 class FileController {
   async document({ request, response }) {
     const validationOptions = {
@@ -39,6 +42,57 @@ class FileController {
         "vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         "x-zip-compressed",
         "x-gzip",
+        "vnd.openxmlformats-officedocument.presentationml.presentation",
+        "vnd.ms-powerpoint",
+      ],
+      size: "200mb",
+    };
+
+    request.multipart.file("file", validationOptions, async (file) => {
+      // set file size from stream byteCount, so adonis can validate file size
+      file.size = file.stream.byteCount;
+
+      // run validation rules
+      await file.runValidations();
+
+      // catches validation errors, if any and then throw exception
+      const error = file.error();
+      if (error.message) {
+        throw new Error(error.message);
+      }
+      var timestamp = new Date().getTime().toString().substring(7, 13); // 6 digit number
+
+      var name = file.clientName.substring(0, file.clientName.lastIndexOf("."));
+      name = name.replace(/[^a-zA-Z0-9._]/g, "");
+      name = `${name}${timestamp}.${file.extname}`;
+
+      const result = await Drive.disk("s3").put(name, file.stream, {
+        ContentType: file.headers["content-type"],
+        //ACL: 'public-read',
+      });
+
+      if (result) {
+        return response
+          .status(200)
+          .send({ message: "File upload successfully", result: result });
+      } else {
+        return response.status(500).send({ message: "File uploading failed" });
+      }
+    });
+
+    await request.multipart.process();
+  }
+
+  
+  async researchDocument({ request, response }) {
+    const validationOptions = {
+      types: [
+        "pdf",
+        "ppt",
+        "pptx",
+        "xls",
+        "xlsx",
+        "vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         "vnd.openxmlformats-officedocument.presentationml.presentation",
         "vnd.ms-powerpoint",
       ],
@@ -372,6 +426,149 @@ class FileController {
 
     await request.multipart.process();
   }
+
+  async uploadDocumentOnGoogleDrive({ request, response }) {
+    const validationOptions = {
+      types: [
+      "doc",
+      "docx",
+      "vnd.openxmlformats-officedocument.wordprocessingml.document",
+    ],
+      size: "2mb",
+    };
+
+    request.multipart.file("file", validationOptions, async (file) => {
+      // set file size from stream byteCount, so adonis can validate file size
+      file.size = file.stream.byteCount;
+
+      // run validation rules
+      await file.runValidations();
+
+      // catches validation errors, if any and then throw exception
+      const error = file.error();
+      if (error.message) {
+        throw new Error(error.message);
+      }
+
+      const resAccessToken = await checkAccessToken();
+      console.log("resAccessToken", resAccessToken);
+      if(resAccessToken.status == 200)
+      {
+        const accessToken = resAccessToken.accessToken;
+        const filename = file.clientName;
+        const headers = {
+          'Authorization': `Bearer ${accessToken}` // Replace with your actual access token
+        }
+
+        try { 
+          const result = await axios.post(
+            `https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart`,
+            file.stream,
+            {
+              headers: headers
+            }
+          )
+
+          if (result.status == 200) 
+          {
+            const res = result.data;
+            const fileId = res.id;
+            
+            // Set permissions for the uploaded file to make it publicly accessible
+            await axios.post(
+                `https://www.googleapis.com/drive/v3/files/${fileId}/permissions`,
+                { role: 'reader', type: 'anyone' },
+                {
+                  headers: headers
+                } 
+            );
+
+            // Set file name
+            const requestBody = {
+              name: filename
+            }
+            const renameResponse = await axios.patch(`https://www.googleapis.com/drive/v3/files/${fileId}`, requestBody, {
+              headers: headers
+            })
+
+            console.log("renameResponse" , renameResponse.data);
+
+            // Make a GET request to retrieve the document
+            const retriveDocument = await axios.get(
+              `https://www.googleapis.com/drive/v3/files/${fileId}?fields=webViewLink`,
+              {
+                headers: headers
+              }
+            );
+
+            console.log("retriveDocument ", retriveDocument.data)
+            let uploadResponse = {
+              document_id : fileId,
+              webViewLink : retriveDocument.data.webViewLink,
+              file_name : filename,
+            }
+
+            return response
+              .status(200)
+              .send({ message: "File upload successfully", result: uploadResponse });
+          } else {
+            return response.status(500).send({ message: "File not uploading." });
+          }
+        } catch (error) {
+          console.log("error", error)
+          return response.status(500).send({ message: "File uploading failed." });
+        }
+      } 
+      else 
+      {
+        return response.status(500).send({ message: resAccessToken.message });
+      }
+    });
+
+    await request.multipart.process();
+  }
+
+  async getGoogleDriveDocument({ params, response }) {
+
+    const fileId = params.id; // Assuming the document ID is passed as a route parameter
+    const resAccessToken = await checkAccessToken();
+
+    if(resAccessToken.status == 200)
+    {
+      try {
+        const accessToken = resAccessToken.accessToken; // Get the access token from your authentication process
+    
+        // Make a GET request to retrieve the document
+        const retriveDocument = await axios.get(
+          `https://www.googleapis.com/drive/v3/files/${fileId}?fields=webViewLink`,
+          {
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+            },
+          }
+        );
+    
+        if(retriveDocument.status == 200) {
+          return response
+          .status(200)
+          .send({ message: "File retrived successfully", result: retriveDocument.data });
+          
+        } else {
+          return response.status(500).send('Error retrieving document');
+        }
+          
+      } catch (error) {
+        console.error('Error retrieving document:', error.response.data);
+        // Handle error
+        return response.status(500).send('Error retrieving document');
+      }
+    }
+    else 
+    {
+      return response.status(500).send({ message: resAccessToken.message });
+    }   
+  }
+
 }
 
 module.exports = FileController;

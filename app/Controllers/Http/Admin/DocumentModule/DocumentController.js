@@ -5,6 +5,7 @@ const Purchase = use(
   "App/Models/Admin/VisitorSubscriptionModule/ItmapEuDocPurchase"
 );
 const ResearchTag = use("App/Models/Admin/DocumentModule/ResearchTag");
+const DocumentLog = use("App/Models/Admin/DocumentModule/DocumentLog");
 const Query = use("Query");
 const moment = require("moment");
 const Excel = require("exceljs");
@@ -123,7 +124,7 @@ class DocumentController {
     return response.status(200).send(result);
   }
 
-  async store({ request, response }) {
+  async store({ request, response, auth }) {
     const query = new Document();
 
     query.document_type_id = request.input("document_type_id");
@@ -134,6 +135,7 @@ class DocumentController {
     // query.tag = request.input("tag");
     query.seo_url_slug = request.input("seo_url_slug");
     query.status = request.input("status");
+    query.document_content_type = request.input("document_content_type");
     // query.is_embedded = request.input("is_embedded");
     var path = require("path");
 
@@ -206,6 +208,26 @@ class DocumentController {
     // console.log("Query", query);
     await query.save();
 
+    let status = "";
+    if(request.input("status") == 1) {
+      status = "Active";
+    } 
+    else if(request.input("status") == 2) {
+      status = "Draft";
+    }
+    else if(request.input("status") == 3) {
+      status = "Approved";
+    }
+    else {
+      status = "Inactive";
+    }
+
+    const userId = auth.user.id;	
+    const insQuery = new DocumentLog();
+    insQuery.user_id = userId;
+    insQuery.description = `Document created with ${status} status`;
+    await insQuery.save();
+
     if(request.input("tags")) {
       await query.documentTags().attach(JSON.parse(request.input("tags")));
     }  
@@ -242,14 +264,17 @@ class DocumentController {
     return response.status(200).send(query);
   }
 
-  async update({ params, request, response }) {
+  async update({ params, request, response, auth }) {
+
     const query = await Document.findOrFail(params.id);
+    let oldStatus = query.status;
     query.category_id = request.input("category_id");
     query.research_topic_id = request.input("research_topic_id");
     query.document_type_id = request.input("document_type_id");
     query.name = request.input("name");
     query.url = (request.input("url")) ? request.input("url") : "";
     query.tag = request.input("tag");
+
     // if (query.url && query.url.includes("//vimeo.com/")) {
     //   query.url = query.url.replace("vimeo.com", "player.vimeo.com/video");
     // }
@@ -272,7 +297,16 @@ class DocumentController {
       extension = "";
     }
     query.extension = extension;
+    query.document_content_type = request.input("document_content_type");
 
+    query.status = request.input("status");
+    query.image = request.input("image");
+    query.details = request.input("details");
+    query.description = request.input("description");
+    query.document_category = request.input("document_category");
+    query.seo_url_slug = request.input("seo_url_slug");
+
+    // query.subscription_category = request.input("subscription_category");
     // if (url.includes("player.vimeo.com")) {
     //   let videoId = url.slice(url.lastIndexOf("/") + 1);
     //   const thumbnail = await fetchVimeoVideoThumbnail(videoId);
@@ -281,13 +315,6 @@ class DocumentController {
     //   }
     // }
 
-    query.status = request.input("status");
-    query.image = request.input("image");
-    query.details = request.input("details");
-    query.description = request.input("description");
-    query.document_category = request.input("document_category");
-    // query.subscription_category = request.input("subscription_category");
-    query.seo_url_slug = request.input("seo_url_slug");
     // query.is_embedded = request.input("is_embedded");
 
     // if (query.subscription_category == 1) {
@@ -324,6 +351,43 @@ class DocumentController {
       await query.documentTags().attach(JSON.parse(request.input("tags")));
     } 
     await query.save();
+
+    if(request.input("status") != oldStatus)
+    {
+      let status = "";
+      if(request.input("status") == 1) {
+        status = "Active";
+      } 
+      else if(request.input("status") == 2) {
+        status = "Draft";
+      }
+      else if(request.input("status") == 3) {
+        status = "Approved";
+      }
+      else {
+        status = "Inactive";
+      }
+
+      let old_status = "";
+      if(oldStatus == 1) {
+        old_status = "Active";
+      } 
+      else if(oldStatus == 2) {
+        old_status = "Draft";
+      }
+      else if(oldStatus == 3) {
+        old_status = "Approved";
+      }
+      else {
+        old_status = "Inactive";
+      }
+
+      const userId = auth.user.id;	
+      const insQuery = new DocumentLog();
+      insQuery.user_id = userId;
+      insQuery.description = `Document status changed from ${old_status} to ${status}.`;
+      await insQuery.save();
+    }
 
     return response.status(200).send({ message: "Updated successfully" });
   }

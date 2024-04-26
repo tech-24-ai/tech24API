@@ -328,6 +328,7 @@ Route.group(() => {
 // file upload
 Route.group(() => {
   Route.post("/document", "FileController.document");
+  Route.post("/researchDocument", "FileController.researchDocument");
   Route.get("/document", "FileController.getDocument");
   Route.post("/image", "FileController.image");
 })
@@ -2742,3 +2743,12 @@ Route.group(() => {
 	Route.put("/:id", "Admin/DocumentModule/ResearchTagController.update");
 	Route.delete("/:id", "Admin/DocumentModule/ResearchTagController.destroy");
 }).prefix("/research_tags").middleware("auth"); 
+
+Route.group(() => {
+  Route.post("uploadDocumentOnGoogleDrive", "FileController.uploadDocumentOnGoogleDrive");
+  Route.get('getGoogleDriveDocument/:id', 'FileController.getGoogleDriveDocument')
+}).middleware("auth");
+
+Route.get('auth/google', 'Admin/GoogleDriveAuthController.redirect')
+Route.get('auth/google/callback', 'Admin/GoogleDriveAuthController.callback')
+Route.get('auth/refreshToken', 'Admin/GoogleDriveAuthController.refreshToken')
