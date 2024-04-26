@@ -238,6 +238,7 @@ class CategoryController {
     query.bg_color = request.input("bg_color")
       ? request.input("bg_color")
       : "#000000";
+    query.bg_image = request.input("bg_image");
     query.image = request.input("image");
     query.no_flow = request.input("no_flow");
     query.sort_order = request.input("sort_order");
@@ -266,6 +267,7 @@ class CategoryController {
     query.bg_color = request.input("bg_color")
       ? request.input("bg_color")
       : "#000000";
+    query.bg_image = request.input("bg_image");
     query.image = request.input("image");
     query.no_flow = request.input("no_flow");
     query.sort_order = request.input("sort_order");
