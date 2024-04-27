@@ -8,6 +8,7 @@ const ResearchTag = use("App/Models/Admin/DocumentModule/ResearchTag");
 const ResearchTopic = use("App/Models/Admin/DocumentModule/ResearchTopic");
 const Category = use("App/Models/Admin/ProductModule/Category");
 const DocumentType = use("App/Models/Admin/DocumentModule/DocumentType");
+const CommunityVisitorLibrary = use('App/Models/Admin/CommunityModule/CommunityVisitorLibrary')
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -124,12 +125,17 @@ class MarketResearchController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async show ({ params, request, response, view }) {
+  async show ({ params, request, response, view, auth }) {
 
+    const userId = (auth.user) ? auth.user.id : "";
     const query = Document.query();
 		query.select("id", "document_type_id", "category_id", "research_topic_id", "name", "seo_url_slug", 'image', "details", "description", "document_content_type", "url", "extension", "created_at");
 		query.with('category', (builder) => {
       builder.select('id', 'name')
+    });
+		query.with('is_saved_document', (builder) => {
+      builder.select('id', 'visitor_id', 'document_id', 'created_at')
+      builder.where('visitor_id', userId)
     });
     query.where("id", params.id);
 		const result = await query.firstOrFail();
@@ -151,12 +157,17 @@ class MarketResearchController {
 		return response.status(200).send(result);	
   }
 
-  async showBySlug ({ params, request, response, view }) {
+  async showBySlug ({ params, request, response, view, auth }) {
 
+    const userId = (auth.user) ? auth.user.id : "";
     const query = Document.query();
 		query.select("id", "document_type_id", "category_id", "research_topic_id", "name", "seo_url_slug", 'image', "details", "description", "document_content_type", "url", "extension", "created_at");
 		query.with('category', (builder) => {
       builder.select('id', 'name')
+    });
+		query.with('is_saved_document', (builder) => {
+      builder.select('id', 'visitor_id', 'document_id', 'created_at')
+      builder.where('visitor_id', userId)
     });
     query.where("seo_url_slug", params.slug);
 		const result = await query.firstOrFail();
@@ -264,6 +275,37 @@ class MarketResearchController {
 		}
 
     return response.status(200).send(result);
+  }
+
+  async save_to_library({ request, response, auth }) 
+  {
+    const userId = auth.user.id;
+
+    try {
+
+      const isExist = await CommunityVisitorLibrary.findBy({
+				document_id: request.input("id"),
+				visitor_id: userId,
+				type: 1,
+			});
+
+			if (isExist) {
+				return response.status(422).send([{ message: "You have already saved." }]);
+			}	
+    
+      const query = new CommunityVisitorLibrary();
+      query.visitor_id = userId;
+      query.document_id = request.input("id");
+      query.type = 1;
+      query.created_by = userId;
+      query.updated_by = userId;
+      await query.save();
+
+      return response.status(200).send({ message: "Create successfully" });
+    } catch (error) {
+      console.log(error);
+      return response.status(423).json({ message: "Something went wrong"});
+    }    
   }
 }
 

@@ -12,6 +12,7 @@ const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
 const {	getSubmitAnswerPoints, getUpvoteAnswerPoints, getCorrectAnswerPoints } = require("../../../../Helper/visitorPoints");
 const { getvisitorCurrentLevel } = require("../../../../Helper/visitorCurrentLevel");
 const CommunityVisitorActivity = use("App/Models/Admin/CommunityModule/CommunityVisitorActivity");
+const CommunityVisitorLibrary = use('App/Models/Admin/CommunityModule/CommunityVisitorLibrary')
 
 const moment = require("moment");
 
@@ -539,6 +540,93 @@ class VisitorCommunityPorfileController {
 			}
 		}
 		return result;
+  }
+
+  async visitor_library ({ request, response, view, auth }) {
+		
+		const userId = auth.user.id;
+		const orderBy = request.input("orderBy");
+		const orderDirection = request.input("orderDirection");
+		const search = request.input("search");
+		const searchQuery = new Query(request, { order: "id" });
+
+		const query = CommunityVisitorLibrary.query();
+		query.where("visitor_id", userId);
+
+    query.with('visitor',(builder)=>{
+			builder.select('id', 'name', 'profile_pic_url')
+		});
+
+    query.with('blog',(builder)=>{
+			builder.select('id', 'name', 'slug', 'image')
+      builder.where('status', 1)
+		});
+
+    query.with('market_research',(builder)=>{
+			builder.select('id', 'name', 'seo_url_slug', 'image')
+		});
+
+    if(search) 
+    {
+      query.where(function () {
+        this.whereHas('blog',(builder)=>{
+          builder.where('status', 1)
+          builder.where(searchQuery.search(['name']))
+        })
+        .orWhereHas('market_research',(builder)=>{
+          builder.where('status', 1)
+          builder.where(searchQuery.search(['name']))
+        })
+      })
+    }
+
+    query.where(function () {
+      this.whereHas('blog',(builder)=>{
+        builder.where('status', 1)
+      })
+      .orWhereHas('market_research',(builder)=>{
+        builder.where('status', 1)
+      })
+    })
+
+		if (orderBy && orderDirection) {
+			query.orderBy(`${orderBy}`, orderDirection);
+		} else {
+			query.orderBy('id', 'desc');
+		}
+		
+		let page = null;
+		let pageSize = null;
+
+		if (request.input("page")) {
+			page = request.input("page");
+		}
+		if (request.input("pageSize")) {
+			pageSize = request.input("pageSize");
+		}
+		var result;
+		if (page && pageSize) {
+      result = (await query.paginate(page, pageSize)).toJSON();
+
+		} else {
+      result = (await query.fetch()).toJSON();
+		}
+		
+		return response.status(200).send(result);
+	}
+
+  async delete_visitor_library ({ params, request, response }) {
+
+    const query = await CommunityVisitorLibrary.findOrFail(params.id);
+		try {
+			await query.delete();
+			return response.status(200).send({ message: "Delete successfully" });
+		  
+		} catch (error) {
+			return response.status(423).send({
+				message: "Something went wrong",
+			});
+		}
   }
 }
 

@@ -3,9 +3,9 @@
 /** @type {import('@adonisjs/lucid/src/Schema')} */
 const Schema = use('Schema')
 
-class VisitorLibrarySchema extends Schema {
+class CommunityVisitorLibrarySchema extends Schema {
   up () {
-    this.create('visitor_libraries', (table) => {
+    this.create('community_visitor_libraries', (table) => {
       table.increments()
 	  table.integer("visitor_id").unsigned().references("id").inTable("visitors").onDelete("cascade").onUpdate("cascade")
 	  table.integer("document_id").unsigned().references("id").inTable("documents").onDelete("cascade").onUpdate("cascade")
@@ -23,8 +23,8 @@ class VisitorLibrarySchema extends Schema {
   }
 
   down () {
-    this.drop('visitor_libraries')
+    this.drop('community_visitor_libraries')
   }
 }
 
-module.exports = VisitorLibrarySchema
+module.exports = CommunityVisitorLibrarySchema

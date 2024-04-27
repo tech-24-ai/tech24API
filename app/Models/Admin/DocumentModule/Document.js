@@ -27,6 +27,10 @@ class Document extends Model {
 		).pivotModel("App/Models/Admin/DocumentModule/DocumentTag");
 	}
 
+    is_saved_document() {
+		return this.belongsTo('App/Models/Admin/CommunityModule/CommunityVisitorLibrary', 'id', 'document_id')
+	}
+
     static get dates() {
         return super.dates.concat(['created_at', 'updated_at'])
     }    

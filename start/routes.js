@@ -2706,6 +2706,8 @@ Route.group(() => {
   Route.get("/visitor_profile_levels", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_profile_levels");
   Route.get("/visitor_activity_counter", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_activity_counter");
   Route.get("/visitor_activities", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_activities");
+  Route.get("/visitor_library", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_library");
+  Route.delete("/visitor_library/:id", "Front/CommunityModule/VisitorCommunityPorfileController.delete_visitor_library");
 	
   Route.get("/get_news_announcements", "Front/CommunityModule/CommunityNewsAnnouncementController.index");
   Route.get("/get_news_announcements/:id", "Front/CommunityModule/CommunityNewsAnnouncementController.show");
@@ -2752,3 +2754,8 @@ Route.group(() => {
 Route.get('auth/google', 'Admin/GoogleDriveAuthController.redirect')
 Route.get('auth/google/callback', 'Admin/GoogleDriveAuthController.callback')
 Route.get('auth/refreshToken', 'Admin/GoogleDriveAuthController.refreshToken')
+
+Route.group(() => {
+  Route.post("/blogs/save", "Front/BlogModule/BlogController.save_to_library");
+  Route.post("/market_research/save", "Front/MarketResearchModule/MarketResearchController.save_to_library");
+}).prefix("/app").middleware("auth:visitorAuth");

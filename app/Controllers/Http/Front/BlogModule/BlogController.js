@@ -1,6 +1,9 @@
 'use strict'
 const Query = use("Query");
+const Database = use("Database");
+
 const Blog = use('App/Models/Admin/BlogModule/Blog')
+const CommunityVisitorLibrary = use('App/Models/Admin/CommunityModule/CommunityVisitorLibrary')
 
 
 const Env = use('Env')
@@ -52,11 +55,16 @@ class BlogController {
         return response.status(200).send(result)
     }
 
-    async show({ params, response }) {
+    async show({ params, response, auth }) {
         
+        const userId = (auth.user) ? auth.user.id : "";
         const blogquery = Blog.query();
         blogquery.where('id', params.id);
         blogquery.with('blog_topic');
+        blogquery.with('is_saved_blog', (builder) => {
+            builder.select('id', 'visitor_id', 'blog_id', 'created_at')
+            builder.where('visitor_id', userId)
+        });
         let result = await blogquery.fetch();
 
         if (result.size() > 0) {
@@ -77,12 +85,16 @@ class BlogController {
     }
 
 
-    async showBySlug({ params, request, response, view }) {
+    async showBySlug({ params, request, response, view, auth }) {
     
-        
+        const userId = (auth.user) ? auth.user.id : "";
         const blogquery = Blog.query();
         blogquery.where('slug', params.id);
         blogquery.with('blog_topic');
+        blogquery.with('is_saved_blog', (builder) => {
+            builder.select('id', 'visitor_id', 'blog_id', 'created_at')
+            builder.where('visitor_id', userId)
+        });
         let result = await blogquery.fetch();
         
         if (result.size() > 0) {
@@ -103,6 +115,36 @@ class BlogController {
         }
     }
 
+    async save_to_library({ request, response, auth }) 
+    {
+        const userId = auth.user.id;
+
+        try {
+
+            const isExist = await CommunityVisitorLibrary.findBy({
+				blog_id: request.input("id"),
+				visitor_id: userId,
+				type: 2,
+			});
+      
+			if (isExist) {
+				return response.status(422).send([{ message: "You have already saved." }]);
+			}	
+
+            const query = new CommunityVisitorLibrary();
+            query.visitor_id = userId;
+            query.blog_id = request.input("id");
+            query.type = 2;
+            query.created_by = userId;
+            query.updated_by = userId;
+            await query.save();
+
+            return response.status(200).send({ message: "Create successfully" });
+        } catch (error) {
+			console.log(error);
+			return response.status(423).json({ message: "Something went wrong"});
+		}    
+    }
 }
 
 module.exports = BlogController

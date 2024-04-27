@@ -83,6 +83,11 @@ class CommunityPostController {
                 })
 				  		);
 				 	break;
+          case "community.name":
+            query.whereHas('community', (builder) => {
+              builder.whereRaw(`name LIKE '%${filter.value}%'`)
+            })
+          break;
           case "visitor.name":
             query.whereHas('visitor', (builder) => {
               builder.whereRaw(`name LIKE '%${filter.value}%'`)
