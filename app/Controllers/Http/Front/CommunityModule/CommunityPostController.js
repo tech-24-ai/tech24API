@@ -54,7 +54,8 @@ class CommunityPostController {
 		});
 		
 		query.withCount('communityPostReply as total_post_replies', (builder) => {
-			builder.where('status', 1)
+			builder.where('community_post_replies.status', 1)
+			builder.where('community_post_replies.parent_id', null)
 		})
 
 		query.withCount('communityVote as total_helpful', (builder) => {
@@ -261,7 +262,8 @@ class CommunityPostController {
 			builder.where('vote_type', 1)
 		})
 		query.withCount('communityPostReply as total_post_replies', (builder) => {
-			builder.where('status', 1)
+			builder.where('community_post_replies.status', 1)
+			builder.where('community_post_replies.parent_id', null)
 		})
 
 		query.withCount('communityPostReply as is_answer_given',(builder)=>{

@@ -70,6 +70,8 @@ class CommunityPostReplyController {
 			builder.select('id','community_post_reply_id').where('visitor_id', userId)
 		});	
 		
+		query.orderBy('is_correct_answer', 'desc');
+
 		if (orderBy && orderDirection) {
 			query.orderBy(`${orderBy}`, orderDirection);
 		} else {
