@@ -9,6 +9,7 @@ const ResearchTopic = use("App/Models/Admin/DocumentModule/ResearchTopic");
 const Category = use("App/Models/Admin/ProductModule/Category");
 const DocumentType = use("App/Models/Admin/DocumentModule/DocumentType");
 const CommunityVisitorLibrary = use('App/Models/Admin/CommunityModule/CommunityVisitorLibrary')
+const Drive = use("Drive");
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -174,6 +175,15 @@ class MarketResearchController {
 
     if(result) 
     {
+      if(result.document_content_type == 1 || result.document_content_type == 2)
+      {
+        const url = result.url;
+        const filename = url.replace(process.env.S3_BASE_URL, "");
+        const file = await Drive.disk("s3").getObject(filename);
+        
+        result.description = file.Body.toString();
+      }
+
       const relatedQuery = Document.query();
       relatedQuery.select("id", "category_id", "name", "seo_url_slug", 'image', "details", "created_at")
       relatedQuery.with('category', (builder) => {

@@ -451,7 +451,7 @@ class FileController {
       }
 
       const resAccessToken = await checkAccessToken();
-      console.log("resAccessToken", resAccessToken);
+
       if(resAccessToken.status == 200)
       {
         const accessToken = resAccessToken.accessToken;
@@ -462,7 +462,7 @@ class FileController {
 
         try { 
           const result = await axios.post(
-            `https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart`,
+            `https://www.googleapis.com/upload/drive/v3/files?uploadType=media`,
             file.stream,
             {
               headers: headers
@@ -491,20 +491,17 @@ class FileController {
               headers: headers
             })
 
-            console.log("renameResponse" , renameResponse.data);
-
             // Make a GET request to retrieve the document
-            const retriveDocument = await axios.get(
-              `https://www.googleapis.com/drive/v3/files/${fileId}?fields=webViewLink`,
-              {
-                headers: headers
-              }
-            );
+            // const retriveDocument = await axios.get(
+            //   `https://www.googleapis.com/drive/v3/files/${fileId}?fields=webViewLink`,
+            //   {
+            //     headers: headers
+            //   }
+            // );
 
-            console.log("retriveDocument ", retriveDocument.data)
             let uploadResponse = {
               document_id : fileId,
-              webViewLink : retriveDocument.data.webViewLink,
+              // webViewLink : retriveDocument.data.webViewLink,
               file_name : filename,
             }
 
@@ -515,7 +512,6 @@ class FileController {
             return response.status(500).send({ message: "File not uploading." });
           }
         } catch (error) {
-          console.log("error", error)
           return response.status(500).send({ message: "File uploading failed." });
         }
       } 
@@ -528,7 +524,7 @@ class FileController {
     await request.multipart.process();
   }
 
-  async getGoogleDriveDocument({ params, response }) {
+  async getGoogleDriveDocumentWebViewLink({ params, response }) {
 
     const fileId = params.id; // Assuming the document ID is passed as a route parameter
     const resAccessToken = await checkAccessToken();

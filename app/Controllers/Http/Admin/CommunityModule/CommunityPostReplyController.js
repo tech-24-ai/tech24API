@@ -355,6 +355,25 @@ class CommunityPostReplyController {
 			return response.status(423).json({ message: "Something went wrong", error });
 		}	
 	}
+
+	async comment_status_update ({ params, request, response, auth }) {
+		
+		const userId = auth.user.id;
+		
+		try {	
+			var reply_status = request.input("status");
+
+			const updateData = await CommunityPostReply.findOrFail(params.id);
+			updateData.status = reply_status;
+			await updateData.save();
+
+			return response.status(200).json({ message: "Status update successfully" });
+		} catch (error) {
+			console.log(error);
+			trx.rollback();
+			return response.status(423).json({ message: "Something went wrong", error });
+		}	
+	}
 }
 
 module.exports = CommunityPostReplyController

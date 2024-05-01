@@ -12,6 +12,13 @@ const Excel = require("exceljs");
 const {
   fetchVimeoVideoThumbnail,
 } = require("../../../../Helper/basicInfoScraper");
+
+const {	extractDocIdFromShareUrl, getGoogleDriveDocumentHtmlContent, getGoogleDriveDocumentName } = require("../../../../Helper/googleDrive");
+const Question = require("@adonisjs/ace/src/Question");
+const { log } = require("console");
+const Drive = use("Drive");
+const createRandomName = require("../../../../Helper/randomString");
+
 const searchInFields = [
   "documents.id",
   "documents.name",
@@ -135,7 +142,6 @@ class DocumentController {
     // query.tag = request.input("tag");
     query.seo_url_slug = request.input("seo_url_slug");
     query.status = request.input("status");
-    query.document_content_type = request.input("document_content_type");
     // query.is_embedded = request.input("is_embedded");
     var path = require("path");
 
@@ -163,6 +169,71 @@ class DocumentController {
       query.extension = extension;
     }
 
+    let drive_document_id = request.input("drive_document_id");
+    let document_content_type = request.input("document_content_type");
+    let google_doc_url = request.input("google_doc_url");
+
+    if(document_content_type == 1)
+    {
+      let filename = createRandomName(10)
+      let file_name = filename+".html";
+      const getContent = await getGoogleDriveDocumentHtmlContent(drive_document_id);
+
+      if(getContent.status == 200)
+      {
+        let content = getContent.result;
+        const result = await Drive.disk("s3").put(file_name, Buffer.from(content));
+
+        if (result) 
+        {
+          query.url = result;
+          query.file_name = file_name;
+        } else {
+          return response.status(500).send({ message: "File uploading failed" });
+        }  
+
+      } else {
+        return response.status(422).send({ message:  getContent.message });
+      }
+    }
+    else if(document_content_type == 2)
+    {
+      const getDocumentId = await extractDocIdFromShareUrl(google_doc_url);
+      
+      if(getDocumentId.status == 200) 
+      {
+        let filename = createRandomName(10)
+        let file_name = filename+".html";
+        const getContent = await getGoogleDriveDocumentHtmlContent(getDocumentId.docId);
+
+        if(getContent.status == 200)
+        {
+          let content = getContent.result;
+          const result = await Drive.disk("s3").put(file_name, Buffer.from(content));
+
+          if (result) 
+          {
+            query.url = result;
+            query.file_name = file_name;
+          } else {
+            return response.status(500).send({ message: "File uploading failed" });
+          } 
+        } else {
+          return response.status(422).send({ message:  getContent.message });
+        }
+      } 
+      else 
+      {
+        return response.status(422).send({ message: getDocumentId.message });
+      }
+    } else {
+      query.description = request.input("description");
+    }
+
+    query.google_doc_url = (google_doc_url) ? google_doc_url : "";
+    query.drive_document_id = (drive_document_id) ? drive_document_id : "";
+    query.document_content_type = document_content_type;
+
     // if (url.includes("player.vimeo.com")) {
     //   let videoId = url.slice(url.lastIndexOf("/") + 1);
     //   const thumbnail = await fetchVimeoVideoThumbnail(videoId);
@@ -173,7 +244,6 @@ class DocumentController {
 
     query.image = request.input("image");
     query.details = request.input("details");
-    query.description = request.input("description");
     query.document_category = request.input("document_category");
     // query.subscription_category = request.input("subscription_category");
 
@@ -268,6 +338,9 @@ class DocumentController {
 
     const query = await Document.findOrFail(params.id);
     let oldStatus = query.status;
+    let oldUrl = query.url;
+    let oldFileName = query.file_name;
+
     query.category_id = request.input("category_id");
     query.research_topic_id = request.input("research_topic_id");
     query.document_type_id = request.input("document_type_id");
@@ -297,12 +370,85 @@ class DocumentController {
       extension = "";
     }
     query.extension = extension;
-    query.document_content_type = request.input("document_content_type");
+
+    let drive_document_id = request.input("drive_document_id");
+    let document_content_type = request.input("document_content_type");
+    let google_doc_url = request.input("google_doc_url");
+
+    if(document_content_type == 1)
+    {
+      let file_name = "";
+      if(oldFileName) {
+        file_name = oldFileName;
+      } else {
+        let filename = createRandomName(10)
+        file_name = filename+".html";
+      }
+      
+      const getContent = await getGoogleDriveDocumentHtmlContent(drive_document_id);
+
+      if(getContent.status == 200)
+      {
+        let content = getContent.result;
+        const result = await Drive.disk("s3").put(file_name, Buffer.from(content));
+
+        if (result) 
+        {
+          query.url = result;
+          query.file_name = file_name;
+          query.google_doc_url = "";
+          query.drive_document_id = drive_document_id;
+        } else {
+          return response.status(500).send({ message: "File uploading failed" });
+        } 
+
+      } else {
+        return response.status(422).send({ message:  getContent.message });
+      }
+    }
+    else if(document_content_type == 2)
+    {
+      // if(oldUrl != url)
+      // {
+        const getDocumentId = await extractDocIdFromShareUrl(google_doc_url);
+        
+        if(getDocumentId.status == 200) 
+        {
+          let file_name = "";
+          if(oldFileName) {
+            file_name = oldFileName;
+          } else {
+            let filename = createRandomName(10)
+            file_name = filename+".html";
+          }
+          const getContent = await getGoogleDriveDocumentHtmlContent(getDocumentId.docId);
+
+          if(getContent.status == 200)
+          {
+            let content = getContent.result;
+            const result = await Drive.disk("s3").put(file_name, Buffer.from(content));
+            query.url = result;
+            query.drive_document_id = "";
+            query.google_doc_url = google_doc_url;
+          } else {
+            return response.status(422).send({ message:  getContent.message });
+          }
+        } 
+        else 
+        {
+          return response.status(422).send({ message: getDocumentId.message });
+        }
+      // }
+    } else {
+      query.description = request.input("description");
+    }
+
+    query.document_content_type = document_content_type;
 
     query.status = request.input("status");
     query.image = request.input("image");
     query.details = request.input("details");
-    query.description = request.input("description");
+    
     query.document_category = request.input("document_category");
     query.seo_url_slug = request.input("seo_url_slug");
 

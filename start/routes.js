@@ -2609,6 +2609,7 @@ Route.group(() => {
 	Route.put("/posts_reply/status_update/:id", "Admin/CommunityModule/CommunityPostReplyController.status_update");
 	Route.delete("/posts_reply/:id", "Admin/CommunityModule/CommunityPostReplyController.destroy");
   Route.get("/posts_reply_comments", "Admin/CommunityModule/CommunityPostReplyController.get_reply_comments");
+  Route.put("/posts_reply_comments/status_update/:id", "Admin/CommunityModule/CommunityPostReplyController.comment_status_update");
   Route.post("/reply_mark_correct_answer", "Admin/CommunityModule/CommunityPostReplyController.mark_correct_answer");
 	
   // Badge
@@ -2748,7 +2749,7 @@ Route.group(() => {
 
 Route.group(() => {
   Route.post("uploadDocumentOnGoogleDrive", "FileController.uploadDocumentOnGoogleDrive");
-  Route.get('getGoogleDriveDocument/:id', 'FileController.getGoogleDriveDocument')
+  Route.get('getGoogleDriveDocumentWebViewLink/:id', 'FileController.getGoogleDriveDocumentWebViewLink')
 }).middleware("auth");
 
 Route.get('auth/google', 'Admin/GoogleDriveAuthController.redirect')
