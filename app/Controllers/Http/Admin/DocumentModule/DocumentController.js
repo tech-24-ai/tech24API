@@ -132,15 +132,25 @@ class DocumentController {
   }
 
   async store({ request, response, auth }) {
+    
+    var seoUrlSlug = request.input("seo_url_slug");
+    seoUrlSlug = seoUrlSlug.replace(/[^-_a-z0-9A-Z' ]/g, "");
+    seoUrlSlug = seoUrlSlug.replace(/ /g,"-")
+    const checkSlug = Document.query();
+    const isExist = await checkSlug.where('seo_url_slug', seoUrlSlug).first();
+    
+    if (isExist) {
+      return response.status(422).send({ message: "Duplicate Seo Slug URL found" });
+    }	
+    
     const query = new Document();
-
     query.document_type_id = request.input("document_type_id");
     query.category_id = request.input("category_id");
     query.research_topic_id = request.input("research_topic_id");
     query.name = request.input("name");
     query.url = (request.input("url")) ? request.input("url") : "";
     // query.tag = request.input("tag");
-    query.seo_url_slug = request.input("seo_url_slug");
+    query.seo_url_slug = seoUrlSlug;
     query.status = request.input("status");
     // query.is_embedded = request.input("is_embedded");
     var path = require("path");
@@ -336,6 +346,16 @@ class DocumentController {
 
   async update({ params, request, response, auth }) {
 
+    var seoUrlSlug = request.input("seo_url_slug");
+    seoUrlSlug = seoUrlSlug.replace(/[^-_a-z0-9A-Z' ]/g, "");
+    seoUrlSlug = seoUrlSlug.replace(/ /g,"-")
+    const checkSlug = Document.query();
+    const isExist = await checkSlug.where('seo_url_slug', seoUrlSlug).whereNot('id', params.id).first();
+    
+    if (isExist) {
+      return response.status(422).send({ message: "Duplicate Seo Slug URL found" });
+    }	
+
     const query = await Document.findOrFail(params.id);
     let oldStatus = query.status;
     let oldUrl = query.url;
@@ -450,7 +470,7 @@ class DocumentController {
     query.details = request.input("details");
     
     query.document_category = request.input("document_category");
-    query.seo_url_slug = request.input("seo_url_slug");
+    query.seo_url_slug = seoUrlSlug;
 
     // query.subscription_category = request.input("subscription_category");
     // if (url.includes("player.vimeo.com")) {

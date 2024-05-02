@@ -50,8 +50,10 @@ async function checkAccessToken() {
           return response;
         }
       } catch (error) {
+        console.log("error data ", error.response.data.error_description)
+        let error_message = (error.response.data) ? `${error.response.data.error_description}  Please try to reconfigure your Google account.` : "Token has been expired or revoked. Please try to reconfigure your Google account."
         response.status = 500;
-        response.message = "Something went wrong while generating new access token. Please try to reconfigure your Google account.";
+        response.message = error_message;
         return response;
       }  
     }  else {
