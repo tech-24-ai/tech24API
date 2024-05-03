@@ -9,6 +9,9 @@ const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVis
 const {	getSubmitAnswerPoints, getUpvoteAnswerPoints, getCorrectAnswerPoints } = require("../../../../Helper/visitorPoints");
 const { getvisitorCurrentLevel } = require("../../../../Helper/visitorCurrentLevel");
 const CommunityVisitorActivity = use("App/Models/Admin/CommunityModule/CommunityVisitorActivity");
+const UserCommunity = use("App/Models/Admin/CommunityModule/UserCommunity");
+const Mail = use("Mail");
+const Env = use("Env");
 
 const requestOnly = [
 	"parent_id",
@@ -163,6 +166,70 @@ class CommunityPostReplyController {
 					},
 					trx
 				);
+			}
+
+			const getModerator = UserCommunity.query();
+			getModerator.with('users', (builder) => {
+				builder.select('id', 'email')
+			});
+			getModerator.where('community_id', getData.community_id);
+			let moderatorLists = (await getModerator.fetch()).toJSON();
+
+			let subject, details, ins_community_post_reply_id, link;
+			if(request.input("parent_id") > 0)
+			{
+				subject = 'Tech24 - New Comment posted on Community Answer';
+				details = `You have a new comment to review. Please review and approve/reject it.`;
+				ins_community_post_reply_id = query.id;
+				link = `${Env.get("ADMIN_BASE_URL")}/community-posts-reply-comments-form/${ins_community_post_reply_id}`;
+			} 
+			else
+			{
+				subject = 'Tech24 - New Answer posted on Community Question';
+				details = `You have a new answer to review. Please review and approve/reject it.`;
+				ins_community_post_reply_id = query.id;
+				link = `${Env.get("ADMIN_BASE_URL")}/community-posts-reply-form/${ins_community_post_reply_id}`;
+			}
+
+			if(moderatorLists)
+			{
+				let toEmails = [];
+
+				moderatorLists.forEach((val, index) => {
+					toEmails.push(val.users.email)
+				});	
+				toEmails = toEmails.join(",");
+				
+				if(toEmails)
+				{
+					const name = 'Moderator';
+					
+					const emailStatus = await Mail.send(
+						"newCommunityContentModeratorMail",
+						{ name: name, title: subject, details: details, link: link },
+						(message) => {
+							message.subject(subject);
+							message.from(Env.get("MAIL_USERNAME"));
+							message.to(toEmails);
+						}
+					);
+				}	
+
+				let admin_mail = Env.get("ADMIN_EMAIL")
+				if(admin_mail) 
+				{
+					const name = 'Admin';
+
+					const emailStatus = await Mail.send(
+						"newCommunityContentModeratorMail",
+						{ name: name, title: subject, details: details, link: link },
+						(message) => {
+							message.subject(subject);
+							message.from(Env.get("MAIL_USERNAME"));
+							message.to(admin_mail);
+						}
+					);
+				}
 			}
 
 			await trx.commit();

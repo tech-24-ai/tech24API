@@ -7,6 +7,9 @@ const { dateFilterExtractor } = require("../../../../Helper/globalFunctions");
 const Role = use("App/Models/Admin/UserModule/Role");
 const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVisitorPoint");
 const {	getSubmitQuestionPoints } = require("../../../../Helper/visitorPoints");
+const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
+const Mail = use("Mail");
+const Env = use("Env");
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -164,7 +167,7 @@ class CommunityPostController {
 	async show ({ params, request, response, view }) {
 		
 		const query = CommunityPost.query();
-		query.select("id", "community_id", "title", "visitor_id", "url_slug", "description", "is_discussion_open", "status", "created_at");
+		query.select("id", "community_id", "title", "visitor_id", "url_slug", "description", "is_discussion_open", "status", "reject_reason", "created_at");
 		query.withCount('communityVote as total_helpful', (builder) => {
 			builder.where('vote_type', 1)
 		})
@@ -194,11 +197,15 @@ class CommunityPostController {
 		
 		try {	
 			var post_status = request.input("status");
+			var reject_reason = request.input("reject_reason");
 			var is_discussion_open = request.input("is_discussion_open");
 
 			const updateData = await CommunityPost.findOrFail(params.id);
+      let oldStatus = updateData.status;
+
 			updateData.is_discussion_open = is_discussion_open;
 			updateData.status = post_status;
+			updateData.reject_reason = reject_reason;
 			await updateData.save();
 
       const query = CommunityVisitorPoint.query();
@@ -218,7 +225,55 @@ class CommunityPostController {
 				);
 			}
 			
+      if(oldStatus != post_status && post_status != 0)
+      {
+        const query1 = Visitor.query();
+        const visitorData = await query1.select('id', 'name', 'email').where('id', updateData.visitor_id).first();
+
+        if(visitorData)
+        {
+          let postTitle = updateData.title;
+          let url_slug = updateData.url_slug;
+          const name = visitorData.name;
+          const toEmails = visitorData.email;
+          let subject, details, link;
+
+          if(post_status == 1) 
+          {
+            subject = "Tech24 - Question approved on Community";
+            details = `Your question for Discussion Group "${postTitle}" is approved by the Admin/Moderator and it is live in the portal. `;
+            link = `${Env.get("FRONTEND_BASE_URL")}/community/question/${url_slug}`;
+
+            const emailStatus = await Mail.send(
+              "questionApproveVisitorMail",
+              { name: name, title: subject, details: details, link: link },
+              (message) => {
+                message.subject(subject);
+                message.from(Env.get("MAIL_USERNAME"));
+                message.to(toEmails);
+              }
+            );
+          } 
+          else 
+          {
+            subject = "Tech24 - Question rejected on Community";
+            details = `Your question for Discussion Group "${postTitle}" is rejected by the Admin/Moderator due to "${reject_reason}"`;
+            
+            const emailStatus = await Mail.send(
+              "questionRejectVisitorMail",
+              { name: name, title: subject, details: details },
+              (message) => {
+                message.subject(subject);
+                message.from(Env.get("MAIL_USERNAME"));
+                message.to(toEmails);
+              }
+            );
+          }
+        }
+      }
+
 			await trx.commit();
+
 			return response.status(200).json({ message: "Status update successfully" });
 		} catch (error) {
 			console.log(error);

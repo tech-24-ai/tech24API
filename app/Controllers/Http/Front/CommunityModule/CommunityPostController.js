@@ -10,6 +10,9 @@ const CommunityPostAttachment = use("App/Models/Admin/CommunityModule/CommunityP
 const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
 const { getvisitorCurrentLevel } = require("../../../../Helper/visitorCurrentLevel");
 const CommunityVisitorActivity = use("App/Models/Admin/CommunityModule/CommunityVisitorActivity");
+const UserCommunity = use("App/Models/Admin/CommunityModule/UserCommunity");
+const Mail = use("Mail");
+const Env = use("Env");
 
 const requestOnly = [
 	"community_id",
@@ -123,6 +126,10 @@ class CommunityPostController {
 			builder.select('id','name','profile_pic_url')
 		});
 		
+		query.with('community',(builder)=>{
+			builder.select('id', 'name', 'url_slug')
+		});
+		
 		query.withCount('communityVote as total_helpful', (builder) => {
 		builder.where('vote_type', 1)
 		})
@@ -180,7 +187,7 @@ class CommunityPostController {
 		const userId = auth.user.id;	
 		const trx = await Database.beginTransaction();
 		const body = request.only(requestOnly);
-		
+
 		try {	
 			const query = await CommunityPost.create(
 				{
@@ -220,6 +227,60 @@ class CommunityPostController {
 
 			await query.postTags().attach(request.input("tags"), null, trx);
 			await trx.commit();
+
+			const getModerator = UserCommunity.query();
+			getModerator.with('users', (builder) => {
+				builder.select('id', 'email')
+			});
+			getModerator.where('community_id', request.input("community_id"));
+			let moderatorLists = (await getModerator.fetch()).toJSON();
+
+			let ins_community_post_id = query.id;
+			let link = `${Env.get("ADMIN_BASE_URL")}/community-posts-form/${ins_community_post_id}`;
+			const subject = 'Tech24 - New Question posted on Community';
+			const details = `You have a new question to review. Please review and approve/reject it.`;
+
+			if(moderatorLists)
+			{
+				let toEmails = [];
+
+				moderatorLists.forEach((val, index) => {
+					toEmails.push(val.users.email)
+				});	
+				toEmails = toEmails.join(",");
+				
+				if(toEmails)
+				{
+					const name = 'Moderator';
+
+					const emailStatus = await Mail.send(
+						"newCommunityContentModeratorMail",
+						{ name: name, title: subject, details: details, link: link },
+						(message) => {
+							message.subject(subject);
+							message.from(Env.get("MAIL_USERNAME"));
+							message.to(toEmails);
+						}
+					);
+				}	
+			}
+
+			let admin_mail = Env.get("ADMIN_EMAIL")
+			if(admin_mail) 
+			{
+				const name = 'Admin';
+
+				const emailStatus = await Mail.send(
+					"newCommunityContentModeratorMail",
+					{ name: name, title: subject, details: details, link: link },
+					(message) => {
+						message.subject(subject);
+						message.from(Env.get("MAIL_USERNAME"));
+						message.to(admin_mail);
+					}
+				);
+			}
+
 			return response.status(200).json({ message: "Question posted successfully" });
 		} catch (error) {
 			console.log(error);
@@ -329,6 +390,43 @@ class CommunityPostController {
 				},
 				trx
 			);
+
+			const query1 = CommunityPost.query();
+			const postData = await query1.select('id', 'visitor_id', 'url_slug').where('id', community_post_id).first();
+			
+			const query2 = Visitor.query();
+			const visitorData = await query2.select('id', 'name', 'email').where('id', postData.visitor_id).first();
+			
+			if(visitorData)
+			{
+				let url_slug = postData.url_slug;
+				const name = visitorData.name;
+				const toEmails = visitorData.email;
+				let subject, details;
+				let link = '';
+
+				let vote_type = request.input("vote_type")
+				if(vote_type == 1) 
+				{
+					subject = "Tech24 - New Upvote on your Community Question";
+					details = `You have a new Upvote for your question. `;
+				} else 
+				{
+					subject = "Tech24 - New Downvote on your Community Question";
+					details = `You have a new Downvote for your question. `;
+				}	
+
+				const emailStatus = await Mail.send(
+					"upvoteDownvoteVisitorMail",
+					{ name: name, title: subject, details: details, link: link },
+					(message) => {
+						message.subject(subject);
+						message.from(Env.get("MAIL_USERNAME"));
+						message.to(toEmails);
+					}
+				);
+			}
+
 			await trx.commit();
 			return response.status(200).json({ message: "Create successfully" });
 		} catch (error) {

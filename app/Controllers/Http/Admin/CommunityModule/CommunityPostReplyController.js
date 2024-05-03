@@ -6,6 +6,11 @@ const CommunityPostReply = use("App/Models/Admin/CommunityModule/CommunityPostRe
 const { dateFilterExtractor } = require("../../../../Helper/globalFunctions");
 const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVisitorPoint");
 const {	getSubmitAnswerPoints, getCorrectAnswerPoints } = require("../../../../Helper/visitorPoints");
+const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
+const CommunityPost = use("App/Models/Admin/CommunityModule/CommunityPost");
+const Mail = use("Mail");
+const Env = use("Env");
+let parentIds;
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -24,6 +29,7 @@ class CommunityPostReplyController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
+  
 	async index ({ request, response, view }) {
 		
 		const query = CommunityPostReply.query();
@@ -175,6 +181,17 @@ class CommunityPostReplyController {
 
     const ans = result.is_correct_answer;
 		result.is_correct_answer = ans.toString();
+		
+		// only generate back url for comment section
+		if(result.parent_id > 0) {
+			parentIds = [];
+			parentIds = await this.getParentIds(result.parent_id);
+			let urlParams = parentIds.reverse().join("/");
+
+			result.back_url = `community-posts-reply-comments/${urlParams}`;
+		} else {
+			result.back_url = "";
+		}	
 
 		return response.status(200).send(result);	
 	}
@@ -188,6 +205,8 @@ class CommunityPostReplyController {
 			var reply_status = request.input("status");
 
 			const updateData = await CommunityPostReply.findOrFail(params.id);
+			let oldStatus = updateData.status;
+
 			updateData.status = reply_status;
 			await updateData.save();
 
@@ -206,6 +225,36 @@ class CommunityPostReplyController {
 					},
 					trx
 				);
+			}
+
+			if(oldStatus != reply_status && reply_status == 1)
+      		{
+				const query1 = CommunityPost.query();
+				const postData = await query1.select('id', 'visitor_id').where('id', updateData.community_post_id).first();
+
+				const query2 = Visitor.query();
+				const visitorData = await query2.select('id', 'name', 'email').where('id', postData.visitor_id).first();
+
+				if(visitorData)
+				{
+					let url_slug = updateData.url_slug;
+					const name = visitorData.name;
+					const toEmails = visitorData.email;
+					
+					const subject = "Tech24 - New Answer on your Community Question";
+					const details = `You have a new Answer for your question. `;
+					const link = '';
+
+					const emailStatus = await Mail.send(
+						"answerApproveVisitorMail",
+						{ name: name, title: subject, details: details, link: link },
+						(message) => {
+							message.subject(subject);
+							message.from(Env.get("MAIL_USERNAME"));
+							message.to(toEmails);
+						}
+					);
+				}
 			}
 
 			await trx.commit();
@@ -364,8 +413,40 @@ class CommunityPostReplyController {
 			var reply_status = request.input("status");
 
 			const updateData = await CommunityPostReply.findOrFail(params.id);
+			let oldStatus = updateData.status;
+
 			updateData.status = reply_status;
 			await updateData.save();
+
+			if(oldStatus != reply_status && reply_status == 1)
+      		{
+				const query1 = CommunityPost.query();
+				const postData = await query1.select('id', 'visitor_id').where('id', updateData.community_post_id).first();
+
+				const query2 = Visitor.query();
+				const visitorData = await query2.select('id', 'name', 'email').where('id', postData.visitor_id).first();
+
+				if(visitorData)
+				{
+					let url_slug = updateData.url_slug;
+					const name = visitorData.name;
+					const toEmails = visitorData.email;
+					
+					const subject = "Tech24 - New Comment on your Community Question";
+					const details = `You have a new Comment for your question. `;
+					const link = '';
+
+					const emailStatus = await Mail.send(
+						"commentApproveVisitorMail",
+						{ name: name, title: subject, details: details, link: link },
+						(message) => {
+							message.subject(subject);
+							message.from(Env.get("MAIL_USERNAME"));
+							message.to(toEmails);
+						}
+					);
+				}
+			}
 
 			return response.status(200).json({ message: "Status update successfully" });
 		} catch (error) {
@@ -373,6 +454,21 @@ class CommunityPostReplyController {
 			trx.rollback();
 			return response.status(423).json({ message: "Something went wrong", error });
 		}	
+	}
+
+	async getParentIds(parent_id)
+	{
+		parentIds.push(parent_id)
+		const getData = await CommunityPostReply.findOrFail(parent_id);
+
+		if(getData)
+		{
+			if(getData.parent_id > 0) {
+				await this.getParentIds(getData.parent_id);
+			}	
+		}
+
+		return parentIds;
 	}
 }
 
