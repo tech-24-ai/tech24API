@@ -98,6 +98,7 @@ class CommunityController {
 		if (request.input("pageSize")) {
 			pageSize = request.input("pageSize");
 		}
+		console.log("query", query.toSQL())
 		var result;
 		if (page && pageSize) {
 			result = (await query.paginate(page, pageSize)).toJSON();

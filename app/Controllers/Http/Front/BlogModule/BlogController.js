@@ -17,7 +17,7 @@ class BlogController {
         const searchQuery = new Query(request, { order: "id" });
 
         const blogQuery = Blog.query()
-        blogQuery.select('blogs.blog_topic_id', 'blogs.name', 'blogs.image', 'blogs.banner', 'blogs.slug', 'blogs.status', 'blogs.created_at', 'blogs.details');
+        blogQuery.select('blogs.blog_topic_id', 'blogs.name', 'blogs.image', 'blogs.banner', 'blogs.slug', 'blogs.status', 'blogs.created_at', 'blogs.details', 'blogs.author', 'blogs.read_time');
         blogQuery.select('categories.name as blog_topic_name');
         blogQuery.leftJoin('categories', 'categories.id', 'blogs.blog_topic_id')
         blogQuery.where('blogs.status', 1)

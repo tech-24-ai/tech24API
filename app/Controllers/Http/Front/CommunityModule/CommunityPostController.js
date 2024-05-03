@@ -524,6 +524,73 @@ class CommunityPostController {
 		
 		return result;
   	}
+
+	async search ({ params, request, response, view, auth }) {
+		
+		const userId = auth.user.id;	
+		const query = CommunityPost.query();
+		const search = request.input("search");
+		const community_id = request.input("community_id");
+
+		const searchQuery = new Query(request, { order: "id" });
+			
+		query.where('status', 1);
+		
+		query.with('visitor',(builder)=>{
+			builder.select('id', 'name', 'profile_pic_url');
+		});
+		
+		query.with('community',(builder)=>{
+			builder.select('id', 'name', 'url_slug')
+		});
+
+		query.withCount('communityPostReply as total_post_replies', (builder) => {
+			builder.where('community_post_replies.status', 1)
+			builder.where('community_post_replies.parent_id', null)
+		})
+
+		query.withCount('communityVote as total_helpful', (builder) => {
+			builder.where('vote_type', 1)
+		})
+
+		query.with('communityVote',(builder)=>{
+			builder.select('id','community_post_id').where('visitor_id', userId)
+		});	
+		
+		query.with('postTags',(builder)=>{
+			builder.select('id','name')
+		});	
+		
+		query.where(searchQuery.search(['title', 'description']));
+
+		if (community_id) {
+			query.where('community_id', community_id);
+		}
+		
+		query.orderBy('created_at', 'desc');
+		
+		let page = null;
+		let pageSize = null;
+
+		if (request.input("page")) {
+			page = request.input("page");
+		}
+		if (request.input("pageSize")) {
+			pageSize = request.input("pageSize");
+		}
+		var result; var finalResult;
+
+		if (page && pageSize) {
+			result = (await query.paginate(page, pageSize)).toJSON();
+			result.data = await this.response(result.data);
+			finalResult = result;
+			
+		} else {
+			result = (await query.fetch()).toJSON();
+			finalResult = await this.response(result);
+		}
+		return response.status(200).send(finalResult);
+	}
 }
 
 module.exports = CommunityPostController

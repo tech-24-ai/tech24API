@@ -141,6 +141,8 @@ class BlogController {
     query.slug = request.input("slug");
     query.details = request.input("details");
     query.html = request.input("html");
+    query.author = request.input("author");
+    query.read_time = request.input("read_time");
     if (request.input("status")) query.status = request.input("status");
     //status 0: Inactive, 1: Active Live, 2: Draft
     else query.status = 2;
@@ -172,6 +174,8 @@ class BlogController {
     query.details = request.input("details");
     query.html = request.input("html");
     query.status = request.input("status"); //status 0: Inactive, 1: Active Live, 2: Draft
+    query.author = request.input("author");
+    query.read_time = request.input("read_time");
     await query.save();
     return response.status(200).send({ message: "Updated successfully" });
   }
