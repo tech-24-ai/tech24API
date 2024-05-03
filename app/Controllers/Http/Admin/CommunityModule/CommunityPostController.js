@@ -47,7 +47,7 @@ class CommunityPostController {
     }
 		
 		if (search) {
-			query.where(searchQuery.search(['name']));
+			query.where(searchQuery.search(['title']));
 		}
 
     if(role && role_name.toLowerCase().includes('moderator')) {
