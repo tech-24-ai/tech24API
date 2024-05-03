@@ -265,7 +265,7 @@ class CommunityPostController {
 				}	
 			}
 
-			let admin_mail = Env.get("ADMIN_EMAIL")
+			let admin_mail = Env.get("TO_MAIL_USERNAME")
 			if(admin_mail) 
 			{
 				const name = 'Admin';
