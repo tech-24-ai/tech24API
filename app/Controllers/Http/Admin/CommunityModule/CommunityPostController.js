@@ -196,6 +196,8 @@ class CommunityPostController {
 		const trx = await Database.beginTransaction();
 		
 		try {	
+			var title = request.input("title");
+			var description = request.input("description");
 			var post_status = request.input("status");
 			var reject_reason = request.input("reject_reason");
 			var is_discussion_open = request.input("is_discussion_open");
@@ -203,6 +205,8 @@ class CommunityPostController {
 			const updateData = await CommunityPost.findOrFail(params.id);
       let oldStatus = updateData.status;
 
+			updateData.title = title;
+			updateData.description = description;
 			updateData.is_discussion_open = is_discussion_open;
 			updateData.status = post_status;
 			updateData.reject_reason = reject_reason;

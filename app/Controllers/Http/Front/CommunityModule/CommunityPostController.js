@@ -226,7 +226,6 @@ class CommunityPostController {
 			);
 
 			await query.postTags().attach(request.input("tags"), null, trx);
-			await trx.commit();
 
 			const getModerator = UserCommunity.query();
 			getModerator.with('users', (builder) => {
@@ -281,6 +280,7 @@ class CommunityPostController {
 				);
 			}
 
+			await trx.commit();
 			return response.status(200).json({ message: "Question posted successfully" });
 		} catch (error) {
 			console.log(error);
