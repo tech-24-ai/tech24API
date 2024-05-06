@@ -509,6 +509,22 @@ class VisitorCommunityPorfileController {
    */
   async update({ params, request, response }) {
     const query = await Visitor.findOrFail(params.id);
+
+    let first_name = request.input("first_name")
+    let last_name = request.input("last_name")
+    let name;
+
+    if(first_name && last_name) {
+      name = first_name+" "+last_name
+    } else {
+      name = first_name
+    }
+
+    query.name = name;
+    query.country_id = request.input("country");
+    query.visitor_ip_city = request.input("city_district");
+    query.designation = request.input("job_title");
+    query.company = request.input("company");
     query.alternate_email = request.input("alternate_email");
     query.country_code = request.input("country_code");
     query.mobile = request.input("mobile");

@@ -52,20 +52,20 @@ class MarketResearchController {
     }
 
     if (document_type) {
-      query.where('document_type_id', document_type);
+      query.whereIn('document_type_id', JSON.parse(document_type));
     }
 
     if (category) {
-      query.where('category_id', category);
+      query.whereIn('category_id', JSON.parse(category));
     }
 
     if (topic) {
-      query.where('research_topic_id', topic);
+      query.whereIn('research_topic_id', JSON.parse(topic));
     }
 
     if (tags) {
       query.whereHas('documentTags', (builder) => {
-        builder.where('research_tag_id', tags)
+        builder.whereIn('research_tag_id', JSON.parse(tags))
       })
     }
 
