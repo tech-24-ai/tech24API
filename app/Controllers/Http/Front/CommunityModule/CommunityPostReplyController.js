@@ -168,72 +168,78 @@ class CommunityPostReplyController {
 				);
 			}
 
-			const getModerator = UserCommunity.query();
-			getModerator.with('users', (builder) => {
-				builder.select('id', 'email')
-			});
-			getModerator.where('community_id', getData.community_id);
-			let moderatorLists = (await getModerator.fetch()).toJSON();
-
-			let subject, details, ins_community_post_reply_id, link;
-			if(request.input("parent_id") > 0)
-			{
-				subject = 'Tech24 - New Comment posted on Community Answer';
-				details = `You have a new comment to review. Please review and approve/reject it.`;
-				ins_community_post_reply_id = query.id;
-				link = `${Env.get("ADMIN_BASE_URL")}/community-posts-reply-comments-form/${ins_community_post_reply_id}`;
-			} 
-			else
-			{
-				subject = 'Tech24 - New Answer posted on Community Question';
-				details = `You have a new answer to review. Please review and approve/reject it.`;
-				ins_community_post_reply_id = query.id;
-				link = `${Env.get("ADMIN_BASE_URL")}/community-posts-reply-form/${ins_community_post_reply_id}`;
-			}
-
-			if(moderatorLists)
-			{
-				let toEmails = [];
-
-				moderatorLists.forEach((val, index) => {
-					toEmails.push(val.users.email)
-				});	
-				toEmails = toEmails.join(",");
-				
-				if(toEmails)
-				{
-					const name = 'Moderator';
-					
-					const emailStatus = await Mail.send(
-						"newCommunityContentModeratorMail",
-						{ name: name, title: subject, details: details, link: link },
-						(message) => {
-							message.subject(subject);
-							message.from(Env.get("MAIL_USERNAME"));
-							message.to(toEmails);
-						}
-					);
-				}	
-
-				let admin_mail = Env.get("TO_MAIL_USERNAME")
-				if(admin_mail) 
-				{
-					const name = 'Admin';
-
-					const emailStatus = await Mail.send(
-						"newCommunityContentModeratorMail",
-						{ name: name, title: subject, details: details, link: link },
-						(message) => {
-							message.subject(subject);
-							message.from(Env.get("MAIL_USERNAME"));
-							message.to(admin_mail);
-						}
-					);
-				}
-			}
-
 			await trx.commit();
-			return response.status(200).json({ message: "Create successfully" });
+
+			try {
+				const getModerator = UserCommunity.query();
+				getModerator.with('users', (builder) => {
+					builder.select('id', 'email')
+				});
+				getModerator.where('community_id', getData.community_id);
+				let moderatorLists = (await getModerator.fetch()).toJSON();
+
+				let subject, details, ins_community_post_reply_id, link;
+				if(request.input("parent_id") > 0)
+				{
+					subject = 'Tech24 - New Comment posted on Community Answer';
+					details = `You have a new comment to review. Please review and approve/reject it.`;
+					ins_community_post_reply_id = query.id;
+					link = `${Env.get("ADMIN_BASE_URL")}/community-posts-reply-comments-form/${ins_community_post_reply_id}`;
+				} 
+				else
+				{
+					subject = 'Tech24 - New Answer posted on Community Question';
+					details = `You have a new answer to review. Please review and approve/reject it.`;
+					ins_community_post_reply_id = query.id;
+					link = `${Env.get("ADMIN_BASE_URL")}/community-posts-reply-form/${ins_community_post_reply_id}`;
+				}
+
+				if(moderatorLists)
+				{
+					let toEmails = [];
+
+					moderatorLists.forEach((val, index) => {
+						toEmails.push(val.users.email)
+					});	
+					toEmails = toEmails.join(",");
+					
+					if(toEmails)
+					{
+						const name = 'Moderator';
+						
+						const emailStatus = await Mail.send(
+							"newCommunityContentModeratorMail",
+							{ name: name, title: subject, details: details, link: link },
+							(message) => {
+								message.subject(subject);
+								message.from(Env.get("MAIL_USERNAME"));
+								message.to(toEmails);
+							}
+						);
+					}	
+
+					let admin_mail = Env.get("TO_MAIL_USERNAME")
+					if(admin_mail) 
+					{
+						const name = 'Admin';
+
+						const emailStatus = await Mail.send(
+							"newCommunityContentModeratorMail",
+							{ name: name, title: subject, details: details, link: link },
+							(message) => {
+								message.subject(subject);
+								message.from(Env.get("MAIL_USERNAME"));
+								message.to(admin_mail);
+							}
+						);
+					}
+				}
+			} catch (error) {
+				console.log(error);
+				return response.status(200).json({ message: "Answer posted successfully" });
+			}
+
+			return response.status(200).json({ message: "Answer posted successfully" });
 		} catch (error) {
 			console.log(error);
 			trx.rollback();
@@ -248,6 +254,14 @@ class CommunityPostReplyController {
 		
 		try {	
 			var community_post_reply_id = request.input("community_post_reply_id");
+
+			const getData = await CommunityPostReply.query().with('communityPost').where("id", community_post_reply_id).first();
+			const rslt = getData.toJSON();
+
+			if(getData.visitor_id == userId)
+			{
+				return response.status(422).send([{ message: "You can not vote on your own answer." }]);
+			}
 
 			const isExist = await Vote.findBy({
 				community_post_reply_id: community_post_reply_id,
@@ -277,8 +291,7 @@ class CommunityPostReplyController {
 				trx
 			);
 
-			const getData = await CommunityPostReply.query().with('communityPost').where("id", community_post_reply_id).first();
-			const rslt = getData.toJSON();
+			
 			let activityType = (request.input("vote_type") == 1) ? 4 : 5;
 
 			const insActivity = await CommunityVisitorActivity.create(

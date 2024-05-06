@@ -226,31 +226,50 @@ class CommunityPostController {
 			);
 
 			await query.postTags().attach(request.input("tags"), null, trx);
+			await trx.commit();
 
-			const getModerator = UserCommunity.query();
-			getModerator.with('users', (builder) => {
-				builder.select('id', 'email')
-			});
-			getModerator.where('community_id', request.input("community_id"));
-			let moderatorLists = (await getModerator.fetch()).toJSON();
+			try {
+				const getModerator = UserCommunity.query();
+				getModerator.with('users', (builder) => {
+					builder.select('id', 'email')
+				});
+				getModerator.where('community_id', request.input("community_id"));
+				let moderatorLists = (await getModerator.fetch()).toJSON();
 
-			let ins_community_post_id = query.id;
-			let link = `${Env.get("ADMIN_BASE_URL")}/community-posts-form/${ins_community_post_id}`;
-			const subject = 'Tech24 - New Question posted on Community';
-			const details = `You have a new question to review. Please review and approve/reject it.`;
+				let ins_community_post_id = query.id;
+				let link = `${Env.get("ADMIN_BASE_URL")}/community-posts-form/${ins_community_post_id}`;
+				const subject = 'Tech24 - New Question posted on Community';
+				const details = `You have a new question to review. Please review and approve/reject it.`;
 
-			if(moderatorLists)
-			{
-				let toEmails = [];
-
-				moderatorLists.forEach((val, index) => {
-					toEmails.push(val.users.email)
-				});	
-				toEmails = toEmails.join(",");
-				
-				if(toEmails)
+				if(moderatorLists)
 				{
-					const name = 'Moderator';
+					let toEmails = [];
+
+					moderatorLists.forEach((val, index) => {
+						toEmails.push(val.users.email)
+					});	
+					toEmails = toEmails.join(",");
+					
+					if(toEmails)
+					{
+						const name = 'Moderator';
+
+						const emailStatus = await Mail.send(
+							"newCommunityContentModeratorMail",
+							{ name: name, title: subject, details: details, link: link },
+							(message) => {
+								message.subject(subject);
+								message.from(Env.get("MAIL_USERNAME"));
+								message.to(toEmails);
+							}
+						);
+					}	
+				}
+
+				let admin_mail = Env.get("TO_MAIL_USERNAME")
+				if(admin_mail) 
+				{
+					const name = 'Admin';
 
 					const emailStatus = await Mail.send(
 						"newCommunityContentModeratorMail",
@@ -258,29 +277,15 @@ class CommunityPostController {
 						(message) => {
 							message.subject(subject);
 							message.from(Env.get("MAIL_USERNAME"));
-							message.to(toEmails);
+							message.to(admin_mail);
 						}
 					);
-				}	
+				}
+			} catch (error) {
+				console.log(error);
+				return response.status(200).json({ message: "Question posted successfully" });
 			}
-
-			let admin_mail = Env.get("TO_MAIL_USERNAME")
-			if(admin_mail) 
-			{
-				const name = 'Admin';
-
-				const emailStatus = await Mail.send(
-					"newCommunityContentModeratorMail",
-					{ name: name, title: subject, details: details, link: link },
-					(message) => {
-						message.subject(subject);
-						message.from(Env.get("MAIL_USERNAME"));
-						message.to(admin_mail);
-					}
-				);
-			}
-
-			await trx.commit();
+			
 			return response.status(200).json({ message: "Question posted successfully" });
 		} catch (error) {
 			console.log(error);
@@ -374,6 +379,14 @@ class CommunityPostController {
 		try {	
 			var community_post_id = request.input("community_post_id");
 
+			const query1 = CommunityPost.query();
+			const postData = await query1.select('id', 'visitor_id', 'url_slug').where('id', community_post_id).first();
+
+			if(postData.visitor_id == userId)
+			{
+				return response.status(422).send([{ message: "You can not vote on your own question." }]);
+			}	
+
 			const isExist = await Vote.findBy({
 				community_post_id: community_post_id,
 				visitor_id: userId,
@@ -390,10 +403,8 @@ class CommunityPostController {
 				},
 				trx
 			);
+			await trx.commit();
 
-			const query1 = CommunityPost.query();
-			const postData = await query1.select('id', 'visitor_id', 'url_slug').where('id', community_post_id).first();
-			
 			const query2 = Visitor.query();
 			const visitorData = await query2.select('id', 'name', 'email').where('id', postData.visitor_id).first();
 			
@@ -416,18 +427,22 @@ class CommunityPostController {
 					details = `You have a new Downvote for your question. `;
 				}	
 
-				const emailStatus = await Mail.send(
-					"upvoteDownvoteVisitorMail",
-					{ name: name, title: subject, details: details, link: link },
-					(message) => {
-						message.subject(subject);
-						message.from(Env.get("MAIL_USERNAME"));
-						message.to(toEmails);
-					}
-				);
+				try {	
+					const emailStatus = await Mail.send(
+						"upvoteDownvoteVisitorMail",
+						{ name: name, title: subject, details: details, link: link },
+						(message) => {
+							message.subject(subject);
+							message.from(Env.get("MAIL_USERNAME"));
+							message.to(toEmails);
+						}
+					);
+				} catch (error) {
+					console.log(error);
+					return response.status(200).json({ message: "Create successfully" });
+				}	
 			}
 
-			await trx.commit();
 			return response.status(200).json({ message: "Create successfully" });
 		} catch (error) {
 			console.log(error);
