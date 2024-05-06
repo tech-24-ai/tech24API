@@ -409,6 +409,8 @@ class FileController {
       if (error.message) {
         throw new Error(error.message);
       }
+      let ogFileName = file.clientName;
+
       file.clientName = createRandomName(10);
       const result = await Drive.disk("s3").put(file.clientName, file.stream, {
         ContentType: file.headers["content-type"],
@@ -418,7 +420,7 @@ class FileController {
       if (result) {
         return response
           .status(200)
-          .send({ message: "File upload successfully", result: result });
+          .send({ message: "File upload successfully", filename: ogFileName, result: result });
       } else {
         return response.status(500).send({ message: "File uploading failed" });
       }

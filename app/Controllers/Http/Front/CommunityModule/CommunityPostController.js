@@ -196,18 +196,23 @@ class CommunityPostController {
 				},
 				trx
 			);
-			let url = request.input("url")
+			let url = JSON.parse(request.input("url"))
 			let urlArr = [];
+
 			if(url)
 			{
 				for(var i = 0; i < url.length; i++)
 				{	
 					let mediaurl = url[i];
-					let extention = await this.getMediaType(mediaurl);
+					let fileurl = mediaurl.url;
+					let filename = mediaurl.name;
+					
+					let extention = await this.getMediaType(fileurl);
 
 					urlArr.push({
 						'community_post_id' : query.id,
-						'url' : mediaurl,
+						'name' : filename,
+						'url' : fileurl,
 						'extension' : (extention) ? extention : ""
 					})
 				}
