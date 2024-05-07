@@ -145,7 +145,7 @@ class BlogController {
             Logger.transport("file").info(
                 `save blog error : ${error}`
             );
-			return response.status(423).json({ message: "Something went wrong"});
+			return response.status(423).json({ message: "Something went wrong", error});
 		}    
     }
 }
