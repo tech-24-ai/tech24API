@@ -135,16 +135,11 @@ class BlogController {
             query.visitor_id = userId;
             query.blog_id = request.input("id");
             query.type = 2;
-            query.created_by = userId;
-            query.updated_by = userId;
             await query.save();
 
             return response.status(200).send({ message: "Create successfully" });
         } catch (error) {
 			console.log(error);
-            Logger.transport("file").info(
-                `save blog error : ${error}`
-            );
 			return response.status(423).json({ message: "Something went wrong", error});
 		}    
     }

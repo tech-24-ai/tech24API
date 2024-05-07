@@ -11,8 +11,6 @@ class CommunityVisitorLibrarySchema extends Schema {
 	  table.integer("document_id").unsigned().references("id").inTable("documents").onDelete("cascade").onUpdate("cascade")
 	  table.integer("blog_id").unsigned().references("id").inTable("blogs").onDelete("cascade").onUpdate("cascade")
 	  table.boolean("type").comment("1 - Market Research, 2 - Blog");
-	  table.integer("created_by").unsigned().references("id").inTable("users").onDelete("restrict").onUpdate("cascade")
-	  table.integer("updated_by").unsigned().references("id").inTable("users").onDelete("restrict").onUpdate("cascade")
       table.timestamps()
     })
 	

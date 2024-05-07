@@ -308,16 +308,11 @@ class MarketResearchController {
       query.visitor_id = userId;
       query.document_id = request.input("id");
       query.type = 1;
-      query.created_by = userId;
-      query.updated_by = userId;
       await query.save();
 
       return response.status(200).send({ message: "Create successfully" });
     } catch (error) {
       console.log(error);
-      Logger.transport("file").info(
-        `save document error : ${error}`
-      );
       return response.status(423).json({ message: "Something went wrong", error});
     }    
   }
