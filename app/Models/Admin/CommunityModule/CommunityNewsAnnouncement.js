@@ -6,6 +6,17 @@ const moment = require("moment");
 
 class CommunityNewsAnnouncement extends Model {
 
+    static boot () {
+		super.boot()
+	
+		this.addTrait('@provider:Lucid/Slugify', {
+			fields: {
+				url_slug: 'title'
+			},
+			strategy: 'dbIncrement'
+		})
+	}
+
     community() {
 		return this.belongsTo(
 			"App/Models/Admin/CommunityModule/Community"

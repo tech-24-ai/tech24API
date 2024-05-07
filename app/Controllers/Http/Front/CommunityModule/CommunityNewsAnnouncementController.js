@@ -28,12 +28,13 @@ class CommunityNewsAnnouncementController {
 		const orderBy = request.input("orderBy");
 		const orderDirection = request.input("orderDirection");
 
-    query.select('id', 'community_id', 'title', 'description', 'created_at');
+    query.select('id', 'community_id', 'title', 'url_slug', 'description', 'created_at');
     
     query.with('community', (builder) => {
       builder.select('id', 'name')
     })
     query.where('community_id', request.input("community_id"));
+    query.where('status', 1);
 
     if (orderBy && orderDirection) {
       query.orderBy(`${orderBy}`, orderDirection);
@@ -93,8 +94,19 @@ class CommunityNewsAnnouncementController {
   async show ({ params, request, response, view }) {
 
     const query = CommunityNewsAnnouncement.query();
-		query.select("id", "title", "description");
+		query.select("id", "title", "url_slug", "description");
 		query.where("id", params.id);
+    query.where('status', 1);
+		const result = await query.firstOrFail();
+		return response.status(200).send(result);	
+  }
+
+  async showBySlug ({ params, request, response, view }) {
+
+    const query = CommunityNewsAnnouncement.query();
+		query.select("id", "title", "url_slug", "description");
+    query.where("url_slug", params.slug);
+    query.where('status', 1);
 		const result = await query.firstOrFail();
 		return response.status(200).send(result);	
   }

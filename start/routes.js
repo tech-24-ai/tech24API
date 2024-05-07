@@ -2713,6 +2713,7 @@ Route.group(() => {
 	
   Route.get("/get_news_announcements", "Front/CommunityModule/CommunityNewsAnnouncementController.index");
   Route.get("/get_news_announcements/:id", "Front/CommunityModule/CommunityNewsAnnouncementController.show");
+  Route.get("/get_news_announcements/show/:slug", "Front/CommunityModule/CommunityNewsAnnouncementController.showBySlug");
 
   Route.post("/uploadimage", "FileController.image");
   Route.post("/uploadmedia", "FileController.media");
