@@ -236,7 +236,6 @@ class CommunityPostReplyController {
 				}
 			} catch (error) {
 				console.log(error);
-				return response.status(200).json({ message: "Answer posted successfully" });
 			}
 
 			return response.status(200).json({ message: "Answer posted successfully" });

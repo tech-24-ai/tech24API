@@ -11,8 +11,10 @@ const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
 const { getvisitorCurrentLevel } = require("../../../../Helper/visitorCurrentLevel");
 const CommunityVisitorActivity = use("App/Models/Admin/CommunityModule/CommunityVisitorActivity");
 const UserCommunity = use("App/Models/Admin/CommunityModule/UserCommunity");
+const CommunityVisitorViewLog = use("App/Models/Admin/CommunityModule/CommunityVisitorViewLog");
 const Mail = use("Mail");
 const Env = use("Env");
+const _ = require("lodash");
 
 const requestOnly = [
 	"community_id",
@@ -196,11 +198,12 @@ class CommunityPostController {
 				},
 				trx
 			);
-			let url = JSON.parse(request.input("url"))
+			let url = request.input("url")
 			let urlArr = [];
 
-			if(url)
+			if(url.length > 0)
 			{
+				url = JSON.parse(request.input("url"));
 				for(var i = 0; i < url.length; i++)
 				{	
 					let mediaurl = url[i];
@@ -288,7 +291,6 @@ class CommunityPostController {
 				}
 			} catch (error) {
 				console.log(error);
-				return response.status(200).json({ message: "Question posted successfully" });
 			}
 			
 			return response.status(200).json({ message: "Question posted successfully" });
@@ -319,9 +321,34 @@ class CommunityPostController {
 		
 		const userId = auth.user.id;
 		const getData = await CommunityPost.query().where("url_slug", params.slug).firstOrFail();
-		let cnt = getData.views_counter;
-		getData.views_counter = cnt + 1;
-		await getData.save();
+
+		const ipAddress = _.split(request.header("X-Forwarded-For"), ",");
+        let guest_ip = _.trim(_.first(ipAddress));
+        guest_ip = guest_ip && guest_ip != "" ? guest_ip : request.request.socket.remoteAddress;
+
+		if(guest_ip)
+		{	
+			let curr_date = moment().subtract(5, 'minutes').format('YYYY-MM-DD HH:mm:ss');
+			const query = CommunityVisitorViewLog.query();
+			const checkViewLog = await query.where('visitor_id', userId).where('reference_id', getData.id).where('type', 1).where('ip_address', guest_ip).where('created_at', '>=', curr_date).orderBy('created_at', 'desc').first();
+			
+			if(!checkViewLog)
+			{
+				// Insert View log
+				await CommunityVisitorViewLog.create(
+					{
+						visitor_id: userId,
+						reference_id: getData.id,
+						ip_address: guest_ip,
+						type: 1,
+					},
+				);
+
+				let cnt = getData.views_counter;
+				getData.views_counter = cnt + 1;
+				await getData.save();
+			}	
+		}
 
 		const query = CommunityPost.query();
 		query.with('visitor',(builder)=>{
@@ -444,7 +471,6 @@ class CommunityPostController {
 					);
 				} catch (error) {
 					console.log(error);
-					return response.status(200).json({ message: "Create successfully" });
 				}	
 			}
 
