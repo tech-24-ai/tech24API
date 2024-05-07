@@ -10,6 +10,7 @@ const Category = use("App/Models/Admin/ProductModule/Category");
 const DocumentType = use("App/Models/Admin/DocumentModule/DocumentType");
 const CommunityVisitorLibrary = use('App/Models/Admin/CommunityModule/CommunityVisitorLibrary')
 const Drive = use("Drive");
+const Logger = use("Logger");
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -314,6 +315,9 @@ class MarketResearchController {
       return response.status(200).send({ message: "Create successfully" });
     } catch (error) {
       console.log(error);
+      Logger.transport("file").info(
+        `save document error : ${error}`
+      );
       return response.status(423).json({ message: "Something went wrong"});
     }    
   }

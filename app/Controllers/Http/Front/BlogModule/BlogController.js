@@ -142,6 +142,9 @@ class BlogController {
             return response.status(200).send({ message: "Create successfully" });
         } catch (error) {
 			console.log(error);
+            Logger.transport("file").info(
+                `save blog error : ${error}`
+            );
 			return response.status(423).json({ message: "Something went wrong"});
 		}    
     }
