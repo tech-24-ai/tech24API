@@ -368,6 +368,19 @@ class CommunityPostController {
 			builder.where('is_correct_answer', 1)
 		});	
 		
+		query.with('community',(builder)=>{
+			builder.withCount('communityPost as total_posts', (builder) => {
+				builder.where('status', 1)
+			})
+			builder.withCount('communityMember as total_members', (builder) => {
+				builder.where('status', 1)
+			})
+			builder.withCount('getCommunityPostReply as total_post_reply', (builder) => {
+				builder.where('community_post_replies.status', 1)
+				builder.where('community_post_replies.parent_id', null)
+			})
+		});	
+
 		query.with('postTags',(builder)=>{
 			builder.select('id','name')
 		});	

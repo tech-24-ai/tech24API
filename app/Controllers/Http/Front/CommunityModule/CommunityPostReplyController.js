@@ -51,6 +51,21 @@ class CommunityPostReplyController {
 		});	
 		
 		query.with('comments',(builder)=>{
+			builder.with('communityPost',(builder)=>{
+				builder.with('community',(builder)=>{
+					builder.withCount('communityPost as total_posts', (builder) => {
+						builder.where('status', 1)
+					})
+					builder.withCount('communityMember as total_members', (builder) => {
+						builder.where('status', 1)
+					})
+					builder.withCount('getCommunityPostReply as total_post_reply', (builder) => {
+						builder.where('community_post_replies.status', 1)
+						builder.where('community_post_replies.parent_id', null)
+					})
+				})
+			})
+				
 			builder.where('status', 1)
 			builder.with('visitor',(builder)=>{
 				builder.select('id','name','profile_pic_url')
@@ -418,6 +433,21 @@ class CommunityPostReplyController {
 		});	
 
 		query.with('comments',(builder)=>{
+			builder.with('communityPost',(builder)=>{
+				builder.with('community',(builder)=>{
+					builder.withCount('communityPost as total_posts', (builder) => {
+						builder.where('status', 1)
+					})
+					builder.withCount('communityMember as total_members', (builder) => {
+						builder.where('status', 1)
+					})
+					builder.withCount('getCommunityPostReply as total_post_reply', (builder) => {
+						builder.where('community_post_replies.status', 1)
+						builder.where('community_post_replies.parent_id', null)
+					})
+				})
+			})
+				
 			builder.where('status', 1)
 			builder.with('visitor',(builder)=>{
 				builder.select('id','name','profile_pic_url')
