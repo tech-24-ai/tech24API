@@ -2683,6 +2683,7 @@ Route.group(() => {
 	// Community post APIs
   Route.get("/tranding_question", "Front/CommunityModule/CommunityPostController.tranding_question");
 	Route.get("/communitypost/search", "Front/CommunityModule/CommunityPostController.search");
+  Route.get("/communitypost/download_attachment", "FileController.downloadPostAttachment");
 	Route.get("/communitypost/:community_slug", "Front/CommunityModule/CommunityPostController.index");
 	Route.get("/communitypost/details/:slug", "Front/CommunityModule/CommunityPostController.show");
 	Route.post("/communitypost", "Front/CommunityModule/CommunityPostController.store").validator('StoreCommunityPost');

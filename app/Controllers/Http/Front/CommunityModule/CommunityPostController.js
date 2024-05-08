@@ -75,6 +75,10 @@ class CommunityPostController {
 			builder.select('id','name')
 		});	
 		
+		query.with('attachments',(builder)=>{
+			builder.select('id','community_post_id', 'name', 'url', 'extension')
+		});
+
 		if (search) {
 			query.where(searchQuery.search(['title']));
 		}

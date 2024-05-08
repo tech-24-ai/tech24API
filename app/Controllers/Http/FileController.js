@@ -25,6 +25,7 @@ const s3 = new aws.S3();
 const createRandomName = require("../../Helper/randomString");
 const axios = require('axios')
 const {	checkAccessToken } = require("../../Helper/googleDrive");
+const CommunityPostAttachment = use("App/Models/Admin/CommunityModule/CommunityPostAttachment");
 
 class FileController {
   async document({ request, response }) {
@@ -565,6 +566,29 @@ class FileController {
     {
       return response.status(500).send({ message: resAccessToken.message });
     }   
+  }
+
+  async downloadPostAttachment({ request, response }) 
+  {
+    const docquery = CommunityPostAttachment.query();
+    docquery.where("id", request.input("attachment_id"));
+    let result = (await docquery.first()).toJSON();
+
+    if(result)
+    {  
+      const url = result.url;
+      const filename = url.replace(process.env.S3_BASE_URL, "");
+
+      const file = await Drive.disk("s3").getObject(filename);
+      // attachment for download file
+      // inline for read in browser
+
+      response.header("Content-disposition", "inline");
+      response.header("content-type", file.ContentType);
+      return response.send(file.Body);
+    } else {
+      return response.status(423).send("Attachment not found!");
+    }  
   }
 
 }
