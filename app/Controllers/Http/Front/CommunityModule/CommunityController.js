@@ -8,6 +8,9 @@ const Database = use("Database");
 const Tag = use("App/Models/Admin/CommunityModule/Tag");
 const Community = use("App/Models/Admin/CommunityModule/Community");
 const CommunityVisitor = use("App/Models/Admin/CommunityModule/CommunityVisitor");
+const CommunityPost = use("App/Models/Admin/CommunityModule/CommunityPost");
+const CommunityPostReply = use("App/Models/Admin/CommunityModule/CommunityPostReply");
+const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -227,6 +230,43 @@ class CommunityController {
 			return response.status(423).json({ message: "Something went wrong", error });
 		}
 	}
+
+	async community_stats({params, request, response})
+	{
+		let data = [];
+
+		const visitor_query = Visitor.query();
+		visitor_query.where('is_blocked', 0);
+		visitor_query.whereRaw(`name != 'Guest' AND 'register_from' is not null`);
+		const totalMember = await visitor_query.count('* as total');
+
+		const community_post = CommunityPost.query();
+		community_post.where('status', 1);
+		const totalCommunityPost = await community_post.count('* as total');
+
+		const community_post_reply = CommunityPostReply.query();
+		community_post_reply.where('status', 1);
+		community_post_reply.where('parent_id', null);
+		const totalCommunityAnswer = await community_post_reply.count('* as total');
+
+		data.push({
+			'total_member' : this.formatCash(totalMember[0].total),
+			'total_question' : this.formatCash(totalCommunityPost[0].total),
+			'total_answer' : this.formatCash(totalCommunityAnswer[0].total)
+		})
+
+		return response.status(200).send({ data });
+	}
+
+	formatCash (n) 
+	{
+		if (n < 1e3) return n;
+		if (n >= 1e3 && n < 1e6) return +(n / 1e3).toFixed(1) + "K";
+		if (n >= 1e6 && n < 1e9) return +(n / 1e6).toFixed(1) + "M";
+		if (n >= 1e9 && n < 1e12) return +(n / 1e9).toFixed(1) + "B";
+		if (n >= 1e12) return +(n / 1e12).toFixed(1) + "T";
+	}
+
 }
 
 module.exports = CommunityController

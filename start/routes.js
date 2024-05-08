@@ -2676,6 +2676,7 @@ Route.group(() => {
 	
 	// Get Community lists APIs
 	Route.get("/community", "Front/CommunityModule/CommunityController.index");
+	Route.get("/community_stats", "Front/CommunityModule/CommunityController.community_stats");
 	Route.get("/community/details/:slug", "Front/CommunityModule/CommunityController.show");
   Route.post("/community/join", "Front/CommunityModule/CommunityController.join_community").validator("StoreJoinCommunity");
   Route.post("/community/leave", "Front/CommunityModule/CommunityController.leave_community").validator("StoreJoinCommunity");

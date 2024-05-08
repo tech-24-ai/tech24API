@@ -394,7 +394,7 @@ class FileController {
   
   async media({ request, response }) {
     const validationOptions = {
-      types: ["png", "jpg", "jpeg", "svg", "mp4", "mov", "avi", "mkv"],
+      types: ["png", "jpg", "jpeg", "svg", "mp4", "mov", "quicktime"],
       size: "10mb",
     };
 

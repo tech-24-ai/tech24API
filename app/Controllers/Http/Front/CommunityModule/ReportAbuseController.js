@@ -70,9 +70,12 @@ class ReportAbuseController {
 		const body = request.only(requestOnly);
 		
 		try {	
+			var report_abuse_type_id = request.input("report_abuse_type_id");
 			var community_id = request.input("community_id");
 			var community_post_id = request.input("community_post_id");
-			var community_post_reply_id = request.input("community_post_reply_id");
+			var community_post_reply_id = (request.input("community_post_reply_id") > 0) ? request.input("community_post_reply_id") : null;
+			var reply_type = (request.input("reply_type") > 0) ? request.input("reply_type") : 0;
+			var reason = request.input("reason");
 
 			const isExist = await ReportAbuse.findBy({
 				community_id: community_id,
@@ -80,14 +83,20 @@ class ReportAbuseController {
 				community_post_reply_id: community_post_reply_id,
 				visitor_id: userId,
 			});
+
 			if (isExist) {
 				return response.status(422).send([{ message: "You have already reported." }]);
 			}	
 			
 			const query = await ReportAbuse.create(
 				{
-					...body,
+					report_abuse_type_id: report_abuse_type_id,
+					community_id: community_id,
+				  community_post_id: community_post_id,
+				  community_post_reply_id: community_post_reply_id,
 					visitor_id: userId,
+          reason: reason,
+          reply_type: reply_type,
 				},
 				trx
 			);

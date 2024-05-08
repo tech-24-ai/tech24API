@@ -7,7 +7,6 @@ class StoreReportAbuse {
 			report_abuse_type_id: 'required',
 			community_id: 'required',
 			community_post_id: 'required',
-			community_post_reply_id: 'required',
 			reason: 'required',
 		}
 	}
