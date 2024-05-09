@@ -401,13 +401,13 @@ class VisitorCommunityPorfileController {
     query.where("visitor_id", userId);
 
     query.with("communityPost", (builder) => {
-      builder.select("id", "title", "url_slug");
+      builder.select("id", "title", "url_slug", "description");
     });
     query.with("communityPostReply", (builder) => {
       // builder.select('id', 'title', 'url_slug')
     });
     query.with("community", (builder) => {
-      builder.select("id", "name", "url_slug");
+      builder.select("id", "name", "url_slug", "description", "image_url");
     });
 
     query.whereHas("communityPost", (builder) => {
@@ -510,14 +510,14 @@ class VisitorCommunityPorfileController {
   async update({ params, request, response }) {
     const query = await Visitor.findOrFail(params.id);
 
-    let first_name = request.input("first_name")
-    let last_name = request.input("last_name")
+    let first_name = request.input("first_name");
+    let last_name = request.input("last_name");
     let name;
 
-    if(first_name && last_name) {
-      name = first_name+" "+last_name
+    if (first_name && last_name) {
+      name = first_name + " " + last_name;
     } else {
-      name = first_name
+      name = first_name;
     }
 
     query.name = name;
