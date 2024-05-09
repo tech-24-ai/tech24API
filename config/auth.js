@@ -84,7 +84,7 @@ module.exports = {
     password: "password",
     options: {
       secret: Env.get("APP_KEY"),
-      expiresIn: 60 * 90, // 1.5 hour
+      expiresIn: 60 * 90000, // 1.5 hour
     },
   },
   guestAuth: {
@@ -95,7 +95,7 @@ module.exports = {
     password: "password",
     options: {
       secret: Env.get("APP_KEY"),
-      expiresIn: 60 * 120, // 120 Minutes
+      expiresIn: 60 * 90000, // 120 Minutes
     },
   },
   investorAuth: {
@@ -106,7 +106,7 @@ module.exports = {
     password: "password",
     options: {
       secret: Env.get("APP_KEY"),
-      expiresIn: 60 * 60, // 1 hour
+      expiresIn: 60 * 90000, // 1 hour
     },
   },
 
