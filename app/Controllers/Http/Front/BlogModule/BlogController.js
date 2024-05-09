@@ -30,7 +30,7 @@ class BlogController {
             blogQuery.orderBy(orderBy, orderPos)
         }
         if (search) {
-            blogQuery.where(searchQuery.search(['blogs.name']));
+            blogQuery.where(searchQuery.search(['blogs.name', 'blogs.details', 'categories.name']));
         }
 
         let page = null;
