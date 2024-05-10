@@ -15,6 +15,7 @@ const CommunityVisitorViewLog = use("App/Models/Admin/CommunityModule/CommunityV
 const Mail = use("Mail");
 const Env = use("Env");
 const _ = require("lodash");
+const Community = use("App/Models/Admin/CommunityModule/Community");
 
 const requestOnly = [
 	"community_id",
@@ -80,7 +81,12 @@ class CommunityPostController {
 		});
 
 		if (search) {
-			query.where(searchQuery.search(['title', 'description']));
+			query.where(function () {
+				this.where(searchQuery.search(['title', 'description']))
+				this.orWhereHas("postTags", (builder) => {
+				  builder.where(searchQuery.search(["name"]));
+				});
+			});
 		}
 		
 		if (from_date && to_date) {
@@ -649,15 +655,61 @@ class CommunityPostController {
 		}
 		var result; var finalResult;
 
-		if (page && pageSize) {
-			result = (await query.paginate(page, pageSize)).toJSON();
+		result = (await query.paginate(page, pageSize)).toJSON();
+
+		if(result.data.length > 0)
+		{
+			result.response_type = 1;
 			result.data = await this.response(result.data);
 			finalResult = result;
+		} 
+		else 
+		{
+			const communityQuery = Community.query();
+	
+			if (search) {
+				communityQuery.where(searchQuery.search(['name']));
+			}
+			communityQuery.select('id', 'name', 'description', 'url_slug', 'image_url')
+
+			communityQuery.with('communityMember', (builder) => {
+				builder.select('id','visitor_id','community_id','created_at').where('status', 1).where('visitor_id', userId)
+			});
+
+			communityQuery.withCount('communityPost as total_posts', (builder) => {
+				builder.where('status', 1)
+			})
+			communityQuery.withCount('getCommunityPostReply as total_post_reply', (builder) => {
+				builder.where('community_post_replies.status', 1)
+				builder.where('community_post_replies.parent_id', null)
+			})
+			communityQuery.withCount('communityMember as total_members', (builder) => {
+				builder.where('status', 1)
+			})
 			
-		} else {
-			result = (await query.fetch()).toJSON();
-			finalResult = await this.response(result);
-		}
+			if (orderBy == 'top_rated') {
+				communityQuery.orderBy('total_posts', 'DESC');
+				communityQuery.orderBy('total_post_reply', 'DESC');
+			} else if (orderBy && orderDirection) {
+				communityQuery.orderBy(`${orderBy}`, orderDirection);
+			} else {
+				communityQuery.orderBy('id', 'DESC');
+			}
+
+			let page = null;
+			let pageSize = null;
+
+			if (request.input("page")) {
+				page = request.input("page");
+			}
+			if (request.input("pageSize")) {
+				pageSize = request.input("pageSize");
+			}
+			var communityResult;
+			communityResult = (await communityQuery.paginate(page, pageSize)).toJSON();
+			communityResult.response_type = 2;
+			finalResult = communityResult;
+		}	
 		return response.status(200).send(finalResult);
 	}
 }
