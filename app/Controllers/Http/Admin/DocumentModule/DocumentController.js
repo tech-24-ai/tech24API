@@ -192,6 +192,7 @@ class DocumentController {
       if(getContent.status == 200)
       {
         let content = getContent.result;
+        content = content.replace(/font-family:[^;]+/g, 'font-family: Poppins, sans-serif')
         const result = await Drive.disk("s3").put(file_name, Buffer.from(content));
 
         if (result) 
@@ -219,6 +220,7 @@ class DocumentController {
         if(getContent.status == 200)
         {
           let content = getContent.result;
+          content = content.replace(/font-family:[^;]+/g, 'font-family: Poppins, sans-serif')
           const result = await Drive.disk("s3").put(file_name, Buffer.from(content));
 
           if (result) 
@@ -410,6 +412,7 @@ class DocumentController {
       if(getContent.status == 200)
       {
         let content = getContent.result;
+        content = content.replace(/font-family:[^;]+/g, 'font-family: Poppins, sans-serif')
         const result = await Drive.disk("s3").put(file_name, Buffer.from(content));
 
         if (result) 
@@ -446,6 +449,7 @@ class DocumentController {
           if(getContent.status == 200)
           {
             let content = getContent.result;
+            content = content.replace(/font-family:[^;]+/g, 'font-family: Poppins, sans-serif')
             const result = await Drive.disk("s3").put(file_name, Buffer.from(content));
             query.url = result;
             query.drive_document_id = "";
