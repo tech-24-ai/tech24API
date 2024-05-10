@@ -668,7 +668,7 @@ class CommunityPostController {
 			const communityQuery = Community.query();
 	
 			if (search) {
-				communityQuery.where(searchQuery.search(['name']));
+				communityQuery.where(searchQuery.search(['name','description']));
 			}
 			communityQuery.select('id', 'name', 'description', 'url_slug', 'image_url')
 
