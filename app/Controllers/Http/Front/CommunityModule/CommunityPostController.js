@@ -80,7 +80,7 @@ class CommunityPostController {
 		});
 
 		if (search) {
-			query.where(searchQuery.search(['title']));
+			query.where(searchQuery.search(['title', 'description']));
 		}
 		
 		if (from_date && to_date) {
@@ -593,6 +593,8 @@ class CommunityPostController {
 		const userId = auth.user.id;	
 		const query = CommunityPost.query();
 		const search = request.input("search");
+		const orderBy = request.input("orderBy");
+		const orderDirection = request.input("orderDirection");
 		const community_id = request.input("community_id");
 
 		const searchQuery = new Query(request, { order: "id" });
@@ -630,7 +632,11 @@ class CommunityPostController {
 			query.where('community_id', community_id);
 		}
 		
-		query.orderBy('created_at', 'desc');
+		if (orderBy && orderDirection) {
+			query.orderBy(`${orderBy}`, orderDirection);
+		} else {
+			query.orderBy('created_at', 'desc');
+		}
 		
 		let page = null;
 		let pageSize = null;
