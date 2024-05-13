@@ -220,18 +220,21 @@ class CommunityPostController {
 					let fileurl = mediaurl.url;
 					let filename = mediaurl.name;
 					
-					let extention = await this.getMediaType(fileurl);
+					if(fileurl && filename)
+					{	
+						let extention = await this.getMediaType(fileurl);
 
-					urlArr.push({
-						'community_post_id' : query.id,
-						'name' : filename,
-						'url' : fileurl,
-						'extension' : (extention) ? extention : ""
-					})
+						urlArr.push({
+							'community_post_id' : query.id,
+							'name' : filename,
+							'url' : fileurl,
+							'extension' : (extention) ? extention : ""
+						})
+					}
 				}
 				await CommunityPostAttachment.createMany(urlArr, trx);
 			}
-
+			
 			// Insert Activity record
 			const insActivity = await CommunityVisitorActivity.create(
 				{
