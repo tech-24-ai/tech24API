@@ -167,7 +167,7 @@ class CommunityPostController {
 	async show ({ params, request, response, view }) {
 		
 		const query = CommunityPost.query();
-		query.select("id", "community_id", "title", "visitor_id", "url_slug", "description", "is_discussion_open", "status", "reject_reason", "created_at");
+		query.select("*");
 		query.withCount('communityVote as total_helpful', (builder) => {
 			builder.where('vote_type', 1)
 		})
@@ -177,6 +177,10 @@ class CommunityPostController {
 
     query.with('attachments',(builder)=>{
 			builder.select('id','community_post_id', 'name', 'url', 'extension')
+		});	
+
+    query.with('postTags',(builder)=>{
+			builder.select('id','name')
 		});	
     
 		query.where("id", params.id);

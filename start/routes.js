@@ -2611,7 +2611,8 @@ Route.group(() => {
   Route.get("/posts_reply_comments", "Admin/CommunityModule/CommunityPostReplyController.get_reply_comments");
   Route.put("/posts_reply_comments/status_update/:id", "Admin/CommunityModule/CommunityPostReplyController.comment_status_update");
   Route.post("/reply_mark_correct_answer", "Admin/CommunityModule/CommunityPostReplyController.mark_correct_answer");
-	
+  Route.get("/communitypost/download_attachment", "FileController.downloadPostAttachment");
+
   // Badge
 	Route.get("/badge", "Admin/CommunityModule/BadgeController.index");
 	Route.post("/badge", "Admin/CommunityModule/BadgeController.store").validator("StoreBadge");
