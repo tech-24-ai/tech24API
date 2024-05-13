@@ -52,7 +52,7 @@ class MarketResearchController {
     query.where('status', 1);
 
     if (search) {
-      query.where(searchQuery.search(['name']));
+      query.where(searchQuery.search(['name','details','description']));
     }
 
     if (document_type) {
@@ -141,6 +141,9 @@ class MarketResearchController {
 		query.with('documentTags', (builder) => {
       builder.select('id', 'name')
     });
+    query.with('researchTopic', (builder) => {
+      builder.select('id', 'title')
+    });
 		query.with('is_saved_document', (builder) => {
       builder.select('id', 'visitor_id', 'document_id', 'created_at')
       builder.where('visitor_id', userId)
@@ -175,6 +178,9 @@ class MarketResearchController {
     });
 		query.with('documentTags', (builder) => {
       builder.select('id', 'name')
+    });
+		query.with('researchTopic', (builder) => {
+      builder.select('id', 'title')
     });
 		query.with('is_saved_document', (builder) => {
       builder.select('id', 'visitor_id', 'document_id', 'created_at')
