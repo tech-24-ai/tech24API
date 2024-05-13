@@ -230,7 +230,7 @@ class CommunityPostReplyController {
 			if(oldStatus != reply_status && reply_status == 1)
       		{
 				const query1 = CommunityPost.query();
-				const postData = await query1.select('id', 'visitor_id').where('id', updateData.community_post_id).first();
+				const postData = await query1.select('id', 'visitor_id', 'url_slug').where('id', updateData.community_post_id).first();
 
 				const query2 = Visitor.query();
 				const visitorData = await query2.select('id', 'name', 'email').where('id', postData.visitor_id).first();
@@ -241,9 +241,10 @@ class CommunityPostReplyController {
 					const name = visitorData.name;
 					const toEmails = visitorData.email;
 					
+					const FRONTEND_BASE_URL = Env.get("FRONTEND_BASE_URL");
 					const subject = "Tech24 - New Answer on your Community Question";
 					const details = `You have a new Answer for your question. `;
-					const link = '';
+					const link = `${FRONTEND_BASE_URL}/community/question/${postData.url_slug}`;
 
 					const emailStatus = await Mail.send(
 						"answerApproveVisitorMail",

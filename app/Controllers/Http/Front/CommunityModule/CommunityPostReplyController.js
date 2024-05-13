@@ -458,6 +458,12 @@ class CommunityPostReplyController {
 			builder.with('visitor',(builder)=>{
 				builder.select('id','name','profile_pic_url')
 			})
+
+			builder.with('comments',(builder)=>{
+				builder.with('visitor',(builder)=>{
+					builder.select('id','name','profile_pic_url')
+				})	
+			})	
 		});	
 		
 		query.withCount('postReplyVote as total_helpful', (builder) => {

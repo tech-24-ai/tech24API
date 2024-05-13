@@ -193,6 +193,8 @@ class DocumentController {
       {
         let content = getContent.result;
         content = content.replace(/font-family:[^;]+/g, 'font-family: Poppins, sans-serif')
+        content = content.replace(/font-weight:700+/g, 'font-weight: 500;')
+        content = content.replace(/font-weight:600+/g, 'font-weight: 500;')
         const result = await Drive.disk("s3").put(file_name, Buffer.from(content));
 
         if (result) 
@@ -221,6 +223,8 @@ class DocumentController {
         {
           let content = getContent.result;
           content = content.replace(/font-family:[^;]+/g, 'font-family: Poppins, sans-serif')
+          content = content.replace(/font-weight:700+/g, 'font-weight: 500;')
+          content = content.replace(/font-weight:600+/g, 'font-weight: 500;')
           const result = await Drive.disk("s3").put(file_name, Buffer.from(content));
 
           if (result) 
@@ -412,7 +416,9 @@ class DocumentController {
       if(getContent.status == 200)
       {
         let content = getContent.result;
-        content = content.replace(/font-family:[^;]+/g, 'font-family: Poppins, sans-serif')
+        content = content.replace(/font-family:[^;]+/g, 'font-family: Poppins, sans-serif;')
+        content = content.replace(/font-weight:700+/g, 'font-weight: 500;')
+        content = content.replace(/font-weight:600+/g, 'font-weight: 500;')
         const result = await Drive.disk("s3").put(file_name, Buffer.from(content));
 
         if (result) 
@@ -450,6 +456,8 @@ class DocumentController {
           {
             let content = getContent.result;
             content = content.replace(/font-family:[^;]+/g, 'font-family: Poppins, sans-serif')
+            content = content.replace(/font-weight:700+/g, 'font-weight: 500;')
+            content = content.replace(/font-weight:600+/g, 'font-weight: 500;')
             const result = await Drive.disk("s3").put(file_name, Buffer.from(content));
             query.url = result;
             query.drive_document_id = "";
