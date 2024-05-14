@@ -116,12 +116,12 @@ class CommunityPostController {
 
 		if (page && pageSize) {
 			result = (await query.paginate(page, pageSize)).toJSON();
-			result.data = await this.response(result.data);
+			result.data = await this.response(result.data, userId);
 			finalResult = result;
 			
 		} else {
 			result = (await query.fetch()).toJSON();
-			finalResult = await this.response(result);
+			finalResult = await this.response(result, userId);
 		}
 		return response.status(200).send(finalResult);
 	}
@@ -538,26 +538,35 @@ class CommunityPostController {
 
 			await CommunityPostAttachment.query().where('community_post_id', params.id).delete();
 
-			let url = JSON.parse(request.input("url"));
+			let url = request.input("url")
 			let urlArr = [];
-			if(url)
+
+			if(url.length > 0)
 			{
+				url = JSON.parse(request.input("url"));
 				for(var i = 0; i < url.length; i++)
 				{	
 					let mediaurl = url[i];
-					let extention = await this.getMediaType(mediaurl);
+					let fileurl = mediaurl.url;
+					let filename = mediaurl.name;
+					
+					if(fileurl && filename)
+					{	
+						let extention = await this.getMediaType(fileurl);
 
-					urlArr.push({
-						'community_post_id' : params.id,
-						'url' : mediaurl,
-						'extension' : (extention) ? extention : ""
-					})
+						urlArr.push({
+							'community_post_id' : params.id,
+							'name' : filename,
+							'url' : fileurl,
+							'extension' : (extention) ? extention : ""
+						})
+					}
 				}
 				await CommunityPostAttachment.createMany(urlArr);
 			}
 
 			await updateData.postTags().detach();
-			await updateData.postTags().attach(JSON.parse(request.input("tags")));
+			await updateData.postTags().attach(request.input("tags"));
 
 			return response.status(200).json({ message: "Question update successfully" });
 		} catch (error) {
@@ -577,12 +586,19 @@ class CommunityPostController {
 	async destroy ({ params, request, response }) {
 	}
 
-	async response (result)
+	async response (result, userId = 0)
  	{
 		for(let i = 0; i < result.length; i++)
 		{
 			let res = result[i];
 			let visitor_id = res.visitor_id;
+
+			if(userId == visitor_id) {
+				res.isQuestionEditable = 1
+			} else {
+				res.isQuestionEditable = 0
+			}
+
 			let comments = res.comments;
 			let visitor_level = await getvisitorCurrentLevel(visitor_id);
 			res.visitor.visitor_level = visitor_level;
