@@ -571,7 +571,7 @@ class CommunityPostController {
 			return response.status(200).json({ message: "Question update successfully" });
 		} catch (error) {
 			console.log(error);
-			return response.status(200).json({ message: "Something went wrong" });
+			return response.status(200).json({ message: "Something went wrong", error });
 		}
 	}
 
