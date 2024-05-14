@@ -65,7 +65,7 @@ class CommunityController {
 		} else if (orderBy && orderDirection) {
 			query.orderBy(`${orderBy}`, orderDirection);
 		} else {
-			query.orderBy('id', 'DESC');
+			query.orderBy('id', 'ASC');
 		}
 
 		let page = null;

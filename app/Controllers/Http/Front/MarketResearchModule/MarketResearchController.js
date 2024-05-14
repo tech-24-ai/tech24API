@@ -52,7 +52,12 @@ class MarketResearchController {
     query.where('status', 1);
 
     if (search) {
-      query.where(searchQuery.search(['name','details','description']));
+      query.where(function () {
+				this.where(searchQuery.search(['name','details','description']));
+				this.orWhereHas("category", (builder) => {
+				  builder.where(searchQuery.search(["name"]));
+				});
+			});
     }
 
     if (document_type) {
