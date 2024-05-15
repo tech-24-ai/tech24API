@@ -327,7 +327,8 @@ class VisitorCommunityPorfileController {
     totalPoints = totalPoints > 0 ? totalPoints : 0;
 
     const correctAnsPoints = await getCorrectAnswerPoints();
-    const ansPoints = await getUpvoteAnswerPoints();
+    const subQuePoints = await getSubmitQuestionPoints();
+    const ansPoints = await getSubmitAnswerPoints();
     const upvotePoints = await getUpvoteAnswerPoints();
 
     data.push({
@@ -336,6 +337,7 @@ class VisitorCommunityPorfileController {
       correct_answer_point_info: correctAnsPoints,
       answer_point_info: ansPoints,
       upvote_point_info: upvotePoints,
+      submit_que_point_info: subQuePoints,
       leavels: badgeResult,
     });
 
