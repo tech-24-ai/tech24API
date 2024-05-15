@@ -1,15 +1,18 @@
-'use strict'
+"use strict";
 const Query = use("Query");
 const Database = use("Database");
 
-const CommunityNewsAnnouncement = use("App/Models/Admin/CommunityModule/CommunityNewsAnnouncement");
+const CommunityNewsAnnouncement = use(
+  "App/Models/Admin/CommunityModule/CommunityNewsAnnouncement"
+);
 const { dateFilterExtractor } = require("../../../../Helper/globalFunctions");
 
 const requestOnly = [
-	"community_id",
-	"title",
-	"description",
-	"status"
+  "community_id",
+  "title",
+  "short_description",
+  "description",
+  "status",
 ];
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
@@ -29,71 +32,72 @@ class CommunityNewsAnnouncementController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index ({ request, response, view }) {
+  async index({ request, response, view }) {
+    const query = CommunityNewsAnnouncement.query();
+    const search = request.input("search");
+    const orderBy = request.input("orderBy");
+    const orderDirection = request.input("orderDirection");
+    const searchQuery = new Query(request, { order: "id" });
 
-		const query = CommunityNewsAnnouncement.query();
-		const search = request.input("search");
-		const orderBy = request.input("orderBy");
-		const orderDirection = request.input("orderDirection");
-		const searchQuery = new Query(request, { order: "id" });
+    query.with("community", (builder) => {
+      builder.select("id", "name");
+    });
 
-    query.with('community', (builder) => {
-      builder.select('id', 'name')
-    })
+    if (orderBy && orderDirection) {
+      query.orderBy(`${orderBy}`, orderDirection);
+    }
 
-		if (orderBy && orderDirection) {
-			query.orderBy(`${orderBy}`, orderDirection);
-		}
-		
-		if (search) {
-			query.where(searchQuery.search(['title']));
-		}
+    if (search) {
+      query.where(searchQuery.search(["title"]));
+    }
 
     if (request.input("filters")) {
-			const filters = JSON.parse(request.input("filters"));
-			filters.forEach(async (filter) => {
-				switch (filter.name) {
-					case "updated_at":
-				 		 query.whereRaw(
-							await dateFilterExtractor({
-					  			name: `community_news_announcements.updated_at`,
-					  			date: filter.value,
-							})
-				  		);
-				 	break;
+      const filters = JSON.parse(request.input("filters"));
+      filters.forEach(async (filter) => {
+        switch (filter.name) {
+          case "updated_at":
+            query.whereRaw(
+              await dateFilterExtractor({
+                name: `community_news_announcements.updated_at`,
+                date: filter.value,
+              })
+            );
+            break;
           case "community.name":
-            query.whereHas('community', (builder) => {
-              builder.whereRaw(`name LIKE '%${filter.value}%'`)
-            })
-          break; 
-				 	break;
+            query.whereHas("community", (builder) => {
+              builder.whereRaw(`name LIKE '%${filter.value}%'`);
+            });
+            break;
+            break;
           case "status":
-            query.whereIn('status', filter.value);
-          break; 
-					default:
-				 		query.whereRaw(`community_news_announcements.${filter.name} LIKE '%${filter.value}%'`);
-				 	break;
-				}
-			});
-		}
+            query.whereIn("status", filter.value);
+            break;
+          default:
+            query.whereRaw(
+              `community_news_announcements.${filter.name} LIKE '%${filter.value}%'`
+            );
+            break;
+        }
+      });
+    }
 
-		let page = null;
-		let pageSize = null;
+    let page = null;
+    let pageSize = null;
 
-		if (request.input("page")) {
-			page = request.input("page");
-		}
-		if (request.input("pageSize")) {
-			pageSize = request.input("pageSize");
-		}
-		var result;
-		if (page && pageSize) {
-			result = (await query.paginate(page, pageSize)).toJSON();
-		} else {
-			result = (await query.fetch()).toJSON();
-		}
+    if (request.input("page")) {
+      page = request.input("page");
+    }
+    if (request.input("pageSize")) {
+      pageSize = request.input("pageSize");
+    }
+    var result;
+    if (page && pageSize) {
+      result = (await query.paginate(page, pageSize)).toJSON();
+    } else {
+      result = (await query.fetch()).toJSON();
+    }
 
-		return response.status(200).send(result);
+    return response.status(200).send(result);
   }
 
   /**
@@ -105,8 +109,7 @@ class CommunityNewsAnnouncementController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async create ({ request, response, view }) {
-  }
+  async create({ request, response, view }) {}
 
   /**
    * Create/save a new communitynewsannouncement.
@@ -116,29 +119,30 @@ class CommunityNewsAnnouncementController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async store ({ request, response, auth }) {
+  async store({ request, response, auth }) {
+    const userId = auth.user.id;
+    const trx = await Database.beginTransaction();
+    const body = request.only(requestOnly);
 
-    const userId = auth.user.id;	
-		const trx = await Database.beginTransaction();
-		const body = request.only(requestOnly);
-		
-		try {	
-			const query = await CommunityNewsAnnouncement.create(
-				{
-					...body,
-					created_by: userId,
-					updated_by: userId,
-				},
-				trx
-			);
-		 
-			await trx.commit();
-			return response.status(200).json({ message: "Create successfully" });
-		} catch (error) {
-			console.log(error);
-			trx.rollback();
-			return response.status(423).json({ message: "Something went wrong", error });
-		}
+    try {
+      const query = await CommunityNewsAnnouncement.create(
+        {
+          ...body,
+          created_by: userId,
+          updated_by: userId,
+        },
+        trx
+      );
+
+      await trx.commit();
+      return response.status(200).json({ message: "Create successfully" });
+    } catch (error) {
+      console.log(error);
+      trx.rollback();
+      return response
+        .status(423)
+        .json({ message: "Something went wrong", error });
+    }
   }
 
   /**
@@ -150,15 +154,15 @@ class CommunityNewsAnnouncementController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async show ({ params, request, response, view }) {
+  async show({ params, request, response, view }) {
     const query = CommunityNewsAnnouncement.query();
-		query.where("id", params.id);
-		const result = await query.firstOrFail();
+    query.where("id", params.id);
+    const result = await query.firstOrFail();
 
     const st = result.status;
-		result.status = st.toString();
+    result.status = st.toString();
 
-		return response.status(200).send(result);	
+    return response.status(200).send(result);
   }
 
   /**
@@ -170,8 +174,7 @@ class CommunityNewsAnnouncementController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async edit ({ params, request, response, view }) {
-  }
+  async edit({ params, request, response, view }) {}
 
   /**
    * Update communitynewsannouncement details.
@@ -181,21 +184,20 @@ class CommunityNewsAnnouncementController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async update ({ params, request, response, auth }) {
-
+  async update({ params, request, response, auth }) {
     const body = request.only(requestOnly);
-		const userId = auth.user.id;
-		
-		try {
-			const updateData = await CommunityNewsAnnouncement.findOrFail(params.id);
-			updateData.merge(body);
-			updateData.updated_by = userId;
-			await updateData.save();
-			return response.status(200).json({ message: "Update successfully" });
-		} catch (error) {
-			console.log(error);
-			return response.status(200).json({ message: "Something went wrong" });
-		}
+    const userId = auth.user.id;
+
+    try {
+      const updateData = await CommunityNewsAnnouncement.findOrFail(params.id);
+      updateData.merge(body);
+      updateData.updated_by = userId;
+      await updateData.save();
+      return response.status(200).json({ message: "Update successfully" });
+    } catch (error) {
+      console.log(error);
+      return response.status(200).json({ message: "Something went wrong" });
+    }
   }
 
   /**
@@ -206,19 +208,17 @@ class CommunityNewsAnnouncementController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async destroy ({ params, request, response }) {
-
+  async destroy({ params, request, response }) {
     const query = await CommunityNewsAnnouncement.findOrFail(params.id);
-		try {
-			await query.delete();
-			return response.status(200).send({ message: "Delete successfully" });
-		  
-		} catch (error) {
-			return response.status(423).send({
-				message: "Something went wrong",
-			});
-		}
+    try {
+      await query.delete();
+      return response.status(200).send({ message: "Delete successfully" });
+    } catch (error) {
+      return response.status(423).send({
+        message: "Something went wrong",
+      });
+    }
   }
 }
 
-module.exports = CommunityNewsAnnouncementController
+module.exports = CommunityNewsAnnouncementController;
