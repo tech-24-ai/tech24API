@@ -401,10 +401,16 @@ class VisitorCommunityPorfileController {
     query.where("visitor_id", userId);
 
     query.with("communityPost", (builder) => {
-      builder.select("id", "title", "url_slug", "description");
+      //builder.select("id", "title", "url_slug", "description");
+      builder.with('visitor',(builder)=>{
+        builder.select('id','name','profile_pic_url')
+      })  
     });
     query.with("communityPostReply", (builder) => {
       // builder.select('id', 'title', 'url_slug')
+      builder.with('visitor',(builder)=>{
+        builder.select('id','name','profile_pic_url')
+      })  
     });
     query.with("community", (builder) => {
       builder.select("id", "name", "url_slug", "description", "image_url");
