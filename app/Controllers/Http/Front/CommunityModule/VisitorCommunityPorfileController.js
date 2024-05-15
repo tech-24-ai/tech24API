@@ -17,6 +17,7 @@ const {
   getSubmitAnswerPoints,
   getUpvoteAnswerPoints,
   getCorrectAnswerPoints,
+  getSubmitQuestionPoints
 } = require("../../../../Helper/visitorPoints");
 const {
   getvisitorCurrentLevel,
