@@ -16,6 +16,7 @@ const Mail = use("Mail");
 const Env = use("Env");
 const _ = require("lodash");
 const Community = use("App/Models/Admin/CommunityModule/Community");
+const CommunityNewsAnnouncement = use("App/Models/Admin/CommunityModule/CommunityNewsAnnouncement");
 
 const requestOnly = [
 	"community_id",
@@ -684,37 +685,29 @@ class CommunityPostController {
 		} 
 		else 
 		{
-			const communityQuery = Community.query();
-	
-			if (search) {
-				communityQuery.where(searchQuery.search(['name','description']));
-			}
-			communityQuery.select('id', 'name', 'description', 'url_slug', 'image_url')
-
-			communityQuery.with('communityMember', (builder) => {
-				builder.select('id','visitor_id','community_id','created_at').where('status', 1).where('visitor_id', userId)
-			});
-
-			communityQuery.withCount('communityPost as total_posts', (builder) => {
-				builder.where('status', 1)
-			})
-			communityQuery.withCount('getCommunityPostReply as total_post_reply', (builder) => {
-				builder.where('community_post_replies.status', 1)
-				builder.where('community_post_replies.parent_id', null)
-			})
-			communityQuery.withCount('communityMember as total_members', (builder) => {
-				builder.where('status', 1)
-			})
+			const newsQuery = CommunityNewsAnnouncement.query();
+			newsQuery.select('id', 'community_id', 'title', 'url_slug', 'description', 'created_at');
 			
-			if (orderBy == 'top_rated') {
-				communityQuery.orderBy('total_posts', 'DESC');
-				communityQuery.orderBy('total_post_reply', 'DESC');
-			} else if (orderBy && orderDirection) {
-				communityQuery.orderBy(`${orderBy}`, orderDirection);
-			} else {
-				communityQuery.orderBy('id', 'DESC');
-			}
+			newsQuery.with('community', (builder) => {
+				builder.withCount('communityPost as total_posts', (builder) => {
+				  builder.where('status', 1)
+				})
+				builder.withCount('communityMember as total_members', (builder) => {
+				  builder.where('status', 1)
+				})
+				builder.withCount('getCommunityPostReply as total_post_reply', (builder) => {
+				  builder.where('community_post_replies.status', 1)
+				  builder.where('community_post_replies.parent_id', null)
+				})
+			})
 
+			newsQuery.where(searchQuery.search(['title', 'description']));
+			newsQuery.where('status', 1);
+
+			if (orderBy && orderDirection) {
+				newsQuery.orderBy(`${orderBy}`, orderDirection);
+			}
+		
 			let page = null;
 			let pageSize = null;
 
@@ -724,10 +717,56 @@ class CommunityPostController {
 			if (request.input("pageSize")) {
 				pageSize = request.input("pageSize");
 			}
-			var communityResult;
-			communityResult = (await communityQuery.paginate(page, pageSize)).toJSON();
-			communityResult.response_type = 2;
-			finalResult = communityResult;
+			
+			var newsResult  = (await newsQuery.paginate(page, pageSize)).toJSON();
+
+			if(newsResult.data.length > 0)
+			{
+				newsResult.response_type = 3;
+				finalResult = newsResult;
+			}
+			else
+			{
+				const communityQuery = Community.query();
+		
+				if (search) {
+					communityQuery.where(searchQuery.search(['name','description']));
+				}
+				communityQuery.select('id', 'name', 'description', 'url_slug', 'image_url')
+
+				communityQuery.with('communityMember', (builder) => {
+					builder.select('id','visitor_id','community_id','created_at').where('status', 1).where('visitor_id', userId)
+				});
+
+				communityQuery.withCount('communityPost as total_posts', (builder) => {
+					builder.where('status', 1)
+				})
+				communityQuery.withCount('getCommunityPostReply as total_post_reply', (builder) => {
+					builder.where('community_post_replies.status', 1)
+					builder.where('community_post_replies.parent_id', null)
+				})
+				communityQuery.withCount('communityMember as total_members', (builder) => {
+					builder.where('status', 1)
+				})
+				
+				if (orderBy && orderDirection) {
+					communityQuery.orderBy(`${orderBy}`, orderDirection);
+				}
+
+				let page = null;
+				let pageSize = null;
+
+				if (request.input("page")) {
+					page = request.input("page");
+				}
+				if (request.input("pageSize")) {
+					pageSize = request.input("pageSize");
+				}
+				var communityResult;
+				communityResult = (await communityQuery.paginate(page, pageSize)).toJSON();
+				communityResult.response_type = 2;
+				finalResult = communityResult;
+			}	
 		}	
 		return response.status(200).send(finalResult);
 	}
