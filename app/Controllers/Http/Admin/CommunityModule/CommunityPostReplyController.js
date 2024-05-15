@@ -227,6 +227,8 @@ class CommunityPostReplyController {
 				);
 			}
 
+			await trx.commit();
+
 			if(oldStatus != reply_status && reply_status == 1)
       		{
 				const query1 = CommunityPost.query();
@@ -237,28 +239,31 @@ class CommunityPostReplyController {
 
 				if(visitorData)
 				{
-					let url_slug = updateData.url_slug;
-					const name = visitorData.name;
-					const toEmails = visitorData.email;
-					
-					const FRONTEND_BASE_URL = Env.get("FRONTEND_BASE_URL");
-					const subject = "Tech24 - New Answer on your Community Question";
-					const details = `You have a new Answer for your question. `;
-					const link = `${FRONTEND_BASE_URL}/community/question/${postData.url_slug}`;
+					try {
+						let url_slug = updateData.url_slug;
+						const name = visitorData.name;
+						const toEmails = visitorData.email;
+						
+						const FRONTEND_BASE_URL = Env.get("FRONTEND_BASE_URL");
+						const subject = "Tech24 - New Answer on your Community Question";
+						const details = `You have a new Answer for your question at `;
+						const link = `${FRONTEND_BASE_URL}/community/question/${postData.url_slug}`;
 
-					const emailStatus = await Mail.send(
-						"answerApproveVisitorMail",
-						{ name: name, title: subject, details: details, link: link },
-						(message) => {
-							message.subject(subject);
-							message.from(Env.get("MAIL_USERNAME"));
-							message.to(toEmails);
-						}
-					);
+						const emailStatus = await Mail.send(
+							"answerApproveVisitorMail",
+							{ name: name, title: subject, details: details, link: link },
+							(message) => {
+								message.subject(subject);
+								message.from(Env.get("MAIL_USERNAME"));
+								message.to(toEmails);
+							}
+						);
+					} catch (error) {
+						console.log(error);
+					} 	
 				}
 			}
 
-			await trx.commit();
 			return response.status(200).json({ message: "Status update successfully" });
 		} catch (error) {
 			console.log(error);
