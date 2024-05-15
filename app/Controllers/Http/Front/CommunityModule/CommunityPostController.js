@@ -261,7 +261,7 @@ class CommunityPostController {
 				let ins_community_post_id = query.id;
 				let link = `${Env.get("ADMIN_BASE_URL")}/community-posts-form/${ins_community_post_id}`;
 				const subject = 'Tech24 - New Question posted on Community';
-				const details = `You have a new question to review. Please review and approve/reject it.`;
+				const details = `You have a new question to review. Please review and approve/reject at `;
 
 				if(moderatorLists)
 				{
@@ -479,12 +479,13 @@ class CommunityPostController {
 				if(vote_type == 1) 
 				{
 					subject = "Tech24 - New Upvote on your Community Question";
-					details = `You have a new Upvote for your question. `;
+					details = `You have a new Upvote for your question at `;
 				} else 
 				{
 					subject = "Tech24 - New Downvote on your Community Question";
-					details = `You have a new Downvote for your question. `;
+					details = `You have a new Downvote for your question at `;
 				}	
+				link = `${Env.get("FRONTEND_BASE_URL")}/community/question/${url_slug}`;
 
 				try {	
 					const emailStatus = await Mail.send(
@@ -535,6 +536,7 @@ class CommunityPostController {
 		try {
 			const updateData = await CommunityPost.findOrFail(params.id);
 			updateData.merge(body);
+			updateData.status = 0;
 			await updateData.save();
 
 			await CommunityPostAttachment.query().where('community_post_id', params.id).delete();
@@ -568,6 +570,63 @@ class CommunityPostController {
 
 			await updateData.postTags().detach();
 			await updateData.postTags().attach(request.input("tags"));
+
+			try {
+				const getModerator = UserCommunity.query();
+				getModerator.with('users', (builder) => {
+					builder.select('id', 'email')
+				});
+				getModerator.where('community_id', request.input("community_id"));
+				let moderatorLists = (await getModerator.fetch()).toJSON();
+
+				let ins_community_post_id = params.id;
+				let link = `${Env.get("ADMIN_BASE_URL")}/community-posts-form/${ins_community_post_id}`;
+				const subject = 'Tech24 - New Question posted on Community';
+				const details = `You have a new question to review. Please review and approve/reject at `;
+
+				if(moderatorLists)
+				{
+					let toEmails = [];
+
+					moderatorLists.forEach((val, index) => {
+						toEmails.push(val.users.email)
+					});	
+					toEmails = toEmails.join(",");
+					
+					if(toEmails)
+					{
+						const name = 'Moderator';
+
+						const emailStatus = await Mail.send(
+							"newCommunityContentModeratorMail",
+							{ name: name, title: subject, details: details, link: link },
+							(message) => {
+								message.subject(subject);
+								message.from(Env.get("MAIL_USERNAME"));
+								message.to(toEmails);
+							}
+						);
+					}	
+				}
+
+				let admin_mail = Env.get("TO_MAIL_USERNAME")
+				if(admin_mail) 
+				{
+					const name = 'Admin';
+
+					const emailStatus = await Mail.send(
+						"newCommunityContentModeratorMail",
+						{ name: name, title: subject, details: details, link: link },
+						(message) => {
+							message.subject(subject);
+							message.from(Env.get("MAIL_USERNAME"));
+							message.to(admin_mail);
+						}
+					);
+				}
+			} catch (error) {
+				console.log(error);
+			}
 
 			return response.status(200).json({ message: "Question update successfully" });
 		} catch (error) {

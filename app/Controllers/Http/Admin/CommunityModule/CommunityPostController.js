@@ -10,6 +10,7 @@ const {	getSubmitQuestionPoints } = require("../../../../Helper/visitorPoints");
 const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
 const Mail = use("Mail");
 const Env = use("Env");
+const moment = require("moment");
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -40,12 +41,6 @@ class CommunityPostController {
 		const role = await Role.findOrFail(role_id);
     let role_name = role.name;
     
-		if (orderBy && orderDirection) {
-			query.orderBy(`${orderBy}`, orderDirection);
-		} else {
-      query.orderBy("id", "DESC");
-    }
-		
 		if (search) {
 			query.where(searchQuery.search(['title']));
 		}
@@ -72,6 +67,14 @@ class CommunityPostController {
 		})
     query.withCount('communityPostReply as total_reply', (builder) => {
       builder.where('parent_id', null)
+    });
+    query.withCount('communityPostReply as total_pending_answer', (builder) => {
+      builder.where('parent_id', null)
+      builder.where('status', 0)
+    });
+    query.withCount('communityPostReply as total_pending_comment', (builder) => {
+      builder.where('parent_id', '>', 0)
+      builder.where('status', 0)
     });
 
     if (request.input("filters")) {
@@ -112,6 +115,18 @@ class CommunityPostController {
 			});
 		}
     
+		if (orderBy == "__meta__.total_reply" && orderDirection) {
+			query.orderBy('total_reply', orderDirection);
+    } else if (orderBy == "__meta__.total_pending_answer" && orderDirection) {
+			query.orderBy('total_pending_answer', orderDirection);
+		} else if (orderBy == "__meta__.total_pending_comment" && orderDirection) {
+			query.orderBy('total_pending_comment', orderDirection);
+		} else if (orderBy && orderDirection) {
+			query.orderBy(`${orderBy}`, orderDirection);
+		} else {
+      query.orderBy("id", "DESC");
+    }
+		
 		let page = null;
 		let pageSize = null;
 
@@ -122,15 +137,32 @@ class CommunityPostController {
 			pageSize = request.input("pageSize");
 		}
     
-		var result;
+		var result; var finalResult;
 		if (page && pageSize) {
 			result = (await query.paginate(page, pageSize)).toJSON();
+			result.data = await this.response(result.data);
+			finalResult = result;
 		} else {
 			result = (await query.fetch()).toJSON();
+			finalResult = await this.response(result);
 		}
 		
-		return response.status(200).send(result);
+		return response.status(200).send(finalResult);
 	}
+
+  async response (result)
+ 	{
+		for(let i = 0; i < result.length; i++)
+		{
+			let res = result[i];
+	
+      res.created_at = moment(res.created_at).format('DD-MM-YYYY hh:m A')
+      res.updated_at = moment(res.updated_at).format('DD-MM-YYYY hh:m A')
+      result[i] = res;
+		}
+		
+		return result;
+  }
 
   /**
    * Render a form to be used for creating a new communitypost.
@@ -232,6 +264,8 @@ class CommunityPostController {
 					trx
 				);
 			}
+
+      await trx.commit();
 			
       if(oldStatus != post_status && post_status != 0)
       {
@@ -240,47 +274,49 @@ class CommunityPostController {
 
         if(visitorData)
         {
-          let postTitle = updateData.title;
-          let url_slug = updateData.url_slug;
-          const name = visitorData.name;
-          const toEmails = visitorData.email;
-          let subject, details, link;
+          try {
+            let postTitle = updateData.title;
+            let url_slug = updateData.url_slug;
+            const name = visitorData.name;
+            const toEmails = visitorData.email;
+            let subject, details, link;
 
-          if(post_status == 1) 
-          {
-            subject = "Tech24 - Question approved on Community";
-            details = `Your question for Discussion Group "${postTitle}" is approved by the Admin/Moderator and it is live in the portal. `;
-            link = `${Env.get("FRONTEND_BASE_URL")}/community/question/${url_slug}`;
+            if(post_status == 1) 
+            {
+              subject = "Tech24 - Question approved on Community";
+              details = `Your question for Discussion Group "${postTitle}" is approved by the Admin/Moderator and it is live in the portal at `;
+              link = `${Env.get("FRONTEND_BASE_URL")}/community/question/${url_slug}`;
 
-            const emailStatus = await Mail.send(
-              "questionApproveVisitorMail",
-              { name: name, title: subject, details: details, link: link },
-              (message) => {
-                message.subject(subject);
-                message.from(Env.get("MAIL_USERNAME"));
-                message.to(toEmails);
-              }
-            );
-          } 
-          else 
-          {
-            subject = "Tech24 - Question rejected on Community";
-            details = `Your question for Discussion Group "${postTitle}" is rejected by the Admin/Moderator due to "${reject_reason}"`;
-            
-            const emailStatus = await Mail.send(
-              "questionRejectVisitorMail",
-              { name: name, title: subject, details: details },
-              (message) => {
-                message.subject(subject);
-                message.from(Env.get("MAIL_USERNAME"));
-                message.to(toEmails);
-              }
-            );
-          }
+              const emailStatus = await Mail.send(
+                "questionApproveVisitorMail",
+                { name: name, title: subject, details: details, link: link },
+                (message) => {
+                  message.subject(subject);
+                  message.from(Env.get("MAIL_USERNAME"));
+                  message.to(toEmails);
+                }
+              );
+            } 
+            else 
+            {
+              subject = "Tech24 - Question rejected on Community";
+              details = `Your question for Discussion Group "${postTitle}" is rejected by the Admin/Moderator due to "${reject_reason}"`;
+              
+              const emailStatus = await Mail.send(
+                "questionRejectVisitorMail",
+                { name: name, title: subject, details: details },
+                (message) => {
+                  message.subject(subject);
+                  message.from(Env.get("MAIL_USERNAME"));
+                  message.to(toEmails);
+                }
+              );
+            }
+          } catch (error) {
+            console.log(error);
+          }  
         }
       }
-
-			await trx.commit();
 
 			return response.status(200).json({ message: "Status update successfully" });
 		} catch (error) {
