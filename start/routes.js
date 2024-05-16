@@ -2715,6 +2715,7 @@ Route.group(() => {
   Route.delete("/visitor_library/:id", "Front/CommunityModule/VisitorCommunityPorfileController.delete_visitor_library");
 	
   Route.get("/get_news_announcements", "Front/CommunityModule/CommunityNewsAnnouncementController.index");
+  Route.get("/get_news_announcements/latest", "Front/CommunityModule/CommunityNewsAnnouncementController.latest");
   Route.get("/get_news_announcements/:id", "Front/CommunityModule/CommunityNewsAnnouncementController.show");
   Route.get("/get_news_announcements/show/:slug", "Front/CommunityModule/CommunityNewsAnnouncementController.showBySlug");
 

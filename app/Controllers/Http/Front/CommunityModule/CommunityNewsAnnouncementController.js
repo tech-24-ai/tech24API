@@ -68,6 +68,38 @@ class CommunityNewsAnnouncementController {
     return response.status(200).send(result);
   }
 
+  async latest({ request, response, view }) 
+  {
+    const query = CommunityNewsAnnouncement.query();
+    const orderBy = request.input("orderBy");
+    const orderDirection = request.input("orderDirection");
+
+    query.select(
+      "id",
+      "community_id",
+      "title",
+      "url_slug",
+      "short_description",
+      "description",
+      "created_at",
+      "updated_at",
+    );
+
+    query.with("community", (builder) => {
+      builder.select("id", "name", "url_slug");
+    });
+    query.where("status", 1);
+
+    if (orderBy && orderDirection) {
+      query.orderBy(`${orderBy}`, orderDirection);
+    }
+
+    let pageSize = (request.input("pageSize")) ? request.input("pageSize") : 5;
+    var result = (await query.limit(pageSize).fetch()).toJSON();
+
+    return response.status(200).send(result);
+  }
+
   /**
    * Render a form to be used for creating a new communitynewsannouncement.
    * GET communitynewsannouncements/create
