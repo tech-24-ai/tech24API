@@ -2695,6 +2695,7 @@ Route.group(() => {
 	// Community post reply APIs
 	Route.get("/communitypostreply", "Front/CommunityModule/CommunityPostReplyController.index");
 	Route.post("/communitypostreply", "Front/CommunityModule/CommunityPostReplyController.store").validator('StoreCommunityPostReply');
+  Route.put("/communitypostreply/:id", "Front/CommunityModule/CommunityPostReplyController.update").validator('StoreCommunityPostReply');
 	Route.post("/communitypostreply/vote", "Front/CommunityModule/CommunityPostReplyController.voting").validator('StoreCommunityPostReplyVote');
 	Route.post("/communitypostreply/mark_correct_answer", "Front/CommunityModule/CommunityPostReplyController.mark_correct_answer");
 	Route.get("/communitypostreply/comments", "Front/CommunityModule/CommunityPostReplyController.get_reply_comments");

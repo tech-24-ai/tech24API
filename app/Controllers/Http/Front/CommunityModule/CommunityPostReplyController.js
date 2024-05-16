@@ -114,12 +114,12 @@ class CommunityPostReplyController {
 		var result; var finalResult;
 		if (page && pageSize) {
 			result = (await query.paginate(page, pageSize)).toJSON();
-			result.data = await this.response(result.data);
+			result.data = await this.response(result.data, userId);
 			finalResult = result;
 			
 		} else {
 			result = (await query.fetch()).toJSON();
-			finalResult = await this.response(result);
+			finalResult = await this.response(result, userId);
 		}
 		
 		return response.status(200).send(finalResult);
@@ -407,8 +407,93 @@ class CommunityPostReplyController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async update ({ params, request, response }) {
-  }
+	async update ({ params, request, response }) {
+
+		const body = request.only(requestOnly);
+		
+		try {
+			const updateData = await CommunityPostReply.findOrFail(params.id);
+			updateData.description = request.input("description");
+			updateData.status = 0;
+			await updateData.save();
+
+			try {
+				var community_post_id = request.input("community_post_id");
+				const getData = await CommunityPost.query().where("id", community_post_id).first();
+
+				const getModerator = UserCommunity.query();
+				getModerator.with('users', (builder) => {
+					builder.select('id', 'email')
+				});
+				getModerator.where('community_id', getData.community_id);
+				let moderatorLists = (await getModerator.fetch()).toJSON();
+
+				let subject, details, ins_community_post_reply_id, link;
+				if(request.input("parent_id") > 0)
+				{
+					subject = 'Tech24 - New Comment posted on Community Answer';
+					details = `You have a new comment to review. Please review and approve/reject it.`;
+					ins_community_post_reply_id = params.id;
+					link = `${Env.get("ADMIN_BASE_URL")}/community-posts-reply-comments-form/${ins_community_post_reply_id}`;
+				} 
+				else
+				{
+					subject = 'Tech24 - New Answer posted on Community Question';
+					details = `You have a new answer to review. Please review and approve/reject it.`;
+					ins_community_post_reply_id = params.id;
+					link = `${Env.get("ADMIN_BASE_URL")}/community-posts-reply-form/${ins_community_post_reply_id}`;
+				}
+
+				if(moderatorLists)
+				{
+					let toEmails = [];
+
+					moderatorLists.forEach((val, index) => {
+						toEmails.push(val.users.email)
+					});	
+					toEmails = toEmails.join(",");
+					
+					if(toEmails)
+					{
+						const name = 'Moderator';
+						
+						const emailStatus = await Mail.send(
+							"newCommunityContentModeratorMail",
+							{ name: name, title: subject, details: details, link: link },
+							(message) => {
+								message.subject(subject);
+								message.from(Env.get("MAIL_USERNAME"));
+								message.to(toEmails);
+							}
+						);
+					}	
+
+					let admin_mail = Env.get("TO_MAIL_USERNAME")
+					if(admin_mail) 
+					{
+						const name = 'Admin';
+
+						const emailStatus = await Mail.send(
+							"newCommunityContentModeratorMail",
+							{ name: name, title: subject, details: details, link: link },
+							(message) => {
+								message.subject(subject);
+								message.from(Env.get("MAIL_USERNAME"));
+								message.to(admin_mail);
+							}
+						);
+					}
+				}
+			} catch (error) {
+				console.log(error);
+			}
+			
+			return response.status(200).json({ message: "Answer updated successfully" });
+		} catch (error) {
+			console.log(error);
+			return response.status(200).json({ message: "Something went wrong" });
+		}
+	}
 
   /**
    * Delete a communitypostreply with id.
@@ -421,8 +506,9 @@ class CommunityPostReplyController {
   async destroy ({ params, request, response }) {
   }
 
-  	async get_reply_comments ({ request, response, view }) {
+  	async get_reply_comments ({ request, response, view, auth }) {
 		
+		const userId = auth.user.id;	
 		const query = CommunityPostReply.query();
 		const search = request.input("search");
 		const orderBy = request.input("orderBy");
@@ -493,23 +579,30 @@ class CommunityPostReplyController {
 		var result; var finalResult;
 		if (page && pageSize) {
 			result = (await query.paginate(page, pageSize)).toJSON();
-			result.data = await this.response(result.data);
+			result.data = await this.response(result.data, userId);
 			finalResult = result;
 			
 		} else {
 			result = (await query.fetch()).toJSON();
-			finalResult = await this.response(result);
+			finalResult = await this.response(result, userId);
 		}
 		
 		return response.status(200).send(finalResult);
 	}
 
-	async response (result)
+	async response (result, userId = 0)
  	{
 		for(let i = 0; i < result.length; i++)
 		{
 			let res = result[i];
 			let visitor_id = res.visitor_id;
+
+			if(userId == visitor_id) {
+				res.isEditable = 1
+			} else {
+				res.isEditable = 0
+			}
+
 			let comments = res.comments;
 			let visitor_level = await getvisitorCurrentLevel(visitor_id);
 			res.visitor.visitor_level = visitor_level;
@@ -517,7 +610,7 @@ class CommunityPostReplyController {
 
 			if(comments && comments.length > 0)
 			{
-				await this.response(comments);
+				await this.response(comments, userId);
 			}
 		}
 		
