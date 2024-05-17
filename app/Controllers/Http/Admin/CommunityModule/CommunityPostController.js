@@ -42,7 +42,15 @@ class CommunityPostController {
     let role_name = role.name;
     
 		if (search) {
-			query.where(searchQuery.search(['title']));
+      query.where(function () {
+				this.where(searchQuery.search(['title']))
+				this.orWhereHas("community", (builder) => {
+				  builder.where(searchQuery.search(["name"]));
+				})
+				this.orWhereHas("visitor", (builder) => {
+				  builder.where(searchQuery.search(["name"]));
+				})
+			});
 		}
 
     if(role && role_name.toLowerCase().includes('moderator')) {
@@ -81,10 +89,10 @@ class CommunityPostController {
 			const filters = JSON.parse(request.input("filters"));
 			filters.forEach(async (filter) => {
 				switch (filter.name) {
-					case "updated_at":
+					case "created_at":
 				 		  query.whereRaw(
                 await dateFilterExtractor({
-                    name: `community_posts.updated_at`,
+                    name: `community_posts.created_at`,
                     date: filter.value,
                 })
 				  		);
@@ -117,17 +125,24 @@ class CommunityPostController {
     
 		if (orderBy == "__meta__.total_reply" && orderDirection) {
 			query.orderBy('total_reply', orderDirection);
-    } else if (orderBy == "__meta__.total_pending_answer" && orderDirection) {
+    } 
+    else if (orderBy == "__meta__.total_pending_answer" && orderDirection) {
 			query.orderBy('total_pending_answer', orderDirection);
-		} else if (orderBy == "__meta__.total_pending_comment" && orderDirection) {
+		} 
+    else if (orderBy == "__meta__.total_pending_comment" && orderDirection) {
 			query.orderBy('total_pending_comment', orderDirection);
-		} else if (orderBy && orderDirection) {
+		} 
+    else if (orderBy == "visitor.name" && orderDirection) {
+			query.orderBy('visitor.name', orderDirection);
+		} 
+    else if (orderBy && orderDirection) {
 			query.orderBy(`${orderBy}`, orderDirection);
-		} else {
+		} 
+    else {
       query.orderBy("id", "DESC");
     }
-		
-		let page = null;
+
+    let page = null;
 		let pageSize = null;
 
 		if (request.input("page")) {
@@ -155,9 +170,11 @@ class CommunityPostController {
 		for(let i = 0; i < result.length; i++)
 		{
 			let res = result[i];
-	
-      res.created_at = moment(res.created_at).format('DD-MM-YYYY hh:m A')
-      res.updated_at = moment(res.updated_at).format('DD-MM-YYYY hh:m A')
+      let createdDate = new Date(res.created_at);
+      let updatedDate = new Date(res.updated_at);
+
+      res.created_at = moment(createdDate).format('DD-MM-YYYY hh:m A')
+      res.updated_at = moment(updatedDate).format('DD-MM-YYYY hh:m A')
       result[i] = res;
 		}
 		
