@@ -203,10 +203,12 @@ class CommunityPostReplyController {
 		
 		try {	
 			var reply_status = request.input("status");
+			var description = request.input("description");
 
 			const updateData = await CommunityPostReply.findOrFail(params.id);
 			let oldStatus = updateData.status;
-
+			
+			updateData.description = description;
 			updateData.status = reply_status;
 			await updateData.save();
 
@@ -417,10 +419,12 @@ class CommunityPostReplyController {
 		
 		try {	
 			var reply_status = request.input("status");
+			var description = request.input("description");
 
 			const updateData = await CommunityPostReply.findOrFail(params.id);
 			let oldStatus = updateData.status;
 
+			updateData.description = description;
 			updateData.status = reply_status;
 			await updateData.save();
 
