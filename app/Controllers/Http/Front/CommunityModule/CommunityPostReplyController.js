@@ -488,10 +488,16 @@ class CommunityPostReplyController {
 				console.log(error);
 			}
 			
-			return response.status(200).json({ message: "Answer updated successfully" });
-		} catch (error) {
+			if(request.input("parent_id") > 0)
+			{
+				return response.status(200).json({ message: "Comment updated successfully" });
+			} else {
+				return response.status(200).json({ message: "Answer updated successfully" });
+			}	
+		
+			} catch (error) {
 			console.log(error);
-			return response.status(200).json({ message: "Something went wrong" });
+			return response.status(423).json({ message: "Something went wrong" });
 		}
 	}
 
