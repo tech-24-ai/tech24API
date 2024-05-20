@@ -42,7 +42,7 @@ class CommunityPostController {
    */
 	async index ({ params, request, response, view, auth }) {
 		
-		const userId = auth.user.id;	
+		const userId = (auth.user) ? auth.user.id : "";
 		const query = CommunityPost.query();
 		const search = request.input("search");
 		const orderBy = request.input("orderBy");
@@ -333,14 +333,14 @@ class CommunityPostController {
    */
 	async show ({ params, request, response, view, auth }) {
 		
-		const userId = auth.user.id;
+		const userId = (auth.user) ? auth.user.id : "";
 		const getData = await CommunityPost.query().where("url_slug", params.slug).firstOrFail();
 
 		const ipAddress = _.split(request.header("X-Forwarded-For"), ",");
         let guest_ip = _.trim(_.first(ipAddress));
         guest_ip = guest_ip && guest_ip != "" ? guest_ip : request.request.socket.remoteAddress;
 
-		if(guest_ip)
+		if(guest_ip && userId > 0)
 		{	
 			let curr_date = moment().subtract(5, 'minutes').format('YYYY-MM-DD HH:mm:ss');
 			const query = CommunityVisitorViewLog.query();
@@ -410,20 +410,23 @@ class CommunityPostController {
 			const visitor_level = await getvisitorCurrentLevel(result.visitor_id); // Fetch user level separately
 			result.visitor.visitor_level = visitor_level;
 
-			let curr_date = moment().format('YYYY-MM-DD');
-			const checkData = await CommunityVisitorActivity.query().where("visitor_id", userId).where("community_post_id", result.id).where("activity_type", 6).whereRaw(`DATE(created_at) = '${curr_date}'`).first();
+			if(userId > 0)
+			{	
+				let curr_date = moment().format('YYYY-MM-DD');
+				const checkData = await CommunityVisitorActivity.query().where("visitor_id", userId).where("community_post_id", result.id).where("activity_type", 6).whereRaw(`DATE(created_at) = '${curr_date}'`).first();
 
-			if(!checkData)
-			{
-				// Insert Activity record
-				const insActivity = await CommunityVisitorActivity.create(
-					{
-						visitor_id: userId,
-						community_id: result.community_id,
-						community_post_id: result.id,
-						activity_type: 6,
-					},
-				);
+				if(!checkData)
+				{
+					// Insert Activity record
+					const insActivity = await CommunityVisitorActivity.create(
+						{
+							visitor_id: userId,
+							community_id: result.community_id,
+							community_post_id: result.id,
+							activity_type: 6,
+						},
+					);
+				}	
 			}	
 		}
 
@@ -673,9 +676,8 @@ class CommunityPostController {
 		return result;
   	}
 
-	async search ({ params, request, response, view, auth }) {
+	async search ({ params, request, response, view }) {
 		
-		const userId = auth.user.id;	
 		const query = CommunityPost.query();
 		const search = request.input("search");
 		const orderBy = request.input("orderBy");
@@ -703,10 +705,6 @@ class CommunityPostController {
 			builder.where('vote_type', 1)
 		})
 
-		query.with('communityVote',(builder)=>{
-			builder.select('id','community_post_id').where('visitor_id', userId)
-		});	
-		
 		query.with('postTags',(builder)=>{
 			builder.select('id','name')
 		});	
@@ -793,19 +791,12 @@ class CommunityPostController {
 				}
 				communityQuery.select('id', 'name', 'description', 'url_slug', 'image_url')
 
-				communityQuery.with('communityMember', (builder) => {
-					builder.select('id','visitor_id','community_id','created_at').where('status', 1).where('visitor_id', userId)
-				});
-
 				communityQuery.withCount('communityPost as total_posts', (builder) => {
 					builder.where('status', 1)
 				})
 				communityQuery.withCount('getCommunityPostReply as total_post_reply', (builder) => {
 					builder.where('community_post_replies.status', 1)
 					builder.where('community_post_replies.parent_id', null)
-				})
-				communityQuery.withCount('communityMember as total_members', (builder) => {
-					builder.where('status', 1)
 				})
 				
 				if (orderBy && orderDirection) {

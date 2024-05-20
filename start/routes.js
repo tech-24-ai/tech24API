@@ -2670,36 +2670,50 @@ Route.group(() => {
 	Route.delete("/:id", "Admin/CommunityModule/CommunityNewsAnnouncementController.destroy");
 }).prefix("/news_announcements").middleware("auth"); 
 
-//Community module App APIs
+//Community module App APIs without login
 Route.group(() => {
-	
-	Route.get("/tags", "Admin/CommunityModule/TagController.index");
+
+  Route.get("/tags", "Admin/CommunityModule/TagController.index");
 	
 	// Get Community lists APIs
 	Route.get("/community", "Front/CommunityModule/CommunityController.index");
 	Route.get("/community_stats", "Front/CommunityModule/CommunityController.community_stats");
 	Route.get("/community/details/:slug", "Front/CommunityModule/CommunityController.show");
+
+  Route.get("/tranding_question", "Front/CommunityModule/CommunityPostController.tranding_question");
+	Route.get("/communitypost/search", "Front/CommunityModule/CommunityPostController.search");
+  Route.get("/communitypost/download_attachment", "FileController.downloadPostAttachment");
+  Route.get("/communitypost/:community_slug", "Front/CommunityModule/CommunityPostController.index");
+	Route.get("/communitypost/details/:slug", "Front/CommunityModule/CommunityPostController.show");
+
+  // Community post reply APIs
+	Route.get("/communitypostreply", "Front/CommunityModule/CommunityPostReplyController.index");
+  Route.get("/communitypostreply/comments", "Front/CommunityModule/CommunityPostReplyController.get_reply_comments");
+
+  Route.get("/get_news_announcements", "Front/CommunityModule/CommunityNewsAnnouncementController.index");
+  Route.get("/get_news_announcements/latest", "Front/CommunityModule/CommunityNewsAnnouncementController.latest");
+  Route.get("/get_news_announcements/:id", "Front/CommunityModule/CommunityNewsAnnouncementController.show");
+  Route.get("/get_news_announcements/show/:slug", "Front/CommunityModule/CommunityNewsAnnouncementController.showBySlug");
+
+}).prefix("/app");
+
+//Community module App APIs
+Route.group(() => {
+	
   Route.post("/community/join", "Front/CommunityModule/CommunityController.join_community").validator("StoreJoinCommunity");
   Route.post("/community/leave", "Front/CommunityModule/CommunityController.leave_community").validator("StoreJoinCommunity");
 	
 	// Community post APIs
-  Route.get("/tranding_question", "Front/CommunityModule/CommunityPostController.tranding_question");
-	Route.get("/communitypost/search", "Front/CommunityModule/CommunityPostController.search");
-  Route.get("/communitypost/download_attachment", "FileController.downloadPostAttachment");
-	Route.get("/communitypost/:community_slug", "Front/CommunityModule/CommunityPostController.index");
-	Route.get("/communitypost/details/:slug", "Front/CommunityModule/CommunityPostController.show");
 	Route.post("/communitypost", "Front/CommunityModule/CommunityPostController.store").validator('StoreCommunityPost');
   Route.put("/communitypost/:id", "Front/CommunityModule/CommunityPostController.update").validator('StoreCommunityPost');
 	Route.post("/communitypost/vote", "Front/CommunityModule/CommunityPostController.voting").validator('StoreCommunityPostVote');
 	
 	// Community post reply APIs
-	Route.get("/communitypostreply", "Front/CommunityModule/CommunityPostReplyController.index");
 	Route.post("/communitypostreply", "Front/CommunityModule/CommunityPostReplyController.store").validator('StoreCommunityPostReply');
   Route.put("/communitypostreply/:id", "Front/CommunityModule/CommunityPostReplyController.update").validator('StoreCommunityPostReply');
 	Route.post("/communitypostreply/vote", "Front/CommunityModule/CommunityPostReplyController.voting").validator('StoreCommunityPostReplyVote');
 	Route.post("/communitypostreply/mark_correct_answer", "Front/CommunityModule/CommunityPostReplyController.mark_correct_answer");
-	Route.get("/communitypostreply/comments", "Front/CommunityModule/CommunityPostReplyController.get_reply_comments");
-
+	
 	Route.get("/repost_abuse/types", "Front/CommunityModule/ReportAbuseController.getTypes");
 	Route.post("/repost_abuse", "Front/CommunityModule/ReportAbuseController.store").validator('StoreReportAbuse');
 	
@@ -2715,11 +2729,6 @@ Route.group(() => {
   Route.get("/visitor_library", "Front/CommunityModule/VisitorCommunityPorfileController.visitor_library");
   Route.delete("/visitor_library/:id", "Front/CommunityModule/VisitorCommunityPorfileController.delete_visitor_library");
 	
-  Route.get("/get_news_announcements", "Front/CommunityModule/CommunityNewsAnnouncementController.index");
-  Route.get("/get_news_announcements/latest", "Front/CommunityModule/CommunityNewsAnnouncementController.latest");
-  Route.get("/get_news_announcements/:id", "Front/CommunityModule/CommunityNewsAnnouncementController.show");
-  Route.get("/get_news_announcements/show/:slug", "Front/CommunityModule/CommunityNewsAnnouncementController.showBySlug");
-
   Route.post("/uploadimage", "FileController.image");
   Route.post("/uploadmedia", "FileController.media");
 

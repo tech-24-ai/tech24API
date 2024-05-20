@@ -37,7 +37,7 @@ class CommunityPostReplyController {
    */
 	async index ({ request, response, view, auth }) {
 
-		const userId = auth.user.id;	
+		const userId = (auth.user) ? auth.user.id : "";
 		const orderBy = request.input("orderBy");
 		const orderDirection = request.input("orderDirection");
 
@@ -514,7 +514,7 @@ class CommunityPostReplyController {
 
   	async get_reply_comments ({ request, response, view, auth }) {
 		
-		const userId = auth.user.id;	
+		const userId = (auth.user) ? auth.user.id : "";
 		const query = CommunityPostReply.query();
 		const search = request.input("search");
 		const orderBy = request.input("orderBy");

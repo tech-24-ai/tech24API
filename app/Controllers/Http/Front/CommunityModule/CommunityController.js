@@ -31,7 +31,7 @@ class CommunityController {
    */
 	async index ({ request, response, view, auth }) {
 		
-   		const userId = auth.user.id;	
+		const userId = (auth.user) ? auth.user.id : "";
 		const orderBy = request.input("orderBy");
 		const orderDirection = request.input("orderDirection");
 		const search = request.input("search");
@@ -121,7 +121,7 @@ class CommunityController {
    */
 	async show ({ params, request, response, view, auth }) {
 
-    const userId = auth.user.id;	
+	const userId = (auth.user) ? auth.user.id : "";
     const query = Community.query();
 		query.where("url_slug", params.slug);
 		query.with('communityMember', (builder) => {
