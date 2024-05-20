@@ -130,6 +130,11 @@ class BlogController {
   }
 
   async store({ request, response }) {
+
+    var seoUrlSlug = request.input("slug");
+    seoUrlSlug = seoUrlSlug.replace(/[^-_a-z0-9A-Z' ]/g, "");
+    seoUrlSlug = seoUrlSlug.replace(/ /g,"-")
+
     const query = new Blog();
     query.blog_topic_id = request.input("blog_topic_id");
     query.meta_title = request.input("meta_title");
@@ -138,7 +143,7 @@ class BlogController {
     query.name = request.input("name");
     query.image = request.input("image");
     query.banner = request.input("banner");
-    query.slug = request.input("slug");
+    query.slug = seoUrlSlug;
     query.details = request.input("details");
     query.html = request.input("html");
     query.author = request.input("author");
@@ -162,6 +167,11 @@ class BlogController {
   }
 
   async update({ params, request, response }) {
+
+    var seoUrlSlug = request.input("slug");
+    seoUrlSlug = seoUrlSlug.replace(/[^-_a-z0-9A-Z' ]/g, "");
+    seoUrlSlug = seoUrlSlug.replace(/ /g,"-")
+
     const query = await Blog.findOrFail(params.id);
     query.blog_topic_id = request.input("blog_topic_id");
     query.meta_title = request.input("meta_title");
@@ -170,7 +180,7 @@ class BlogController {
     query.name = request.input("name");
     query.image = request.input("image");
     query.banner = request.input("banner");
-    query.slug = request.input("slug");
+    query.slug = seoUrlSlug;
     query.details = request.input("details");
     query.html = request.input("html");
     query.status = request.input("status"); //status 0: Inactive, 1: Active Live, 2: Draft
