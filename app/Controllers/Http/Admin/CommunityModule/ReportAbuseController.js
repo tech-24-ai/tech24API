@@ -144,6 +144,10 @@ class ReportAbuseController {
 		const query = ReportAbuse.query();
 		query.where("id", params.id);
 		
+		query.with('abuseType',(builder)=>{
+			builder.select('id','name')
+		});
+		
 		query.with('visitor',(builder)=>{
 			builder.select('id','name')
 		});
