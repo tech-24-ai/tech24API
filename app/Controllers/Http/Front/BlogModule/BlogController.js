@@ -16,6 +16,8 @@ class BlogController {
         const orderPos = request.input('orderPos')
         const searchQuery = new Query(request, { order: "id" });
         const tags = request.input('tags')
+        const category = request.input('category')
+        const author = request.input('author')
 
         const blogQuery = Blog.query()
         blogQuery.select('blogs.blog_topic_id', 'blogs.name', 'blogs.image', 'blogs.banner', 'blogs.slug', 'blogs.status', 'blogs.created_at', 'blogs.details', 'blogs.author', 'blogs.read_time');
@@ -29,6 +31,12 @@ class BlogController {
         }
         if (tags) {
             blogQuery.whereRaw(`blogs.details LIKE '%${tags}%'`)
+        }
+        if (category) {
+            blogQuery.whereRaw(`categories.name LIKE '%${category}%'`)
+        }
+        if (author) {
+            blogQuery.whereRaw(`blogs.author LIKE '%${author}%'`)
         }
         if (orderBy && orderPos) {
             blogQuery.orderBy(orderBy, orderPos)
