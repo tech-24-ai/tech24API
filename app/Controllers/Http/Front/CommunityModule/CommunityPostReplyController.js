@@ -12,6 +12,7 @@ const CommunityVisitorActivity = use("App/Models/Admin/CommunityModule/Community
 const UserCommunity = use("App/Models/Admin/CommunityModule/UserCommunity");
 const Mail = use("Mail");
 const Env = use("Env");
+const Logger = use("Logger");
 
 const requestOnly = [
 	"parent_id",
@@ -262,6 +263,9 @@ class CommunityPostReplyController {
 			return response.status(200).json({ message: "Answer posted successfully" });
 		} catch (error) {
 			console.log(error);
+			Logger.transport("file").info(
+				`error save answer/comment : ${error}`
+			);
 			trx.rollback();
 			return response.status(423).json({ message: "Something went wrong", error });
 		}
@@ -497,6 +501,9 @@ class CommunityPostReplyController {
 		
 			} catch (error) {
 			console.log(error);
+			Logger.transport("file").info(
+				`error update answer/comment : ${error}`
+			);
 			return response.status(423).json({ message: "Something went wrong" });
 		}
 	}

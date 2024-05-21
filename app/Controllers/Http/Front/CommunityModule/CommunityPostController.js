@@ -17,6 +17,7 @@ const Env = use("Env");
 const _ = require("lodash");
 const Community = use("App/Models/Admin/CommunityModule/Community");
 const CommunityNewsAnnouncement = use("App/Models/Admin/CommunityModule/CommunityNewsAnnouncement");
+const Logger = use("Logger");
 
 const requestOnly = [
 	"community_id",
@@ -310,6 +311,9 @@ class CommunityPostController {
 			return response.status(200).json({ message: "Question posted successfully" });
 		} catch (error) {
 			console.log(error);
+			Logger.transport("file").info(
+				`error save question : ${error}`
+			);
 			trx.rollback();
 			return response.status(423).json({ message: "Something went wrong", error });
 		}
@@ -634,6 +638,9 @@ class CommunityPostController {
 			return response.status(200).json({ message: "Question update successfully" });
 		} catch (error) {
 			console.log(error);
+			Logger.transport("file").info(
+				`error update question : ${error}`
+			);
 			return response.status(423).json({ message: "Something went wrong", error });
 		}
 	}
