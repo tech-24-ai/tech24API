@@ -2695,6 +2695,7 @@ Route.group(() => {
   Route.get("/get_news_announcements/:id", "Front/CommunityModule/CommunityNewsAnnouncementController.show");
   Route.get("/get_news_announcements/show/:slug", "Front/CommunityModule/CommunityNewsAnnouncementController.showBySlug");
 
+  Route.get("/repost_abuse/types", "Front/CommunityModule/ReportAbuseController.getTypes");
 }).prefix("/app");
 
 //Community module App APIs
@@ -2714,7 +2715,6 @@ Route.group(() => {
 	Route.post("/communitypostreply/vote", "Front/CommunityModule/CommunityPostReplyController.voting").validator('StoreCommunityPostReplyVote');
 	Route.post("/communitypostreply/mark_correct_answer", "Front/CommunityModule/CommunityPostReplyController.mark_correct_answer");
 	
-	Route.get("/repost_abuse/types", "Front/CommunityModule/ReportAbuseController.getTypes");
 	Route.post("/repost_abuse", "Front/CommunityModule/ReportAbuseController.store").validator('StoreReportAbuse');
 	
 	Route.get("/visitorcommunityprofile", "Front/CommunityModule/VisitorCommunityPorfileController.index");
