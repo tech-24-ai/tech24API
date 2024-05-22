@@ -82,7 +82,9 @@ class CommunityPostReplyController {
         builder.select("id", "name", "profile_pic_url");
       });
 
-      builder.withCount("comments as total_comments");
+      builder.withCount("comments as total_comments", (builder) => {
+        builder.where("status", 1);
+      });
 
       //   builder.with("comments", (builder) => {
       //     builder.with("visitor", (builder) => {
@@ -589,7 +591,9 @@ class CommunityPostReplyController {
     // 	})
     // });
 
-    query.withCount("comments as total_comments");
+    query.withCount("comments as total_comments", (builder) => {
+      builder.where("status", 1);
+    });
 
     query.withCount("postReplyVote as total_helpful", (builder) => {
       builder.where("vote_type", 1);
