@@ -41,6 +41,10 @@ class MarketResearchController {
 		const orderDirection = request.input("orderDirection");
     const searchQuery = new Query(request, { order: "id" });
 
+    const topic_txt = request.input("topic_txt");
+    const category_txt = request.input("category_txt");
+    const tags_txt = request.input("tags_txt");
+
     query.select('id', 'document_type_id', 'category_id', 'research_topic_id', 'name', 'seo_url_slug', 'image', 'details', 'created_at');
     
     query.with('category', (builder) => {
@@ -75,6 +79,22 @@ class MarketResearchController {
     if (tags) {
       query.whereHas('documentTags', (builder) => {
         builder.whereIn('research_tag_id', tags)
+      })
+    }
+
+    if(topic_txt) {
+      query.whereHas('researchTopic', (builder) => {
+        builder.whereRaw(`title LIKE '%${topic_txt}%'`)
+      })
+    }
+    if(category_txt) {
+      query.whereHas('category', (builder) => {
+        builder.whereRaw(`name LIKE '%${category_txt}%'`)
+      })
+    }
+    if(tags_txt) {
+      query.whereHas('documentTags', (builder) => {
+        builder.whereRaw(`name LIKE '%${tags_txt}%'`)
       })
     }
 
