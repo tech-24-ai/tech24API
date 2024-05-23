@@ -10,6 +10,7 @@ const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
 const CommunityPost = use("App/Models/Admin/CommunityModule/CommunityPost");
 const Mail = use("Mail");
 const Env = use("Env");
+const moment = require("moment");
 let parentIds;
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
@@ -210,6 +211,13 @@ class CommunityPostReplyController {
 			
 			updateData.description = description;
 			updateData.status = reply_status;
+
+			if(oldStatus != reply_status)
+			{
+				updateData.moderator_id = userId;
+				updateData.moderated_at = moment().format('YYYY-MM-DD HH:mm:ss');
+			}
+			
 			await updateData.save();
 
 			const query = CommunityVisitorPoint.query();

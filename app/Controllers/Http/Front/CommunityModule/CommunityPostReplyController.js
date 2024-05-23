@@ -170,18 +170,20 @@ class CommunityPostReplyController {
     const body = request.only(requestOnly);
 
     try {
-      const query = await CommunityPostReply.create(
-        {
-          ...body,
-          visitor_id: userId,
-        },
-        trx
-      );
-
+      
       var community_post_id = request.input("community_post_id");
       const getData = await CommunityPost.query()
         .where("id", community_post_id)
         .first();
+
+      const query = await CommunityPostReply.create(
+        {
+          ...body,
+          community_id: getData.community_id,
+          visitor_id: userId,
+        },
+        trx
+      );
 
       // Insert Activity record
       if (request.input("parent_id") > 0) {

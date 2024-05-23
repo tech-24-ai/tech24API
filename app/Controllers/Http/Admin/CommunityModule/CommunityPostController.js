@@ -244,8 +244,9 @@ class CommunityPostController {
 		return response.status(200).send(result);	
 	}
 
-	async status_update ({ params, request, response }) {
+	async status_update ({ params, request, response, auth }) {
 		
+    const user_id = auth.user.id;
 		const trx = await Database.beginTransaction();
 		
 		try {	
@@ -263,7 +264,14 @@ class CommunityPostController {
 			updateData.is_discussion_open = is_discussion_open;
 			updateData.status = post_status;
 			updateData.reject_reason = reject_reason;
-			await updateData.save();
+
+      if(oldStatus != post_status)
+      {
+        updateData.moderator_id = user_id;
+        updateData.moderated_at = moment().format('YYYY-MM-DD HH:mm:ss');
+      }
+
+      await updateData.save();
 
       const query = CommunityVisitorPoint.query();
 			const isExist = await query.where('community_post_reply_id', params.id).where('visitor_id', updateData.visitor_id).first();
