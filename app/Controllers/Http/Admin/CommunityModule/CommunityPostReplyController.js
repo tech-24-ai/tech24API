@@ -434,6 +434,13 @@ class CommunityPostReplyController {
 
 			updateData.description = description;
 			updateData.status = reply_status;
+
+			if(oldStatus != reply_status)
+			{
+				updateData.moderator_id = userId;
+				updateData.moderated_at = moment().format('YYYY-MM-DD HH:mm:ss');
+			}
+
 			await updateData.save();
 
 			if(oldStatus != reply_status && reply_status == 1)
