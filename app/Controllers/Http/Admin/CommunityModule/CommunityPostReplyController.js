@@ -476,7 +476,6 @@ class CommunityPostReplyController {
 			return response.status(200).json({ message: "Status update successfully" });
 		} catch (error) {
 			console.log(error);
-			trx.rollback();
 			return response.status(423).json({ message: "Something went wrong", error });
 		}	
 	}
