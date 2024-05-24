@@ -676,14 +676,14 @@ class ReportController {
     counters.push({
       name: "Total Questions",
       icon: "QuestionMarkIcon",
-      color: "success",
+      color: "warning",
       value: await CommunityPost.query().getCount(),
     });
 
     counters.push({
       name: "Total Answers",
       icon: "QuestionAnswerIcon",
-      color: "success",
+      color: "primary",
       value: await CommunityPostReply.query().getCount(),
     });
 
@@ -710,7 +710,7 @@ class ReportController {
     counters.push({
       name: "Total Visitors",
       icon: "Diversity3Icon",
-      color: "success",
+      color: "warning",
       value: totalVisitors,
     });
 
