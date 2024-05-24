@@ -2776,3 +2776,13 @@ Route.group(() => {
   Route.post("/blogs/save", "Front/BlogModule/BlogController.save_to_library");
   Route.post("/market_research/save", "Front/MarketResearchModule/MarketResearchController.save_to_library");
 }).prefix("/app").middleware("auth:visitorAuth");
+
+Route.group(() => {
+  Route.get('getVisitorLists', 'Admin/CommunityModule/ReportController.get_visitor_lists')
+  Route.get('generateVisitorReport', 'Admin/CommunityModule/ReportController.visitor_report')
+  Route.get('generateDiscussionGroupSummaryReport', 'Admin/CommunityModule/ReportController.dicsussion_group_summary_report')
+  Route.get('getModeratorLists', 'Admin/CommunityModule/ReportController.get_moderator_lists')
+  Route.get('generateModeratorReport', 'Admin/CommunityModule/ReportController.moderator_report')
+
+  Route.get('communityDashboard', 'Admin/CommunityModule/ReportController.community_dashboard')
+}).middleware("auth");

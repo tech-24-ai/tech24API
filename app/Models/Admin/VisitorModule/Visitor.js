@@ -2,6 +2,7 @@
 
 /** @type {import('@adonisjs/framework/src/Hash')} */
 const Hash = use('Hash')
+const Database = use("Database");
 
 /** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
 const Model = use('Model')
@@ -47,6 +48,31 @@ class Visitor extends Model {
     visitor_group() {
         return this.belongsTo('App/Models/Admin/VisitorModule/VisitorGroup')
     }
+
+    communityPost() {
+		return this.hasMany(
+			"App/Models/Admin/CommunityModule/CommunityPost"
+		);
+	}
+
+	communityPostReply() {
+		return this.hasMany(
+			"App/Models/Admin/CommunityModule/CommunityPostReply"
+		);
+	}
+
+	// visitorPoints() {
+	// 	return this.hasMany(
+	// 		"App/Models/Admin/CommunityModule/CommunityVisitorPoint"
+	// 	);
+	// }
+
+    // static scopeWithTotalVisitorPoints(query) {
+	// 	query.with('visitorPoints', (builder) => {
+    //         builder.select('visitor_id', Database.raw('SUM(points) as total_current_points'))
+    //         builder.groupBy("visitor_id")
+    //     })
+	// }
 }
 
 module.exports = Visitor

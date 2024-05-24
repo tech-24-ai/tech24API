@@ -36,7 +36,31 @@ async function getvisitorCurrentLevel(visitorId) {
   return current_level;
 }
 
+async function getvisitorPointsBadge(visitorId) {
+  
+  const query = CommunityVisitorPoint.query();
+  query.select('id','visitor_id')
+  query.where("visitor_id", visitorId);
+  query.sum('points as totalPoints')
+  const result1 = await query.first();
+  let totalPoints = result1.totalPoints;
+  totalPoints = (totalPoints > 0) ? totalPoints : 0;
+
+  const badgeQuery = Badge.query()
+  badgeQuery.where('min_range', '<=', totalPoints)
+  badgeQuery.where('max_range', '>=', totalPoints)
+  const badgeResult = await badgeQuery.first();
+  let currectBadge = (badgeResult) ? badgeResult.title : '';
+
+  let data = {
+    "total_points" : totalPoints,
+    "current_badge" : currectBadge,
+  };
+  
+  return data;
+}
 
 module.exports = {
   getvisitorCurrentLevel,
+  getvisitorPointsBadge,
 };

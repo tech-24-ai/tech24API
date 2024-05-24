@@ -35,6 +35,18 @@ class User extends Model {
 		).pivotModel("App/Models/Admin/CommunityModule/UserCommunity");
 	}
 
+  communityPost() {
+		return this.hasMany(
+			"App/Models/Admin/CommunityModule/CommunityPost", "id", "moderator_id"
+		);
+	}
+
+	communityPostReply() {
+		return this.hasMany(
+			"App/Models/Admin/CommunityModule/CommunityPostReply", "id", "moderator_id"
+		);
+	}
+
   static get dates() {
     return super.dates.concat(['created_at', 'updated_at'])
 }    
