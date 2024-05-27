@@ -47,6 +47,7 @@
     "geoip-lite": "^1.4.6",
     "google-trends-api": "^4.9.2",
     "image-url-validator": "^1.0.4",
+    "jsonwebtoken": "^9.0.2",
     "logo-scrape": "^1.1.0",
     "maskdata": "^1.2.2",
     "millify": "^4.0.0",

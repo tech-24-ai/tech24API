@@ -11,6 +11,7 @@ const CommunityVisitor = use("App/Models/Admin/CommunityModule/CommunityVisitor"
 const CommunityPost = use("App/Models/Admin/CommunityModule/CommunityPost");
 const CommunityPostReply = use("App/Models/Admin/CommunityModule/CommunityPostReply");
 const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
+const { checkVisitorLoggedIn } = require("../../../../Helper/checkVisitorLoggedIn");
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -29,9 +30,16 @@ class CommunityController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async index ({ request, response, view, auth }) {
+	async index ({ request, response, view }) {
 		
-		const userId = (auth.user) ? auth.user.id : "";
+		let userId = "";
+		let authToken = request.header('Authorization')
+		if(authToken) {
+			authToken = authToken.replace("Bearer","")
+			authToken = authToken.trim()
+			userId = await checkVisitorLoggedIn(authToken);	
+		}
+
 		const orderBy = request.input("orderBy");
 		const orderDirection = request.input("orderDirection");
 		const search = request.input("search");
@@ -119,10 +127,17 @@ class CommunityController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async show ({ params, request, response, view, auth }) {
+	async show ({ params, request, response, view }) {
 
-	const userId = (auth.user) ? auth.user.id : "";
-    const query = Community.query();
+		let userId = "";
+		let authToken = request.header('Authorization')
+		if(authToken) {
+			authToken = authToken.replace("Bearer","")
+			authToken = authToken.trim()
+			userId = await checkVisitorLoggedIn(authToken);	
+		}
+
+   		const query = Community.query();
 		query.where("url_slug", params.slug);
 		query.with('communityMember', (builder) => {
 		builder.select('id','visitor_id','community_id','created_at').where('visitor_id', userId)

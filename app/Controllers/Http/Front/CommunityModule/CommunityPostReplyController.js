@@ -25,6 +25,7 @@ const UserCommunity = use("App/Models/Admin/CommunityModule/UserCommunity");
 const Mail = use("Mail");
 const Env = use("Env");
 const Logger = use("Logger");
+const { checkVisitorLoggedIn } = require("../../../../Helper/checkVisitorLoggedIn");
 
 const requestOnly = ["parent_id", "community_post_id", "description"];
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
@@ -44,8 +45,15 @@ class CommunityPostReplyController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index({ request, response, view, auth }) {
-    const userId = auth.user ? auth.user.id : "";
+  async index({ request, response, view }) {
+    
+    let userId = "";
+		let authToken = request.header('Authorization')
+		if(authToken) {
+			authToken = authToken.replace("Bearer","")
+			authToken = authToken.trim()
+			userId = await checkVisitorLoggedIn(authToken);	
+		}
     const orderBy = request.input("orderBy");
     const orderDirection = request.input("orderDirection");
 
@@ -550,8 +558,15 @@ class CommunityPostReplyController {
    */
   async destroy({ params, request, response }) {}
 
-  async get_reply_comments({ request, response, view, auth }) {
-    const userId = auth.user ? auth.user.id : "";
+  async get_reply_comments({ request, response, view }) {
+    
+    let userId = "";
+		let authToken = request.header('Authorization')
+		if(authToken) {
+			authToken = authToken.replace("Bearer","")
+			authToken = authToken.trim()
+			userId = await checkVisitorLoggedIn(authToken);	
+		}
     const query = CommunityPostReply.query();
     const search = request.input("search");
     const orderBy = request.input("orderBy");

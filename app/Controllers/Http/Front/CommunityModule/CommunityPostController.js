@@ -18,12 +18,16 @@ const _ = require("lodash");
 const Community = use("App/Models/Admin/CommunityModule/Community");
 const CommunityNewsAnnouncement = use("App/Models/Admin/CommunityModule/CommunityNewsAnnouncement");
 const Logger = use("Logger");
+const { checkVisitorLoggedIn } = require("../../../../Helper/checkVisitorLoggedIn");
+const { getUpvoteQuestionPoints } = require("../../../../Helper/visitorPoints");
+const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVisitorPoint");
 
 const requestOnly = [
 	"community_id",
 	"title",
 	"description",
 ];
+
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
 /** @typedef {import('@adonisjs/framework/src/View')} View */
@@ -41,9 +45,16 @@ class CommunityPostController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async index ({ params, request, response, view, auth }) {
+	async index ({ params, request, response, view }) {
 		
-		const userId = (auth.user) ? auth.user.id : "";
+		let userId = "";
+		let authToken = request.header('Authorization')
+		if(authToken) {
+			authToken = authToken.replace("Bearer","")
+			authToken = authToken.trim()
+			userId = await checkVisitorLoggedIn(authToken);	
+		}
+
 		const query = CommunityPost.query();
 		const search = request.input("search");
 		const orderBy = request.input("orderBy");
@@ -335,9 +346,15 @@ class CommunityPostController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-	async show ({ params, request, response, view, auth }) {
+	async show ({ params, request, response, view }) {
 		
-		const userId = (auth.user) ? auth.user.id : "";
+		let userId = "";
+		let authToken = request.header('Authorization')
+		if(authToken) {
+			authToken = authToken.replace("Bearer","")
+			authToken = authToken.trim()
+			userId = await checkVisitorLoggedIn(authToken);
+		}	
 		const getData = await CommunityPost.query().where("url_slug", params.slug).firstOrFail();
 
 		const ipAddress = _.split(request.header("X-Forwarded-For"), ",");
@@ -469,6 +486,18 @@ class CommunityPostController {
 				},
 				trx
 			);
+
+			const upvoteQuePoints = await getUpvoteQuestionPoints();
+			const addPoints = await CommunityVisitorPoint.create(
+				{
+					visitor_id: userId,
+					type: 5,
+					points: upvoteQuePoints,
+					community_post_id: community_post_id,
+				},
+				trx
+			);
+			
 			await trx.commit();
 
 			const query2 = Visitor.query();
