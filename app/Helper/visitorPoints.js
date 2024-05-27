@@ -33,9 +33,18 @@ async function getCorrectAnswerPoints() {
   return acceptAnswerPoints.value;
 }
 
+async function getUpvoteQuestionPoints() {
+  let questionUpvotePoints = await Config.findOrCreate(
+    { key: KEYS.UPVOTES_QUESTION_POINTS },
+    { key: KEYS.UPVOTES_QUESTION_POINTS, value: 1 }
+  );
+  return questionUpvotePoints.value;
+}
+
 module.exports = {
   getSubmitQuestionPoints,
   getSubmitAnswerPoints,
   getUpvoteAnswerPoints,
-  getCorrectAnswerPoints
+  getCorrectAnswerPoints,
+  getUpvoteQuestionPoints,
 };
