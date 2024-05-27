@@ -234,7 +234,7 @@ class VisitorController {
       }
 
       if (request.input("designation")) {
-        query.company = request.input("designation")
+        query.designation = request.input("designation")
       }
 
       if (request.input("company_location")) {
@@ -367,7 +367,7 @@ class VisitorController {
     }
 
     if (request.input("designation")) {
-      query.company = request.input("designation")
+      query.designation = request.input("designation")
     }
 
     if (request.input("company_location")) {
