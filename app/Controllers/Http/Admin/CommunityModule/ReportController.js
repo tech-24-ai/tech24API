@@ -845,7 +845,7 @@ class ReportController {
       name: "Total Answers",
       icon: "message",
       color: "primary",
-      value: await CommunityPostReply.query().getCount(),
+      value: await CommunityPostReply.query().where('parent_id', null).getCount(),
     });
 
     let totalViews = await CommunityPost.query().getSum('views_counter')
@@ -888,6 +888,8 @@ class ReportController {
 
     communityQuery.having('total_query_views', '>', 0)
     communityQuery.groupBy("communities.id")
+    communityQuery.orderBy('total_questions', 'DESC')
+    communityQuery.orderBy('total_post_answers', 'DESC')
     communityQuery.orderBy('total_query_views', 'DESC')
     let communityResult = (await communityQuery.limit(10).fetch()).toJSON();
 		return response.status(200).send(communityResult);
