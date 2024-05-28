@@ -41,7 +41,7 @@ class User extends Model {
 		);
 	}
 
-	communityPostReply() {
+	communityPostReplyData() {
 		return this.hasMany(
 			"App/Models/Admin/CommunityModule/CommunityPostReply", "id", "moderator_id"
 		);

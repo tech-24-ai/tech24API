@@ -673,11 +673,11 @@ class ReportController {
 
     query.withCount('communityPost as total_question_moderated')
     
-    query.withCount('communityPostReply as total_answer_moderated', (builder) => {
+    query.withCount('communityPostReplyData as total_answer_moderated', (builder) => {
       builder.where('community_post_replies.parent_id', null)
     })
 
-    query.withCount('communityPostReply as total_replies_moderated', (builder) => {
+    query.withCount('communityPostReplyData as total_replies_moderated', (builder) => {
       builder.where('community_post_replies.parent_id', '>', 0)
     })
 
