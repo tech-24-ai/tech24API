@@ -23,12 +23,6 @@ class Community extends Model {
 		);
 	}
 
-	communityPostReply() {
-		return this.hasMany(
-			"App/Models/Admin/CommunityModule/communityPostReply"
-		);
-	}
-
 	getCommunityPostReply () {
 		return this.manyThrough('App/Models/Admin/CommunityModule/CommunityPost', 'communityPostReply')
 	}

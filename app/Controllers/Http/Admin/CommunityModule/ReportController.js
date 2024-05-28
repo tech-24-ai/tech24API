@@ -8,8 +8,8 @@ const Visitor = use("App/Models/Admin/VisitorModule/Visitor");
 const { getvisitorPointsBadge } = require("../../../../Helper/visitorCurrentLevel");
 const Community = use("App/Models/Admin/CommunityModule/Community");
 const CommunityPost = use("App/Models/Admin/CommunityModule/CommunityPost");
-const User = use("App/Models/Admin/UserModule/User");
 const CommunityPostReply = use("App/Models/Admin/CommunityModule/CommunityPostReply");
+const User = use("App/Models/Admin/UserModule/User");
 const CommunityVisitorPoint = use("App/Models/Admin/CommunityModule/CommunityVisitorPoint");
 
 const Excel = require("exceljs");
@@ -67,10 +67,6 @@ class ReportController {
 
     query.with("country", (builder) => {
       builder.select("id", "name");
-    });
-
-    query.withCount("communityPost as total_questions", (builder) => {
-      builder.where("status", 1);
     });
 
     query.withCount("communityPost as total_questions", (builder) => {
@@ -261,22 +257,6 @@ class ReportController {
     return workbook.xlsx.writeBuffer(response);
   }
 
-  async response (result)
- 	{
-		for(let i = 0; i < result.length; i++)
-		{
-			let res = result[i];
-			let visitor_id = res.id;
-			let { total_points, current_badge } = await getvisitorPointsBadge(visitor_id);
-
-			res.total_points = total_points;
-			res.current_badge = current_badge;
-			result[i] = res;
-		}
-    
-		return result;
-  }
-
   async dicsussion_group_summary_report({ request, response, view })
   {
     const community_id = request.input("community_id");
@@ -299,7 +279,8 @@ class ReportController {
     // });
 
     communityQuery.withCount("getCommunityPostReply as total_answers", (builder) => {
-      builder.where('parent_id', null)
+      builder.where('community_post_replies.parent_id', null)
+			builder.where('community_post_replies.status', 1)
 
       if(from_date && to_date) {
         builder.whereRaw(`DATE(community_post_replies.created_at) between '${from_date}' and '${to_date}'`)
@@ -313,7 +294,8 @@ class ReportController {
     });
 
     communityQuery.withCount("getCommunityPostReply as total_comments", (builder) => {
-      builder.where('parent_id', '>' ,0)
+      builder.where('community_post_replies.parent_id', '>' ,0)
+			builder.where('community_post_replies.status', 1)
 
       if(from_date && to_date) {
         builder.whereRaw(`DATE(community_post_replies.created_at) between '${from_date}' and '${to_date}'`)
@@ -327,6 +309,7 @@ class ReportController {
     });
 
     communityQuery.with("communityPost", function(builder) {
+			builder.where('community_posts.status', 1)
 
       if(from_date && to_date) {
         builder.whereRaw(`DATE(community_posts.created_at) between '${from_date}' and '${to_date}'`)
@@ -339,7 +322,7 @@ class ReportController {
       }
 
       builder.withCount('postViews as total_question_views', (builder) => {
-        builder.where('type', 1)
+        builder.where('community_visitor_view_logs.type', 1)
   
         if(from_date && to_date) {
           builder.whereRaw(`DATE(community_visitor_view_logs.created_at) between '${from_date}' and '${to_date}'`)
@@ -363,17 +346,20 @@ class ReportController {
     // Get all questions lists
     const communityPostQuery = CommunityPost.query();
     communityPostQuery.select("id", "community_id", "title", "url_slug", "description", "views_counter", "created_at");
-
+    
+		communityPostQuery.where('status', 1)
     communityPostQuery.with('community',(builder)=>{
 			builder.select('id','name')
 		});
 
     communityPostQuery.withCount('communityPostReply as total_answers', (builder) => {
       builder.where('parent_id', null)
+			builder.where('status', 1)
     });
 
     communityPostQuery.withCount('communityPostReply as total_comments', (builder) => {
       builder.where('parent_id', '>', 0)
+			builder.where('status', 1)
     });
 
     communityPostQuery.withCount('postViews as total_question_views', (builder) => {
@@ -660,14 +646,14 @@ class ReportController {
         builder1.where('status', 0)
       })
 
-      builder.withCount('communityPostReply as total_pending_answers', (builder2) => {
-        builder2.where('status', 0)
-        builder2.where('parent_id', null)
+      builder.withCount('getCommunityPostReply as total_pending_answers', (builder2) => {
+        builder2.where('community_post_replies.status', 0)
+        builder2.where('community_post_replies.parent_id', null)
       })
 
-      builder.withCount('communityPostReply as total_pending_replies', (builder2) => {
-        builder2.where('status', 0)
-        builder2.where('parent_id', '>', 0)
+      builder.withCount('getCommunityPostReply as total_pending_replies', (builder2) => {
+        builder2.where('community_post_replies.status', 0)
+        builder2.where('community_post_replies.parent_id', '>', 0)
       })
     })
 
@@ -692,7 +678,7 @@ class ReportController {
     }
     
     var result = (await query.fetch()).toJSON();
-    // return response.status(200).send(result)
+    return response.status(200).send(result)
 
     let exportData = [];
     let index = 1;
@@ -839,57 +825,57 @@ class ReportController {
 
   async community_dashboard({ request, response, view }) 
   {
-    let counters = [];
+    let data = [];
 
-    counters.push({
-      name: "Total Discussion Group",
-      icon: "GroupWorkIcon",
+    data.push({
+      name: "Total Community",
+      icon: "view_module",
       color: "success",
       value: await Community.query().getCount(),
     });
 
-    counters.push({
+    data.push({
       name: "Total Questions",
-      icon: "QuestionMarkIcon",
+      icon: "quiz",
       color: "warning",
       value: await CommunityPost.query().getCount(),
     });
 
-    counters.push({
+    data.push({
       name: "Total Answers",
-      icon: "QuestionAnswerIcon",
+      icon: "message",
       color: "primary",
       value: await CommunityPostReply.query().getCount(),
     });
 
     let totalViews = await CommunityPost.query().getSum('views_counter')
-    counters.push({
+    data.push({
       name: "Total Views",
-      icon: "ViewModuleIcon",
+      icon: "visibility",
       color: "success",
       value: totalViews,
     });
 
     const query = Visitor.query();
     query.where(function () {
-      this.whereHas("communityPost", (builder) => {
-        builder.where("status", 1);
-      });
-
-      this.orWhereHas("communityPostReply", (builder) => {
-        builder.where("status", 1);
-      });
+      this.whereHas("communityPost");
+      this.orWhereHas("communityPostReply");
     });
     let totalVisitors = await query.getCount()
 
-    counters.push({
+    data.push({
       name: "Total Visitors",
-      icon: "Diversity3Icon",
+      icon: "groups",
       color: "warning",
       value: totalVisitors,
     });
 
+    return response.status(200).send({ data });
+  }  
 
+  async top_communities({ request, response, view }) 
+  {
+    
     // Get total Query views based on Communities
     const communityQuery = Community.query();
     communityQuery.select("communities.id", "communities.name", Database.raw('SUM(community_posts.views_counter) as total_query_views'), Database.raw('COUNT(community_posts.id) as total_questions'))
@@ -897,13 +883,19 @@ class ReportController {
 
     communityQuery.withCount('getCommunityPostReply as total_post_answers', (builder) => {
 			builder.where('parent_id', null)
+			builder.where('community_post_replies.status', 1)
 		})
 
     communityQuery.having('total_query_views', '>', 0)
     communityQuery.groupBy("communities.id")
     communityQuery.orderBy('total_query_views', 'DESC')
     let communityResult = (await communityQuery.limit(10).fetch()).toJSON();
+		return response.status(200).send(communityResult);
 
+  }  
+
+  async top_visitors({ request, response, view }) 
+  {
 
     // Get Top visitors based on points and badges
     const visitorQuery = CommunityVisitorPoint.query();
@@ -917,11 +909,15 @@ class ReportController {
     visitorQuery.orderBy('total_points', 'DESC')
     let visitorResult = (await visitorQuery.limit(10).fetch()).toJSON();
     let visitorFinalResult = await this.response(visitorResult);
+		return response.status(200).send(visitorFinalResult);
 
+  }  
 
+  async top_queries({ request, response, view }) 
+  { 
     // Top Queries based on view count
     const questionQuery = CommunityPost.query();
-    questionQuery.select('id', 'title', 'views_counter', 'community_id', 'visitor_id')
+    // questionQuery.select('id', 'title', 'views_counter', 'community_id', 'visitor_id')
 
     questionQuery.with('community', (builder) => {
       builder.select('id', 'name')
@@ -935,20 +931,31 @@ class ReportController {
       builder.where('vote_type', 1)
     })
 
+    questionQuery.withCount('communityPostReply as total_answers', (builder) => {
+      builder.where('community_post_replies.parent_id', null)
+      builder.where('community_post_replies.status', 1)
+    })
+
     questionQuery.orderBy('views_counter', 'DESC')
     let questionResult = (await questionQuery.limit(10).fetch()).toJSON();
-
-
-    // Generate Response
-    let responseData = []; 
-    responseData.push({
-      counters : counters,
-      community_listings : communityResult,
-      visitor_listings : visitorFinalResult,
-      queries_listings : questionResult,
-    })
-    return response.status(200).send({ responseData });
+		return response.status(200).send(questionResult);
   }  
+
+  async response (result)
+ 	{
+		for(let i = 0; i < result.length; i++)
+		{
+			let res = result[i];
+			let visitor_id = res.id;
+			let { total_points, current_badge } = await getvisitorPointsBadge(visitor_id);
+
+			res.total_points = total_points;
+			res.current_badge = (current_badge) ? current_badge : "-";
+			result[i] = res;
+		}
+    
+		return result;
+  }
 
 }
 

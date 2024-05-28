@@ -2785,4 +2785,7 @@ Route.group(() => {
   Route.get('generateModeratorReport', 'Admin/CommunityModule/ReportController.moderator_report')
 
   Route.get('communityDashboard', 'Admin/CommunityModule/ReportController.community_dashboard')
+  Route.get('communityDashboard/topCommunities', 'Admin/CommunityModule/ReportController.top_communities')
+  Route.get('communityDashboard/topVisitors', 'Admin/CommunityModule/ReportController.top_visitors')
+  Route.get('communityDashboard/topQueries', 'Admin/CommunityModule/ReportController.top_queries')
 }).middleware("auth");
