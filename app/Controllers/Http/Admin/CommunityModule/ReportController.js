@@ -678,7 +678,7 @@ class ReportController {
     }
     
     var result = (await query.fetch()).toJSON();
-    return response.status(200).send(result)
+    // return response.status(200).send(result)
 
     let exportData = [];
     let index = 1;
