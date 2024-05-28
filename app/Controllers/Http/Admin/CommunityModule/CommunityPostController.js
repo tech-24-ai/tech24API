@@ -273,6 +273,11 @@ class CommunityPostController {
 
       await updateData.save();
 
+      await updateData.postTags().detach();
+      if(request.input("postTags")) {
+        await updateData.postTags().attach(JSON.parse(request.input("postTags")));
+      }
+
       const query = CommunityVisitorPoint.query();
 			const isExist = await query.where('community_post_reply_id', params.id).where('visitor_id', updateData.visitor_id).first();
 			

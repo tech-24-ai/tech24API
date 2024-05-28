@@ -699,7 +699,7 @@ class ReportController {
 
     const fileName = "Moderator_report-" + moment().format("DD-MM-YYYY") + ".xlsx";
     let workbook = new Excel.Workbook();
-    let worksheet = workbook.addWorksheet("Visitor Report");
+    let worksheet = workbook.addWorksheet("Moderator Report");
     let font = { name: "Calibara", size: 12 };
     let headerFont = { name: "Arial", size: 18 };
 
