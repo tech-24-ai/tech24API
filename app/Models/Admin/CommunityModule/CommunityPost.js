@@ -3,17 +3,16 @@
 /** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
 const Model = use('Model');
 const moment = require("moment");
+const { generateUniqueSlug } = require("../../../Helper/generateUniqueSlug");
+let maxLength = 25
 
 class CommunityPost extends Model {
 	
 	static boot () {
 		super.boot()
 	
-		this.addTrait('@provider:Lucid/Slugify', {
-			fields: {
-				url_slug: 'title'
-			},
-			strategy: 'dbIncrement'
+		this.addHook('beforeCreate', async (userInstance) => {
+			userInstance.url_slug = await generateUniqueSlug(CommunityPost, userInstance.title, 'url_slug', maxLength);
 		})
 	}
 	
