@@ -361,7 +361,7 @@ class CommunityPostController {
         let guest_ip = _.trim(_.first(ipAddress));
         guest_ip = guest_ip && guest_ip != "" ? guest_ip : request.request.socket.remoteAddress;
 
-		if(guest_ip && userId > 0)
+		if(guest_ip && userId > 0 && getData.visitor_id != userId)
 		{	
 			let curr_date = moment().subtract(5, 'minutes').format('YYYY-MM-DD HH:mm:ss');
 			const query = CommunityVisitorViewLog.query();
@@ -431,7 +431,7 @@ class CommunityPostController {
 			const visitor_level = await getvisitorCurrentLevel(result.visitor_id); // Fetch user level separately
 			result.visitor.visitor_level = visitor_level;
 
-			if(userId > 0)
+			if(userId > 0 && result.visitor_id != userId)
 			{	
 				let curr_date = moment().format('YYYY-MM-DD');
 				const checkData = await CommunityVisitorActivity.query().where("visitor_id", userId).where("community_post_id", result.id).where("activity_type", 6).whereRaw(`DATE(created_at) = '${curr_date}'`).first();

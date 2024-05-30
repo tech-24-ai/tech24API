@@ -49,9 +49,16 @@ class VisitorCommunityPorfileController {
    * @param {View} ctx.view
    */
   async index({ request, response, view, auth }) {
-    const userId = auth.user.id;
-    let data = [];
+    
+    let userId;
 
+    if(request.input("visitor_id")) {
+      userId = request.input("visitor_id");
+    } else {
+      userId = auth.user.id;
+    }
+    
+    let data = [];
     const totalAnswerQuery = CommunityPostReply.query();
     totalAnswerQuery.where("visitor_id", userId);
 
@@ -190,7 +197,15 @@ class VisitorCommunityPorfileController {
   }
 
   async queries_history({ request, response, view, auth }) {
-    const userId = auth.user.id;
+    
+    let userId;
+
+    if(request.input("visitor_id")) {
+      userId = request.input("visitor_id");
+    } else {
+      userId = auth.user.id;
+    }
+
     const search = request.input("search");
     const orderBy = request.input("orderBy");
     const orderDirection = request.input("orderDirection");
@@ -485,8 +500,14 @@ class VisitorCommunityPorfileController {
    * @param {View} ctx.view
    */
   async show({ params, request, response, view, auth }) {
-    const userId = auth.user.id;
+    let userId;
 
+    if(request.input("visitor_id")) {
+      userId = request.input("visitor_id");
+    } else {
+      userId = auth.user.id;
+    }
+    
     const query = Visitor.query();
     query.with("country", (builder) => {
       builder.select("id", "name");
